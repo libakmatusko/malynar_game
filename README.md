@@ -1,2 +1,2 @@
 # malynar_game
-server and app for game on Malynar
+Budu tu dva priečinky, jeden na server, ktorý bude bežať hru a jeden na aplikáciu/program, ktorý bude bežať každý hráč.
