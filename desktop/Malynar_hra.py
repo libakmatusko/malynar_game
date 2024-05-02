@@ -1,6 +1,7 @@
 from time import time
 import requests
-SERVER_IP = '0.0.0.0'
+from front import Front
+SERVER_IP = 'http://127.0.0.1:500' # pre ucely debugovania, myslim ze tato je defaultna adresa
 
 
 class actions:
@@ -35,6 +36,7 @@ class actions:
         ]
         self.available_lands = {starting_pos}
         self.add_available_lands(starting_pos)
+        self.front = Front(self)
 
 
     def tick(self):
@@ -116,3 +118,4 @@ while True:
     if last_time < time() - 1:
         last_time = time()
         player.tick()
+    player.front.update()
