@@ -54,12 +54,12 @@ class actions:
                     else:
                         land['time to generation'] -= 1
                 else:
-                    if take_from_inventory(land['input']):
+                    if self.take_from_inventory(land['input']):
                         land['generating'] = True
         
     # neviem este ako presne ma vyzerat, returne True ak sa hra
     def update_from_server(self):
-        response = requuests.post(
+        response = requests.post(
             f'{SERVER_IP}/update/{self.name}',
         )
 
@@ -98,7 +98,7 @@ class actions:
 
 
 def start():
-    response = requuests.post(
+    response = requests.post(
         f'{SERVER_IP}/conect/{input()}',
     )
     if response.status_code == 400:
