@@ -13,6 +13,9 @@ class actions:
         self.army = {
 
         }
+        self.trades = [
+            
+        ]
         self.my_lands = [
             {
                 'name': 'base',
@@ -30,20 +33,11 @@ class actions:
                 'position': starting_pos,
             }
         ]
-        self.available_lands = {
-            starting_pos,
-            [starting_pos[0], starting_pos[1]+1],
-            [starting_pos[0]+1, starting_pos[1]],
-            [starting_pos[0]-1, starting_pos[1]+1],
-            [starting_pos[0], starting_pos[1]-1],
-            [starting_pos[0]-1, starting_pos[1]],
-            [starting_pos[0]+1, starting_pos[1]-1],
-            
-        }
+        self.available_lands = {starting_pos}
+        self.add_available_lands(starting_pos)
 
 
     def tick(self):
-
         self.tick_counter += 1
         if self.tick_counter % 5 == 0:
             if not self.update_from_server():
@@ -65,7 +59,9 @@ class actions:
         
     # neviem este ako presne ma vyzerat, returne True ak sa hra
     def update_from_server(self):
-        pass
+        response = requuests.post(
+            f'{SERVER_IP}/update/{self.name}',
+        )
 
 
     # ak je v inventari dostatok veci, tak ich zobere a vrati True, inak vrati False
@@ -89,6 +85,18 @@ class actions:
                 self.inventory[item] += generated[item]
 
 
+    def add_available_lands(self, pos: list[int]):
+        self.available_lands.update({
+            [pos[0], pos[1]+1],
+            [pos[0]+1, pos[1]],
+            [pos[0]-1, pos[1]+1],
+            [pos[0], pos[1]-1],
+            [pos[0]-1, pos[1]],
+            [pos[0]+1, pos[1]-1],
+            
+        })
+
+
 def start():
     response = requuests.post(
         f'{SERVER_IP}/conect/{input()}',
@@ -97,6 +105,7 @@ def start():
         print('Username already in use. Try a new one:', end=' ')
         start()
     elif response.status_code == 200:
+        global player
         player = actions(response.json()['name'], response.json()['starting_pos'])
 
 print('Enter username:', end=' ')
