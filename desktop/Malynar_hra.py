@@ -1,11 +1,21 @@
-from time import time
+from time import time, localtime, strftime, sleep
 import requests
+<<<<<<< Updated upstream
 from front import Front
 SERVER_IP = 'http://127.0.0.1:500' # pre ucely debugovania, myslim ze tato je defaultna adresa
+=======
+import json
+SERVER_IP = 'http://127.0.0.1:5000'
+
+from front import Front
+SERVER_IP = 'http://127.0.0.1:500' # pre ucely debugovania, myslim ze tato je defaultna adresa
+>>>>>>> ca02bd24b6ad5baa8adf6fb4871e986c2b9f188a
+>>>>>>> Stashed changes
 
 
 class actions:
-    def __init__(self, name, starting_pos: list[int]):
+    def __init__(self, name, starting_pos):
+        self.playing = False
         self.name = name
         self.tick_counter = -1
         self.inventory = {
@@ -34,7 +44,7 @@ class actions:
                 'position': starting_pos,
             }
         ]
-        self.available_lands = {starting_pos}
+        self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
         self.front = Front(self)
 
@@ -43,8 +53,11 @@ class actions:
         self.tick_counter += 1
         if self.tick_counter % 5 == 0:
             if not self.update_from_server():
-                self.tick_counter = -1
-                return
+                print('You are now ofline.')
+            else:
+                print('Game updated')
+        if self.tick_counter % 60 == 0:
+            self.save()
     
         for land in self.my_lands:
             if land['name'] != 'road':
@@ -88,30 +101,62 @@ class actions:
 
 
     def add_available_lands(self, pos: list[int]):
-        self.available_lands.update({
+        for land in [
             [pos[0], pos[1]+1],
             [pos[0]+1, pos[1]],
             [pos[0]-1, pos[1]+1],
             [pos[0], pos[1]-1],
             [pos[0]-1, pos[1]],
-            [pos[0]+1, pos[1]-1],
-            
-        })
+            [pos[0]+1, pos[1]-1],    
+        ]:
+            if not land in self.available_lands:
+                self.available_lands.append(land)
+
+    
+
+    def save(self):
+        t = strftime("%d-%B-%Hh%Mm%Ss", localtime())
+        with open(f'save_{t}.json', 'w') as save_file:
+            save_file.write(json.dumps(
+                self.__dict__,
+                indent=4
+            ))
+    
+
+    def load(self, save_name: str):
+         with open(f'{save_name}.json', 'r') as save_file:
+            self.__dict__ = json.load(save_file)
 
 
-def start():
+def conect():
     response = requests.post(
-        f'{SERVER_IP}/conect/{input()}',
+        f'{SERVER_IP}/conect/{input().strip()}',
     )
     if response.status_code == 400:
         print('Username already in use. Try a new one:', end=' ')
-        start()
+        conect()
     elif response.status_code == 200:
-        global player
         player = actions(response.json()['name'], response.json()['starting_pos'])
+    elif response.status_code == 204:
+        player = actions('', '')
+        player.load(response.json()['save_name'])
+    return player
+    
+
+def start():
+    response = requests.post(
+        f'{SERVER_IP}/start/{player.name}',
+    )
+    if response.status_code == 200:
+        return True
+    return False
+
 
 print('Enter username:', end=' ')
-start()
+player = conect()
+
+while not start():
+    sleep(1)
 
 last_time = 0
 while True:
