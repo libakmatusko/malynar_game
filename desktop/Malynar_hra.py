@@ -1,16 +1,8 @@
 from time import time, localtime, strftime, sleep
 import requests
-<<<<<<< Updated upstream
 from front import Front
-SERVER_IP = 'http://127.0.0.1:500' # pre ucely debugovania, myslim ze tato je defaultna adresa
-=======
 import json
-SERVER_IP = 'http://127.0.0.1:5000'
-
-from front import Front
-SERVER_IP = 'http://127.0.0.1:500' # pre ucely debugovania, myslim ze tato je defaultna adresa
->>>>>>> ca02bd24b6ad5baa8adf6fb4871e986c2b9f188a
->>>>>>> Stashed changes
+SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
 
 class actions:
