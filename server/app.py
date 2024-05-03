@@ -15,8 +15,6 @@ game = game_state('idk')
 
 @app.route('/conect/<name>', methods=['POST'])
 def new_player(name):
-    if name[:6] == 'reload':
-        return jsonify({'save_name': name[7:]}, status=204)
     if name in game.names:
         return 'This username already exist', 400
     if len(game.names) == 6:
