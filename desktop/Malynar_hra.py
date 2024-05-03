@@ -109,8 +109,11 @@ class actions:
     def save(self):
         t = strftime("%d-%B-%Hh%Mm%Ss", localtime())
         with open(f'save_{t}.json', 'w') as save_file:
+            to_save = self.__dict__
+            print(to_save)
+            to_save.pop('front')
             save_file.write(json.dumps(
-                self.__dict__,
+                to_save,
                 indent=4
             ))
     
@@ -155,4 +158,4 @@ while True:
     if last_time < time() - 1:
         last_time = time()
         player.tick()
-    player.front.update()
+    player.front.update()# AttributeError: 'actions' object has no attribute 'front'
