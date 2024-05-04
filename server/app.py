@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import json
+import functools
 
 app = Flask(__name__)
 
@@ -17,6 +18,17 @@ class game_state():
         self.playing = False
         self.names = []
         self.all_lands = {}
+        for x in range(-40, 41):
+            for y in range(-40, 41):
+                if -x-40<y<-x+40:
+                    self.all_lands[to_pos_string(x, y)] = {
+                        'name': 'land',
+                        'level': 0
+                    }
+        with open('resources.json', 'r') as resources_file:
+            resources = json.load(resources_file)
+            for pos in resources.keys():
+                self.all_lands[pos] = resources[pos]
         self.trades = []
 
 game = game_state('idk')
@@ -49,7 +61,7 @@ def start(name):
 
 @app.route('/update/<name>', methods=['POST'])
 def update(name):
-    return jsonify([game.all_lands, game.trades])
+    return jsonify({'all_lands': game.all_lands, 'trades': game.trades})
 
 
 @app.route('/start/admin', methods=['POST', 'GET'])

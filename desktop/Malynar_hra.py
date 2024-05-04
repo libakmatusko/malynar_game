@@ -26,13 +26,7 @@ class actions:
                 'output': {'people': 1},
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
-        self.all_lands = {
-            self.from_pos_string(*starting_pos): {
-                'name': 'base',
-                'player': name,
-                'level': 1
-            }
-        }
+        self.all_lands = {}
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
         self.front = Front(self)
@@ -60,8 +54,9 @@ class actions:
                 else:
                     if self.take_from_inventory(land['input']):
                         land['generating'] = True
-        
-    # neviem este ako presne ma vyzerat, returne True ak sa hra
+
+
+    # return True ak sa updatlo
     def update_from_server(self):
         response = requests.post(
             f'{SERVER_IP}/update/{self.name}',
@@ -107,7 +102,8 @@ class actions:
             if not land in self.available_lands:
                 self.available_lands.append(land)
 
-    
+
+    # vrati co je na policku inak vrati more
     def read_pos(self, x: int, y: int):
         self.all_lands.get(
             f'{x}x{y}',
@@ -129,7 +125,6 @@ class actions:
         t = strftime("%d-%B-%Hh%Mm%Ss", localtime())
         with open(f'save_{t}.json', 'w') as save_file:
             to_save = dict(self.__dict__)
-            print(to_save)
             to_save.pop('front')
             save_file.write(json.dumps(
                 to_save,
@@ -138,7 +133,7 @@ class actions:
     
 
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 
-         with open(f'{save_name}.json', 'r') as save_file:
+        with open(f'{save_name}.json', 'r') as save_file:
             self.__dict__ = json.load(save_file)
 
 
