@@ -6,9 +6,18 @@ app = Flask(__name__)
 class game_state():
     def __init__(self, game_description):
         self.game_description = game_description
+        self.starting_positions = [
+            (30, 0),
+            (0, 30),
+            (30, -30),
+            (-30, 0),
+            (0, -30),
+            (-30, 30),
+        ]
         self.playing = False
         self.names = []
-        self.starting_positions = [(30, 0), (0, 30), (30, -30), (-30, 0), (0, -30), (-30, 30)]
+        self.all_lands = {}
+        self.trades = []
 
 game = game_state('idk')
 
@@ -22,7 +31,13 @@ def new_player(name):
     game.names.append(name)
     if len(game.names) == 6:
         game.playing = True
-    return jsonify({'name': name, 'starting_pos': game.starting_positions[len(game.names)-1]})
+    cords = game.starting_positions[len(game.names)-1]
+    game.all_lands[to_pos_string(*cords)] = {
+        'name': 'base',
+        'player': name,
+        'level': 1
+    }
+    return jsonify({'name': name, 'starting_pos': cords})
 
 
 @app.route('/start/<name>', methods=['POST'])
@@ -34,16 +49,20 @@ def start(name):
 
 @app.route('/update/<name>', methods=['POST'])
 def update(name):
-    if game.playing:
-        return jsonify({})
-    else:
-        return 'Waiting for players', 403
+    return jsonify([game.all_lands, game.trades])
 
 
 @app.route('/start/admin', methods=['POST', 'GET'])
 def admin_start():
     game.playing = True
     return 'Started!', 200
+
+
+def to_pos_string(x: int, y: int):
+    return f'{x}x{y}'
+
+def from_pos_string(pos: str):
+    return list(map(int, pos.split('x')))
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000)

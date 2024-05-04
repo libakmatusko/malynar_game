@@ -13,12 +13,8 @@ class actions:
         self.inventory = {
             'people': 0
         }
-        self.army = {
-
-        }
-        self.trades = [
-            
-        ]
+        self.army = {}
+        self.trades = []
         self.my_lands = [
             {
                 'name': 'base',
@@ -30,12 +26,13 @@ class actions:
                 'output': {'people': 1},
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
-        self.all_lands = [
-            {
+        self.all_lands = {
+            self.from_pos_string(*starting_pos): {
                 'name': 'base',
-                'position': starting_pos,
+                'player': name,
+                'level': 1
             }
-        ]
+        }
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
         self.front = Front(self)
@@ -68,7 +65,13 @@ class actions:
     def update_from_server(self):
         response = requests.post(
             f'{SERVER_IP}/update/{self.name}',
-        )
+        ).json()
+        try:
+            for key in response.keys():
+                self.__dict__[key] = response[key]
+        except KeyError:
+            return False
+        return True
 
 
     # ak je v inventari dostatok veci, tak ich zobere a vrati True, inak vrati False
@@ -105,6 +108,22 @@ class actions:
                 self.available_lands.append(land)
 
     
+    def read_pos(self, x: int, y: int):
+        self.all_lands.get(
+            f'{x}x{y}',
+            {
+                'name': 'sea',
+                'level': 0
+            }
+        )
+
+    
+    def to_pos_string(x: int, y: int) -> str:
+        return f'{x}x{y}'
+
+    def from_pos_string(pos: str) -> list[int]:
+        return list(map(int, pos.split('x')))
+    
 
     def save(self):
         t = strftime("%d-%B-%Hh%Mm%Ss", localtime())
@@ -129,7 +148,7 @@ def conect():
         player = actions('', [0, 0])
         player.load(name_input[7:])
         return player
-        
+
     response = requests.post(
         f'{SERVER_IP}/conect/{name_input}',
     )
