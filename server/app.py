@@ -68,6 +68,20 @@ def admin_start():
     return 'Started!', 200
 
 
+@app.route('/build/<name>', methods=['POST'])
+def build(name):
+    content = request.json.keys()
+    for pos in content:
+        game.all_lands[pos] = content[pos]
+    return 'Built', 200
+
+
+@app.route('/upgrade/<name>', methods=['POST'])
+def upgrade(name):
+    pos = request.json
+    game.all_lands[pos]['level'] += 1
+    return 'Upgraded', 200
+
 def to_pos_string(x: int, y: int):
     return f'{x}x{y}'
 

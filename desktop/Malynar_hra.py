@@ -68,6 +68,26 @@ class actions:
             return False
         return True
 
+    
+    def server_build(self, pos: list[int], building: str):
+        response = requests.post(
+            f'{SERVER_IP}/build/{self.name}',
+            json={
+                self.to_pos_string(*pos): {
+                    'name': building,
+                    'player': name,
+                    'level': 1
+                }
+            }
+        )
+    
+
+    def server_upgrade(self, pos: list[int]):
+        response = requests.post(
+            f'{SERVER_IP}/upgrade/{self.name}',
+            json=self.to_pos_string(*pos)
+        )
+
 
     # ak je v inventari dostatok veci, tak ich zobere a vrati True, inak vrati False
     # moze sa potencialne pouzit na davanie veci do inventara
