@@ -1,0 +1,56 @@
+{
+    "berry picker": {
+        "cost":{
+            "people":1,
+            "wood":2
+        },
+        "generating": true,
+        "ticks per item":5,
+        "input": {},
+        "output": {"food":1},
+        "upgrades":{}
+    },
+    "road": {
+        "cost":{
+            "stone":1,
+            "wood":1
+        },
+        "generating": false,
+        "upgrades": {
+            "road merchant": {
+                "cost":{
+                    "people":1,
+                    "wood":5,
+                    "stone":2
+                },
+                "generating": true,
+                "ticks per item":10,
+                "input": {"food":1},
+                "output": {"coin":2},
+                "upgrades":{}
+            }
+        }
+    },
+    "stone picker":{
+        "cost":{
+            "people":1,
+            "wood":1
+        },
+        "generating": true,
+        "ticks per item":5,
+        "input": {},
+        "output": {"stone":1},
+        "upgrades":{}
+    },
+    "wood picker":{
+        "cost":{
+            "people":1,
+            "stone":1
+        },
+        "generating": true,
+        "ticks per item":5,
+        "input": {},
+        "output": {"wood":1},
+        "upgrades":{}
+    }
+}

@@ -24,6 +24,7 @@ class actions:
                 'generating': False,
                 'input': {},
                 'output': {'people': 1},
+                'points': 0
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
         self.all_lands = {}
@@ -72,7 +73,7 @@ class actions:
     def server_build(self, pos: list[int], building: str):
         response = requests.post(
             f'{SERVER_IP}/build/{self.name}',
-            json={
+            json={  
                 self.to_pos_string(*pos): {
                     'name': building,
                     'player': name,
