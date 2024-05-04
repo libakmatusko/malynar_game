@@ -123,7 +123,7 @@ class actions:
 
     def save(self):
         t = strftime("%d-%B-%Hh%Mm%Ss", localtime())
-        with open(f'save_{t}.json', 'w') as save_file:
+        with open(f'desktop/save_{t}.json', 'w') as save_file:
             to_save = dict(self.__dict__)
             to_save.pop('front')
             save_file.write(json.dumps(
@@ -133,7 +133,7 @@ class actions:
     
 
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 
-        with open(f'{save_name}.json', 'r') as save_file:
+        with open(f'desktop/{save_name}.json', 'r') as save_file:
             self.__dict__ = json.load(save_file)
 
 

@@ -25,13 +25,11 @@ class game_state():
                         'name': 'land',
                         'level': 0
                     }
-        with open('resources.json', 'r') as resources_file:
+        with open('server/resources.json', 'r') as resources_file:
             resources = json.load(resources_file)
             for pos in resources.keys():
                 self.all_lands[pos] = resources[pos]
         self.trades = []
-
-game = game_state('idk')
 
 
 @app.route('/conect/<name>', methods=['POST'])
@@ -75,6 +73,9 @@ def to_pos_string(x: int, y: int):
 
 def from_pos_string(pos: str):
     return list(map(int, pos.split('x')))
+
+
+game = game_state('idk')
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000)
