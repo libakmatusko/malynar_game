@@ -58,13 +58,13 @@ class actions:
 
     # return True ak sa updatlo
     def update_from_server(self):
-        response = requests.post(
-            f'{SERVER_IP}/update/{self.name}',
-        ).json()
         try:
+            response = requests.post(
+                f'{SERVER_IP}/update/{self.name}',
+            ).json()
             for key in response.keys():
                 self.__dict__[key] = response[key]
-        except KeyError:
+        except:
             return False
         return True
 
@@ -126,10 +126,7 @@ class actions:
         with open(f'desktop/save_{t}.json', 'w') as save_file:
             to_save = dict(self.__dict__)
             to_save.pop('front')
-            save_file.write(json.dumps(
-                to_save,
-                indent=4
-            ))
+            json.dump(to_save, save_file)
     
 
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 
