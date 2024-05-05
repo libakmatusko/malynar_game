@@ -1,6 +1,7 @@
 {
     "0x0": {
-        "name": "golden mountain",
-        "monster power": 250
+        "name": "mountain of the golden dragon",
+        "monster power":250,
+        "resources":["mountain", "metal mountain", "golden mountain"]
     }
 }

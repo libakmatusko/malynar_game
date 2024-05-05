@@ -1,5 +1,6 @@
 {
     "berry picker": {
+        "requrement":"",
         "cost":{
             "people":1,
             "wood":2
@@ -8,30 +9,19 @@
         "ticks per item":5,
         "input": {},
         "output": {"food":1},
-        "upgrades":{}
+        "upgrade":{}
     },
     "road": {
+        "requrement":"",
         "cost":{
             "stone":1,
             "wood":1
         },
         "generating": false,
-        "upgrades": {
-            "road merchant": {
-                "cost":{
-                    "people":1,
-                    "wood":5,
-                    "stone":2
-                },
-                "generating": true,
-                "ticks per item":10,
-                "input": {"food":1},
-                "output": {"coin":2},
-                "upgrades":{}
-            }
-        }
+        "upgrade": {}
     },
-    "stone picker":{
+    "mine":{
+        "requrement":"mountain",
         "cost":{
             "people":1,
             "wood":1
@@ -40,9 +30,20 @@
         "ticks per item":5,
         "input": {},
         "output": {"stone":1},
-        "upgrades":{}
+        "upgrade":{
+            "cost":{
+                "people":2,
+                "wood":5
+            },
+            "generating": true,
+            "ticks per item":3,
+            "input": {},
+            "output": {"stone":1},
+            "upgrade":{}
+        }
     },
-    "wood picker":{
+    "lumberjack":{
+        "requrement":"forest",
         "cost":{
             "people":1,
             "stone":1
@@ -51,6 +52,16 @@
         "ticks per item":5,
         "input": {},
         "output": {"wood":1},
-        "upgrades":{}
+        "upgrade":{
+            "cost":{
+                "people":2,
+                "stone":5
+            },
+            "generating": true,
+            "ticks per item":3,
+            "input": {},
+            "output": {"wood":1},
+            "upgrade":{}
+        }
     }
 }

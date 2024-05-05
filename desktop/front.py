@@ -68,13 +68,15 @@ class Front:
     def draw_hexagon(self, x, y, side_length): # TODO turn this into an object so that it's clickable
         x_shift = (((3) ** 0.5) / 2) * side_length
         y_shift = side_length / 2
-        self.map_canvas.create_polygon(x, y + side_length,
-                                       x - x_shift, y + y_shift,
-                                       x - x_shift, y - y_shift,
-                                       x, y - side_length,
-                                       x + x_shift, y - y_shift,
-                                       x + x_shift, y + y_shift,
-                                       fill="red")
+        self.map_canvas.create_polygon(
+            x, y + side_length,
+            x - x_shift, y + y_shift,
+            x - x_shift, y - y_shift,
+            x, y - side_length,
+            x + x_shift, y - y_shift,
+            x + x_shift, y + y_shift,
+            fill="red"
+        )
 
 
 if __name__ == "__main__":

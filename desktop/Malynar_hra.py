@@ -52,6 +52,8 @@ class actions:
                         self.generate(land['output'])
                     else:
                         land['time to generation'] -= 1
+                elif land.get('input') == None:
+                    pass
                 else:
                     if self.take_from_inventory(land['input']):
                         land['generating'] = True
