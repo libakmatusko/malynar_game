@@ -25,9 +25,13 @@ class Front:
         self.menu_canvas.place(y=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=1)
 
         self.zoom = 7 # describes how many rows of tiles will be displayed
-        self.draw_map()
 
         self.map_canvas.bind("<MouseWheel>", self.scroll_response)
+        # matus sprta to kodu
+        self.map_canvas.bind('<Button-1>', self.select_hex)
+        self.polygons = []
+        
+        self.draw_map()
 
 
     def update(self): # call this function rapidly to make everything work
@@ -40,7 +44,17 @@ class Front:
         if event.num == 4 or event.delta == 120:
             if self.zoom > 1:
                 self.zoom -= 1
+        self.polygons = []
         self.draw_map()
+    
+    # matus sprta to kodu
+    def select_hex(self, event):
+        print(event.x, event.y)
+        id = min(self.polygons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
+        print(id)
+        self.map_canvas.itemconfig(id[0], fill='blue')
+        
+
     
 
     def draw_map(self):
@@ -68,7 +82,7 @@ class Front:
     def draw_hexagon(self, x, y, side_length): # TODO turn this into an object so that it's clickable
         x_shift = (((3) ** 0.5) / 2) * side_length
         y_shift = side_length / 2
-        self.map_canvas.create_polygon(
+        self.polygons.append((self.map_canvas.create_polygon(
             x, y + side_length,
             x - x_shift, y + y_shift,
             x - x_shift, y - y_shift,
@@ -76,7 +90,7 @@ class Front:
             x + x_shift, y - y_shift,
             x + x_shift, y + y_shift,
             fill="red"
-        )
+        ), (x, y)))
 
 
 if __name__ == "__main__":
