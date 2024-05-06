@@ -30,7 +30,10 @@ class Front:
         # matus sprta to kodu
         self.map_canvas.bind('<Button-1>', self.select_hex)
         self.polygons = []
-        
+        self.tkinter_to_map_cords = {}
+
+        self.center_hexagon_cords = {"x": 0, "y": 0} # defining on which hexagon the map is centered
+
         self.draw_map()
 
 
@@ -49,13 +52,11 @@ class Front:
     
     # matus sprta to kodu
     def select_hex(self, event):
-        print(event.x, event.y)
         id = min(self.polygons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
-        print(id)
+        map_cords = self.tkinter_to_map_cords[id[1]]
+        self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
         self.map_canvas.itemconfig(id[0], fill='blue')
-        
 
-    
 
     def draw_map(self):
         self.map_canvas.delete("all")
@@ -65,6 +66,7 @@ class Front:
         full_num_of_columns = int(self.map_canvas_size["x"] / hexagon_width)
 
         center_piece_row = self.zoom // 2
+        center_piece_column = full_num_of_columns // 2
 
         for row in range(self.zoom):
             center_pos_y = side_length + side_length * 1.5 * row
@@ -77,9 +79,15 @@ class Front:
 
             for column in range(num_of_columns):
                 self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length)
+
+                # calculating where the hexagon is in map coordinates, (keep in mind tkinter has reversed y axis)
+                y_cord_difference = center_piece_row - row
+                x_cord_difference = column - center_piece_column - (y_cord_difference // 2)
+
+                self.tkinter_to_map_cords[(center_pos_x, center_pos_y)] = (self.center_hexagon_cords["x"] + x_cord_difference, self.center_hexagon_cords["y"] + y_cord_difference)
                 center_pos_x += (((3) ** 0.5) / 2) * side_length * 2
     
-    def draw_hexagon(self, x, y, side_length): # TODO turn this into an object so that it's clickable
+    def draw_hexagon(self, x, y, side_length):
         x_shift = (((3) ** 0.5) / 2) * side_length
         y_shift = side_length / 2
         self.polygons.append((self.map_canvas.create_polygon(
