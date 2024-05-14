@@ -1,67 +1,83 @@
 {
-    "berry picker": {
-        "requrement":"",
-        "cost":{
-            "people":1,
-            "wood":2
-        },
-        "generating": true,
-        "ticks per item":5,
-        "input": {},
-        "output": {"food":1},
-        "upgrade":{}
-    },
     "road": {
         "requrement":"",
-        "cost":{
-            "stone":1,
-            "wood":1
-        },
         "generating": false,
-        "upgrade": {}
+        "cost":[
+            {
+                "stone":1,
+                "wood":1
+            }
+        ]
+    },
+    "berry picker":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "wood":5,
+                "stone":5
+            }
+        ],
+        "ticks per item":[5, 3],
+        "input": [
+            {},
+            {}
+        ],
+        "output": [
+            {"food":1},
+            {"food":1}
+        ]
     },
     "mine":{
         "requrement":"mountain",
-        "cost":{
-            "people":1,
-            "wood":1
-        },
         "generating": true,
-        "ticks per item":5,
-        "input": {},
-        "output": {"stone":1},
-        "upgrade":{
-            "cost":{
+        "cost":[
+            {
+                "people":1,
+                "wood":1
+            },
+            {
                 "people":2,
                 "wood":5
-            },
-            "generating": true,
-            "ticks per item":3,
-            "input": {},
-            "output": {"stone":1},
-            "upgrade":{}
-        }
+            }
+        ],
+        "ticks per item":[5, 3],
+        "input": [
+            {},
+            {}
+        ],
+        "output": [
+            {"stone":1},
+            {"stone":1}
+        ]
     },
     "lumberjack":{
         "requrement":"forest",
-        "cost":{
-            "people":1,
-            "stone":1
-        },
         "generating": true,
-        "ticks per item":5,
-        "input": {},
-        "output": {"wood":1},
-        "upgrade":{
-            "cost":{
+        "cost":[
+            {
+                "people":1,
+                "stone":1
+            },
+            {
                 "people":2,
                 "stone":5
-            },
-            "generating": true,
-            "ticks per item":3,
-            "input": {},
-            "output": {"wood":1},
-            "upgrade":{}
-        }
+            }
+        ],
+        "ticks per item":[5, 3],
+        "input": [
+            {},
+            {}
+        ],
+        "output": [
+            {"wood":1},
+            {"wood":1}
+        ]
     }
 }
