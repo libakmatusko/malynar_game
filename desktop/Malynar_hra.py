@@ -116,18 +116,28 @@ class actions:
         self.add_available_lands(pos)
         for c in cost.keys():
             self.inventory[c] -= cost[c]
-        self.my_lands.append(
-            {
-                'name': build,
-                'position': pos,
-                'ticks per item': building['ticks per item'][0],
-                'time to generation': building['ticks per item'][0],
-                'generating': building['generating'][0],
-                'input': building['input'][0],
-                'output': building['output'][0],
-                'points': 1
-            }
-        )
+        if building['generating'] == True:
+            self.my_lands.append(
+                {
+                    'name': build,
+                    'position': pos,
+                    'ticks per item': building['ticks per item'][0],
+                    'time to generation': building['ticks per item'][0],
+                    'generating': building['generating'],
+                    'input': building['input'][0],
+                    'output': building['output'][0],
+                    'points': 1
+                }
+            )
+        else:
+            self.my_lands.append(
+                {
+                    'name': build,
+                    'position': pos,
+                    'generating': building['generating'],
+                    'points': 1
+                }
+            )
         self.all_lands[self.to_pos_string(*pos)] = {
             'name': build,
             'player': self.name,
