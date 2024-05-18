@@ -57,7 +57,7 @@ class actions:
                         self.generate(land['output'])
                     else:
                         land['time to generation'] -= 1
-                elif land.get('input') == None:
+                elif land.get('input') == None or len(land.get('input')):
                     pass
                 else:
                     if self.take_from_inventory(land['input']):
@@ -106,16 +106,12 @@ class actions:
         if requrement != '':
             if not requrement in self.find_resources(pos=pos):
                 return False
-        for c in cost.keys():
-            if cost[c] > self.inventory[c]:
-                return False
         if not pos in self.available_lands:
             return False
         # moze byt postavene
-        self.add_available_lands.remove(pos)
+        if not self.take_from_inventory(cost):
+            return False
         self.add_available_lands(pos)
-        for c in cost.keys():
-            self.inventory[c] -= cost[c]
         if building['generating'] == True:
             self.my_lands.append(
                 {
@@ -156,11 +152,7 @@ class actions:
         if self.all_lands[self.to_pos_string(*pos)]['player'] != self.name:
             return False
         costs = self.cost_to_upgrade(pos=pos)
-        for material in costs.keys():
-            if costs[material] > self.inventory[material]:
-                return False
-        for material in costs.keys():
-            self.inventory[material] -= costs[material]
+        self.take_from_inventory(costs)
         level = self.all_lands[self.to_pos_string(*pos)]['level']
         self.all_lands[self.to_pos_string(*pos)]['level'] += 1
         for my_land in self.my_lands:
@@ -177,6 +169,24 @@ class actions:
         if not self.server_upgrade(pos=pos):
             pass# daco ked sa neupdatuje server
         return True
+
+
+    def sleep(self, pos: list[int]):
+        for my_land in self.my_lands:
+            if my_land['position'] == pos:
+                my_land.update(
+                    {'input': dict(zip(my_land['input'].keys(), [key+1000000 for key in my_land['input'].keys()]))}
+                )
+                break
+
+
+    def wake_up(self, pos: list[int]):
+        for my_land in self.my_lands:
+            if my_land['position'] == pos:
+                my_land.update(
+                    {'input': dict(zip(my_land['input'].keys(), [key-1000000 for key in my_land['input'].keys()]))}
+                )
+                break
 
 
     # ak je v inventari dostatok veci, tak ich zobere a vrati True, inak vrati False
@@ -201,6 +211,10 @@ class actions:
 
 
     def add_available_lands(self, pos: list[int]):
+        try:
+            self.available_lands.remove(pos)
+        except:
+            pass
         for land in [
             [pos[0], pos[1]+1],
             [pos[0]+1, pos[1]],
@@ -229,13 +243,33 @@ class actions:
         return resources
 
 
-    def possible_actions(self, pos):# toto sa este bude zasadne menit
+    def possible_actions(self, pos):# bude vracat zoznam staus{info... +actions[funkcie, {potrebne veci}]}
+        actions = []
+        status = {'actions': actions}
+
         if pos in self.available_lands:
-            return ['build']
+            resources = self.find_resources(pos)
+            for key in self.buildings.keys():
+                if self.buildings[key]['requrement'] == "" or self.buildings[key]['requrement'] in resources:
+                    actions.append([lambda: self.build_new(key, pos), self.buildings[key]['cost'][0]])
+            status.update(self.all_lands())
+
         elif self.all_lands[self.to_pos_string(*pos)]['player'] == self.name:
-            return ['upgrade', 'sleep']
+            for my_land in self.my_lands:
+                if my_land['position'] == pos:
+                    status.update(my_land)
+                    if len(my_land['input']) != 0:
+                        if my_land['input'][my_land['input'].keys()[0]] > 10**6:
+                            actions.append([lambda: self.wake_up(pos), {}])
+                        else:
+                            actions.append([lambda: self.sleep(pos), {}])
+                    recepy = self.buildings[my_land['name']]
+                    if len(recepy['cost']) < my_land['level']:
+                        actions.append([lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
+
         else:
-            pass
+            status.update(self.all_lands())
+        return status
 
 
     # vrati co je na policku inak vrati more
