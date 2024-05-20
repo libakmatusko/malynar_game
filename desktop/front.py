@@ -25,6 +25,7 @@ class Front:
         self.menu_canvas.place(y=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=1)
 
         self.zoom = 7 # describes how many rows of tiles will be displayed
+        self.selected_pos = []
 
         self.map_canvas.bind("<MouseWheel>", self.scroll_response)
         # matus sprta to kodu
@@ -48,14 +49,22 @@ class Front:
             if self.zoom > 1:
                 self.zoom -= 1
         self.polygons = []
+        self.selected_pos = []
         self.draw_map()
     
     # matus sprta to kodu
     def select_hex(self, event):
         id = min(self.polygons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
-        map_cords = self.tkinter_to_map_cords[id[1]]
-        self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
-        self.map_canvas.itemconfig(id[0], fill='blue')
+        if self.selected_pos == id:
+            self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
+            self.selected_pos = []
+        else:
+            if self.selected_pos != []:
+                self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
+            self.selected_pos = id
+            map_cords = self.tkinter_to_map_cords[id[1]]
+            self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
+            self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
 
 
     def draw_map(self):
