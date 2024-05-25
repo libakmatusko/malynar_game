@@ -1,6 +1,6 @@
 from time import time, localtime, strftime, sleep
 import requests
-from front import Front
+import front
 import json
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
@@ -32,7 +32,7 @@ class actions:
         self.all_lands = {}
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
-        self.front = Front(self)
+        self.front = front.Front(self)
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file_file)
         
