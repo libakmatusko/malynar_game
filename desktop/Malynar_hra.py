@@ -33,6 +33,7 @@ class actions:
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
         self.front = front.Front(self)
+        self.front.update()
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file_file)
         

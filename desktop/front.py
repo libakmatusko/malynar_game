@@ -65,6 +65,7 @@ class Front:
             map_cords = self.tkinter_to_map_cords[id[1]]
             self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
             self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
+        self.update()
 
 
     def draw_map(self):
