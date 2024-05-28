@@ -113,5 +113,4 @@ class Front:
 
 if __name__ == "__main__":
     front = Front(None)
-    while True:
-        front.update()
+    front.window.mainloop()

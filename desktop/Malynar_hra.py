@@ -30,12 +30,19 @@ class actions:
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
         self.all_lands = {}
+        for x in range(-40, 41):
+            for y in range(-40, 41):
+                if -x-40<y<-x+40:
+                    self.all_lands[self.to_pos_string(x, y)] = {
+                        'name': 'land',
+                        'level': 0
+                    }
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
         self.front = front.Front(self)
         self.front.update()
         with open(f'desktop/buildings.json', 'r') as buildings_file:
-            self.buildings = json.load(buildings_file_file)
+            self.buildings = json.load(buildings_file)
         
 
 
@@ -224,7 +231,7 @@ class actions:
             [pos[0]-1, pos[1]],
             [pos[0]+1, pos[1]-1],    
         ]:
-            if (not land in self.available_lands) and self.all_lands[self.to_pos_string]['name'] == 'land':
+            if (not land in self.available_lands) and self.all_lands[self.to_pos_string(*land)]['name'] == 'land':
                 self.available_lands.append(land)
     
 
@@ -310,15 +317,22 @@ def conect():
         player = actions('', [0, 0])
         player.load(name_input[7:])
         return player
-
-    response = requests.post(
-        f'{SERVER_IP}/conect/{name_input}',
-    )
-    if response.status_code == 400:
-        print('Username already in use. Try a new one:', end=' ')
-        conect()
-    elif response.status_code == 200:
-        player = actions(response.json()['name'], response.json()['starting_pos'])
+    try:
+        response = requests.post(
+            f'{SERVER_IP}/conect/{name_input}',
+        )
+        if response.status_code == 400:
+            print('Username already in use. Try a new one:', end=' ')
+            conect()
+        elif response.status_code == 200:
+            player = actions(response.json()['name'], response.json()['starting_pos'])
+    except: #ked testujeme ofline
+        player = actions('Skuska', [30, -30])
+        player.all_lands[player.to_pos_string(30, -30)] = {
+            'name': 'base',
+            'player': player.name,
+            'level': 1
+        }
     return player
     
 
@@ -326,8 +340,11 @@ def start():
     response = requests.post(
         f'{SERVER_IP}/start/{player.name}',
     )
-    if response.status_code == 200:
-        return True
+    try:# ak to ide offline
+        if response.status_code == 200:
+            return True
+    except:
+        pass
     return False
 
 
