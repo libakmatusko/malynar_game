@@ -6,7 +6,8 @@ SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je de
 
 
 class actions:
-    def __init__(self, name, starting_pos):
+    def __init__(self, name, starting_pos, debug=False):
+        self.debug = debug
         self.playing = False
         self.name = name
         self.tick_counter = -1
@@ -74,6 +75,8 @@ class actions:
 
     # return True ak sa updatlo
     def update_from_server(self):
+        if self.debug:
+            return False
         try:
             response = requests.post(
                 f'{SERVER_IP}/update/{self.name}',
@@ -327,7 +330,7 @@ def conect():
         elif response.status_code == 200:
             player = actions(response.json()['name'], response.json()['starting_pos'])
     except: #ked testujeme ofline
-        player = actions('Skuska', [30, -30])
+        player = actions('Skuska', [30, -30], debug=True)
         player.all_lands[player.to_pos_string(30, -30)] = {
             'name': 'base',
             'player': player.name,
@@ -337,14 +340,13 @@ def conect():
     
 
 def start():
+    if player.debug:
+        return True
     response = requests.post(
         f'{SERVER_IP}/start/{player.name}',
     )
-    try:# ak to ide offline
-        if response.status_code == 200:
-            return True
-    except:
-        pass
+    if response.status_code == 200:
+        return True
     return False
 
 
