@@ -62,6 +62,8 @@ class Front:
             if self.selected_pos != []:
                 self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
             self.selected_pos = id
+            staus = self.actions.possible_actions(id[1])
+            # tu pride daco co bude zo statusu pisat veci na sidebar
             map_cords = self.tkinter_to_map_cords[id[1]]
             self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
             self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')

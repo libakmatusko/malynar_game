@@ -263,7 +263,7 @@ class actions:
             for key in self.buildings.keys():
                 if self.buildings[key]['requrement'] == "" or self.buildings[key]['requrement'] in resources:
                     actions.append([lambda: self.build_new(key, pos), self.buildings[key]['cost'][0]])
-            status.update(self.all_lands())
+            status.update(self.all_lands[self.to_pos_string(pos)])
 
         elif self.all_lands[self.to_pos_string(*pos)]['player'] == self.name:
             for my_land in self.my_lands:
@@ -279,7 +279,7 @@ class actions:
                         actions.append([lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
 
         else:
-            status.update(self.all_lands())
+            status.update(self.all_lands[self.to_pos_string(pos)])
         return status
 
 
