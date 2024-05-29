@@ -288,7 +288,7 @@ class actions:
         self.all_lands.get(
             f'{x}x{y}',
             {
-                'name': 'sea',
+                'name': 'sea',  # if non-valid
                 'level': 0
             }
         )
