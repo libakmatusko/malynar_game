@@ -164,7 +164,8 @@ class actions:
         if self.all_lands[self.to_pos_string(*pos)]['player'] != self.name:
             return False
         costs = self.cost_to_upgrade(pos=pos)
-        self.take_from_inventory(costs)
+        if not self.take_from_inventory(costs):
+            return False
         level = self.all_lands[self.to_pos_string(*pos)]['level']
         self.all_lands[self.to_pos_string(*pos)]['level'] += 1
         for my_land in self.my_lands:
@@ -255,21 +256,21 @@ class actions:
         return resources
 
 
-    def possible_actions(self, pos):# bude vracat zoznam staus{info... +actions[funkcie, {potrebne veci}]}
+    def possible_actions(self, pos):# bude vracat zoznam staus{info{coho: kolko/ako}, actions[co, za kolko]}
         actions = []
-        status = {'actions': actions}
+        info = {}
+        status = {'actions': actions, 'info': info}
 
         if pos in self.available_lands:
             resources = self.find_resources(pos)
             for key in self.buildings.keys():
                 if self.buildings[key]['requrement'] == "" or self.buildings[key]['requrement'] in resources:
                     actions.append([lambda: self.build_new(key, pos), self.buildings[key]['cost'][0]])
-            status.update(self.all_lands[self.to_pos_string(pos)])
 
         elif self.all_lands[self.to_pos_string(*pos)]['player'] == self.name:
             for my_land in self.my_lands:
                 if my_land['position'] == pos:
-                    status.update(my_land)
+                    info.update(my_land)
                     if len(my_land['input']) != 0:
                         if my_land['input'][my_land['input'].keys()[0]] > 10**6:
                             actions.append([lambda: self.wake_up(pos), {}])
@@ -279,8 +280,7 @@ class actions:
                     if len(recepy['cost']) < my_land['level']:
                         actions.append([lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
 
-        else:
-            status.update(self.all_lands[self.to_pos_string(pos)])
+        info.update(self.all_lands[self.to_pos_string(pos)])
         return status
 
 
