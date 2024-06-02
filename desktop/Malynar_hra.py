@@ -2,6 +2,7 @@ from time import time, localtime, strftime, sleep
 import requests
 import front
 import json
+import os
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
 
@@ -303,7 +304,12 @@ class actions:
 
     def save(self):
         t = strftime("%d-%B-%Hh%Mm%Ss", localtime())
-        with open(f'desktop/save_{t}.json', 'w') as save_file:
+        if os.getcwd()[-7:] != 'desktop':
+            os.chdir(os.getcwd() + '\\desktop')
+        for file in os.listdir():
+            if file[:4] == 'save':
+                os.remove(file)
+        with open(f'save_{t}.json', 'w') as save_file:
             to_save = dict(self.__dict__)
             to_save.pop('front')
             json.dump(to_save, save_file)
