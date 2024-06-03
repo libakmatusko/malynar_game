@@ -18,7 +18,7 @@ class actions:
             'wood': 10
         }
         self.army = {}
-        self.trades = []
+        self.trades: dict(id, ) = {}
         self.my_lands = [
             {
                 'name': 'base',
@@ -362,7 +362,7 @@ player = conect()
 while not start():
     sleep(1)
 
-last_time = 0
+last_time: float = 0
 while True:
     if last_time < time() - 1:
         last_time = time()
