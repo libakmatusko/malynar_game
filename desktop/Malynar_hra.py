@@ -5,7 +5,6 @@ import json
 import os
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
-
 class actions:
     def __init__(self, name, starting_pos, debug=False):
         self.debug = debug
@@ -15,10 +14,12 @@ class actions:
         self.inventory = {
             'people': 0,
             'stone': 10,
-            'wood': 10
+            'wood': 10,
+            'money': 0
         }
         self.army = {}
-        self.trades: dict(id, ) = {}
+        self.trades = {}                # id : trade_info
+        self.placed_trades = {}         # id : trade_info
         self.my_lands = [
             {
                 'name': 'base',
@@ -182,6 +183,54 @@ class actions:
         if not self.server_upgrade(pos=pos):
             pass# daco ked sa neupdatuje server
         return True
+    
+    def place_trade(self, type, item, count, cost):
+        # type - 0 if you offer money for item, 1 if you offer item for money
+        assert type == 0 or type == 1
+        if type == 0:
+            self.inventory['money'] -= cost
+        else:
+            self.inventory[item] -= count
+
+        response = requests.post(
+            f'{SERVER_IP}/place_trade/{self.name}',
+            json={  
+                'type': type,
+                'item': item,
+                'count': count,
+                'cost': cost
+            }
+        )
+        if response.status_code == 200:
+            self.placed_trades[response[0]] = {
+                'owner': self.name,
+                'type': type,
+                'item': item,
+                'count': count,
+                'cost': cost
+            }
+            return response[0]      # id of placed trade
+    
+    def take_trade(self, id):
+        response = requests.post(f'{SERVER_IP}/take_trade/{id}')
+        if response.status_code == 200 and response[0]:
+            if self.trades[id]["type"] == 0:
+                self.inventory['money'] += self.trades[id]['cost']
+                self.inventory[self.trades[id]['item']] -= self.trades[id]['count']
+            else:
+                self.inventory['money'] -= self.trades[id]['cost']
+                self.inventory[self.trades[id]['item']] += self.trades[id]['count']
+            return True
+    
+    def check_my_trades(self):
+        for id in self.placed_trades.keys():
+            response = requests.post(f'{SERVER_IP}/was_trade_taken/{id}')
+            if response[0]:
+                if self.placed_trades[id]['type'] == 0:
+                    self.inventory[self.placed_trades[id]['item']] += self.placed_trades[id]['count']
+                else:
+                    self.inventory['money'] += self.placed_trades[id]['cost']
+                self.placed_trades.pop(id)
 
 
     def sleep(self, pos: list[int]):

@@ -6,21 +6,28 @@ app = Flask(__name__)
 
 class All_trades():
     def __init__(self):
-        self.actual_trades = {}        # int id : Trade_offer
-        self.sold_trades = {}          # player name : Trade_offer
+        self.all_trades = {}           # int id : trade
+        self.sold_trades = {}          # player id : trade
         self.current_id = 0
     
     def place_trade(self, owner, type, item, count, cost):
+        new_trade = {}
+        new_trade['owner'] = owner      # player who placed trade
+        new_trade['type'] = type        # 0 if you offer money for item, 1 if you offer item for money 
+        new_trade['item'] = item        # specific item
+        new_trade['count'] = count      # amount of item
+        new_trade['cost'] = cost        # amount of money
+
         self.current_id += 1
-        self.actual_trades[self.current_id] = Trade_offer(owner, item, count, cost, type)
+        self.all_trades[self.current_id] = new_trade
+
         return self.current_id
 
     def take_trade(self, id):
-        if id in self.actual_trades:
-            self.sold_trades[id] = self.actual_trades.pop(id)
+        if id in self.all_trades:
+            self.sold_trades[id] = self.all_trades.pop(id)
             return True
         return False
-        
 
     def is_sold(self, id):
         if id in self.sold_trades.keys():
@@ -29,17 +36,8 @@ class All_trades():
         return False
     
     def get_availible_trades(self):
-        return self.actual_trades
-        
+        return self.all_trades
 
-class Trade_offer():
-    def __init__(self, owner, item, count, cost, type):
-        self.owner = owner  # player who placed trade
-        self.item = item
-        self.count = count
-        self.cost = cost    # amounth of money
-        self.type = type    # 0 if you offer money for item, 1 if you offer item for money
-        
 
 class game_state():
     def __init__(self, game_description):
@@ -96,7 +94,7 @@ def start(name):
 
 @app.route('/update/<name>', methods=['POST'])
 def update(name):
-    return jsonify({'all_lands': game.all_lands, 'trades': game.trades})
+    return jsonify({'all_lands': game.all_lands, 'trades': game.trades.get_availible_trades()})
 
 
 @app.route('/start/admin', methods=['POST', 'GET'])
@@ -122,20 +120,16 @@ def upgrade(name):
 @app.route('/place_trade/<name>', methods=['POST'])
 def place_trade(name):
     pos = request.json
-    game.trades.place_trade() # to do
-    return 'Placed', 200
+    id = game.trades.place_trade(name, pos['type'], pos['item'], pos['count'], pos['cost'])
+    return id, 200
 
 @app.route('/take_trade/<id>', methods=['POST'])
 def take_trade(id):
-    return game.trades.take_trade(id), 200
+    return game.trades.take_trade(int(id)), 200
 
 @app.route('/was_trade_taken/<id>', methods=['POST'])
 def was_trade_taken(id):
-    return game.trades.is_sold(id), 200
-
-@app.route('/get_all_trades/', methods=['POST', 'GET'])
-def get_all_trades():
-    return jsonify(game.trades.get_availible_trades())
+    return game.trades.is_sold(int(id)), 200
 
 def to_pos_string(x: int, y: int):
     return f'{x}x{y}'
