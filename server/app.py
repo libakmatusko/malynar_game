@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import json
 import functools
+from time import strftime, localtime
 
 app = Flask(__name__)
 
@@ -65,6 +66,19 @@ class game_state():
             for pos in resources.keys():
                 self.all_lands[pos] = resources[pos]
         self.trades = All_trades()
+    
+    def make_save(self) -> None:
+        time = strftime("%d-%B-%Hh%Mm%Ss", localtime())
+        with open(f'saves/lands_{time}.json', 'w', encoding='utf-8') as f:
+            json.dump(self.all_lands, f)
+        with open(f'saves/trades_{time}.json', 'w', encoding='utf-8') as f:
+            json.dump(dict(self.trades.__dict__), f)
+
+    def restore_save(self, time: str) -> None: # to do v tvare
+        with open(f'saves/lands_{time}.json', 'r', encoding='utf-8') as f:
+            self.all_lands = json.load(f)
+        with open(f'saves/trades_{time}.json', "r", encoding='utf-8') as f:
+            self.trades.__dict__ = json.load(f)
 
 
 @app.route('/conect/<name>', methods=['POST'])
