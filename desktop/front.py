@@ -26,10 +26,13 @@ class Front:
 
         self.zoom = 7 # describes how many rows of tiles will be displayed
         self.selected_pos = []
+        self.status = {}
 
         self.map_canvas.bind("<MouseWheel>", self.scroll_response)
         # matus sprta to kodu
         self.map_canvas.bind('<Button-1>', self.select_hex)
+        self.menu_canvas.bind('<Button-1>', self.menu_click)
+        self.buttons = []
         self.polygons = []
         self.tkinter_to_map_cords = {}
 
@@ -62,12 +65,41 @@ class Front:
             if self.selected_pos != []:
                 self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
             self.selected_pos = id
-            #staus = self.actions.possible_actions(id[1])
+            self.draw_menu()
             # tu pride daco co bude zo statusu pisat veci na sidebar
-            map_cords = self.tkinter_to_map_cords[id[1]]
             self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
             self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
         self.update()
+    
+
+    def draw_menu(self, ceiling=0):
+        x = self.menu_canvas_size['x']
+        y = self.menu_canvas_size['y']
+        self.map_canvas.create_rectangle(0, ceiling, x, ceiling+len(self.status['info'])*10, fill='yellow')
+        ceiling += len(self.status['info'])*10
+        for action in self.status['actions']:
+            ceiling += self.draw_button(action, ceiling)
+
+
+    def draw_button(self, action, ceiling):
+        self.buttons.append((self.map_canvas.create_rectangle(0, ceiling, self.menu_canvas_size['x'], ceiling+15, fill='grey'), (self.menu_canvas_size['x']/2, 7.5), action))
+        self.map_canvas.create_text(self.menu_canvas_size['x']/2, ceiling+5, text=action[0])
+        self.map_canvas.create_text(self.menu_canvas_size['x']/2, ceiling+10, text=action[2])
+        return 15
+
+
+    def menu_click(self, event, recursion=False):
+        button = min(self.buttons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
+        button[2][1]
+        map_cords = self.tkinter_to_map_cords[self.select_hex[1]]
+        self.status = self.actions.possible_actions(list(map_cords))
+        self.draw_menu()
+        if not recursion:
+            self.menu_click(event, recursion=True)
+
+
+    def menu_scroll(self, event):
+        self.draw_menu()
 
 
     def draw_map(self):

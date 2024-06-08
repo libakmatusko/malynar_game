@@ -308,29 +308,28 @@ class actions:
     def possible_actions(self, pos):# bude vracat zoznam staus{info{coho: kolko/ako}, actions[co, za kolko]}
         actions = []
         info = {}
-        status = {'actions': actions, 'info': info}
 
         if pos in self.available_lands:
             resources = self.find_resources(pos)
             for key in self.buildings.keys():
                 if self.buildings[key]['requrement'] == "" or self.buildings[key]['requrement'] in resources:
-                    actions.append([lambda: self.build_new(key, pos), self.buildings[key]['cost'][0]])
+                    actions.append([f'Postav {key}', lambda: self.build_new(key, pos), self.buildings[key]['cost'][0]])
 
-        elif self.all_lands[self.to_pos_string(*pos)]['player'] == self.name:
+        elif self.all_lands[self.to_pos_string(*pos)].get('player') == self.name:
             for my_land in self.my_lands:
                 if my_land['position'] == pos:
                     info.update(my_land)
                     if len(my_land['input']) != 0:
                         if my_land['input'][my_land['input'].keys()[0]] > 10**6:
-                            actions.append([lambda: self.wake_up(pos), {}])
+                            actions.append(['Zobud', lambda: self.wake_up(pos), {}])
                         else:
-                            actions.append([lambda: self.sleep(pos), {}])
+                            actions.append(['Uspi', lambda: self.sleep(pos), {}])
                     recepy = self.buildings[my_land['name']]
                     if len(recepy['cost']) < my_land['level']:
-                        actions.append([lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
+                        actions.append(['Vylepsi', lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
 
-        info.update(self.all_lands[self.to_pos_string(pos)])
-        return status
+        info.update(self.all_lands[self.to_pos_string(*pos)])
+        return {'actions': actions, 'info': info}
 
 
     # vrati co je na policku inak vrati more
