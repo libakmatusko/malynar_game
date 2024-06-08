@@ -53,7 +53,8 @@ class actions:
         self.tick_counter += 1
         if self.tick_counter % 5 == 0:
             if not self.update_from_server():
-                print('You are now ofline.')
+                #print('You are now ofline.')
+                pass
             else:
                 print('Game updated')
         if self.tick_counter % 60 == 0:
@@ -91,12 +92,15 @@ class actions:
 
     
     def server_build(self, pos: list[int], building: str):
+        if self.debug:
+            print('Neupdatujem')
+            return True
         response = requests.post(
             f'{SERVER_IP}/build/{self.name}',
             json={  
                 self.to_pos_string(*pos): {
                     'name': building,
-                    'player': name,
+                    'player': self.name,
                     'level': 1
                 }
             }
@@ -113,16 +117,24 @@ class actions:
     
 
     def build_new(self, build: str, pos: list[int]):
+        print('building', build)
+        print('position', pos)
         building = self.buildings[build]
         cost = building['cost'][0]
-        requrement = building['requriment']
+        requrement = building['requrement']
         if requrement != '':
+            print(requrement)
             if not requrement in self.find_resources(pos=pos):
+                print('nie je requrement')
                 return False
         if not pos in self.available_lands:
+            print(pos)
+            print(self.available_lands)
+            print('nie je v available lands')
             return False
         # moze byt postavene
         if not self.take_from_inventory(cost):
+            print('nie su materialy')
             return False
         self.add_available_lands(pos)
         if building['generating'] == True:
@@ -268,8 +280,10 @@ class actions:
         for item in generated.keys():
             if item in self.army.keys():
                 self.army[item] += generated[item]
-            else:
+            elif item in self.inventory.keys():
                 self.inventory[item] += generated[item]
+            else:
+                self.inventory[item] = generated[item]
 
 
     def add_available_lands(self, pos: list[int]):
@@ -285,7 +299,7 @@ class actions:
             [pos[0]-1, pos[1]],
             [pos[0]+1, pos[1]-1],    
         ]:
-            if (not land in self.available_lands) and self.all_lands[self.to_pos_string(*land)]['name'] == 'land':
+            if (not (land in self.available_lands)) and self.read_pos(*land)['name'] == 'land':
                 self.available_lands.append(land)
     
 
@@ -299,7 +313,7 @@ class actions:
             [pos[0]-1, pos[1]],
             [pos[0]+1, pos[1]-1],    
         ]:
-            for resource in self.all_lands[to_pos_string(*land)]['resources']:
+            for resource in self.all_lands[self.to_pos_string(*land)].get('resources', []):
                 if not resource in resources:
                     resources.append(resource)
         return resources
@@ -312,29 +326,33 @@ class actions:
         if pos in self.available_lands:
             resources = self.find_resources(pos)
             for key in self.buildings.keys():
-                if self.buildings[key]['requrement'] == "" or self.buildings[key]['requrement'] in resources:
-                    actions.append([f'Postav {key}', lambda: self.build_new(key, pos), self.buildings[key]['cost'][0]])
+                if (self.buildings[key]['requrement'] == "") or (self.buildings[key]['requrement'] in resources):
+                    print(key, pos)
+                    actions.append([f'Postav {key}', (self.build_new, (key, list(tuple(pos)))), self.buildings[key]['cost'][0]])
 
-        elif self.all_lands[self.to_pos_string(*pos)].get('player') == self.name:
+        elif self.read_pos(*pos).get('player') == self.name:
             for my_land in self.my_lands:
                 if my_land['position'] == pos:
                     info.update(my_land)
-                    if len(my_land['input']) != 0:
+                    land_input = my_land.get('input')
+                    if land_input and len(land_input) != 0:
                         if my_land['input'][my_land['input'].keys()[0]] > 10**6:
                             actions.append(['Zobud', lambda: self.wake_up(pos), {}])
                         else:
                             actions.append(['Uspi', lambda: self.sleep(pos), {}])
-                    recepy = self.buildings[my_land['name']]
-                    if len(recepy['cost']) < my_land['level']:
-                        actions.append(['Vylepsi', lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
-
-        info.update(self.all_lands[self.to_pos_string(*pos)])
+                    try:
+                        recepy = self.buildings[my_land['name']]
+                        if len(recepy['cost']) < my_land['level']:
+                            actions.append(['Vylepsi', lambda: self.upgrade(pos), self.cost_to_upgrade(pos)])
+                    except:# je to base
+                        pass
+        info.update(self.read_pos(*pos))
         return {'actions': actions, 'info': info}
 
 
     # vrati co je na policku inak vrati more
     def read_pos(self, x: int, y: int):
-        self.all_lands.get(
+         return self.all_lands.get(
             f'{x}x{y}',
             {
                 'name': 'sea',  # if non-valid
