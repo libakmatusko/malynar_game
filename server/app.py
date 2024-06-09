@@ -157,11 +157,17 @@ def load_from_save(time):
     game.restore_save(time)
     return 'Loaded', 200
 
+@app.route('/hello/', methods=['POST'])
+def hello(time):
+    return 'hello'
+
 def to_pos_string(x: int, y: int):
     return f'{x}x{y}'
 
 def from_pos_string(pos: str):
     return list(map(int, pos.split('x')))
+
+
 
 game = game_state('idk')
 
