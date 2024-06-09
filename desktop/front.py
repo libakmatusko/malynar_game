@@ -11,12 +11,15 @@ class Front:
         window_height = self.window.winfo_screenheight() # - 200 # - 200 only for easier testing
         window_width = self.window.winfo_screenwidth() # - 200 # - 200 only for easier testing
 
+
         self.map_canvas_size = {"x": window_width - (window_height / 2), "y": window_height}
         self.menu_canvas_size = {"x": window_height / 2, "y": window_height}
 
+        self.font_size = int(window_height / 60)
+
         # line below makes window completely fullscreen (annoying to test with)
-        self.window.overrideredirect(True)
-        self.window.geometry(f"{window_width}x{window_height}+0+0")
+        # self.window.overrideredirect(True)
+        # self.window.geometry(f"{window_width}x{window_height}+0+0")
 
         self.map_canvas = tk.Canvas(self.window, bg="green2")
         self.map_canvas.place(y=0, width=self.map_canvas_size["x"], relheight=1)
@@ -39,6 +42,9 @@ class Front:
         self.center_hexagon_cords = {"x": 0, "y": 0} # defining on which hexagon the map is centered
 
         self.draw_map()
+
+        self.inventory_window = None
+        self.trade_window = None
 
 
     def update(self): # call this function rapidly to make everything work
@@ -75,6 +81,52 @@ class Front:
         self.update()
     
 
+    def create_inventory_window(self):
+        if self.inventory_window:
+            try:
+                self.inventory_window.destroy()
+            except tk.TclError:
+                pass
+        self.inventory_window = tk.Tk()
+        self.update_inventory_window()
+        self.inventory_window.title("Inventár")
+
+    
+    def update_inventory_window(self):
+        if self.inventory_window:
+            try:
+                inv = self.actions.inventory
+                inv = dict(sorted(inv.items(), key=lambda item: item[1]))
+
+                num_of_rows = 20
+
+                tk.Label(self.inventory_window, text=f"people: {inv['people']}", width=30, font=("smili", 20)).grid(row=0, column=0, columnspan=1000)
+                tk.Label(self.inventory_window, text=f"money: {inv['money']}", width=30, font=("smili", 20)).grid(row=1, column=0, columnspan=1000)
+
+                counter = 0
+                for item in inv.keys():
+                    if item != "money" and item != "people":
+
+                        tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
+                        counter += 1
+            except tk.TclError:
+                pass
+    
+    def create_trade_window(self):
+        if self.trade_window:
+            try:
+                self.trade_window.destroy()
+            except tk.TclError:
+                pass
+        self.trade_window = tk.Tk()
+
+        tk.Label(self.trade_window, width=30, text="Čo dám").grid(row=0, column=0)
+        tk.Label(self.trade_window, width=30, text="Čo dostanem").grid(row=0, column=1)
+        
+
+    def create_army_window(self):
+        pass
+
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
         self.buttons = []
@@ -95,6 +147,13 @@ class Front:
         self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(inv)*20, fill='yellow')
         for i, item in enumerate(inv.keys()):
             self.menu_canvas.create_text(x/2, ceiling+i*20+10, text=f'{item} : {inv[item]}')
+
+        tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)).\
+            place(rely=0.76, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+        tk.Button(text="Obchodovanie", command=self.create_trade_window, borderwidth=4, font=("smili", self.font_size)).\
+            place(rely=0.84, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+        tk.Button(text="Inventár", command=self.create_inventory_window, borderwidth=4, font=("smili", self.font_size)).\
+            place(rely=0.92, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
 
 
     def draw_button(self, action, ceiling):# button = (id, (x, y), (action))
