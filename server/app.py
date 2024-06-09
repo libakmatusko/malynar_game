@@ -168,7 +168,6 @@ def from_pos_string(pos: str):
     return list(map(int, pos.split('x')))
 
 
-
 game = game_state('idk')
 
 if __name__ == '__main__':
