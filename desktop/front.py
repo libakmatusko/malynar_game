@@ -1,5 +1,5 @@
 import tkinter as tk
-from math import ceil, acos
+from math import ceil, acos, degrees
 import unicodedata
 
 
@@ -9,18 +9,26 @@ def vector_size(vector):
     return (vector[0]**2 + vector[1]**2)**0.5
 
 def get_angle_of_vectors(vectorA, vecotrB):
-    cosalpha = (vectorA[0]*vecotrB[0] + vectorA[1]*vecotrB[1])/(vector_size(vectorA) + vector_size(vecotrB))
+    cosalpha = (vectorA[0]*vecotrB[0] + vectorA[1]*vecotrB[1])/(vector_size(vectorA) * vector_size(vecotrB))
     return acos(cosalpha)
 
 def determine_area(point: tuple[int, int], middle: tuple[int, int]) -> int:
     vectorA = (point[0] - middle[0], point[1] - middle[1])
-    vectorB = (1 - middle[0], 1 - middle[1])
+    vectorB = (1, 0)
 
-    if point[0] >= middle[0]:
-        angle = get_angle_of_vectors(vectorA, vectorB)
+    angle = degrees(get_angle_of_vectors(vectorA, vectorB))
+    print(angle)
+    if not point[1] >= middle[1]:
         return angle // 60
     else:
         return 5 - (angle // 60)
+    
+print(determine_area((0, 0), (300, 300)))
+print(determine_area((280, 0), (300, 300)))
+print(determine_area((320, 310), (300, 300)))
+print(determine_area((300, 350), (300, 300)))
+
+print(determine_area((250, 310), (300, 300)))
 
 
 def remove_diacritics(input_str):
