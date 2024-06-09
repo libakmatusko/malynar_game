@@ -214,14 +214,14 @@ class actions:
             }
         )
         if response.status_code == 200:
-            self.placed_trades[response[0]] = {
+            self.placed_trades[int(response[0])] = {
                 'owner': self.name,
                 'type': type,
                 'item': item,
                 'count': count,
                 'cost': cost
             }
-            return response[0]      # id of placed trade
+            return int(response[0])      # id of placed trade
     
     def take_trade(self, id):
         response = requests.post(f'{SERVER_IP}/take_trade/{id}')
@@ -388,6 +388,7 @@ class actions:
 
 def conect():
     name_input = input().strip()
+    player = None
     if name_input[:6] == 'reload':
         player = actions('', [0, 0])
         player.load(name_input[7:])
@@ -409,7 +410,6 @@ def conect():
             'level': 1
         }
     return player
-    
 
 def start():
     if player.debug:

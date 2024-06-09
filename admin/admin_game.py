@@ -3,7 +3,7 @@ import json
 import os
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
-all_items: list[str] = []
+all_items: list[str] = ['jablko']
 should_save = False
 
 def start_game():
