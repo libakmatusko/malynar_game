@@ -61,10 +61,16 @@ class game_state():
                         'name': 'land',
                         'level': 0
                     }
-        with open('server/resources.json', 'r') as resources_file:
-            resources = json.load(resources_file)
-            for pos in resources.keys():
-                self.all_lands[pos] = resources[pos]
+        try:
+            with open('server/resources.json', 'r') as resources_file:
+                resources = json.load(resources_file)
+                for pos in resources.keys():
+                    self.all_lands[pos] = resources[pos]
+        except:
+            with open('resources.json', 'r') as resources_file:
+                resources = json.load(resources_file)
+                for pos in resources.keys():
+                    self.all_lands[pos] = resources[pos]
         self.trades = All_trades()
     
     def make_save(self) -> None:
