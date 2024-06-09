@@ -91,7 +91,7 @@ class Front:
         print(*self.buttons, sep='\n')
 
 
-    def draw_button(self, action, ceiling):
+    def draw_button(self, action, ceiling):# button = (id, (x, y), (action))
         self.buttons.append((self.menu_canvas.create_rectangle(0, ceiling, self.menu_canvas_size['x'], ceiling+30, fill='grey'), (self.menu_canvas_size['x']/2, ceiling+15), action))
         self.menu_canvas.create_text(self.menu_canvas_size['x']/2, ceiling+10, text=action[0])
         self.menu_canvas.create_text(self.menu_canvas_size['x']/2, ceiling+20, text=action[2])
