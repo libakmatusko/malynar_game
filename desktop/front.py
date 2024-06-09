@@ -1,4 +1,5 @@
 import tkinter as tk
+from math import ceil
 
 MAP_RADIUS = 30
 
@@ -43,8 +44,13 @@ class Front:
 
         self.draw_map()
 
+        # inventory
         self.inventory_window = None
+
+        # trades
+        self.trade_page_number = 0
         self.trade_window = None
+        self.disposable_trade_labels = []
 
 
     def update(self): # call this function rapidly to make everything work
@@ -112,6 +118,11 @@ class Front:
             except tk.TclError:
                 pass
     
+    def change_trade_page(self, value):
+        self.trade_page_number += value
+        self.trade_page_number %= ceil(len(self.actions.trades) / 10)
+        self.show_trades()
+
     def create_trade_window(self):
         if self.trade_window:
             try:
@@ -120,9 +131,37 @@ class Front:
                 pass
         self.trade_window = tk.Tk()
 
-        tk.Label(self.trade_window, width=30, text="Čo dám").grid(row=0, column=0)
-        tk.Label(self.trade_window, width=30, text="Čo dostanem").grid(row=0, column=1)
-        
+        tk.Label(self.trade_window, width=30, text="Čo dám", font=("smili", self.font_size)).grid(row=0, column=0)
+        tk.Label(self.trade_window, width=30, text="Čo dostanem", font=("smili", self.font_size)).grid(row=0, column=1)
+
+        tk.Button(self.trade_window, text="<-", width=30, command=lambda: self.change_trade_page(-1), font=("smili", self.font_size)).grid(row=11, column=0)
+        tk.Button(self.trade_window, text="->", width=30, command=lambda: self.change_trade_page(1), font=("smili", self.font_size)).grid(row=11, column=2)
+
+        self.show_trades()
+    
+    def show_trades(self):
+        while self.trade_page_number > len(self.actions.trades) * 10:
+            self.trade_page_number -= 1
+
+        for label in self.disposable_trade_labels:
+            try:
+                label.destroy()
+            except tk.TclError:
+                pass
+
+        trades = list(reversed(sorted(list(self.actions.trades))))
+        for i, id in enumerate(trades[self.trade_page_number * 10:]):
+            if i >= 10:
+                break
+            self.disposable_trade_labels.append(tk.Label(self.trade_window, width=30, text=f"{self.actions.trades[id]['cost']}", font=("smili", self.font_size)))
+            self.disposable_trade_labels[-1].grid(row=i + 1, column=(self.actions.trades[id]["type"] + 1) % 2)
+            self.disposable_trade_labels.append(tk.Label(self.trade_window, width=30, text=f"{self.actions.trades[id]['count']} - {self.actions.trades[id]['item']}", font=("smili", self.font_size)))
+            self.disposable_trade_labels[-1].grid(row=i + 1, column=self.actions.trades[id]["type"])
+            self.disposable_trade_labels.append(tk.Button(self.trade_window, width=30, bg="green2", text="✔", font=("smili", self.font_size)))
+            self.disposable_trade_labels[-1].grid(row=i + 1, column=2)
+
+        self.disposable_trade_labels.append(tk.Label(self.trade_window, text=f"{self.trade_page_number + 1} / {ceil(len(self.actions.trades) / 10)}", font=("smili", self.font_size)))
+        self.disposable_trade_labels[-1].grid(row=11, column=1)
 
     def create_army_window(self):
         pass

@@ -21,6 +21,18 @@ class actions:
         }
         self.army = {}
         self.trades = {}                # id : trade_info
+        self.trades = {1: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       2: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       3: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
+                       4: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       5: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
+                       10: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       11: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       12: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       13: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
+                       14: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+                       15: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
+                       110: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20}}
         self.placed_trades = {}         # id : trade_info
         self.my_lands = [
             {
