@@ -226,6 +226,13 @@ class actions:
             return int(response[0])      # id of placed trade
     
     def take_trade(self, id):
+        if self.trades[id]['type'] == 0:
+            if self.inventory[self.trades[id]['item']] < self.trades[id]['count']:
+                return False
+        else:
+            if self.inventory['money'] < self.trades[id]['cost']:
+                return False
+
         response = requests.post(f'{SERVER_IP}/take_trade/{id}')
         if response.status_code == 200 and response[0]:
             if self.trades[id]["type"] == 0:
@@ -235,6 +242,7 @@ class actions:
                 self.inventory['money'] -= self.trades[id]['cost']
                 self.inventory[self.trades[id]['item']] += self.trades[id]['count']
             return True
+        return False
     
     def check_my_trades(self):
         for id in self.placed_trades.keys():
