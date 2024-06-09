@@ -15,7 +15,9 @@ class actions:
             'people': 0,
             'stone': 10,
             'wood': 10,
-            'money': 0
+            'money': 0,
+            "iron": 7,
+            "berries": 2
         }
         self.army = {}
         self.trades = {}                # id : trade_info
@@ -282,8 +284,10 @@ class actions:
                 self.army[item] += generated[item]
             elif item in self.inventory.keys():
                 self.inventory[item] += generated[item]
+                self.front.update_inventory_window()
             else:
                 self.inventory[item] = generated[item]
+                self.front.update_inventory_window()
 
 
     def add_available_lands(self, pos: list[int]):
