@@ -145,12 +145,23 @@ def take_trade(id):
 def was_trade_taken(id):
     return game.trades.is_sold(int(id)), 200
 
+@app.route('/quicksave/admin', methods=['POST'])
+def quicksave():
+    game.make_save()
+    return 'Saved', 200
+
+@app.route('/load_from_save/<time>', methods=['POST'])
+def load_from_save(time):
+    if not game.playing:
+        return 'Not started!', 400
+    game.restore_save(time)
+    return 'Loaded', 200
+
 def to_pos_string(x: int, y: int):
     return f'{x}x{y}'
 
 def from_pos_string(pos: str):
     return list(map(int, pos.split('x')))
-
 
 game = game_state('idk')
 

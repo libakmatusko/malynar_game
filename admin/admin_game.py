@@ -4,6 +4,7 @@ import os
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
 all_items: list[str] = []
+should_save = False
 
 def start_game():
     response = requests.post(
@@ -44,9 +45,27 @@ def write_trades_to_file():
     with open("all_trades.json", "w", encoding='utf-8') as f:
         f.write(response['trades'])
 
+def save_server():
+    response = requests.post(
+                f'{SERVER_IP}/quicksave/admin',
+            )
+    if response.status_code == 200:
+        print("server saved!")
+    else:
+        print('server save failed')
+
+def load_server(time):
+    response = requests.post(
+                f'{SERVER_IP}/load_from_save/{time}',
+            )
+    if response.status_code == 200:
+        print('server loaded')
+    else:
+        print('server load failed')
 
 while True:
-    task = input("Zadaj akciu (start, add_trade, take_trade, all_trades)\n")
+    task = input("Zadaj akciu (start, add_trade, take_trade, all_trades, start_saves, load_server)\n")
+
     if task == 'start':
         start_game()
         continue
@@ -75,3 +94,15 @@ while True:
     if task == 'all_trades':
         write_trades_to_file()
         continue
+
+    if task == 'start_saves':
+        should_save = True
+    
+    if task == 'load_server':
+        time = input("enter time-stamp of save-file\n")
+        load_server(time)
+    
+    if should_save:
+        save_server()
+
+    
