@@ -16,7 +16,7 @@ class actions:
             'stone': 10,
             'wood': 10,
             'money': 0,
-            "iron": 7,
+            "iron": 15,
             "berries": 2
         }
         self.army = {}
@@ -71,6 +71,7 @@ class actions:
                 pass
             else:
                 print('Game updated')
+            self.frontend_update()
         if self.tick_counter % 60 == 0:
             self.save()
     
@@ -103,7 +104,12 @@ class actions:
         except:
             return False
         return True
+    
 
+    def frontend_update(self):
+        self.front.update_inventory_window()
+        self.front.show_trades()
+        self.check_my_trades()
     
     def server_build(self, pos: list[int], building: str):
         if self.debug:
@@ -236,6 +242,7 @@ class actions:
                 'cost': cost
             }
             return int(response[0])      # id of placed trade
+        print("unable to place trade on server")
     
     def take_trade(self, id):
         if self.trades[id]['type'] == 0:
@@ -304,11 +311,8 @@ class actions:
                 self.army[item] += generated[item]
             elif item in self.inventory.keys():
                 self.inventory[item] += generated[item]
-                self.front.update_inventory_window()
             else:
                 self.inventory[item] = generated[item]
-                self.front.update_inventory_window()
-
 
     def add_available_lands(self, pos: list[int]):
         try:

@@ -1,8 +1,19 @@
 import tkinter as tk
 from math import ceil
+import unicodedata
 
 MAP_RADIUS = 30
 
+
+def remove_diacritics(input_str):
+    normalized_str = unicodedata.normalize('NFKD', input_str)
+    return ''.join([c for c in normalized_str if not unicodedata.combining(c)])
+
+
+def compare_strings(str1, str2):
+    processed_str1 = remove_diacritics(str1).lower()
+    processed_str2 = remove_diacritics(str2).lower()
+    return processed_str1 == processed_str2
 
 class Front:
     def __init__(self, actions):
@@ -51,6 +62,9 @@ class Front:
         self.trade_page_number = 0
         self.trade_window = None
         self.disposable_trade_labels = []
+
+        self.make_trade_window = None
+        self.make_trade_objects = {}
 
 
     def update(self): # call this function rapidly to make everything work
@@ -137,9 +151,18 @@ class Front:
         tk.Button(self.trade_window, text="<-", width=30, command=lambda: self.change_trade_page(-1), font=("smili", self.font_size)).grid(row=11, column=0)
         tk.Button(self.trade_window, text="->", width=30, command=lambda: self.change_trade_page(1), font=("smili", self.font_size)).grid(row=11, column=2)
 
+        tk.Button(self.trade_window, text="Pridat ponuku", width=90, command=self.add_trade, font=("smili", self.font_size)).grid(row=12, columnspan=3)
+
         self.show_trades()
     
     def show_trades(self):
+        if self.trade_window is None:
+            return
+        try:
+            self.trade_window.winfo_exists()
+        except tk.TclError:
+            return
+
         while self.trade_page_number > len(self.actions.trades) * 10:
             self.trade_page_number -= 1
 
@@ -157,11 +180,115 @@ class Front:
             self.disposable_trade_labels[-1].grid(row=i + 1, column=(self.actions.trades[id]["type"] + 1) % 2)
             self.disposable_trade_labels.append(tk.Label(self.trade_window, width=30, text=f"{self.actions.trades[id]['count']} - {self.actions.trades[id]['item']}", font=("smili", self.font_size)))
             self.disposable_trade_labels[-1].grid(row=i + 1, column=self.actions.trades[id]["type"])
-            self.disposable_trade_labels.append(tk.Button(self.trade_window, width=30, bg="green2", text="✔", font=("smili", self.font_size)))
+
+            self.disposable_trade_labels.append(tk.Button(self.trade_window, command=lambda x = id: self.buy(x), width=30, bg="green2", text="✔", font=("smili", self.font_size)))
             self.disposable_trade_labels[-1].grid(row=i + 1, column=2)
+
+            if self.actions.trades[id]['type'] == 0:
+                if self.actions.inventory[self.actions.trades[id]['item']] < self.actions.trades[id]['count']:
+                    self.disposable_trade_labels[-1].config(bg="grey", state="disabled")
+            else:
+                if self.actions.inventory['money'] < self.actions.trades[id]['cost']:
+                    self.disposable_trade_labels[-1].config(bg="grey", state="disabled")
 
         self.disposable_trade_labels.append(tk.Label(self.trade_window, text=f"{self.trade_page_number + 1} / {ceil(len(self.actions.trades) / 10)}", font=("smili", self.font_size)))
         self.disposable_trade_labels[-1].grid(row=11, column=1)
+
+    def add_trade(self):
+        # TODO redesign...        ...sure
+
+        # 🔁
+        if self.make_trade_window:
+            try:
+                self.make_trade_window.destroy()
+            except tk.TclError:
+                pass
+        
+        self.make_trade_window = tk.Tk()
+        tk.Label(self.make_trade_window, text="Čo dám", font=("smili", self.font_size)).grid(row=0, column=0, columnspan=2)
+        tk.Label(self.make_trade_window, text="Čo dostanem", font=("smili", self.font_size)).grid(row=0, column=2, columnspan=2)
+
+        tk.Label(self.make_trade_window, text="Koľko:", width=30, font=("smili", self.font_size)).grid(row=2, column=0)
+        tk.Label(self.make_trade_window, text="Koľko:", width=30, font=("smili", self.font_size)).grid(row=2, column=2)
+
+        self.make_trade_objects = {
+            "money_amount": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
+            "item_amount": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
+            "item": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
+            "money_label": tk.Label(self.make_trade_window, text="Peniaze", width=30, font=("smili", self.font_size)),
+            "item_label": tk.Label(self.make_trade_window, text="Tovar:", width=30, font=("smili", self.font_size)),
+            "direction": True
+        }
+
+        self.grid_make_trade_objects()
+
+        tk.Button(self.make_trade_window, text="🔁", font=("smili", self.font_size * 2), width=60, command=self.grid_make_trade_objects).grid(row=3, columnspan=4)
+        tk.Button(self.make_trade_window, text="Zverejniť", font=("smili", self.font_size * 2), width=60, command=self.publish_trade).grid(row=4, columnspan=4)
+
+    def grid_make_trade_objects(self):
+        if self.make_trade_objects["direction"]:
+            self.make_trade_objects["money_amount"].grid(row=2, column=3)
+            self.make_trade_objects["item_amount"].grid(row=2, column=1)
+            self.make_trade_objects["item"].grid(row=1, column=1)
+            self.make_trade_objects["money_label"].grid(row=1, column=2, columnspan=2)
+            self.make_trade_objects["item_label"].grid(row=1, column=0)
+        else:
+            self.make_trade_objects["money_amount"].grid(row=2, column=1)
+            self.make_trade_objects["item_amount"].grid(row=2, column=3)
+            self.make_trade_objects["item"].grid(row=1, column=3)
+            self.make_trade_objects["money_label"].grid(row=1, column=0, columnspan=2)
+            self.make_trade_objects["item_label"].grid(row=1, column=2)
+        self.make_trade_objects["direction"] = not self.make_trade_objects["direction"]
+
+    def publish_trade(self):
+        trade = {"item": self.make_trade_objects["item"].get(),
+                 "count": self.make_trade_objects["item_amount"].get(),
+                 "cost": self.make_trade_objects["money_amount"].get(),
+                 }
+        exists = False
+        for key in self.actions.inventory.keys():
+            if compare_strings(trade["item"], key) and key != "people":
+                exists = True
+                break
+        if not exists:
+            # e-ee
+            return
+        if trade["count"].isnumeric():
+            trade["count"] = int(trade["count"])
+            if trade["count"] < 0:
+                # e-ee
+                return
+        else:
+            # e-ee
+            return
+        if trade["cost"].isnumeric():
+            trade["cost"] = int(trade["cost"])
+            if trade["cost"] < 0:
+                # e-ee
+                return
+        else:
+            # e-ee
+            return
+        
+        if not self.make_trade_objects["direction"]:
+            if self.actions.inventory["money"] < trade["cost"]:
+                # e-ee
+                return
+        else:
+            if self.actions.inventory[trade["item"]] < trade["count"]:
+                # e-ee
+                return
+        
+        self.actions.place_trade(int(not self.make_trade_objects["direction"]), trade["item"], trade["count"], trade["cost"])
+
+        # cink
+
+
+    def buy(self, id):
+        if self.actions.take_trade(id):
+            pass # cink
+        else:
+            pass # e-eee
 
     def create_army_window(self):
         pass
