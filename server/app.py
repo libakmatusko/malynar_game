@@ -157,8 +157,8 @@ def load_from_save(time):
     game.restore_save(time)
     return 'Loaded', 200
 
-@app.route('/hello/', methods=['POST'])
-def hello(time):
+@app.route('/hello/', methods=['GET'])
+def hello():
     return 'hello'
 
 def to_pos_string(x: int, y: int):
