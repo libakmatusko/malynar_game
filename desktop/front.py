@@ -81,9 +81,11 @@ class Front:
         x = self.menu_canvas_size['x']
         y = self.menu_canvas_size['y']
         print(self.status)
-        self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(self.status['info'])*20, fill='yellow')
-        self.menu_canvas.create_text(x/2, ceiling+(len(self.status['info'])*10), text=self.status['info'])
-        ceiling += len(self.status['info'])*20
+        infos = self.status['info']
+        self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(infos)*20, fill='yellow')
+        for i, info in enumerate(infos.keys()):
+            self.menu_canvas.create_text(x/2, ceiling+i*20+10, text=f'{info} : {infos[info]}')
+        ceiling += len(infos)*20
         for action in self.status['actions']:
             ceiling += self.draw_button(action, ceiling)
         print(*self.buttons, sep='\n')
