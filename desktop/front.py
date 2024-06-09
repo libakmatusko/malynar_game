@@ -1,8 +1,26 @@
 import tkinter as tk
-from math import ceil
+from math import ceil, acos
 import unicodedata
 
+
 MAP_RADIUS = 30
+
+def vector_size(vector):
+    return (vector[0]**2 + vector[1]**2)**0.5
+
+def get_angle_of_vectors(vectorA, vecotrB):
+    cosalpha = (vectorA[0]*vecotrB[0] + vectorA[1]*vecotrB[1])/(vector_size(vectorA) + vector_size(vecotrB))
+    return acos(cosalpha)
+
+def determine_area(point: tuple[int, int], middle: tuple[int, int]) -> int:
+    vectorA = (point[0] - middle[0], point[1] - middle[1])
+    vectorB = (1 - middle[0], 1 - middle[1])
+
+    if point[0] >= middle[0]:
+        angle = get_angle_of_vectors(vectorA, vectorB)
+        return angle // 60
+    else:
+        return 5 - (angle // 60)
 
 
 def remove_diacritics(input_str):
