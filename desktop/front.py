@@ -22,13 +22,6 @@ def determine_area(point: tuple[int, int], middle: tuple[int, int]) -> int:
         return angle // 60
     else:
         return 5 - (angle // 60)
-    
-print(determine_area((0, 0), (300, 300)))
-print(determine_area((280, 0), (300, 300)))
-print(determine_area((320, 310), (300, 300)))
-print(determine_area((300, 350), (300, 300)))
-
-print(determine_area((250, 310), (300, 300)))
 
 
 def remove_diacritics(input_str):
@@ -96,7 +89,6 @@ class Front:
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
 
-
     def scroll_response(self, event):
         if event.num == 5 or event.delta == -120:
             self.zoom += 1
@@ -126,7 +118,6 @@ class Front:
             self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
         self.update()
     
-
     def create_inventory_window(self):
         if self.inventory_window:
             try:
@@ -137,7 +128,6 @@ class Front:
         self.update_inventory_window()
         self.inventory_window.title("Inventár")
 
-    
     def update_inventory_window(self):
         if self.inventory_window:
             try:
@@ -309,7 +299,6 @@ class Front:
 
         # cink
 
-
     def buy(self, id):
         if self.actions.take_trade(id):
             pass # cink
@@ -347,13 +336,11 @@ class Front:
         tk.Button(text="Inventár", command=self.create_inventory_window, borderwidth=4, font=("smili", self.font_size)).\
             place(rely=0.92, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
 
-
     def draw_button(self, action, ceiling):# button = (id, (x, y), (action))
         self.buttons.append((self.menu_canvas.create_rectangle(0, ceiling, self.menu_canvas_size['x'], ceiling+30, fill='grey'), (self.menu_canvas_size['x']/2, ceiling+15), action))
         self.menu_canvas.create_text(self.menu_canvas_size['x']/2, ceiling+10, text=action[0])
         self.menu_canvas.create_text(self.menu_canvas_size['x']/2, ceiling+20, text=action[2])
         return 30
-
 
     def menu_click(self, event):
         button = min(self.buttons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
@@ -364,10 +351,8 @@ class Front:
         print(self.status)
         self.draw_menu()
 
-
     def menu_scroll(self, event):
         self.draw_menu()
-
 
     def draw_map(self):
         self.map_canvas.delete("all")
@@ -391,7 +376,7 @@ class Front:
             for column in range(num_of_columns):
                 self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length)
 
-                # calculating where the hexagon is in map coordinates, (keep in mind tkinter has reversed y axis)
+                # calculating where the hexagon is in map coordinates
                 y_cord_difference = center_piece_row - row
                 x_cord_difference = column - center_piece_column - (y_cord_difference // 2)
 
