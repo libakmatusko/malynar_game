@@ -75,15 +75,15 @@ class game_state():
     
     def make_save(self) -> None:
         time = strftime("%d-%B-%Hh%Mm%Ss", localtime())
-        with open(f'saves/lands_{time}.json', 'w', encoding='utf-8') as f:
+        with open(f'server/saves/lands_{time}.json', 'w', encoding='utf-8') as f:
             json.dump(self.all_lands, f)
-        with open(f'saves/trades_{time}.json', 'w', encoding='utf-8') as f:
+        with open(f'server/saves/trades_{time}.json', 'w', encoding='utf-8') as f:
             json.dump(dict(self.trades.__dict__), f)
 
     def restore_save(self, time: str) -> None: # to do v tvare
-        with open(f'saves/lands_{time}.json', 'r', encoding='utf-8') as f:
+        with open(f'server/saves/lands_{time}.json', 'r', encoding='utf-8') as f:
             self.all_lands = json.load(f)
-        with open(f'saves/trades_{time}.json', "r", encoding='utf-8') as f:
+        with open(f'server/saves/trades_{time}.json', "r", encoding='utf-8') as f:
             self.trades.__dict__ = json.load(f)
 
 
@@ -145,11 +145,17 @@ def place_trade(name):
 
 @app.route('/take_trade/<id>', methods=['POST'])
 def take_trade(id):
-    return game.trades.take_trade(int(id)), 200
+    result = game.trades.take_trade(int(id))
+    if result:
+        return '1', 200
+    return '0', 200
 
 @app.route('/was_trade_taken/<id>', methods=['POST'])
 def was_trade_taken(id):
-    return game.trades.is_sold(int(id)), 200
+    result = game.trades.is_sold(int(id))
+    if result:
+        return '1', 200
+    return '0', 200
 
 @app.route('/quicksave/admin', methods=['POST'])
 def quicksave():
