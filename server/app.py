@@ -139,6 +139,7 @@ def upgrade(name):
 
 @app.route('/place_trade/<name>', methods=['POST'])
 def place_trade(name):
+    print("taking trade")
     pos = request.json
     id = game.trades.place_trade(name, pos['type'], pos['item'], pos['count'], pos['cost'])
     return str(id), 200

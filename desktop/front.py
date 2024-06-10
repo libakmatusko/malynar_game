@@ -14,7 +14,7 @@ def get_angle_of_vectors(vectorA, vecotrB):
     return acos(cosalpha)
 
 
-def determine_area(point: tuple[int, int], middle: tuple[int, int]) -> int:
+def determine_area(point: tuple[int, int], middle: tuple[int, int]) -> float:
     vectorA = (point[0] - middle[0], point[1] - middle[1])
     vectorB = (1, 0)
 
@@ -314,42 +314,52 @@ class Front:
                 break
         if not exists:
             # e-ee
+            print("eeee")
             return
         if trade["count"].isnumeric():
             trade["count"] = int(trade["count"])
             if trade["count"] < 0:
                 # e-ee
+                print("eeee")
                 return
         else:
             # e-ee
+            print("eeee")
             return
         if trade["cost"].isnumeric():
             trade["cost"] = int(trade["cost"])
             if trade["cost"] < 0:
                 # e-ee
+                print("eeee")
                 return
         else:
             # e-ee
+            print("eeee")
             return
         
         if not self.make_trade_objects["direction"]:
             if self.actions.inventory["money"] < trade["cost"]:
                 # e-ee
+                print("eeee")
                 return
         else:
             if self.actions.inventory[trade["item"]] < trade["count"]:
                 # e-ee
+                print("eeee")
                 return
         
         self.actions.place_trade(int(not self.make_trade_objects["direction"]), trade["item"], trade["count"], trade["cost"])
 
         # cink
+        print("cink")
 
     def buy(self, id):
         if self.actions.take_trade(id):
             pass # cink
+            print('cink')
         else:
             pass # e-eee
+            print('eeee')
 
     def create_army_window(self):
         pass
