@@ -3,6 +3,7 @@ import requests
 import front
 import json
 import os
+from copy import copy
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
 class actions:
@@ -264,7 +265,8 @@ class actions:
         return False
     
     def check_my_trades(self):
-        for id in self.placed_trades.keys():
+        ids = copy(self.placed_trades).keys()
+        for id in ids:
             response = requests.post(f'{SERVER_IP}/was_trade_taken/{id}')
             if response[0]:
                 if self.placed_trades[id]['type'] == 0:
@@ -348,6 +350,7 @@ class actions:
 
 
     def possible_actions(self, pos):# bude vracat zoznam staus{info{coho: kolko/ako}, actions[co, za kolko]}
+        print(pos)
         actions = []
         info = {}
 

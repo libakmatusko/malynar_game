@@ -93,6 +93,9 @@ class Front:
         self.make_trade_window = None
         self.make_trade_objects = {}
 
+        # building
+        self.build_window = None
+
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
 
@@ -102,7 +105,7 @@ class Front:
 
         distance_from_middle = vector_size((mid_x - event.x, mid_y - event.y))
         hexagon_size = (self.map_canvas_size["y"] / self.zoom) * 0.7
-        mid_shift_size = ((self.zoom_strength / self.zoom) * distance_from_middle) // hexagon_size
+        mid_shift_size = int(((self.zoom_strength / self.zoom) * distance_from_middle) // hexagon_size)
 
         mid_shift_directions = {0: (-1, 0), 1: (0, -1), 2: (1, -1), 3: (1, 0), 4: (0, 1), 5: (-1, 1)}
 
@@ -150,6 +153,7 @@ class Front:
                 self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
             self.selected_pos = id
             map_cords = self.tkinter_to_map_cords[id[1]]
+            print(map_cords)
 
             self.clicked_hexagons.append(map_cords)  # na test zoomovania
 
@@ -350,6 +354,14 @@ class Front:
     def create_army_window(self):
         pass
 
+    def create_build_window(self):
+        if self.build_window:
+            try:
+                self.build_window.destroy()
+            except tk.TclError:
+                pass
+        self.build_window = tk.Tk()
+
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
         self.buttons = []
@@ -371,6 +383,9 @@ class Front:
         for i, item in enumerate(inv.keys()):
             self.menu_canvas.create_text(x/2, ceiling+i*20+10, text=f'{item} : {inv[item]}')
 
+        if True: # TODO eventualne check ci sa tu da stavat
+            tk.Button(text="Stavať", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)).\
+                place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
         tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)).\
             place(rely=0.76, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
         tk.Button(text="Obchodovanie", command=self.create_trade_window, borderwidth=4, font=("smili", self.font_size)).\
