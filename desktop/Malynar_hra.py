@@ -348,7 +348,6 @@ class actions:
 
 
     def possible_actions(self, pos):# bude vracat zoznam staus{info{coho: kolko/ako}, actions[co, za kolko]}
-        print(pos)
         actions = []
         info = {}
 
@@ -432,8 +431,8 @@ def conect():
         elif response.status_code == 200:
             player = actions(response.json()['name'], response.json()['starting_pos'])
     except: #ked testujeme ofline
-        player = actions('Skuska', [30, -30], debug=True)
-        player.all_lands[player.to_pos_string(30, -30)] = {
+        player = actions('Skuska', [0, 0], debug=True)
+        player.all_lands[player.to_pos_string(0, 0)] = {
             'name': 'base',
             'player': player.name,
             'level': 1

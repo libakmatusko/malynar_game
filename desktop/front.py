@@ -372,6 +372,62 @@ class Front:
                 pass
         self.build_window = tk.Tk()
 
+        # map_cords = self.tkinter_to_map_cords[self.selected_pos[1]]
+        # self.status = self.actions.possible_actions(list(map_cords))
+
+        # [['Postav road', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('road', [-1, 1])), {'stone': 1, 'wood': 1}], ['Postav berry picker', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('berry picker', [-1, 1])), {'people': 1, 'wood': 1, 'stone': 1}]]
+
+        for i, building in enumerate(self.actions.buildings.keys()):
+            cost_text = ""
+            for material in self.actions.buildings[building]["cost"][0].keys():
+                cost_text += f'{self.actions.buildings[building]["cost"][0][material]} {material}, '
+            cost_text = cost_text[:-2]
+
+            requirement_text = self.actions.buildings[building]["requrement"]
+            if not requirement_text:
+                requirement_text = "Môže byť kdekoľvek"
+            else:
+                requirement_text = "Musí byť pri: " + requirement_text
+
+            if self.actions.buildings[building]["generating"]:
+                input_text = ""
+                for material in self.actions.buildings[building]["input"][0].keys():
+                    input_text += f'{self.actions.buildings[building]["input"][0][material]} {material}, '
+                if input_text:
+                    input_text = output_text[:-2]
+                else:
+                    input_text = "Z ničoho"
+
+                output_text = ""
+                for material in self.actions.buildings[building]["output"][0].keys():
+                    output_text += f'{self.actions.buildings[building]["output"][0][material]} {material}, '
+                if output_text:
+                    output_text = output_text[:-2]
+                else:
+                    output_text = "-"
+                
+                time_text = f"{self.actions.buildings[building]['ticks per item'][0]} ⌛"
+            else:
+                input_text = "-"
+                output_text = "-"
+                time_text = "0 ⌛"
+            
+
+            tk.Label(self.build_window, text=building, width=25, font=("smili", self.font_size)).grid(row=2 * i, column=0)
+            tk.Label(self.build_window, text=cost_text, width=45, font=("smili", int(self.font_size * 0.7))).grid(row=2 * i, column=1)
+            tk.Label(self.build_window, text=requirement_text, width=25, font=("smili", self.font_size)).grid(row=2 * i, column=2)
+            button = tk.Button(self.build_window, text="✔", bg="green2", width=15, font=("smili", self.font_size))
+            button.grid(row=2 * i, column=3)
+
+            tk.Label(self.build_window, text=input_text, width=25, font=("smili", self.font_size)).grid(row=2 * i + 1, column=0)
+            tk.Label(self.build_window, text="------->", font=("smili", self.font_size * 2)).grid(row=2 * i + 1, column=1)
+            tk.Label(self.build_window, text=output_text, width=25, font=("smili", self.font_size)).grid(row=2 * i + 1, column=2)
+            tk.Label(self.build_window, text=time_text, width=15, font=("smili", self.font_size)).grid(row=2 * i + 1, column=3)
+
+
+
+
+
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
         self.buttons = []
@@ -388,10 +444,12 @@ class Front:
         for action in self.status['actions']:
             ceiling += self.draw_button(action, ceiling)
         
+        '''
         inv = self.actions.inventory
         self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(inv)*20, fill='yellow')
         for i, item in enumerate(inv.keys()):
             self.menu_canvas.create_text(x/2, ceiling+i*20+10, text=f'{item} : {inv[item]}')
+        '''
 
         if True: # TODO eventualne check ci sa tu da stavat
             tk.Button(text="Stavať", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)).\
