@@ -464,7 +464,6 @@ class Front:
                 input_text = "-"
                 output_text = "-"
                 time_text = "0 ⌛"
-            
 
             self.disposable_build_labels.append(tk.Label(self.build_window, text=building, width=25, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i, column=0)
@@ -489,6 +488,9 @@ class Front:
 
             self.disposable_build_labels.append(tk.Label(self.build_window, text=f"{self.build_page_number + 1} / {ceil(len(self.actions.buildings) / 7)}", width=25, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=15, column=1)
+
+    def build_confirm_menu(self):
+        pass
 
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
