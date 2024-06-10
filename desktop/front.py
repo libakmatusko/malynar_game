@@ -62,6 +62,7 @@ class Front:
         self.zoom = 30 # describes how many rows of tiles will be displayed
         self.zoom_strength = 3
         self.selected_pos = []
+        self.map_cords = []
         self.status = {}
 
         self.map_canvas.bind("<MouseWheel>", self.scroll_response)
@@ -95,6 +96,8 @@ class Front:
 
         # building
         self.build_window = None
+        self.build_page_number = 0
+        self.disposable_build_labels = []
 
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
@@ -148,11 +151,13 @@ class Front:
         if self.selected_pos == id:
             self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
             self.selected_pos = []
+            self.map_cords = []
         else:
             if self.selected_pos != []:
                 self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
             self.selected_pos = id
             map_cords = self.tkinter_to_map_cords[id[1]]
+            self.map_cords = [map_cords[0], map_cords[1]]
             print(map_cords)
 
             self.clicked_hexagons.append(map_cords)  # na test zoomovania
@@ -162,6 +167,13 @@ class Front:
             # tu pride daco co bude zo statusu pisat veci na sidebar
             # self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
             self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
+
+        if self.build_window:
+            try:
+                self.build_window.destroy()
+            except tk.TclError:
+                pass
+
         self.update()
     
     def create_inventory_window(self):
@@ -233,6 +245,8 @@ class Front:
                 label.destroy()
             except tk.TclError:
                 pass
+
+        self.disposable_trade_labels = []
 
         trades = list(reversed(sorted(list(self.actions.trades))))
         for i, id in enumerate(trades[self.trade_page_number * 10:]):
@@ -354,6 +368,11 @@ class Front:
     def create_army_window(self):
         pass
 
+    def change_build_page(self, value):
+        self.build_page_number += value
+        self.build_page_number %= ceil(len(self.actions.buildings) / 7)
+        self.fill_build_window()
+
     def create_build_window(self):
         if self.build_window:
             try:
@@ -366,11 +385,43 @@ class Front:
         # self.status = self.actions.possible_actions(list(map_cords))
 
         # [['Postav road', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('road', [-1, 1])), {'stone': 1, 'wood': 1}], ['Postav berry picker', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('berry picker', [-1, 1])), {'people': 1, 'wood': 1, 'stone': 1}]]
+        
+        tk.Button(self.build_window, text="<-", width=30, command=lambda: self.change_build_page(-1), font=("smili", self.font_size)).grid(row=15, column=0)
+        tk.Button(self.build_window, text="->", width=30, command=lambda: self.change_build_page(1), font=("smili", self.font_size)).grid(row=15, column=2)
+        self.fill_build_window()
 
-        for i, building in enumerate(self.actions.buildings.keys()):
+    def fill_build_window(self):
+        if self.build_window is None:
+            return
+        try:
+            self.build_window.winfo_exists()
+        except tk.TclError:
+            return
+
+        while self.build_page_number > len(self.actions.buildings) * 7:
+            self.build_page_number -= 1
+
+        for label in self.disposable_build_labels:
+            try:
+                label.destroy()
+            except tk.TclError:
+                pass
+
+        self.disposable_build_labels = []
+
+        resources = self.actions.find_resources(self.map_cords)
+
+        for i, building in enumerate(list(self.actions.buildings.keys())[self.build_page_number * 7:]):
+            if i >= 7:
+                break
+
+            is_buildable = True
+
             cost_text = ""
             for material in self.actions.buildings[building]["cost"][0].keys():
                 cost_text += f'{self.actions.buildings[building]["cost"][0][material]} {material}, '
+                if self.actions.inventory[material] < self.actions.buildings[building]["cost"][0][material]:
+                    is_buildable = False
             cost_text = cost_text[:-2]
 
             requirement_text = self.actions.buildings[building]["requrement"]
@@ -378,6 +429,8 @@ class Front:
                 requirement_text = "Môže byť kdekoľvek"
             else:
                 requirement_text = "Musí byť pri: " + requirement_text
+                if self.actions.buildings[building]["requrement"] not in resources:
+                    is_buildable = False
 
             if self.actions.buildings[building]["generating"]:
                 input_text = ""
@@ -403,20 +456,29 @@ class Front:
                 time_text = "0 ⌛"
             
 
-            tk.Label(self.build_window, text=building, width=25, font=("smili", self.font_size)).grid(row=2 * i, column=0)
-            tk.Label(self.build_window, text=cost_text, width=45, font=("smili", int(self.font_size * 0.7))).grid(row=2 * i, column=1)
-            tk.Label(self.build_window, text=requirement_text, width=25, font=("smili", self.font_size)).grid(row=2 * i, column=2)
-            button = tk.Button(self.build_window, text="✔", bg="green2", width=15, font=("smili", self.font_size))
-            button.grid(row=2 * i, column=3)
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=building, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=2 * i, column=0)
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=cost_text, width=45, font=("smili", int(self.font_size * 0.7))))
+            self.disposable_build_labels[-1].grid(row=2 * i, column=1)
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=requirement_text, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=2 * i, column=2)
+            self.disposable_build_labels.append(tk.Button(self.build_window, text="✔", bg="green2", width=15, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=2 * i, column=3)
 
-            tk.Label(self.build_window, text=input_text, width=25, font=("smili", self.font_size)).grid(row=2 * i + 1, column=0)
-            tk.Label(self.build_window, text="------->", font=("smili", self.font_size * 2)).grid(row=2 * i + 1, column=1)
-            tk.Label(self.build_window, text=output_text, width=25, font=("smili", self.font_size)).grid(row=2 * i + 1, column=2)
-            tk.Label(self.build_window, text=time_text, width=15, font=("smili", self.font_size)).grid(row=2 * i + 1, column=3)
+            if not is_buildable:
+                self.disposable_build_labels[-1].config(bg="grey", state="disabled")
 
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=input_text, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=2 * i + 1, column=0)
+            self.disposable_build_labels.append(tk.Label(self.build_window, text="------->", font=("smili", self.font_size * 2)))
+            self.disposable_build_labels[-1].grid(row=2 * i + 1, column=1)
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=output_text, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=2 * i + 1, column=2)
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=time_text, width=15, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=2 * i + 1, column=3)
 
-
-
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=f"{self.build_page_number + 1} / {ceil(len(self.actions.buildings) / 7)}", width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels[-1].grid(row=15, column=1)
 
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')

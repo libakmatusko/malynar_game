@@ -109,6 +109,7 @@ class actions:
         self.front.update_inventory_window()
         self.front.show_trades()
         self.check_my_trades()
+        self.front.fill_build_window()
     
     def server_build(self, pos: list[int], building: str):
         if self.debug:
