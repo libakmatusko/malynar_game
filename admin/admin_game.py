@@ -3,7 +3,7 @@ import json
 import os
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
-all_items: list[str] = ['jablko']
+all_items: list[str] = ['berries', 'iron']
 should_save = False
 
 def start_game():
@@ -42,8 +42,8 @@ def write_trades_to_file():
                 f'{SERVER_IP}/update/admin',
             ).json()
     
-    with open("all_trades.json", "w", encoding='utf-8') as f:
-        f.write(response['trades'])
+    with open("admin/all_trades.json", "w", encoding='utf-8') as f:
+        json.dump(response['trades'], f)
 
 def save_server():
     response = requests.post(
