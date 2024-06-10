@@ -8,21 +8,22 @@ MAP_RADIUS = 30
 def vector_size(vector):
     return (vector[0]**2 + vector[1]**2)**0.5
 
+
 def get_angle_of_vectors(vectorA, vecotrB):
     cosalpha = (vectorA[0]*vecotrB[0] + vectorA[1]*vecotrB[1])/(vector_size(vectorA) * vector_size(vecotrB))
     return acos(cosalpha)
+
 
 def determine_area(point: tuple[int, int], middle: tuple[int, int]) -> int:
     vectorA = (point[0] - middle[0], point[1] - middle[1])
     vectorB = (1, 0)
 
     angle = degrees(get_angle_of_vectors(vectorA, vectorB))
-    print(angle)
     if not point[1] >= middle[1]:
         return angle // 60
     else:
         return 5 - (angle // 60)
-
+    
 
 def remove_diacritics(input_str):
     normalized_str = unicodedata.normalize('NFKD', input_str)
@@ -58,11 +59,17 @@ class Front:
         self.menu_canvas = tk.Canvas(self.window, bg="grey")
         self.menu_canvas.place(y=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=1)
 
-        self.zoom = 60 # describes how many rows of tiles will be displayed
+        self.zoom = 30 # describes how many rows of tiles will be displayed
+        self.zoom_strength = 3
         self.selected_pos = []
         self.status = {}
 
         self.map_canvas.bind("<MouseWheel>", self.scroll_response)
+        self.window.bind_all("<Left>", lambda event: self.arrow_click("left"))
+        self.window.bind_all("<Right>", lambda event: self.arrow_click("right"))
+        self.window.bind_all("<Up>", lambda event: self.arrow_click("up"))
+        self.window.bind_all("<Down>", lambda event: self.arrow_click("down"))
+        self.last_move_up_was_right = True
         # matus sprta to kodu
         self.map_canvas.bind('<Button-1>', self.select_hex)
         self.menu_canvas.bind('<Button-1>', self.menu_click)
@@ -72,6 +79,7 @@ class Front:
 
         self.center_hexagon_cords = {"x": 0, "y": 0} # defining on which hexagon the map is centered
 
+        self.clicked_hexagons = []  # na test zoomovania
         self.draw_map()
 
         # inventory
@@ -85,18 +93,50 @@ class Front:
         self.make_trade_window = None
         self.make_trade_objects = {}
 
-
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
 
     def scroll_response(self, event):
+        mid_x = self.map_canvas_size["x"] / 2
+        mid_y = self.map_canvas_size["y"] / 2
+
+        distance_from_middle = vector_size((mid_x - event.x, mid_y - event.y))
+        hexagon_size = (self.map_canvas_size["y"] / self.zoom) * 0.7
+        mid_shift_size = ((self.zoom_strength / self.zoom) * distance_from_middle) // hexagon_size
+
+        mid_shift_directions = {0: (-1, 0), 1: (0, -1), 2: (1, -1), 3: (1, 0), 4: (0, 1), 5: (-1, 1)}
+
         if event.num == 5 or event.delta == -120:
-            self.zoom += 1
+            self.zoom += self.zoom_strength
+            mid_shift_size *= -1
         if event.num == 4 or event.delta == 120:
             if self.zoom > 1:
-                self.zoom -= 1
+                self.zoom -= self.zoom_strength
+
+        direction = mid_shift_directions[int(determine_area((event.x, event.y), (mid_x, mid_y)))]
+        self.center_hexagon_cords["x"] -= direction[0] * mid_shift_size
+        self.center_hexagon_cords["y"] -= direction[1] * mid_shift_size
+
         self.polygons = []
         self.selected_pos = []
+        self.draw_map()
+        self.zoom_strength = self.zoom // 15 + 1
+
+    def arrow_click(self, arrow):
+        if arrow == "left":
+            self.center_hexagon_cords["x"] -= 1
+        elif arrow == "right":
+            self.center_hexagon_cords["x"] += 1
+        elif arrow == "up":
+            self.center_hexagon_cords["y"] += 1
+            if self.last_move_up_was_right:
+                self.center_hexagon_cords["x"] -= 1
+            self.last_move_up_was_right = not self.last_move_up_was_right
+        elif arrow == "down":
+            self.center_hexagon_cords["y"] -= 1
+            if self.last_move_up_was_right:
+                self.center_hexagon_cords["x"] += 1
+            self.last_move_up_was_right = not self.last_move_up_was_right
         self.draw_map()
     
     # matus sprta to kodu
@@ -110,11 +150,13 @@ class Front:
                 self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
             self.selected_pos = id
             map_cords = self.tkinter_to_map_cords[id[1]]
+
+            self.clicked_hexagons.append(map_cords)  # na test zoomovania
+
             self.status = self.actions.possible_actions(list(map_cords))
-            print(map_cords)
             self.draw_menu()
             # tu pride daco co bude zo statusu pisat veci na sidebar
-            self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
+            # self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
             self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
         self.update()
     
@@ -374,16 +416,21 @@ class Front:
                 center_pos_x = (((3) ** 0.5) / 2) * side_length * 2
 
             for column in range(num_of_columns):
-                self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length)
-
                 # calculating where the hexagon is in map coordinates
                 y_cord_difference = center_piece_row - row
                 x_cord_difference = column - center_piece_column - (y_cord_difference // 2)
 
                 self.tkinter_to_map_cords[(center_pos_x, center_pos_y)] = (self.center_hexagon_cords["x"] + x_cord_difference, self.center_hexagon_cords["y"] + y_cord_difference)
+
+                color = "red"
+                if self.tkinter_to_map_cords[(center_pos_x, center_pos_y)] in self.clicked_hexagons:
+                    color = "blue"
+
+                self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color)
+
                 center_pos_x += (((3) ** 0.5) / 2) * side_length * 2
-    
-    def draw_hexagon(self, x, y, side_length):
+
+    def draw_hexagon(self, x, y, side_length, color="red"):
         x_shift = (((3) ** 0.5) / 2) * side_length
         y_shift = side_length / 2
         self.polygons.append((self.map_canvas.create_polygon(
@@ -393,7 +440,7 @@ class Front:
             x, y - side_length,
             x + x_shift, y - y_shift,
             x + x_shift, y + y_shift,
-            fill="red"
+            fill=color
         ), (x, y)))
 
 
