@@ -60,8 +60,6 @@ class actions:
         self.front.update()
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file)
-        
-
 
     def tick(self):
         self.tick_counter += 1
@@ -234,14 +232,14 @@ class actions:
             }
         )
         if response.status_code == 200:
-            self.placed_trades[int(response[0])] = {
+            self.placed_trades[int(response.text)] = {
                 'owner': self.name,
                 'type': type,
                 'item': item,
                 'count': count,
                 'cost': cost
             }
-            return int(response[0])      # id of placed trade
+            return int(response.text)      # id of placed trade
         print("unable to place trade on server")
     
     def take_trade(self, id):
@@ -253,7 +251,7 @@ class actions:
                 return False
 
         response = requests.post(f'{SERVER_IP}/take_trade/{id}')
-        if response.status_code == 200 and response[0]:
+        if response.status_code == 200 and response.text == "1":
             if self.trades[id]["type"] == 0:
                 self.inventory['money'] += self.trades[id]['cost']
                 self.inventory[self.trades[id]['item']] -= self.trades[id]['count']
@@ -266,7 +264,7 @@ class actions:
     def check_my_trades(self):
         for id in self.placed_trades.keys():
             response = requests.post(f'{SERVER_IP}/was_trade_taken/{id}')
-            if response[0]:
+            if response.text == "1":
                 if self.placed_trades[id]['type'] == 0:
                     self.inventory[self.placed_trades[id]['item']] += self.placed_trades[id]['count']
                 else:
