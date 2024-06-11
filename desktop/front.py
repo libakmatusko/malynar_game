@@ -549,6 +549,7 @@ class Front:
             self.actions.frontend_update()
             self.build_confirm_window.destroy()
             self.build_window.destroy()
+            self.draw_menu()
             # zvuky stavby
         else:
             pass # e-ee
@@ -561,6 +562,8 @@ class Front:
                 i.destroy()
             except tk.TclError:
                 pass
+
+        self.status = self.actions.possible_actions(list(self.map_cords))
         
         
         self.buttons = []
@@ -599,8 +602,12 @@ class Front:
             self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
 
         elif infos["name"] in list(self.actions.buildings.keys()):
-            self.disposable_menu_buttons.append(tk.Button(text="Vylepšiť", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)))
-            self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"] / 2, relheight=0.08)
+            if infos["level"] < len(self.actions.buildings[infos["name"]]["cost"]):
+                self.disposable_menu_buttons.append(tk.Button(text="Vylepšiť", command=lambda: print("vylepsujem"), borderwidth=4, font=("smili", self.font_size)))
+                self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"] / 2, relheight=0.08)
+            else:
+                self.disposable_menu_buttons.append(tk.Button(text="MAX level", state="disabled", borderwidth=4, font=("smili", self.font_size)))
+                self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"] / 2, relheight=0.08)
 
             if infos['is_sleeping']:
                 self.disposable_menu_buttons.append(tk.Button(text="Zobuď", command=lambda: self.actions.wake_up(self.map_cords), borderwidth=4, font=("smili", self.font_size)))

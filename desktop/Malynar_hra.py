@@ -180,7 +180,8 @@ class actions:
                     'name': build,
                     'position': pos,
                     'generating': building['generating'],
-                    'points': 1
+                    'points': 1,
+                    'is_sleeping': False
                 }
             )
         self.all_lands[self.to_pos_string(*pos)] = {
@@ -298,6 +299,7 @@ class actions:
                 my_land.update(
                     {'is_sleeping': True}
                 )
+                self.front.draw_menu()
                 break
 
 
@@ -307,6 +309,7 @@ class actions:
                 my_land.update(
                     {'is_sleeping': False}
                 )
+                self.front.draw_menu()
                 break
 
 
