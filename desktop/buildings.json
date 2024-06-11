@@ -42,6 +42,35 @@
             "color": "purple"
         }
     },
+    "farmer":{
+        "requrement":"field",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":10,
+                "stone":5
+            }
+        ],
+        "ticks per item":[3, 1],
+        "input": [
+            {},
+            {}
+        ],
+        "output": [
+            {"food":1},
+            {"food":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "magenta"
+        }
+    },
     "mine":{
         "requrement":"mountain",
         "generating": true,
