@@ -332,38 +332,38 @@ class Front:
                 break
         if not exists:
             # e-ee
-            print("eeee")
+            print("eeee1")
             return
         if trade["count"].isnumeric():
             trade["count"] = int(trade["count"])
             if trade["count"] < 0:
                 # e-ee
-                print("eeee")
+                print("eeee2")
                 return
         else:
             # e-ee
-            print("eeee")
+            print("eeee3")
             return
         if trade["cost"].isnumeric():
             trade["cost"] = int(trade["cost"])
             if trade["cost"] < 0:
                 # e-ee
-                print("eeee")
+                print("eeee4")
                 return
         else:
             # e-ee
-            print("eeee")
+            print("eeee5")
             return
         
-        if not self.make_trade_objects["direction"]:
+        if self.make_trade_objects["direction"]:
             if self.actions.inventory["money"] < trade["cost"]:
                 # e-ee
-                print("eeee")
+                print("eeee6")
                 return
         else:
             if self.actions.inventory[trade["item"]] < trade["count"]:
                 # e-ee
-                print("eeee")
+                print("eeee7")
                 return
         
         self.actions.place_trade(int(not self.make_trade_objects["direction"]), trade["item"], trade["count"], trade["cost"])
