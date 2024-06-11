@@ -71,6 +71,8 @@ class actions:
 
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file)
+        
+        self.used_codes = set()
 
         self.front = front.Front(self)
         self.front.update()
@@ -319,6 +321,22 @@ class actions:
         
         self.army[name]["count"] += 1
         return True
+    
+    def fight_monster(self):
+        pass
+
+    def is_ok_code(self, item, code):
+        if code in self.used_codes:
+            return False
+
+        modula = [317, 179, 263, 293]
+        num = int(code[len(item):])
+
+        for mod in modula:
+            if num % mod == 0:
+                self.used_codes.add(code)
+                return True
+        return False
 
     def sleep(self, pos: list[int]):
         for my_land in self.my_lands:

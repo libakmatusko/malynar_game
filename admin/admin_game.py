@@ -1,7 +1,10 @@
 import requests
 import json
 import os
+import random
+
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
+
 
 all_items: list[str] = ['berries', 'iron']
 should_save = False
@@ -63,8 +66,35 @@ def load_server(time):
     else:
         print('server load failed')
 
+def create_codes(name, count):
+    result = []
+    modula = [317, 179, 263, 293]
+    for i in range(count):
+        modulo = random.choice(modula)
+        num = str(modulo * random.randrange(3,10))
+        if len(num) == 3:
+            num = '0' + num
+        result.append(f'{name}{num}')
+    print(result)
+    return result
+
+def is_ok_code(item, code):
+    used_codes = set() #dakde vyssie v kode
+    if code in used_codes:
+        return False
+
+    modula = [317, 179, 263, 293]
+    num = int(code[len(item):])
+    print(num)
+    for mod in modula:
+        if num % mod == 0:
+            used_codes.add(code)
+            return True
+        
+    return False
+
 while True:
-    task = input("Zadaj akciu (start, add_trade, take_trade, all_trades, start_saves, load_server)\n")
+    task = input("Zadaj akciu (start, add_trade, take_trade, all_trades, start_saves, load_server, create_codes, check_code)\n")
 
     if task == 'start':
         start_game()
@@ -101,6 +131,16 @@ while True:
     if task == 'load_server':
         time = input("enter time-stamp of save-file\n")
         load_server(time)
+    
+    if task == 'create_codes':
+        name = input('name of item\n')
+        n = input('number of codes\n')
+        create_codes(name, int(n))
+    
+    if task == 'check_code':
+        item = input('name of item\n')
+        code = input('enter code\n')
+        print(is_ok_code(item, code))
     
     if should_save:
         save_server()
