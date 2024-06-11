@@ -68,13 +68,16 @@ def load_server(time):
 
 def create_codes(name, count):
     result = []
+    used = set()
     modula = [317, 179, 263, 293]
-    for i in range(count):
+    while len(result) < count:
         modulo = random.choice(modula)
         num = str(modulo * random.randrange(3,10))
         if len(num) == 3:
             num = '0' + num
-        result.append(f'{name}{num}')
+        if (f'{name}{num}') not in used:
+            result.append(f'{name}{num}')
+            used.add(f'{name}{num}')
     print(result)
     return result
 
