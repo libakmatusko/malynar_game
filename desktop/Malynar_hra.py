@@ -20,7 +20,8 @@ class actions:
             "iron": 15,
             "berries": 2
         }
-        self.army = {}
+        with open('desktop/army.json', 'r', encoding='utf-8') as f:
+            self.army = json.load(f)
         self.trades = {}                # id : trade_info
         self.trades = {1: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
                        2: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
