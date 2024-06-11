@@ -165,7 +165,6 @@ class Front:
             self.selected_pos = id
             map_cords = self.tkinter_to_map_cords[id[1]]
             self.map_cords = [map_cords[0], map_cords[1]]
-            print(map_cords)
 
             self.clicked_hexagons.append(map_cords)  # na test zoomovania
 
@@ -392,8 +391,7 @@ class Front:
         self.army_building_win = tk.Tk()
         self.update_create_army_window()
         self.army_building_win.title("Armáda")
-        
-            
+         
     def update_create_army_window(self):
         if self.army_building_win:
             try:
@@ -568,7 +566,6 @@ class Front:
         self.buttons = []
         x = self.menu_canvas_size['x']
         y = self.menu_canvas_size['y']
-        print(self.status)
 
         infos = self.status['info']
         self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(infos)*20, fill='yellow')
@@ -600,6 +597,17 @@ class Front:
         if self.map_cords in self.actions.available_lands: # TODO check ci sa tu da stavat
             self.disposable_menu_buttons.append(tk.Button(text="Stavať", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)))
             self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+
+        elif infos["name"] in list(self.actions.buildings.keys()):
+            self.disposable_menu_buttons.append(tk.Button(text="Vylepšiť", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)))
+            self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"] / 2, relheight=0.08)
+
+            if infos['is_sleeping']:
+                self.disposable_menu_buttons.append(tk.Button(text="Zobuď", command=lambda: self.actions.wake_up(self.map_cords), borderwidth=4, font=("smili", self.font_size)))
+            else:
+                self.disposable_menu_buttons.append(tk.Button(text="Uspať", command=lambda: self.actions.sleep(self.map_cords), borderwidth=4, font=("smili", self.font_size)))
+            self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"] + self.menu_canvas_size["x"] / 2, width=self.menu_canvas_size["x"] / 2, relheight=0.08)
+
         self.disposable_menu_buttons.append(tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)))
         self.disposable_menu_buttons[-1].place(rely=0.76, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
         self.disposable_menu_buttons.append(tk.Button(text="Obchodovanie", command=self.create_trade_window, borderwidth=4, font=("smili", self.font_size)))
@@ -615,11 +623,11 @@ class Front:
 
     def menu_click(self, event):
         button = min(self.buttons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
-        print(button[2][1])
+        # print(button[2][1])
         button[2][1][0](*button[2][1][1])
         map_cords = self.tkinter_to_map_cords[self.selected_pos[1]]
         self.status = self.actions.possible_actions(list(map_cords))
-        print(self.status)
+        # print(self.status)
         self.draw_menu()
 
     def menu_scroll(self, event):

@@ -45,7 +45,8 @@ class actions:
                 'generating': False,
                 'input': {},
                 'output': {'people': 1},
-                'points': 0
+                'points': 0,
+                'is_sleeping': False
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
         self.all_lands = {}
@@ -78,12 +79,13 @@ class actions:
         for land in self.my_lands:
             if land['name'] != 'road':
                 if land['generating']:
-                    if land['time to generation'] == 1:
-                        land['time to generation'] = land['ticks per item']
-                        land['generating'] = False
-                        self.generate(land['output'])
-                    else:
-                        land['time to generation'] -= 1
+                    if not land["is_sleeping"]:
+                        if land['time to generation'] == 1:
+                            land['time to generation'] = land['ticks per item']
+                            land['generating'] = False
+                            self.generate(land['output'])
+                        else:
+                            land['time to generation'] -= 1
                 elif land.get('input') == None or len(land.get('input')):
                     pass
                 else:
@@ -168,7 +170,8 @@ class actions:
                     'generating': building['generating'],
                     'input': building['input'][0],
                     'output': building['output'][0],
-                    'points': 1
+                    'points': 1,
+                    'is_sleeping': False
                 }
             )
         else:
@@ -293,7 +296,7 @@ class actions:
         for my_land in self.my_lands:
             if my_land['position'] == pos:
                 my_land.update(
-                    {'input': dict(zip(my_land['input'].keys(), [key+1000000 for key in my_land['input'].keys()]))}
+                    {'is_sleeping': True}
                 )
                 break
 
@@ -302,7 +305,7 @@ class actions:
         for my_land in self.my_lands:
             if my_land['position'] == pos:
                 my_land.update(
-                    {'input': dict(zip(my_land['input'].keys(), [key-1000000 for key in my_land['input'].keys()]))}
+                    {'is_sleeping': False}
                 )
                 break
 
@@ -379,7 +382,7 @@ class actions:
                     info.update(my_land)
                     land_input = my_land.get('input')
                     if land_input and len(land_input) != 0:
-                        if my_land['input'][my_land['input'].keys()[0]] > 10**6:
+                        if my_land['is_sleeping']:
                             actions.append(['Zobud', lambda: self.wake_up(pos), {}])
                         else:
                             actions.append(['Uspi', lambda: self.sleep(pos), {}])
