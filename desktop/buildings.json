@@ -55,16 +55,24 @@
                 "people":3,
                 "wood":10,
                 "stone":5
+            },
+            {
+                "people":10,
+                "wood":20,
+                "stone":50
             }
         ],
-        "ticks per item":[3, 1],
+        "ticks per item":[3, 1, 1],
         "input": [
+            {},
             {},
             {}
         ],
         "output": [
             {"food":1},
-            {"food":1}
+            {"food":1},
+            {"food":3, "leather":3}
+
         ],
         "design": {
             "shape": "triangle",
