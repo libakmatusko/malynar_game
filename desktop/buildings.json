@@ -147,20 +147,64 @@
                 "people":2,
                 "stone":15,
                 "wood":5
+            },
+            {
+                "people":5,
+                "iron":10,
+                "wood":5
             }
         ],
-        "ticks per item":[10, 8],
+        "ticks per item":[10, 8, 12],
         "input": [
             {"coal":4, "raw iron":1},
-            {"coal":3, "raw iron":1}
+            {"coal":3, "raw iron":1},
+            {"coal":5, "raw iron":3}
         ],
         "output": [
             {"iron":1},
-            {"iron":1}
+            {"iron":1},
+            {"steel":1}
         ],
         "design": {
             "shape": "square",
             "color": "grey2"
+        }
+    },
+    "toolsmith":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":3,
+                "wood":2
+            },
+            {
+                "people":1,
+                "stone":10,
+                "wood":5
+            },
+            {
+                "people":1,
+                "stone":5,
+                "wood":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[20, 20, 30],
+        "input": [
+            {"wood":2, "iron":1},
+            {"wood":3, "iron":2},
+            {"wood":3, "steel":1}
+        ],
+        "output": [
+            {"iron tool":1},
+            {"iron tool":1},
+            {"steel tool":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey4"
         }
     },
     "lumberjack":{
