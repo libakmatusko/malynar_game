@@ -310,12 +310,8 @@ class actions:
         if name not in self.army.keys():
             return False
         
-        for item, count in self.army[name]["recipe"].items():
-            if self.inventory[item] < count:
-                return False
-        
-        for item, count in self.army[name]["recipe"].items():
-            self.inventory[item] -= count
+        if not self.take_from_inventory(self.army[name]['recipe']):
+            return False
         
         self.army[name]["count"] += 1
         return True

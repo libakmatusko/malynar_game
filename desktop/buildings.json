@@ -92,14 +92,14 @@
                 "wood":5
             }
         ],
-        "ticks per item":[5, 3],
+        "ticks per item":[5, 5],
         "input": [
             {},
             {}
         ],
         "output": [
             {"stone":1},
-            {"stone":1}
+            {"stone":2, "coal":1}
         ],
         "design": {
             "shape": "square",
