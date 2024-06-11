@@ -328,7 +328,7 @@ class actions:
     def fight_monster(self):
         pass
 
-    def is_ok_code(self, item, code):
+    def is_ok_code(self, item, code): # name of item, code (iron1234)
         if code in self.used_codes:
             return False
 
