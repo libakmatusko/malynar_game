@@ -98,6 +98,10 @@ class Front:
         self.build_window = None
         self.build_page_number = 0
         self.disposable_build_labels = []
+        self.build_confirm_window = None
+
+        # menu
+        self.disposable_menu_buttons = []
 
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
@@ -471,7 +475,7 @@ class Front:
             self.disposable_build_labels[-1].grid(row=2 * i, column=1)
             self.disposable_build_labels.append(tk.Label(self.build_window, text=requirement_text, width=25, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i, column=2)
-            self.disposable_build_labels.append(tk.Button(self.build_window, text="✔", bg="green2", width=15, font=("smili", self.font_size)))
+            self.disposable_build_labels.append(tk.Button(self.build_window, text="✔", command=lambda x=building: self.build_confirm_menu(x), bg="green2", width=15, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i, column=3)
 
             if not is_buildable:
@@ -489,11 +493,39 @@ class Front:
             self.disposable_build_labels.append(tk.Label(self.build_window, text=f"{self.build_page_number + 1} / {ceil(len(self.actions.buildings) / 7)}", width=25, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=15, column=1)
 
-    def build_confirm_menu(self):
-        pass
+    def build_confirm_menu(self, building):
+        if self.build_confirm_window:
+            try:
+                self.build_confirm_window.destroy()
+            except tk.TclError:
+                pass
+        self.build_confirm_window = tk.Tk()
+
+        tk.Label(self.build_confirm_window, text=f"Zadaj kód pre: {building}", font=("smili", self.font_size), width=30).pack()
+        entry = tk.Entry(self.build_confirm_window, font=("smili", self.font_size), width=30)
+        entry.pack()
+        tk.Button(self.build_confirm_window, text="✔", command=lambda: self.verify_build_confirmation(building, entry.get()), bg="green2", width=30, font=("smili", self.font_size)).pack()
+
+    def verify_build_confirmation(self, building, code):
+        if True: # TODO verifikacia kodu eventualne
+            self.actions.build_new(building, self.map_cords)
+            self.actions.frontend_update()
+            self.build_confirm_window.destroy()
+            self.build_window.destroy()
+            # zvuky stavby
+        else:
+            pass # e-ee
 
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
+
+        for i in self.disposable_menu_buttons:
+            try:
+                i.destroy()
+            except tk.TclError:
+                pass
+        
+        
         self.buttons = []
         x = self.menu_canvas_size['x']
         y = self.menu_canvas_size['y']
@@ -507,6 +539,15 @@ class Front:
 
         for action in self.status['actions']:
             ceiling += self.draw_button(action, ceiling)
+
+        infos = self.status['info']
+        name = infos["name"]
+        if name not in ["land", "sea"]:
+            name += f": {infos['level']}"
+        
+        self.disposable_menu_buttons.append(tk.Label(text=name, bg="yellow", borderwidth=4, font=("smili", self.font_size * 2)))
+        self.disposable_menu_buttons[-1].place(rely=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.12)
+        
         
         '''
         inv = self.actions.inventory
@@ -515,15 +556,17 @@ class Front:
             self.menu_canvas.create_text(x/2, ceiling+i*20+10, text=f'{item} : {inv[item]}')
         '''
 
-        if True: # TODO eventualne check ci sa tu da stavat
-            tk.Button(text="Stavať", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)).\
-                place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
-        tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)).\
-            place(rely=0.76, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
-        tk.Button(text="Obchodovanie", command=self.create_trade_window, borderwidth=4, font=("smili", self.font_size)).\
-            place(rely=0.84, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
-        tk.Button(text="Inventár", command=self.create_inventory_window, borderwidth=4, font=("smili", self.font_size)).\
-            place(rely=0.92, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+
+
+        if self.map_cords in self.actions.available_lands: # TODO check ci sa tu da stavat
+            self.disposable_menu_buttons.append(tk.Button(text="Stavať", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)))
+            self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+        self.disposable_menu_buttons.append(tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)))
+        self.disposable_menu_buttons[-1].place(rely=0.76, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+        self.disposable_menu_buttons.append(tk.Button(text="Obchodovanie", command=self.create_trade_window, borderwidth=4, font=("smili", self.font_size)))
+        self.disposable_menu_buttons[-1].place(rely=0.84, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+        self.disposable_menu_buttons.append(tk.Button(text="Inventár", command=self.create_inventory_window, borderwidth=4, font=("smili", self.font_size)))
+        self.disposable_menu_buttons[-1].place(rely=0.92, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
 
     def draw_button(self, action, ceiling):# button = (id, (x, y), (action))
         self.buttons.append((self.menu_canvas.create_rectangle(0, ceiling, self.menu_canvas_size['x'], ceiling+30, fill='grey'), (self.menu_canvas_size['x']/2, ceiling+15), action))

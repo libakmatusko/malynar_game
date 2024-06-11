@@ -4,8 +4,6 @@ def fancify():
     minimapa
     timelapse na konci
 
-pretty zoom
-
 verifikacia stavania budov (povolovacie kody)
 
 armada a dobyjanie
@@ -16,5 +14,5 @@ zmenit typ ID
 change inentory change event
 
 
-nahrat yvuk pos/neg trade
+nahrat zvuk pos/neg trade
 
