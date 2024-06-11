@@ -13,7 +13,7 @@ class actions:
         self.name = name
         self.tick_counter = -1
         self.inventory = {
-            'people': 0,
+            'people': 5,
             'stone': 10,
             'wood': 10,
             'money': 0,
@@ -133,6 +133,9 @@ class actions:
     
 
     def server_upgrade(self, pos: list[int]):
+        if self.debug:
+            print('Neupdatujem')
+            return True
         response = requests.post(
             f'{SERVER_IP}/upgrade/{self.name}',
             json=self.to_pos_string(*pos)
@@ -208,12 +211,11 @@ class actions:
         self.all_lands[self.to_pos_string(*pos)]['level'] += 1
         for my_land in self.my_lands:
             if my_land['position'] == pos:
+                building = self.buildings[my_land['name']]
                 my_land.update({
-                    'ticks per item': building['ticks per item'][level],
-                    'time to generation': building['ticks per item'][level],
-                    'generating': building['generating'][level],
-                    'input': building['input'][level],
-                    'output': building['output'][level],
+                    'ticks per item': building['ticks per item'][level - 1],
+                    'input': building['input'][level - 1],
+                    'output': building['output'][level - 1],
                 })
                 break
 

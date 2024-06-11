@@ -106,6 +106,9 @@ class Front:
         # menu
         self.disposable_menu_buttons = []
 
+        # upgrading
+        self.upgrade_window = None
+
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
 
@@ -488,7 +491,7 @@ class Front:
                 for material in self.actions.buildings[building]["input"][0].keys():
                     input_text += f'{self.actions.buildings[building]["input"][0][material]} {material}, '
                 if input_text:
-                    input_text = output_text[:-2]
+                    input_text = input_text[:-2]
                 else:
                     input_text = "Z ničoho"
 
@@ -554,6 +557,67 @@ class Front:
         else:
             pass # e-ee
 
+    def upgrade_selected_building(self):
+        self.actions.upgrade(self.map_cords)
+        if self.upgrade_window:
+            try:
+                self.upgrade_window.destroy()
+            except tk.TclError:
+                pass
+        self.draw_menu()
+        
+
+    def create_upgrade_window(self, infos):
+        if self.upgrade_window:
+            try:
+                self.upgrade_window.destroy()
+            except tk.TclError:
+                pass
+        
+        self.upgrade_window = tk.Tk()
+
+        next_level = infos["level"]
+
+        tk.Label(self.upgrade_window, text=f'{infos["name"]}: {next_level + 1}', font=("smili", self.font_size)).pack()
+
+        input_text = ""
+        for material in self.actions.buildings[infos["name"]]["input"][next_level].keys():
+            input_text += f'{self.actions.buildings[infos["name"]]["input"][next_level][material]} {material}, '
+        if input_text:
+            input_text = input_text[:-2]
+        else:
+            input_text = "Z ničoho"
+
+        tk.Label(self.upgrade_window, text=input_text, font=("smili", self.font_size)).pack()
+
+        time_text = f'↓ {self.actions.buildings[infos["name"]]["ticks per item"][next_level]} ⌛ ↓'
+        tk.Label(self.upgrade_window, text=time_text, font=("smili", self.font_size)).pack()
+
+        output_text = ""
+        for material in self.actions.buildings[infos["name"]]["output"][next_level].keys():
+            output_text += f'{self.actions.buildings[infos["name"]]["output"][next_level][material]} {material}, '
+        if output_text:
+            output_text = output_text[:-2]
+        else:
+            output_text = "-"
+        
+        tk.Label(self.upgrade_window, text=output_text, font=("smili", self.font_size)).pack()
+
+        is_buildable = True
+        cost_text = ""
+        for material in self.actions.buildings[infos["name"]]["cost"][next_level].keys():
+            cost_text += f'{self.actions.buildings[infos["name"]]["cost"][next_level][material]} {material}, '
+            if self.actions.inventory[material] < self.actions.buildings[infos["name"]]["cost"][next_level][material]:
+                is_buildable = False
+        cost_text = cost_text[:-2]
+        tk.Label(self.upgrade_window, text=cost_text, font=("smili", self.font_size)).pack()
+
+        button = tk.Button(self.upgrade_window, text="✔", width=30, command=self.upgrade_selected_building, bg="green2", font=("smili", self.font_size))
+        button.pack()
+        if not is_buildable:
+            button.configure(bg="gray", state="disabled")
+
+
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
 
@@ -603,7 +667,7 @@ class Front:
 
         elif infos["name"] in list(self.actions.buildings.keys()):
             if infos["level"] < len(self.actions.buildings[infos["name"]]["cost"]):
-                self.disposable_menu_buttons.append(tk.Button(text="Vylepšiť", command=lambda: print("vylepsujem"), borderwidth=4, font=("smili", self.font_size)))
+                self.disposable_menu_buttons.append(tk.Button(text="Vylepšiť", command=lambda: self.create_upgrade_window(infos), borderwidth=4, font=("smili", self.font_size)))
                 self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"] / 2, relheight=0.08)
             else:
                 self.disposable_menu_buttons.append(tk.Button(text="MAX level", state="disabled", borderwidth=4, font=("smili", self.font_size)))
