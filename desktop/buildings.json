@@ -92,22 +92,28 @@
             {
                 "people":2,
                 "wood":5
+            },
+            {
+                "people":5,
+                "plank":10,
+                "iron tool":3
             }
         ],
-        "ticks per item":[5, 5],
+        "ticks per item":[5, 5, 4],
         "input": [
             {},
             {}
         ],
         "output": [
             {"stone":1},
-            {"stone":2, "coal":1}
+            {"stone":2, "coal":1},
+            {"stone":3, "coal":2}
         ],
         "design": {
             "shape": "square",
             "color": "grey"
         },
-        "points":[1, 3]
+        "points":[1, 3, 8]
     },
     "iron mine":{
         "requrement":"metal mountain",
@@ -121,14 +127,21 @@
                 "people":5,
                 "wood":2,
                 "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
             }
         ],
-        "ticks per item":[15, 10],
+        "ticks per item":[15, 10, 3],
         "input": [
+            {},
             {},
             {}
         ],
         "output": [
+            {"raw iron":1},
             {"raw iron":1},
             {"raw iron":1}
         ],
@@ -136,7 +149,7 @@
             "shape": "square",
             "color": "grey3"
         },
-        "points":[2, 5]
+        "points":[2, 5, 15]
     },
     "forge":{
         "requrement":"",
@@ -202,7 +215,7 @@
         "input": [
             {"wood":2, "iron":1},
             {"wood":3, "iron":2},
-            {"wood":3, "steel":1}
+            {"plank":3, "steel":1}
         ],
         "output": [
             {"iron tool":1},
@@ -214,6 +227,36 @@
             "color": "grey4"
         },
         "points":[5, 10, 20]
+    },
+    "weaponsmith":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":2,
+                "plank":5,
+                "iron tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            }
+        ],
+        "ticks per item":[15, 35],
+        "input": [
+            {"plank":3, "iron":2},
+            {"plamk":5, "iron":20}
+        ],
+        "output": [
+            {"musket":1},
+            {"canon":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey4"
+        },
+        "points":[6, 15]
     },
     "lumberjack":{
         "requrement":"forest",
@@ -310,7 +353,43 @@
         },
         "points":[2, 2, 5]
     },
-
+    "vyskumnik":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":5,
+                "coal": 10
+            },
+            {
+                "people":2,
+                "glass":5,
+                "gem": 2
+            },
+            {
+                "people":5,
+                "steel tool":10,
+                "leather":25
+            }
+        ],
+        "ticks per item":[10, 10, 10],
+        "input": [
+            {"sand": 5},
+            {"dust": 5},
+            {"steel":5}
+        ],
+        "output": [
+            {"glass":2},
+            {"gunpowder":2},
+            {"gold":2}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "bisque2"
+        },
+        "points":[2, 2, 5]
+    },
 
 
 
@@ -324,18 +403,22 @@
             {"stone":4},
             {"stone":9},
             {"stone":16},
-            {"stone":25},
+            {"stone":25, "iron":5},
             {"stone":36},
             {"stone":49},
             {"stone":64},
             {"stone":81},
-            {"stone":100},
-            {"gem":5}
+            {"stone":100, "gem":5},
+            {"stone":121},
+            {"stone":144},
+            {"stone":169},
+            {"stone":196},
+            {"stone":225, "gold":5}
         ],
         "design": {
-            "shape": "triangle",
+            "shape": "star",
             "color": "black"
         },
-        "points":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        "points":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     }
 }
