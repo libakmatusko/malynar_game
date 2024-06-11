@@ -475,7 +475,6 @@ class actions:
         with open(f'save_{t}.json', 'w') as save_file:
             to_save = dict(self.__dict__)
             to_save.pop('front')
-            to_save.pop('used_codes')
             json.dump(to_save, save_file)
     
 
