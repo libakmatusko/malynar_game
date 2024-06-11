@@ -19,7 +19,8 @@ class actions:
             'money': 0,
             "iron": 100,
             "berries": 2,
-            "plank": 5
+            "plank": 5,
+            "food": 0
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army = json.load(f)
@@ -80,6 +81,7 @@ class actions:
             self.save()
     
         for land in self.my_lands:
+            '''
             if land['name'] != 'road':
                 if land['generating']:
                     if not land["is_sleeping"]:
@@ -94,6 +96,19 @@ class actions:
                 else:
                     if self.take_from_inventory(land['input']):
                         land['generating'] = True
+            '''
+
+            # original je zakomentovany, nefungoval pri budovach berucich input a nevedel som ho opravit
+
+            if land['name'] != 'road':
+                if not land["is_sleeping"]:
+                    if land["time to generation"] == 0:
+                        if self.take_from_inventory(land["input"]):
+                            self.generate(land["output"])
+                            land["time to generation"] = land["ticks per item"]
+                    else:
+                        land["time to generation"] -= 1
+
 
 
     # return True ak sa updatlo

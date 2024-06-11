@@ -98,7 +98,7 @@
     },
     "wood saw":{
         "requrement":"",
-        "generating": false,
+        "generating": true,
         "cost":[
             {
                 "people":1,
