@@ -1,0 +1,8 @@
+{
+    "types": {
+        "zombie": {"strength": 10}
+    },
+    "positions": {
+        "20x20": {"type": "zombie", "count": 20}
+    }
+}

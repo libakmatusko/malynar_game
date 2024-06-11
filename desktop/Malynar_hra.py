@@ -24,6 +24,7 @@ class actions:
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army = json.load(f)
+
         self.trades = {}                # id : trade_info
         self.trades = {1: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
                        2: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
@@ -61,6 +62,13 @@ class actions:
                     }
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
+
+        with open('desktop/beasts.json', "r", encoding="utf-8") as f:
+            cont = json.load(f)
+        self.beast_types = cont["types"]
+        for pos in cont["positions"].keys():
+            self.all_lands[pos]['name'] = cont['positions'][pos]["type"]
+            self.all_lands[pos]['level'] = cont['positions'][pos]["count"]
 
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file)
