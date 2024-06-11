@@ -94,6 +94,9 @@ class Front:
         self.make_trade_window = None
         self.make_trade_objects = {}
 
+        # army building
+        self.army_building_win = None
+
         # building
         self.build_window = None
         self.build_page_number = 0
@@ -380,7 +383,43 @@ class Front:
             print('eeee')
 
     def create_army_window(self):
-        pass
+        if self.army_building_win:
+            try:
+                self.army_building_win.destroy()
+            except tk.TclError:
+                pass
+        
+        self.army_building_win = tk.Tk()
+        self.update_create_army_window()
+        self.army_building_win.title("Armáda")
+        
+            
+    def update_create_army_window(self):
+        if self.army_building_win:
+            try:
+                tk.Label(self.army_building_win, text='Názov', font=("smili", self.font_size)).grid(row=0, column=0)
+                tk.Label(self.army_building_win, text='Koľko máš', font=("smili", self.font_size)).grid(row=0, column=1)
+                tk.Label(self.army_building_win, text='Sila', font=("smili", self.font_size)).grid(row=0, column=2)
+                tk.Label(self.army_building_win, text='Vyrobiť', font=("smili", self.font_size)).grid(row=0, column=3)
+                tk.Label(self.army_building_win, text='Potrebné suroviny', font=("smili", self.font_size)).grid(row=0, column=4, columnspan=100)
+                for i, soldier in enumerate(self.actions.army.keys()):
+                    tk.Label(self.army_building_win, text=soldier, font=("smili", self.font_size)).grid(row=i+1, column=0)
+                    tk.Label(self.army_building_win, text=f'{self.actions.army[soldier]["count"]}', font=("smili", self.font_size)).grid(row=i+1, column=1)
+                    tk.Label(self.army_building_win, text=f'{self.actions.army[soldier]["strength"]}', font=("smili", self.font_size)).grid(row=i+1, column=2)
+                    tk.Button(self.army_building_win, command=lambda x = soldier: self.make_soldier(x), width=10, text="+", font=("smili", self.font_size)).grid(row=i+1, column=3)
+                    for j, item in enumerate(self.actions.army[soldier]["recipe"]):
+                        tk.Label(self.army_building_win, text=f'{item}: {self.actions.army[soldier]["recipe"][item]}', font=("smili", self.font_size)).grid(row=i+1, column=4+j)
+            except tk.TclError:
+                pass
+
+    def make_soldier(self, name):
+        if self.actions.build_soldier(name):
+            print('cink')
+            self.create_army_window()
+            # cink
+        else:
+            print('eee')
+            # e-eee
 
     def change_build_page(self, value):
         self.build_page_number += value

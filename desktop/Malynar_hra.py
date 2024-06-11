@@ -17,7 +17,7 @@ class actions:
             'stone': 10,
             'wood': 10,
             'money': 0,
-            "iron": 15,
+            "iron": 100,
             "berries": 2
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
@@ -275,6 +275,19 @@ class actions:
                     self.inventory['money'] += self.placed_trades[id]['cost']
                 self.placed_trades.pop(id)
 
+    def build_soldier(self, name: str) -> bool:
+        if name not in self.army.keys():
+            return False
+        
+        for item, count in self.army[name]["recipe"].items():
+            if self.inventory[item] < count:
+                return False
+        
+        for item, count in self.army[name]["recipe"].items():
+            self.inventory[item] -= count
+        
+        self.army[name]["count"] += 1
+        return True
 
     def sleep(self, pos: list[int]):
         for my_land in self.my_lands:
