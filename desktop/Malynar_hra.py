@@ -340,7 +340,7 @@ class actions:
     # moze sa potencialne pouzit na davanie veci do inventara
     def take_from_inventory(self, taking) -> bool:
         for item in taking.keys():
-            if taking[item] > self.inventory[item]:
+            if taking[item] > self.inventory.get(item, 0):
                 return False
 
         for item in taking.keys():

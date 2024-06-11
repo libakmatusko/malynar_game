@@ -106,6 +106,63 @@
             "color": "grey"
         }
     },
+    "iron mine":{
+        "requrement":"metal mountain",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            }
+        ],
+        "ticks per item":[15, 10],
+        "input": [
+            {},
+            {}
+        ],
+        "output": [
+            {"raw iron":1},
+            {"raw iron":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey3"
+        }
+    },
+    "forge":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":5,
+                "wood":3
+            },
+            {
+                "people":2,
+                "stone":15,
+                "wood":5
+            }
+        ],
+        "ticks per item":[10, 8],
+        "input": [
+            {"coal":4, "raw iron":1},
+            {"coal":3, "raw iron":1}
+        ],
+        "output": [
+            {"iron":1},
+            {"iron":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey2"
+        }
+    },
     "lumberjack":{
         "requrement":"forest",
         "generating": true,
@@ -133,13 +190,13 @@
             "color": "brown"
         }
     },
-    "wood saw":{
+    "sawmill":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
                 "people":1,
-                "stone":1,
+                "stone":2,
                 "wood": 1
             },
             {
