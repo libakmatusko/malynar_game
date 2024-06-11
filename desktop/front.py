@@ -641,7 +641,7 @@ class Front:
 
         self.status = self.actions.possible_actions(list(self.map_cords))
         
-        
+        '''
         self.buttons = []
         x = self.menu_canvas_size['x']
         y = self.menu_canvas_size['y']
@@ -654,15 +654,12 @@ class Front:
 
         for action in self.status['actions']:
             ceiling += self.draw_button(action, ceiling)
+        '''
 
         infos = self.status['info']
         name = infos["name"]
         if name not in ["land", "sea"]:
             name += f": {infos['level']}"
-        
-        self.disposable_menu_buttons.append(tk.Label(text=name, bg="yellow", borderwidth=4, font=("smili", self.font_size * 2)))
-        self.disposable_menu_buttons[-1].place(rely=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.12)
-        
         
         '''
         inv = self.actions.inventory
@@ -671,9 +668,10 @@ class Front:
             self.menu_canvas.create_text(x/2, ceiling+i*20+10, text=f'{item} : {inv[item]}')
         '''
 
+        self.disposable_menu_buttons.append(tk.Label(text=name, bg="yellow", borderwidth=4, font=("smili", self.font_size * 2)))
+        self.disposable_menu_buttons[-1].place(rely=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.12)
 
-
-        if self.map_cords in self.actions.available_lands: # TODO check ci sa tu da stavat
+        if self.map_cords in self.actions.available_lands:
             self.disposable_menu_buttons.append(tk.Button(text="Stavať", command=self.create_build_window, borderwidth=4, font=("smili", self.font_size)))
             self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
 
@@ -691,12 +689,41 @@ class Front:
                 self.disposable_menu_buttons.append(tk.Button(text="Uspať", command=lambda: self.actions.sleep(self.map_cords), borderwidth=4, font=("smili", self.font_size)))
             self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"] + self.menu_canvas_size["x"] / 2, width=self.menu_canvas_size["x"] / 2, relheight=0.08)
 
+            if self.actions.buildings[infos["name"]]["generating"]:
+                input_text = ""
+                for material in self.actions.buildings[infos["name"]]["input"][infos["level"] - 1].keys():
+                    input_text += f'{self.actions.buildings[infos["name"]]["input"][infos["level"] - 1][material]} {material}, '
+                if input_text:
+                    input_text = input_text[:-2]
+                else:
+                    input_text = "Z ničoho"
+
+                output_text = ""
+                for material in self.actions.buildings[infos["name"]]["output"][infos["level"] - 1].keys():
+                    output_text += f'{self.actions.buildings[infos["name"]]["output"][infos["level"] - 1][material]} {material}, '
+                if output_text:
+                    output_text = output_text[:-2]
+                else:
+                    output_text = "-"
+                
+                time_text = f"↓ {self.actions.buildings[infos['name']]['ticks per item'][infos['level'] - 1]} ⌛ ↓"
+
+                self.disposable_menu_buttons.append(tk.Label(text=input_text, borderwidth=4, font=("smili", self.font_size)))
+                self.disposable_menu_buttons[-1].place(rely=0.12, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+                self.disposable_menu_buttons.append(tk.Label(text=time_text, borderwidth=4, font=("smili", self.font_size)))
+                self.disposable_menu_buttons[-1].place(rely=0.20, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+                self.disposable_menu_buttons.append(tk.Label(text=output_text, borderwidth=4, font=("smili", self.font_size)))
+                self.disposable_menu_buttons[-1].place(rely=0.28, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+
+
         self.disposable_menu_buttons.append(tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)))
         self.disposable_menu_buttons[-1].place(rely=0.76, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
         self.disposable_menu_buttons.append(tk.Button(text="Obchodovanie", command=self.create_trade_window, borderwidth=4, font=("smili", self.font_size)))
         self.disposable_menu_buttons[-1].place(rely=0.84, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
         self.disposable_menu_buttons.append(tk.Button(text="Inventár", command=self.create_inventory_window, borderwidth=4, font=("smili", self.font_size)))
         self.disposable_menu_buttons[-1].place(rely=0.92, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+
+        # print(len(self.window.winfo_children())) # useful check ci sa nezahlcuje okno
 
     def draw_button(self, action, ceiling):# button = (id, (x, y), (action))
         self.buttons.append((self.menu_canvas.create_rectangle(0, ceiling, self.menu_canvas_size['x'], ceiling+30, fill='grey'), (self.menu_canvas_size['x']/2, ceiling+15), action))

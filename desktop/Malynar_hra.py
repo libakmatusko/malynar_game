@@ -73,7 +73,7 @@ class actions:
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file)
         
-        self.used_codes = set()
+        self.used_codes = []
 
         self.front = front.Front(self)
         self.front.update()
@@ -115,7 +115,7 @@ class actions:
 
             # original je zakomentovany, nefungoval pri budovach berucich input a nevedel som ho opravit
 
-            if land['name'] != 'road':
+            if land["generating"]:
                 if not land["is_sleeping"]:
                     if land["time to generation"] == 0:
                         if self.take_from_inventory(land["input"]):
@@ -337,7 +337,7 @@ class actions:
 
         for mod in modula:
             if num % mod == 0:
-                self.used_codes.add(code)
+                self.used_codes.append(code)
                 return True
         return False
 
