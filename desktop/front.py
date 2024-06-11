@@ -1,6 +1,7 @@
 import tkinter as tk
 from math import ceil, acos, degrees
 import unicodedata
+import winsound
 
 
 MAP_RADIUS = 30
@@ -335,51 +336,61 @@ class Front:
                 break
         if not exists:
             # e-ee
+            self.play_sound(False)
             print("eeee1")
             return
         if trade["count"].isnumeric():
             trade["count"] = int(trade["count"])
             if trade["count"] < 0:
                 # e-ee
+                self.play_sound(False)
                 print("eeee2")
                 return
         else:
             # e-ee
+            self.play_sound(False)
             print("eeee3")
             return
         if trade["cost"].isnumeric():
             trade["cost"] = int(trade["cost"])
             if trade["cost"] < 0:
                 # e-ee
+                self.play_sound(False)
                 print("eeee4")
                 return
         else:
             # e-ee
+            self.play_sound(False)
             print("eeee5")
             return
         
         if self.make_trade_objects["direction"]:
             if self.actions.inventory["money"] < trade["cost"]:
                 # e-ee
+                self.play_sound(False)
                 print("eeee6")
                 return
         else:
             if self.actions.inventory[trade["item"]] < trade["count"]:
                 # e-ee
+                self.play_sound(False)
                 print("eeee7")
                 return
         
         self.actions.place_trade(int(not self.make_trade_objects["direction"]), trade["item"], trade["count"], trade["cost"])
 
         # cink
+        self.play_sound(True)
         print("cink")
 
     def buy(self, id):
         if self.actions.take_trade(id):
-            pass # cink
+             # cink
+            self.play_sound(True)
             print('cink')
         else:
-            pass # e-eee
+             # e-eee
+            self.play_sound(False)
             print('eeee')
 
     def create_army_window(self):
@@ -415,9 +426,11 @@ class Front:
         if self.actions.build_soldier(name):
             print('cink')
             self.create_army_window()
+            self.play_sound(True)
             # cink
         else:
             print('eee')
+            self.play_sound(False)
             # e-eee
 
     def change_build_page(self, value):
@@ -555,7 +568,8 @@ class Front:
             self.draw_map()
             # zvuky stavby
         else:
-            pass # e-ee
+            self.play_sound(False)
+             # e-ee
 
     def upgrade_selected_building(self):
         self.actions.upgrade(self.map_cords)
@@ -769,6 +783,16 @@ class Front:
             radius = side_length / 1.5
             distance = ((3 ** (0.5)) / 2) * radius
             self.map_canvas.create_polygon(x, y - radius, x - distance, y + radius / 2, x + distance, y + radius / 2, fill=building_color)
+
+    
+    def play_sound(self, is_correct: bool) -> None:
+        pass
+        '''
+        if is_correct:
+            winsound.PlaySound('desktop/sounds/cin.wav', winsound.SND_FILENAME)
+        else:
+            winsound.PlaySound('desktop/sounds/eeee.wav', winsound.SND_FILENAME)
+            '''
 
 
 if __name__ == "__main__":
