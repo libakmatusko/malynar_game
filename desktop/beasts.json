@@ -3,6 +3,6 @@
         "zombie": {"strength": 10}
     },
     "positions": {
-        "20x20": {"type": "zombie", "count": 20}
+        "20x0": {"type": "zombie", "count": 20}
     }
 }

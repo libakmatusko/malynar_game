@@ -62,7 +62,6 @@ class actions:
                     }
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
-
         with open('desktop/beasts.json', "r", encoding="utf-8") as f:
             cont = json.load(f)
         self.beast_types = cont["types"]
