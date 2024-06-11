@@ -8,11 +8,12 @@ SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je de
 
 class actions:
     def __init__(self, name, starting_pos, debug=False):
-        self.debug = debug
-        self.playing = False
-        self.name = name
-        self.tick_counter = -1
-        self.inventory = {
+        self.debug:bool = debug
+        self.playing:bool = False
+        self.name:str = name
+        self.points:int = 0
+        self.tick_counter:int = -1
+        self.inventory:dict = {
             'people': 5,
             'stone': 10,
             'wood': 15,
@@ -23,10 +24,10 @@ class actions:
             "food": 0
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
-            self.army = json.load(f)
+            self.army:dict = json.load(f)
 
-        self.trades = {}                # id : trade_info
-        self.trades = {1: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
+        self.trades:dict = {}                # id : trade_info
+        self.trades:dict = {1: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
                        2: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
                        3: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
                        4: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
@@ -38,8 +39,8 @@ class actions:
                        14: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
                        15: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
                        110: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20}}
-        self.placed_trades = {}         # id : trade_info
-        self.my_lands = [
+        self.placed_trades:dict = {}         # id : trade_info
+        self.my_lands:list = [
             {
                 'name': 'base',
                 'position': starting_pos,
@@ -52,7 +53,7 @@ class actions:
                 'is_sleeping': False
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
-        self.all_lands = {}
+        self.all_lands:dict = {}
         for x in range(-30, 31):
             for y in range(-30, 31):
                 if -x-31<y<-x+31:
@@ -60,11 +61,11 @@ class actions:
                         'name': 'land',
                         'level': 0
                     }
-        self.available_lands = [starting_pos]
+        self.available_lands:list = [starting_pos]
         self.add_available_lands(starting_pos)
         with open('desktop/beasts.json', "r", encoding="utf-8") as f:
             cont = json.load(f)
-        self.beast_types = cont["types"]
+        self.beast_types:dict = cont["types"]
         for pos in cont["positions"].keys():
             self.all_lands[pos]['name'] = cont['positions'][pos]["type"]
             self.all_lands[pos]['level'] = cont['positions'][pos]["count"]
@@ -76,6 +77,11 @@ class actions:
 
         self.front = front.Front(self)
         self.front.update()
+    
+
+    def __int__(self):
+        return self.points
+
 
     def tick(self):
         self.tick_counter += 1
@@ -219,6 +225,7 @@ class actions:
             'player': self.name,
             'level': 1
         }
+        self.points += building.get('points', [0])[0]
         if not self.server_build(pos=pos, building=build):
             pass# daco ked sa neupdatuje na server
         return True
@@ -234,18 +241,18 @@ class actions:
         costs = self.cost_to_upgrade(pos=pos)
         if not self.take_from_inventory(costs):
             return False
-        level = self.all_lands[self.to_pos_string(*pos)]['level']
+        level:int = self.all_lands[self.to_pos_string(*pos)]['level']
         self.all_lands[self.to_pos_string(*pos)]['level'] += 1
         for my_land in self.my_lands:
             if my_land['position'] == pos:
                 building = self.buildings[my_land['name']]
                 my_land.update({
-                    'ticks per item': building['ticks per item'][level - 1],
-                    'input': building['input'][level - 1],
-                    'output': building['output'][level - 1],
+                    'ticks per item': building['ticks per item'][level],
+                    'input': building['input'][level],
+                    'output': building['output'][level],
                 })
                 break
-
+        self.points += building.get('points', [0 for _ in range(level+1)])[level]
         if not self.server_upgrade(pos=pos):
             pass# daco ked sa neupdatuje server
         return True
@@ -312,12 +319,8 @@ class actions:
         if name not in self.army.keys():
             return False
         
-        for item, count in self.army[name]["recipe"].items():
-            if self.inventory[item] < count:
-                return False
-        
-        for item, count in self.army[name]["recipe"].items():
-            self.inventory[item] -= count
+        if not self.take_from_inventory(self.army[name]['recipe']):
+            return False
         
         self.army[name]["count"] += 1
         return True
@@ -362,7 +365,7 @@ class actions:
     # moze sa potencialne pouzit na davanie veci do inventara
     def take_from_inventory(self, taking) -> bool:
         for item in taking.keys():
-            if taking[item] > self.inventory[item]:
+            if taking[item] > self.inventory.get(item, 0):
                 return False
 
         for item in taking.keys():

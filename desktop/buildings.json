@@ -40,7 +40,8 @@
         "design": {
             "shape": "triangle",
             "color": "purple"
-        }
+        },
+        "points":[1, 2]
     },
     "farmer":{
         "requrement":"field",
@@ -55,21 +56,30 @@
                 "people":3,
                 "wood":10,
                 "stone":5
+            },
+            {
+                "people":10,
+                "wood":20,
+                "stone":50
             }
         ],
-        "ticks per item":[3, 1],
+        "ticks per item":[3, 1, 1],
         "input": [
+            {},
             {},
             {}
         ],
         "output": [
             {"food":1},
-            {"food":1}
+            {"food":1},
+            {"food":3, "leather":3}
+
         ],
         "design": {
             "shape": "triangle",
             "color": "magenta"
-        }
+        },
+        "points":[2, 5, 10]
     },
     "mine":{
         "requrement":"mountain",
@@ -84,19 +94,126 @@
                 "wood":5
             }
         ],
-        "ticks per item":[5, 3],
+        "ticks per item":[5, 5],
         "input": [
             {},
             {}
         ],
         "output": [
             {"stone":1},
-            {"stone":1}
+            {"stone":2, "coal":1}
         ],
         "design": {
             "shape": "square",
             "color": "grey"
-        }
+        },
+        "points":[1, 3]
+    },
+    "iron mine":{
+        "requrement":"metal mountain",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            }
+        ],
+        "ticks per item":[15, 10],
+        "input": [
+            {},
+            {}
+        ],
+        "output": [
+            {"raw iron":1},
+            {"raw iron":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey3"
+        },
+        "points":[2, 5]
+    },
+    "forge":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":5,
+                "wood":3
+            },
+            {
+                "people":2,
+                "stone":15,
+                "wood":5
+            },
+            {
+                "people":5,
+                "iron":10,
+                "wood":5
+            }
+        ],
+        "ticks per item":[10, 8, 12],
+        "input": [
+            {"coal":4, "raw iron":1},
+            {"coal":3, "raw iron":1},
+            {"coal":5, "raw iron":3}
+        ],
+        "output": [
+            {"iron":1},
+            {"iron":1},
+            {"steel":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey2"
+        },
+        "points":[2, 7, 15]
+    },
+    "toolsmith":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":3,
+                "wood":2,
+                "iron":1
+            },
+            {
+                "people":1,
+                "stone":10,
+                "wood":5,
+                "iron":3
+            },
+            {
+                "people":1,
+                "stone":5,
+                "wood":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[20, 20, 30],
+        "input": [
+            {"wood":2, "iron":1},
+            {"wood":3, "iron":2},
+            {"wood":3, "steel":1}
+        ],
+        "output": [
+            {"iron tool":1},
+            {"iron tool":1},
+            {"steel tool":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey4"
+        },
+        "points":[5, 10, 20]
     },
     "lumberjack":{
         "requrement":"forest",
@@ -123,15 +240,16 @@
         "design": {
             "shape": "square",
             "color": "brown"
-        }
+        },
+        "points":[2, 5]
     },
-    "wood saw":{
+    "sawmill":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
                 "people":1,
-                "stone":1,
+                "stone":2,
                 "wood": 1
             },
             {
@@ -152,6 +270,72 @@
         "design": {
             "shape": "square",
             "color": "bisque2"
-        }
+        },
+        "points":[1, 3]
+    },
+    "drvicka":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":5,
+                "wood": 2
+            },
+            {
+                "people":2,
+                "stone":5,
+                "wood": 2
+            },
+            {
+                "people":5,
+                "stone":15,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 12, 20],
+        "input": [
+            {"stone": 5},
+            {"stone": 5},
+            {"stone": 10}
+        ],
+        "output": [
+            {"sand":1, "dust":4},
+            {"sand":2, "dust":3},
+            {"sand":4, "dust":5, "gem":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "bisque2"
+        },
+        "points":[2, 2, 5]
+    },
+
+
+
+
+
+
+    "mohyla": {
+        "requrement":"",
+        "generating": false,
+        "cost":[
+            {"stone":1},
+            {"stone":4},
+            {"stone":9},
+            {"stone":16},
+            {"stone":25},
+            {"stone":36},
+            {"stone":49},
+            {"stone":64},
+            {"stone":81},
+            {"stone":100},
+            {"gem":5}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "black"
+        },
+        "points":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
 }
