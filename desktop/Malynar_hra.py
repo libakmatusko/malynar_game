@@ -15,10 +15,11 @@ class actions:
         self.inventory = {
             'people': 5,
             'stone': 10,
-            'wood': 10,
+            'wood': 15,
             'money': 0,
             "iron": 100,
-            "berries": 2
+            "berries": 2,
+            "plank": 5
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army = json.load(f)

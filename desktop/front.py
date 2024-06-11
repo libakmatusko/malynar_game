@@ -551,6 +551,8 @@ class Front:
             self.build_confirm_window.destroy()
             self.build_window.destroy()
             self.draw_menu()
+            self.polygons = []
+            self.draw_map()
             # zvuky stavby
         else:
             pass # e-ee
@@ -762,7 +764,11 @@ class Front:
             self.selected_pos = self.polygons[-1]
 
         if building_shape == "square":
-            self.map_canvas.create_rectangle(x - side_length / 4, y - side_length / 4, x + side_length / 4, y + side_length / 4, fill=building_color)
+            self.map_canvas.create_rectangle(x - side_length / 2.5, y - side_length / 2.5, x + side_length / 2.5, y + side_length / 2.5, fill=building_color, width=0)
+        if building_shape == "triangle":
+            radius = side_length / 1.5
+            distance = ((3 ** (0.5)) / 2) * radius
+            self.map_canvas.create_polygon(x, y - radius, x - distance, y + radius / 2, x + distance, y + radius / 2, fill=building_color)
 
 
 if __name__ == "__main__":

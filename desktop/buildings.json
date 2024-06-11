@@ -38,7 +38,7 @@
             {"food":1}
         ],
         "design": {
-            "shape": "square",
+            "shape": "triangle",
             "color": "purple"
         }
     },
@@ -94,6 +94,35 @@
         "design": {
             "shape": "square",
             "color": "brown"
+        }
+    },
+    "wood saw":{
+        "requrement":"",
+        "generating": false,
+        "cost":[
+            {
+                "people":1,
+                "stone":1,
+                "wood": 1
+            },
+            {
+                "people":2,
+                "stone":5,
+                "wood": 5
+            }
+        ],
+        "ticks per item":[2, 1],
+        "input": [
+            {"wood": 1},
+            {"wood": 1}
+        ],
+        "output": [
+            {"plank":1},
+            {"plank":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "bisque2"
         }
     }
 }
