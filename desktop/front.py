@@ -43,6 +43,8 @@ class Front:
         window_height = self.window.winfo_screenheight() # - 200 # - 200 only for easier testing
         window_width = self.window.winfo_screenwidth() # - 200 # - 200 only for easier testing
 
+        self.hexagon_color = "ivory2"
+        self.clicked_hexagon_color = "gold"
 
         self.map_canvas_size = {"x": window_width - (window_height / 2), "y": window_height}
         self.menu_canvas_size = {"x": window_height / 2, "y": window_height}
@@ -53,13 +55,13 @@ class Front:
         # self.window.overrideredirect(True)
         # self.window.geometry(f"{window_width}x{window_height}+0+0")
 
-        self.map_canvas = tk.Canvas(self.window, bg="green2")
+        self.map_canvas = tk.Canvas(self.window, bg="deep sky blue")
         self.map_canvas.place(y=0, width=self.map_canvas_size["x"], relheight=1)
 
         self.menu_canvas = tk.Canvas(self.window, bg="grey")
         self.menu_canvas.place(y=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=1)
 
-        self.zoom = 30 # describes how many rows of tiles will be displayed
+        self.zoom = 6 # describes how many rows of tiles will be displayed
         self.zoom_strength = 3
         self.selected_pos = []
         self.map_cords = []
@@ -80,7 +82,6 @@ class Front:
 
         self.center_hexagon_cords = {"x": 0, "y": 0} # defining on which hexagon the map is centered
 
-        self.clicked_hexagons = []  # na test zoomovania
         self.draw_map()
 
         # inventory
@@ -128,13 +129,14 @@ class Front:
         if event.num == 4 or event.delta == 120:
             if self.zoom > 1:
                 self.zoom -= self.zoom_strength
+            if self.zoom <= 0:
+                self.zoom = 1
 
         direction = mid_shift_directions[int(determine_area((event.x, event.y), (mid_x, mid_y)))]
         self.center_hexagon_cords["x"] -= direction[0] * mid_shift_size
         self.center_hexagon_cords["y"] -= direction[1] * mid_shift_size
 
         self.polygons = []
-        self.selected_pos = []
         self.draw_map()
         self.zoom_strength = self.zoom // 15 + 1
 
@@ -153,29 +155,25 @@ class Front:
             if self.last_move_up_was_right:
                 self.center_hexagon_cords["x"] += 1
             self.last_move_up_was_right = not self.last_move_up_was_right
+        
+        self.polygons = []
         self.draw_map()
     
     # matus sprta to kodu
     def select_hex(self, event):
         id = min(self.polygons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
-        if self.selected_pos == id:
-            self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
-            self.selected_pos = []
-            self.map_cords = []
-        else:
-            if self.selected_pos != []:
-                self.map_canvas.itemconfig(self.selected_pos[0], fill='red')
-            self.selected_pos = id
-            map_cords = self.tkinter_to_map_cords[id[1]]
-            self.map_cords = [map_cords[0], map_cords[1]]
 
-            self.clicked_hexagons.append(map_cords)  # na test zoomovania
+        if self.selected_pos != []:
+            self.map_canvas.itemconfig(self.selected_pos[0], fill=self.hexagon_color)
+        self.selected_pos = id
+        map_cords = self.tkinter_to_map_cords[id[1]]
+        self.map_cords = [map_cords[0], map_cords[1]]
 
-            self.status = self.actions.possible_actions(list(map_cords))
-            self.draw_menu()
-            # tu pride daco co bude zo statusu pisat veci na sidebar
-            # self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
-            self.map_canvas.itemconfig(self.selected_pos[0], fill='blue')
+        self.status = self.actions.possible_actions(list(map_cords))
+        self.draw_menu()
+        # tu pride daco co bude zo statusu pisat veci na sidebar
+        # self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
+        self.map_canvas.itemconfig(self.selected_pos[0], fill=self.clicked_hexagon_color)
 
         if self.build_window:
             try:
@@ -566,7 +564,6 @@ class Front:
                 pass
         self.draw_menu()
         
-
     def create_upgrade_window(self, infos):
         if self.upgrade_window:
             try:
@@ -616,7 +613,6 @@ class Front:
         button.pack()
         if not is_buildable:
             button.configure(bg="gray", state="disabled")
-
 
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
@@ -730,17 +726,28 @@ class Front:
 
                 self.tkinter_to_map_cords[(center_pos_x, center_pos_y)] = (self.center_hexagon_cords["x"] + x_cord_difference, self.center_hexagon_cords["y"] + y_cord_difference)
 
-                color = "red"
-                if self.tkinter_to_map_cords[(center_pos_x, center_pos_y)] in self.clicked_hexagons:
-                    color = "blue"
+                if self.actions.to_pos_string(*self.tkinter_to_map_cords[(center_pos_x, center_pos_y)]) not in self.actions.all_lands:
+                    center_pos_x += (((3) ** 0.5) / 2) * side_length * 2
+                    continue
+                building = self.actions.all_lands[self.actions.to_pos_string(*self.tkinter_to_map_cords[(center_pos_x, center_pos_y)])]
 
-                self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color)
+                if list(self.tkinter_to_map_cords[(center_pos_x, center_pos_y)]) == self.map_cords:
+                    color = self.clicked_hexagon_color
+                else:
+                    color = self.hexagon_color
+
+                if building["name"] in self.actions.buildings.keys():
+                    design = self.actions.buildings[building["name"]]["design"]
+                    self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color, design["shape"], design["color"])
+                else:
+                    self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color)
 
                 center_pos_x += (((3) ** 0.5) / 2) * side_length * 2
 
-    def draw_hexagon(self, x, y, side_length, color="red"):
+    def draw_hexagon(self, x, y, side_length, color, building_shape=None, building_color=None):
         x_shift = (((3) ** 0.5) / 2) * side_length
         y_shift = side_length / 2
+
         self.polygons.append((self.map_canvas.create_polygon(
             x, y + side_length,
             x - x_shift, y + y_shift,
@@ -750,6 +757,12 @@ class Front:
             x + x_shift, y + y_shift,
             fill=color
         ), (x, y)))
+
+        if color == self.clicked_hexagon_color:
+            self.selected_pos = self.polygons[-1]
+
+        if building_shape == "square":
+            self.map_canvas.create_rectangle(x - side_length / 4, y - side_length / 4, x + side_length / 4, y + side_length / 4, fill=building_color)
 
 
 if __name__ == "__main__":

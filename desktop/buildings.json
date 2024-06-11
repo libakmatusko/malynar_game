@@ -7,7 +7,11 @@
                 "stone":1,
                 "wood":1
             }
-        ]
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "black"
+        }
     },
     "berry picker":{
         "requrement":"",
@@ -32,7 +36,11 @@
         "output": [
             {"food":1},
             {"food":1}
-        ]
+        ],
+        "design": {
+            "shape": "square",
+            "color": "purple"
+        }
     },
     "mine":{
         "requrement":"mountain",
@@ -55,7 +63,11 @@
         "output": [
             {"stone":1},
             {"stone":1}
-        ]
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey"
+        }
     },
     "lumberjack":{
         "requrement":"forest",
@@ -78,6 +90,10 @@
         "output": [
             {"wood":1},
             {"wood":1}
-        ]
+        ],
+        "design": {
+            "shape": "square",
+            "color": "brown"
+        }
     }
 }

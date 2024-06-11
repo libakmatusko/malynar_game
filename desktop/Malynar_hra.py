@@ -50,19 +50,21 @@ class actions:
             }
         ]# toto sa zmeni o poziciu zakladne pri prvom napojenie na server
         self.all_lands = {}
-        for x in range(-40, 41):
-            for y in range(-40, 41):
-                if -x-40<y<-x+40:
+        for x in range(-30, 31):
+            for y in range(-30, 31):
+                if -x-31<y<-x+31:
                     self.all_lands[self.to_pos_string(x, y)] = {
                         'name': 'land',
                         'level': 0
                     }
         self.available_lands = [starting_pos]
         self.add_available_lands(starting_pos)
-        self.front = front.Front(self)
-        self.front.update()
+
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file)
+
+        self.front = front.Front(self)
+        self.front.update()
 
     def tick(self):
         self.tick_counter += 1
@@ -378,7 +380,7 @@ class actions:
             resources = self.find_resources(pos)
             for key in self.buildings.keys():
                 if (self.buildings[key]['requrement'] == "") or (self.buildings[key]['requrement'] in resources):
-                    print(key, pos)
+                    # print(key, pos)
                     actions.append([f'Postav {key}', (self.build_new, (key, list(tuple(pos)))), self.buildings[key]['cost'][0]])
 
         elif self.read_pos(*pos).get('player') == self.name:
