@@ -22,5 +22,6 @@ dictionary budov{
             "shape": "triangle",
             "color": "purple"
         } ako sa orientovat vo farbach dopisat...
+        "points" list z int k levlom
     }
 }
