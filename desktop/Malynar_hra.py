@@ -4,6 +4,8 @@ import front
 import json
 import os
 from copy import copy
+import random
+from math import ceil
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 
 class actions:
@@ -13,7 +15,7 @@ class actions:
         self.name:str = name
         self.points:int = 0
         self.tick_counter:int = -1
-        self.inventory:dict = {
+        self.inventory:dict[str, int] = {
             'people': 5,
             'stone': 10,
             'wood': 15,
@@ -65,7 +67,7 @@ class actions:
         self.add_available_lands(starting_pos)
         with open('desktop/beasts.json', "r", encoding="utf-8") as f:
             cont = json.load(f)
-        self.beast_types:dict = cont["types"]
+        self.beast_types = cont["types"]
         for pos in cont["positions"].keys():
             self.all_lands[pos]['name'] = cont['positions'][pos]["type"]
             self.all_lands[pos]['level'] = cont['positions'][pos]["count"]
@@ -326,8 +328,34 @@ class actions:
         self.army[name]["count"] += 1
         return True
     
-    def fight_monster(self):
-        pass
+    def fight_monster(self, type: str, count: int, pos: str) -> bool:
+        your_stren = 0
+        for soldier in self.army.keys():
+            your_stren += self.army[soldier]["strength"] * self.army[soldier]['count']
+        
+        monster_stren = self.beast_types[type]["strength"] * count
+        monster_receieves_dmg = (your_stren / (your_stren * monster_stren)) * (your_stren + monster_stren)
+        you_receieve_dmg = (monster_stren / (your_stren * monster_stren)) * (your_stren + monster_stren)
+
+        monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
+
+        while you_receieve_dmg > 0:
+            soldier = random.choice(list(self.army.keys()))
+            if self.army[soldier]['count'] == 0:
+                continue
+            if you_receieve_dmg < self.army[soldier]["strength"] / 2:
+                break
+            else:
+                self.army[soldier]['count'] -= 1
+                you_receieve_dmg -= self.army[soldier]["strength"]
+
+        if self.all_lands[pos]["level"] <= monsters_killed:
+            self.all_lands[pos]["level"] = 0
+            self.all_lands[pos]["name"] = 'land'
+            return True
+        else:
+            self.all_lands[pos]["level"] -= monsters_killed
+            return False
 
     def is_ok_code(self, item, code): # name of item, code (iron1234)
         if code in self.used_codes:
