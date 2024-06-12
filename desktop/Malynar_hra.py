@@ -330,16 +330,23 @@ class actions:
     
     def fight_monster(self, type: str, count: int, pos: str) -> bool:
         your_stren = 0
+        soldier_count = 0
         for soldier in self.army.keys():
             your_stren += self.army[soldier]["strength"] * self.army[soldier]['count']
+            soldier_count += self.army[soldier]['count']
         
         monster_stren = self.beast_types[type]["strength"] * count
+
+        monster_stren = int((1 + (1/random.randint(1, 10))) * monster_stren)
+        your_stren = int((1 + (1/random.randint(1, 10))) * your_stren)
+        
+
         monster_receieves_dmg = (your_stren / (your_stren * monster_stren)) * (your_stren + monster_stren)
         you_receieve_dmg = (monster_stren / (your_stren * monster_stren)) * (your_stren + monster_stren)
 
         monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
 
-        while you_receieve_dmg > 0:
+        while you_receieve_dmg > 0 and soldier_count > 0:
             soldier = random.choice(list(self.army.keys()))
             if self.army[soldier]['count'] == 0:
                 continue
@@ -347,6 +354,7 @@ class actions:
                 break
             else:
                 self.army[soldier]['count'] -= 1
+                soldier_count -= 1
                 you_receieve_dmg -= self.army[soldier]["strength"]
 
         if self.all_lands[pos]["level"] <= monsters_killed:
