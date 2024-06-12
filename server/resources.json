@@ -1,7 +1,54 @@
 {
     "0x0": {
         "name": "mountain of the golden dragon",
-        "monster power":250,
         "resources":["mountain", "metal mountain", "golden mountain"]
+    },
+    "-10x10": {
+        "name": "Iron mountain",
+        "resources":["mountain", "metal mountain"]
+    },
+    "10x-10": {
+        "name": "Iron mountain",
+        "resources":["mountain", "metal mountain"]
+    },
+    "0x-10": {
+        "name": "Iron mountain",
+        "resources":["mountain", "metal mountain"]
+    },
+    "0x10": {
+        "name": "Iron mountain",
+        "resources":["mountain", "metal mountain"]
+    },
+    "-10x0": {
+        "name": "Iron mountain",
+        "resources":["mountain", "metal mountain"]
+    },
+    "10x0": {
+        "name": "Iron mountain",
+        "resources":["mountain", "metal mountain"]
+    },
+    "20x0": {
+        "name": "Old forest",
+        "resources":["forest"]
+    },
+    "20x-20": {
+        "name": "Old forest",
+        "resources":["forest"]
+    },
+    "0x-20": {
+        "name": "Old forest",
+        "resources":["forest"]
+    },
+    "-20x0": {
+        "name": "Old forest",
+        "resources":["forest"]
+    },
+    "-20x20": {
+        "name": "Old forest",
+        "resources":["forest"]
+    },
+    "0x20": {
+        "name": "Old forest",
+        "resources":["forest"]
     }
 }

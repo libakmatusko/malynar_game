@@ -860,6 +860,13 @@ class Front:
         if color == self.clicked_hexagon_color:
             self.selected_pos = self.polygons[-1]
 
+        
+        if building_shape == "dot":
+            self.map_canvas.create_oval(
+                x - side_length / 4, y - side_length / 4,
+                x + side_length / 4, y + side_length / 4,
+                fill=building_color, width=0
+            )
         if building_shape == "square":
             self.map_canvas.create_rectangle(
                 x - side_length / 2.5, y - side_length / 2.5,

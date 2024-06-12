@@ -9,7 +9,7 @@
             }
         ],
         "design": {
-            "shape": "triangle",
+            "shape": "dot",
             "color": "black"
         }
     },
@@ -183,8 +183,8 @@
             {"raw gold":2}
         ],
         "design": {
-            "shape": "star",
-            "color": "grey3"
+            "shape": "square",
+            "color": "gold"
         },
         "points":[10, 25]
     },
@@ -260,7 +260,7 @@
             {"steel tool":1}
         ],
         "design": {
-            "shape": "square",
+            "shape": "pentagon",
             "color": "grey4"
         },
         "points":[5, 10, 20]
@@ -290,7 +290,7 @@
             {"canon":1}
         ],
         "design": {
-            "shape": "square",
+            "shape": "pentagon",
             "color": "grey4"
         },
         "points":[6, 15]
@@ -324,7 +324,7 @@
             {"wood":1}
         ],
         "design": {
-            "shape": "square",
+            "shape": "triangle",
             "color": "brown"
         },
         "points":[2, 5, 7]
@@ -361,7 +361,7 @@
             {"plank":5}
         ],
         "design": {
-            "shape": "square",
+            "shape": "triangle",
             "color": "bisque2"
         },
         "points":[1, 3, 7]
@@ -435,7 +435,7 @@
             {"gold":2}
         ],
         "design": {
-            "shape": "square",
+            "shape": "pentagon",
             "color": "bisque2"
         },
         "points":[5, 10, 15]
