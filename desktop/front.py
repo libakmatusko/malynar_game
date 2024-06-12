@@ -593,27 +593,32 @@ class Front:
 
         tk.Label(self.upgrade_window, text=f'{infos["name"]}: {next_level + 1}', font=("smili", self.font_size)).pack()
 
-        input_text = ""
-        for material in self.actions.buildings[infos["name"]]["input"][next_level].keys():
-            input_text += f'{self.actions.buildings[infos["name"]]["input"][next_level][material]} {material}, '
-        if input_text:
-            input_text = input_text[:-2]
+        if self.actions.buildings[infos["name"]]["generating"]:
+            input_text = ""
+            for material in self.actions.buildings[infos["name"]]["input"][next_level].keys():
+                input_text += f'{self.actions.buildings[infos["name"]]["input"][next_level][material]} {material}, '
+            if input_text:
+                input_text = input_text[:-2]
+            else:
+                input_text = "Z ničoho"
+
+            time_text = f'↓ {self.actions.buildings[infos["name"]]["ticks per item"][next_level]} ⌛ ↓'
+
+            output_text = ""
+            for material in self.actions.buildings[infos["name"]]["output"][next_level].keys():
+                output_text += f'{self.actions.buildings[infos["name"]]["output"][next_level][material]} {material}, '
+            if output_text:
+                output_text = output_text[:-2]
+            else:
+                output_text = "Nič"
+        
         else:
+            time_text = "↓ 0 ⌛ ↓"
             input_text = "Z ničoho"
+            output_text = "Nič"
 
         tk.Label(self.upgrade_window, text=input_text, font=("smili", self.font_size)).pack()
-
-        time_text = f'↓ {self.actions.buildings[infos["name"]]["ticks per item"][next_level]} ⌛ ↓'
         tk.Label(self.upgrade_window, text=time_text, font=("smili", self.font_size)).pack()
-
-        output_text = ""
-        for material in self.actions.buildings[infos["name"]]["output"][next_level].keys():
-            output_text += f'{self.actions.buildings[infos["name"]]["output"][next_level][material]} {material}, '
-        if output_text:
-            output_text = output_text[:-2]
-        else:
-            output_text = "-"
-        
         tk.Label(self.upgrade_window, text=output_text, font=("smili", self.font_size)).pack()
 
         is_buildable = True
