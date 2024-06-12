@@ -165,7 +165,7 @@ class Front:
         id = min(self.polygons, key=lambda l: ((l[1][0]-event.x)**2 + (l[1][1]-event.y)**2)**0.5)
 
         if self.selected_pos != []:
-            self.map_canvas.itemconfig(self.selected_pos[0], fill=self.hexagon_color)
+            self.map_canvas.itemconfig(self.selected_pos[0], fill=self.get_hexagon_color(self.map_cords))
         self.selected_pos = id
         map_cords = self.tkinter_to_map_cords[id[1]]
         self.map_cords = [map_cords[0], map_cords[1]]
@@ -665,6 +665,7 @@ class Front:
         if not is_buildable:
             button.configure(bg="gray", state="disabled")
 
+
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
 
@@ -749,6 +750,14 @@ class Front:
                 self.disposable_menu_buttons[-1].place(rely=0.20, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
                 self.disposable_menu_buttons.append(tk.Label(text=output_text, borderwidth=4, font=("smili", self.font_size)))
                 self.disposable_menu_buttons[-1].place(rely=0.28, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+        elif infos["name"] in self.actions.beast_types.keys():
+            self.disposable_menu_buttons.append(tk.Button(text="Zaútočiť", command=lambda: self.actions.fight_monster(infos["name"], infos["level"], self.actions.to_pos_string(*self.map_cords)), borderwidth=4, font=("smili", self.font_size)))
+            self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+
+            strength_text = f'Sila {self.actions.beast_types[infos["name"]]["strength"]}'
+            self.disposable_menu_buttons.append(tk.Label(text=strength_text, borderwidth=4, font=("smili", self.font_size)))
+            self.disposable_menu_buttons[-1].place(rely=0.12, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
+
 
 
         self.disposable_menu_buttons.append(tk.Button(text="Armáda", command=self.create_army_window, borderwidth=4, font=("smili", self.font_size)))
@@ -777,6 +786,15 @@ class Front:
 
     def menu_scroll(self, event):
         self.draw_menu()
+
+    def get_hexagon_color(self, cords):
+        color = self.hexagon_color  
+
+        typ = self.actions.all_lands[self.actions.to_pos_string(*cords)]
+        if typ["name"] in self.actions.beast_types.keys():
+            color = "darkgreen"
+        
+        return color
 
     def draw_map(self):
         self.map_canvas.delete("all")
@@ -809,10 +827,13 @@ class Front:
                     continue
                 building = self.actions.all_lands[self.actions.to_pos_string(*self.tkinter_to_map_cords[(center_pos_x, center_pos_y)])]
 
+                cords = list(self.tkinter_to_map_cords[(center_pos_x, center_pos_y)])
+
+                color = self.get_hexagon_color(cords)
+
                 if list(self.tkinter_to_map_cords[(center_pos_x, center_pos_y)]) == self.map_cords:
                     color = self.clicked_hexagon_color
-                else:
-                    color = self.hexagon_color
+               
 
                 if building["name"] in self.actions.buildings.keys():
                     design = self.actions.buildings[building["name"]]["design"]

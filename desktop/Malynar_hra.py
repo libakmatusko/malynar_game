@@ -352,9 +352,11 @@ class actions:
         if self.all_lands[pos]["level"] <= monsters_killed:
             self.all_lands[pos]["level"] = 0
             self.all_lands[pos]["name"] = 'land'
+            self.front.draw_menu()
             return True
         else:
             self.all_lands[pos]["level"] -= monsters_killed
+            self.front.draw_menu()
             return False
 
     def is_ok_code(self, item, code): # name of item, code (iron1234)
