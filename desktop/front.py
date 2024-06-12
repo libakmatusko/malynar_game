@@ -875,6 +875,16 @@ class Front:
                 x + distance, y + radius / 2,
                 fill=building_color
             )
+        elif building_shape == "pentagon":
+            radius = side_length / 1.25
+            self.map_canvas.create_polygon(
+                x, y - radius,
+                x + radius*0.951, y - radius*0.309,
+                x + radius*0.587, y + radius*0.809,
+                x - radius*0.587, y + radius*0.809,
+                x - radius*0.951, y - radius*0.309,
+                fill=building_color
+            )
         elif building_shape == "star":
             radius = side_length / 1.25
             p = 0.618-1
