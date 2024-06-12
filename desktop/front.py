@@ -520,6 +520,19 @@ class Front:
                 output_text = "-"
                 time_text = "0 ⌛"
 
+            if "points" in self.actions.buildings[building].keys():
+                points = self.actions.buildings[building]["points"][0]
+                if points == 0:
+                    points_text = "0 bodov"
+                elif points == 1:
+                    points_text = f'{points} bod'
+                elif points <= 4:
+                    points_text = f'{points} body'
+                else:
+                    points_text = f'{points} bodov'
+            else:
+                points_text = "0 bodov"
+
             self.disposable_build_labels.append(tk.Label(self.build_window, text=building, width=25, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i, column=0)
             self.disposable_build_labels.append(tk.Label(self.build_window, text=cost_text, width=45, font=("smili", int(self.font_size * 0.7))))
@@ -543,6 +556,9 @@ class Front:
 
             self.disposable_build_labels.append(tk.Label(self.build_window, text=f"{self.build_page_number + 1} / {ceil(len(self.actions.buildings) / 7)}", width=25, font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=15, column=1)
+
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=points_text, width=10, font=("smili", int(self.font_size * 1.6))))
+            self.disposable_build_labels[-1].grid(row=2 * i, column=4, rowspan=2)
 
     def build_confirm_menu(self, building):
         if self.build_confirm_window:
@@ -616,6 +632,20 @@ class Front:
             time_text = "↓ 0 ⌛ ↓"
             input_text = "Z ničoho"
             output_text = "Nič"
+        
+        if "points" in self.actions.buildings[infos["name"]].keys():
+            points = self.actions.buildings[infos["name"]]["points"][infos["level"]]
+            if points == 0:
+                points_text = "0 bodov"
+            elif points == 1:
+                points_text = f'{points} bod'
+            elif points <= 4:
+                points_text = f'{points} body'
+            else:
+                points_text = f'{points} bodov'
+        else:
+            points_text = "0 bodov"
+        tk.Label(self.upgrade_window, text=points_text, font=("smili", self.font_size)).pack()
 
         tk.Label(self.upgrade_window, text=input_text, font=("smili", self.font_size)).pack()
         tk.Label(self.upgrade_window, text=time_text, font=("smili", self.font_size)).pack()

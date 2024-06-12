@@ -246,11 +246,12 @@ class actions:
         for my_land in self.my_lands:
             if my_land['position'] == pos:
                 building = self.buildings[my_land['name']]
-                my_land.update({
-                    'ticks per item': building['ticks per item'][level],
-                    'input': building['input'][level],
-                    'output': building['output'][level],
-                })
+                if building["generating"]:
+                    my_land.update({
+                        'ticks per item': building['ticks per item'][level],
+                        'input': building['input'][level],
+                        'output': building['output'][level],
+                    })
                 break
         self.points += building.get('points', [0 for _ in range(level+1)])[level]
         if not self.server_upgrade(pos=pos):
