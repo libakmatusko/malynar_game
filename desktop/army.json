@@ -1,6 +1,6 @@
 {
     "vojak": {
-        "strength": 100,
+        "strength": 10,
         "count": 0,
         "recipe": {"iron": 10, "people": 1}
     }
