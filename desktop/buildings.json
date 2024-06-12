@@ -23,17 +23,24 @@
                 "stone":1
             },
             {
-                "people":2,
+                "people":3,
                 "wood":5,
                 "stone":5
+            },
+            {
+                "people":15,
+                "wood":20,
+                "stone":10
             }
         ],
-        "ticks per item":[5, 3],
+        "ticks per item":[5, 3, 1],
         "input": [
+            {},
             {},
             {}
         ],
         "output": [
+            {"food":1},
             {"food":1},
             {"food":1}
         ],
@@ -41,7 +48,7 @@
             "shape": "triangle",
             "color": "purple"
         },
-        "points":[1, 2]
+        "points":[1, 2, 5]
     },
     "farmer":{
         "requrement":"field",
@@ -58,8 +65,8 @@
                 "stone":5
             },
             {
-                "people":10,
-                "wood":20,
+                "people":20,
+                "plank":20,
                 "stone":50
             }
         ],
@@ -72,7 +79,7 @@
         "output": [
             {"food":1},
             {"food":1},
-            {"food":3, "leather":3}
+            {"food":3, "leather":1}
 
         ],
         "design": {
@@ -150,6 +157,36 @@
             "color": "grey3"
         },
         "points":[2, 5, 15]
+    },
+    "gold mine":{
+        "requrement":"golden mountain",
+        "generating": true,
+        "cost":[
+            {
+                "people":5,
+                "plank":15,
+                "iron tool":2
+            },
+            {
+                "people":20,
+                "plank":25,
+                "steel tool":5
+            }
+        ],
+        "ticks per item":[30, 40],
+        "input": [
+            {"food":2, "gunpowder":5},
+            {"food":5, "gunpowder":10}
+        ],
+        "output": [
+            {"raw gold":1},
+            {"raw gold":2}
+        ],
+        "design": {
+            "shape": "star",
+            "color": "grey3"
+        },
+        "points":[10, 25]
     },
     "forge":{
         "requrement":"",
@@ -245,8 +282,8 @@
         ],
         "ticks per item":[15, 35],
         "input": [
-            {"plank":3, "iron":2},
-            {"plamk":5, "iron":20}
+            {"plank":3, "iron":2, "gunpowder":5},
+            {"plamk":5, "iron":20, "gunpowder":50}
         ],
         "output": [
             {"musket":1},
@@ -269,14 +306,20 @@
             {
                 "people":2,
                 "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
             }
         ],
-        "ticks per item":[5, 3],
+        "ticks per item":[5, 3, 1],
         "input": [
+            {},
             {},
             {}
         ],
         "output": [
+            {"wood":1},
             {"wood":1},
             {"wood":1}
         ],
@@ -284,7 +327,7 @@
             "shape": "square",
             "color": "brown"
         },
-        "points":[2, 5]
+        "points":[2, 5, 7]
     },
     "sawmill":{
         "requrement":"",
@@ -299,22 +342,29 @@
                 "people":2,
                 "stone":5,
                 "wood": 5
+            },
+            {
+                "people":3,
+                "iron tool":3,
+                "iron": 5
             }
         ],
-        "ticks per item":[2, 1],
+        "ticks per item":[2, 1, 3],
         "input": [
-            {"wood": 1},
-            {"wood": 1}
+            {"wood":1},
+            {"wood":1},
+            {"wood":4}
         ],
         "output": [
             {"plank":1},
-            {"plank":1}
+            {"plank":1},
+            {"plank":5}
         ],
         "design": {
             "shape": "square",
             "color": "bisque2"
         },
-        "points":[1, 3]
+        "points":[1, 3, 7]
     },
     "drvicka":{
         "requrement":"",
@@ -388,7 +438,7 @@
             "shape": "square",
             "color": "bisque2"
         },
-        "points":[2, 2, 5]
+        "points":[5, 10, 15]
     },
 
 

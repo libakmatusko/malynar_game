@@ -485,7 +485,7 @@ class Front:
             cost_text = ""
             for material in self.actions.buildings[building]["cost"][0].keys():
                 cost_text += f'{self.actions.buildings[building]["cost"][0][material]} {material}, '
-                if self.actions.inventory[material] < self.actions.buildings[building]["cost"][0][material]:
+                if self.actions.inventory.get(material, 0) < self.actions.buildings[building]["cost"][0][material]:
                     is_buildable = False
             cost_text = cost_text[:-2]
 
