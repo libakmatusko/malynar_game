@@ -861,11 +861,37 @@ class Front:
             self.selected_pos = self.polygons[-1]
 
         if building_shape == "square":
-            self.map_canvas.create_rectangle(x - side_length / 2.5, y - side_length / 2.5, x + side_length / 2.5, y + side_length / 2.5, fill=building_color, width=0)
-        if building_shape == "triangle":
+            self.map_canvas.create_rectangle(
+                x - side_length / 2.5, y - side_length / 2.5,
+                x + side_length / 2.5, y + side_length / 2.5,
+                fill=building_color, width=0
+            )
+        elif building_shape == "triangle":
             radius = side_length / 1.5
             distance = ((3 ** (0.5)) / 2) * radius
-            self.map_canvas.create_polygon(x, y - radius, x - distance, y + radius / 2, x + distance, y + radius / 2, fill=building_color)
+            self.map_canvas.create_polygon(
+                x, y - radius,
+                x - distance, y + radius / 2,
+                x + distance, y + radius / 2,
+                fill=building_color
+            )
+        elif building_shape == "star":
+            radius = side_length / 1.25
+            p = 0.618-1
+            self.map_canvas.create_polygon(
+                x, y - radius,
+                x - radius*0.587*p, y + radius*0.809*p,
+                x + radius*0.951, y - radius*0.309,
+                x - radius*0.951*p, y - radius*0.309*p,
+                x + radius*0.587, y + radius*0.809,
+                x, y - radius*p,
+                x - radius*0.587, y + radius*0.809,
+                x + radius*0.951*p, y - radius*0.309*p,
+                x - radius*0.951, y - radius*0.309,
+                x + radius*0.587*p, y + radius*0.809*p,
+                fill=building_color
+            )
+        
 
     
     def play_sound(self, is_correct: bool) -> None:
