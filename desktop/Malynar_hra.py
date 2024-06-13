@@ -334,15 +334,21 @@ class actions:
         for soldier in self.army.keys():
             your_stren += self.army[soldier]["strength"] * self.army[soldier]['count']
             soldier_count += self.army[soldier]['count']
+
+        if your_stren == 0:
+            return False
         
         monster_stren = self.beast_types[type]["strength"] * count
 
-        monster_stren = int((1 + (1/random.randint(1, 10))) * monster_stren)
-        your_stren = int((1 + (1/random.randint(1, 10))) * your_stren)
+        monster_stren = int(random.random() / 2 * monster_stren)
+        your_stren = int(random.random() / 2 * your_stren)
         
+        monster_receieves_dmg = your_stren
 
-        monster_receieves_dmg = (your_stren / (your_stren * monster_stren)) * (your_stren + monster_stren)
-        you_receieve_dmg = (monster_stren / (your_stren * monster_stren)) * (your_stren + monster_stren)
+        you_receieve_dmg = monster_stren
+
+        #monster_receieves_dmg = (your_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
+        #you_receieve_dmg = (monster_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
 
         monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
 
@@ -357,15 +363,16 @@ class actions:
                 soldier_count -= 1
                 you_receieve_dmg -= self.army[soldier]["strength"]
 
-        if self.all_lands[pos]["level"] <= monsters_killed:
-            self.all_lands[pos]["level"] = 0
-            self.all_lands[pos]["name"] = 'land'
-            self.front.draw_menu()
+        response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
+        self.front.draw_menu()
+        if response.status_code == 200 and response.text == '0':
             return True
-        else:
-            self.all_lands[pos]["level"] -= monsters_killed
-            self.front.draw_menu()
+        elif response.status_code == 200:
             return False
+        else:
+            print('zlyhal server')
+            return False
+
 
     def is_ok_code(self, item, code): # name of item, code (iron1234)
         if code in self.used_codes:

@@ -43,7 +43,6 @@ class Front:
 
         window_height = self.window.winfo_screenheight() # - 200 # - 200 only for easier testing
         window_width = self.window.winfo_screenwidth() # - 200 # - 200 only for easier testing
-
         self.hexagon_color = "ivory2"
         self.clicked_hexagon_color = "gold"
 
@@ -336,61 +335,61 @@ class Front:
                 break
         if not exists:
             # e-ee
-            self.play_sound(False)
+            play_sound(False)
             print("eeee1")
             return
         if trade["count"].isnumeric():
             trade["count"] = int(trade["count"])
             if trade["count"] < 0:
                 # e-ee
-                self.play_sound(False)
+                play_sound(False)
                 print("eeee2")
                 return
         else:
             # e-ee
-            self.play_sound(False)
+            play_sound(False)
             print("eeee3")
             return
         if trade["cost"].isnumeric():
             trade["cost"] = int(trade["cost"])
             if trade["cost"] < 0:
                 # e-ee
-                self.play_sound(False)
+                play_sound(False)
                 print("eeee4")
                 return
         else:
             # e-ee
-            self.play_sound(False)
+            play_sound(False)
             print("eeee5")
             return
         
         if self.make_trade_objects["direction"]:
             if self.actions.inventory["money"] < trade["cost"]:
                 # e-ee
-                self.play_sound(False)
+                play_sound(False)
                 print("eeee6")
                 return
         else:
             if self.actions.inventory[trade["item"]] < trade["count"]:
                 # e-ee
-                self.play_sound(False)
+                play_sound(False)
                 print("eeee7")
                 return
         
         self.actions.place_trade(int(not self.make_trade_objects["direction"]), trade["item"], trade["count"], trade["cost"])
 
         # cink
-        self.play_sound(True)
+        play_sound(True)
         print("cink")
 
     def buy(self, id):
         if self.actions.take_trade(id):
              # cink
-            self.play_sound(True)
+            play_sound(True)
             print('cink')
         else:
              # e-eee
-            self.play_sound(False)
+            play_sound(False)
             print('eeee')
 
     def create_army_window(self):
@@ -407,10 +406,10 @@ class Front:
     def update_create_army_window(self):
         if self.army_building_win:
             try:
-                tk.Label(self.army_building_win, text='Názov', font=("smili", self.font_size)).grid(row=0, column=0)
-                tk.Label(self.army_building_win, text='Koľko máš', font=("smili", self.font_size)).grid(row=0, column=1)
-                tk.Label(self.army_building_win, text='Sila', font=("smili", self.font_size)).grid(row=0, column=2)
-                tk.Label(self.army_building_win, text='Vyrobiť', font=("smili", self.font_size)).grid(row=0, column=3)
+                tk.Label(self.army_building_win, width=10, text='Názov', font=("smili", self.font_size)).grid(row=0, column=0)
+                tk.Label(self.army_building_win, width=10, text='Koľko máš', font=("smili", self.font_size)).grid(row=0, column=1)
+                tk.Label(self.army_building_win, width=10, text='Sila', font=("smili", self.font_size)).grid(row=0, column=2)
+                tk.Label(self.army_building_win, width=10, text='Vyrobiť', font=("smili", self.font_size)).grid(row=0, column=3)
                 tk.Label(self.army_building_win, text='Potrebné suroviny', font=("smili", self.font_size)).grid(row=0, column=4, columnspan=100)
                 for i, soldier in enumerate(self.actions.army.keys()):
                     tk.Label(self.army_building_win, text=soldier, font=("smili", self.font_size)).grid(row=i+1, column=0)
@@ -426,11 +425,11 @@ class Front:
         if self.actions.build_soldier(name):
             print('cink')
             self.create_army_window()
-            self.play_sound(True)
+            play_sound(True)
             # cink
         else:
             print('eee')
-            self.play_sound(False)
+            play_sound(False)
             # e-eee
 
     def change_build_page(self, value):
@@ -584,7 +583,7 @@ class Front:
             self.draw_map()
             # zvuky stavby
         else:
-            self.play_sound(False)
+            play_sound(False)
              # e-ee
 
     def upgrade_selected_building(self):
@@ -788,11 +787,25 @@ class Front:
         self.draw_menu()
 
     def get_hexagon_color(self, cords):
-        color = self.hexagon_color  
+        color = self.hexagon_color
+
+        max_strength = 5000
 
         typ = self.actions.all_lands[self.actions.to_pos_string(*cords)]
         if typ["name"] in self.actions.beast_types.keys():
-            color = "darkgreen"
+            strength = typ["level"] * self.actions.beast_types[typ["name"]]["strength"]
+
+            if strength > max_strength:
+                percentage = 1
+            else:
+                percentage = strength / max_strength
+            percentage = 1 - percentage
+            
+            rgb_color = [int(percentage * 180) for i in range(3)]
+            rgb_color[1] += 75
+
+            color = f"#{rgb_color[0]:02x}{rgb_color[1]:02x}{rgb_color[2]:02x}"
+
         
         return color
 
@@ -911,14 +924,14 @@ class Front:
         
 
     
-    def play_sound(self, is_correct: bool) -> None:
-        pass
-        '''
-        if is_correct:
-            winsound.PlaySound('desktop/sounds/cin.wav', winsound.SND_FILENAME)
-        else:
-            winsound.PlaySound('desktop/sounds/eeee.wav', winsound.SND_FILENAME)
-            '''
+def play_sound(is_correct: bool) -> None:
+    print(is_correct)
+    
+    if is_correct:
+        winsound.PlaySound('sounds/cin.wav', winsound.SND_ASYNC)
+    else:
+        winsound.PlaySound('sounds/eeee.wav', winsound.SND_ASYNC)
+        
 
 
 if __name__ == "__main__":

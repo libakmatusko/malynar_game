@@ -158,6 +158,21 @@ def was_trade_taken(id):
         return '1', 200
     return '0', 200
 
+@app.route('/kill_monsters/<args>', methods=['POST'])
+def kill_monsters(args):
+    pos, count = args.split("|")
+    count = int(count)
+
+    game.all_lands[pos]
+    if game.all_lands[pos]["level"] <= count:
+        game.all_lands[pos]["level"] = 0
+        game.all_lands[pos]["name"] = 'land'
+        return '0', 200
+    else:
+        game.all_lands[pos]["level"] -= count
+        return '1', 200
+
+
 @app.route('/quicksave/admin', methods=['POST'])
 def quicksave():
     game.make_save()
