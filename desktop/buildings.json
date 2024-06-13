@@ -87,7 +87,7 @@
         },
         "points":[1, 2, 5]
     },
-    "sedlar":{
+    "sedliar":{
         "requrement":"",
         "generating": true,
         "cost":[
@@ -306,30 +306,28 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":1
+                "wood":10,
+                "stone":10
             },
             {
-                "people":2,
-                "wood":5
+                "wood":10,
+                "stone":10
             },
             {
-                "people":5,
+                "plank":25,
+                "chiseled stone":25
+            },
+            {
                 "plank":10,
-                "iron tool":3
+                "iron":10
             },
             {
-                "people":1,
-                "wood":1
-            },
-            {
-                "people":2,
-                "wood":5
-            },
-            {
-                "people":5,
                 "plank":10,
-                "iron tool":3
+                "klinec":30
+            },
+            {
+                "mahagon plank":25,
+                "iron tool":10
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -360,30 +358,28 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":1
+                "wood":15,
+                "stone":15
             },
             {
-                "people":2,
-                "wood":5
+                "wood":15,
+                "stone":15
             },
             {
-                "people":5,
-                "plank":10,
-                "iron tool":3
+                "plank":40,
+                "chiseled stone":40
             },
             {
-                "people":1,
-                "wood":1
+                "plank":40,
+                "iron":15
             },
             {
-                "people":2,
-                "wood":5
+                "plank":50,
+                "iron tool":25
             },
             {
-                "people":5,
-                "plank":10,
-                "iron tool":3
+                "mahagon plank":50,
+                "iron tool":50
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],

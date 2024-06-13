@@ -14,8 +14,6 @@ class actions:
         self.playing:bool = False
         self.name:str = name
         self.points:int = 0
-        self.army_points = 0
-
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
             'people': 5,
@@ -49,7 +47,7 @@ class actions:
                 'name': 'base',
                 'position': starting_pos,
                 'ticks per item': 10,
-                'time to generation': 30,
+                'time to generation': 10,
                 'generating': False,
                 'input': {},
                 'output': {'people': 1},
@@ -65,6 +63,7 @@ class actions:
                         'name': 'land',
                         'level': 0
                     }
+        #print(len(self.all_lands))
         self.available_lands:list = [starting_pos]
         self.add_available_lands(starting_pos)
         with open('desktop/beasts.json', "r", encoding="utf-8") as f:
@@ -77,10 +76,11 @@ class actions:
 
         self.front = front.Front(self)
         self.front.update()
+    
 
     def __int__(self):
-        points = self.points + self.army_points
-        return points
+        return self.points
+
 
     def tick(self):
         self.tick_counter += 1
@@ -92,7 +92,6 @@ class actions:
                 print('Game updated')
             self.frontend_update()
         if self.tick_counter % 60 == 0:
-            self.grow_population()
             self.save()
     
         for land in self.my_lands:
@@ -147,14 +146,6 @@ class actions:
         self.check_my_trades()
         self.front.fill_build_window()
     
-    def grow_population(self) -> None:
-        food_const = 10
-        family_const = 10
-        families = self.inventory['people'] // food_const
-        food = self.inventory['food'] // family_const
-        self.inventory['people'] += min(families, food)
-        self.inventory['food'] -= min(families, food) * food_const
-
     def server_build(self, pos: list[int], building: str):
         if self.debug:
             print('Neupdatujem')
@@ -372,10 +363,8 @@ class actions:
         response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
         self.front.draw_menu()
         if response.status_code == 200 and response.text == '0':
-            self.army_points += monster_receieves_dmg
             return True
         elif response.status_code == 200:
-            self.army_points += monster_receieves_dmg
             return False
         else:
             print('zlyhal server')
