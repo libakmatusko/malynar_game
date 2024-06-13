@@ -49,7 +49,7 @@ class actions:
                 'name': 'base',
                 'position': starting_pos,
                 'ticks per item': 10,
-                'time to generation': 10,
+                'time to generation': 30,
                 'generating': False,
                 'input': {},
                 'output': {'people': 1},
@@ -81,11 +81,10 @@ class actions:
 
         self.front = front.Front(self)
         self.front.update()
-    
 
     def __int__(self):
-        return self.points
-
+        points = self.points + self.army_points
+        return points
 
     def tick(self):
         self.tick_counter += 1
@@ -97,6 +96,7 @@ class actions:
                 print('Game updated')
             self.frontend_update()
         if self.tick_counter % 60 == 0:
+            self.grow_population()
             self.save()
     
         for land in self.my_lands:
@@ -151,6 +151,14 @@ class actions:
         self.check_my_trades()
         self.front.fill_build_window()
     
+    def grow_population(self) -> None:
+        food_const = 10
+        family_const = 10
+        families = self.inventory['people'] // food_const
+        food = self.inventory['food'] // family_const
+        self.inventory['people'] += min(families, food)
+        self.inventory['food'] -= min(families, food) * food_const
+
     def server_build(self, pos: list[int], building: str):
         if self.debug:
             print('Neupdatujem')
