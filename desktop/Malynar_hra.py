@@ -14,6 +14,8 @@ class actions:
         self.playing:bool = False
         self.name:str = name
         self.points:int = 0
+        self.army_points = 0
+
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
             'people': 5,
@@ -366,8 +368,10 @@ class actions:
         response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
         self.front.draw_menu()
         if response.status_code == 200 and response.text == '0':
+            self.army_points += monster_receieves_dmg
             return True
         elif response.status_code == 200:
+            self.army_points += monster_receieves_dmg
             return False
         else:
             print('zlyhal server')
