@@ -68,18 +68,39 @@
                 "people":20,
                 "plank":20,
                 "stone":50
+            },
+            {
+                "people":1,
+                "wood":3,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":10,
+                "stone":5
+            },
+            {
+                "people":20,
+                "plank":20,
+                "stone":50
             }
         ],
-        "ticks per item":[3, 1, 1],
+        "ticks per item":[15, 10, 5, 15, 10, 5],
         "input": [
+            {},
+            {},
+            {},
             {},
             {},
             {}
         ],
         "output": [
-            {"food":1},
-            {"food":1},
-            {"food":3, "leather":1}
+            {"hay":1},
+            {"hay":1},
+            {"hay":1},
+            {"hay":3, "leather":1},
+            {"hay":3, "leather":1},
+            {"hay":3, "leather":1}
 
         ],
         "design": {
@@ -104,17 +125,91 @@
                 "people":5,
                 "plank":10,
                 "iron tool":3
+            },
+            {
+                "people":1,
+                "wood":1
+            },
+            {
+                "people":2,
+                "wood":5
+            },
+            {
+                "people":5,
+                "plank":10,
+                "iron tool":3
             }
         ],
-        "ticks per item":[5, 5, 4],
+        "ticks per item":[15, 10, 5, 15, 10, 5],
         "input": [
+            {},
+            {},
+            {},
+            {},
             {},
             {}
         ],
         "output": [
             {"stone":1},
-            {"stone":2, "coal":1},
-            {"stone":3, "coal":2}
+            {"stone":1},
+            {"stone":1},
+            {"stone":3, "marble":1},
+            {"stone":3, "marble":1},
+            {"stone":3, "marble":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey"
+        },
+        "points":[1, 3, 8]
+    },
+    "coal mine":{
+        "requrement":"coal mountain",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":1
+            },
+            {
+                "people":2,
+                "wood":5
+            },
+            {
+                "people":5,
+                "plank":10,
+                "iron tool":3
+            },
+            {
+                "people":1,
+                "wood":1
+            },
+            {
+                "people":2,
+                "wood":5
+            },
+            {
+                "people":5,
+                "plank":10,
+                "iron tool":3
+            }
+        ],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
+        "input": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "output": [
+            {"coal":1},
+            {"coal":1},
+            {"coal":1},
+            {"coal":1},
+            {"coal":1},
+            {"coal":1}
         ],
         "design": {
             "shape": "square",
@@ -139,15 +234,35 @@
                 "people":10,
                 "plank":5,
                 "iron tool":5
+            },
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
             }
         ],
-        "ticks per item":[15, 10, 3],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
+            {},
+            {},
+            {},
             {},
             {},
             {}
         ],
         "output": [
+            {"raw iron":1},
+            {"raw iron":1},
+            {"raw iron":1},
             {"raw iron":1},
             {"raw iron":1},
             {"raw iron":1}
@@ -312,7 +427,7 @@
                 "iron tool":5
             }
         ],
-        "ticks per item":[5, 3, 1],
+        "ticks per item":[15, 10, 5],
         "input": [
             {},
             {},

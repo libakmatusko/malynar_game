@@ -1,13 +1,3 @@
 {
-    "types": {
-        "zombie": {"strength": 10}
-    },
-    "positions": {
-        "20x0": {"type": "zombie", "count": 20},
-        "19x0": {"type": "zombie", "count": 40},
-        "18x0": {"type": "zombie", "count": 80},
-        "17x0": {"type": "zombie", "count": 160},
-        "16x0": {"type": "zombie", "count": 320},
-        "15x0": {"type": "zombie", "count": 640}
-    }
+    "zombie": {"strength": 10}
 }

@@ -873,6 +873,7 @@ class Front:
         if color == self.clicked_hexagon_color:
             self.selected_pos = self.polygons[-1]
 
+        width = side_length // 15 + 1
         
         if building_shape == "dot":
             self.map_canvas.create_oval(
@@ -884,7 +885,7 @@ class Front:
             self.map_canvas.create_rectangle(
                 x - side_length / 2.5, y - side_length / 2.5,
                 x + side_length / 2.5, y + side_length / 2.5,
-                fill=building_color, width=0
+                fill=building_color, outline="black", width=width
             )
         elif building_shape == "triangle":
             radius = side_length / 1.5
@@ -893,7 +894,9 @@ class Front:
                 x, y - radius,
                 x - distance, y + radius / 2,
                 x + distance, y + radius / 2,
-                fill=building_color
+                fill=building_color,
+                outline="black",
+                width=width
             )
         elif building_shape == "pentagon":
             radius = side_length / 1.25
@@ -903,7 +906,9 @@ class Front:
                 x + radius*0.587, y + radius*0.809,
                 x - radius*0.587, y + radius*0.809,
                 x - radius*0.951, y - radius*0.309,
-                fill=building_color
+                fill=building_color,
+                outline="black",
+                width=width
             )
         elif building_shape == "star":
             radius = side_length / 1.25
@@ -919,7 +924,9 @@ class Front:
                 x + radius*0.951*p, y - radius*0.309*p,
                 x - radius*0.951, y - radius*0.309,
                 x + radius*0.587*p, y + radius*0.809*p,
-                fill=building_color
+                fill=building_color,
+                outline="black",
+                width=width
             )
         
 
