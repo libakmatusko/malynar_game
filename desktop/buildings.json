@@ -50,6 +50,80 @@
         },
         "points":[1, 2, 5]
     },
+    "koniar":{
+        "requrement":"field",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":1,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":5,
+                "stone":5
+            },
+            {
+                "people":15,
+                "wood":20,
+                "stone":10
+            }
+        ],
+        "ticks per item":[30, 20, 10],
+        "input": [
+            {"hay":30},
+            {"hay":30},
+            {"hay":30}
+        ],
+        "output": [
+            {"kon":1},
+            {"kon":1},
+            {"kon":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "purple"
+        },
+        "points":[1, 2, 5]
+    },
+    "sedlar":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":1,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":5,
+                "stone":5
+            },
+            {
+                "people":15,
+                "wood":20,
+                "stone":10
+            }
+        ],
+        "ticks per item":[30, 20, 10],
+        "input": [
+            {"lather":15, "plank":5, "klinec":10},
+            {"lather":15, "plank":5, "klinec":10},
+            {"lather":15, "plank":5, "klinec":10}
+        ],
+        "output": [
+            {"sedlo":1},
+            {"sedlo":1},
+            {"sedlo":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "purple"
+        },
+        "points":[1, 2, 5]
+    },
     "farmer":{
         "requrement":"field",
         "generating": true,
@@ -107,7 +181,125 @@
             "shape": "triangle",
             "color": "magenta"
         },
-        "points":[2, 5, 10]
+        "points":[2, 5, 10, 10, 10, 10]
+    },
+    "mlyn":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":10,
+                "stone":5
+            },
+            {
+                "people":20,
+                "plank":20,
+                "stone":50
+            },
+            {
+                "people":1,
+                "wood":3,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":10,
+                "stone":5
+            },
+            {
+                "people":20,
+                "plank":20,
+                "stone":50
+            }
+        ],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
+        "input": [
+            {"hay":1},
+            {"hay":1},
+            {"hay":1},
+            {"hay":1},
+            {"hay":1},
+            {"hay":1}
+        ],
+        "output": [
+            {"muka":1},
+            {"muka":1},
+            {"muka":1},
+            {"muka":1},
+            {"muka":1},
+            {"muka":1}
+
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "magenta"
+        },
+        "points":[2, 5, 10, 10, 10, 10]
+    },
+    "pekaren":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":10,
+                "stone":5
+            },
+            {
+                "people":20,
+                "plank":20,
+                "stone":50
+            },
+            {
+                "people":1,
+                "wood":3,
+                "stone":1
+            },
+            {
+                "people":3,
+                "wood":10,
+                "stone":5
+            },
+            {
+                "people":20,
+                "plank":20,
+                "stone":50
+            }
+        ],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
+        "input": [
+            {"muka":3, "coal":1},
+            {"muka":3, "coal":1},
+            {"muka":3, "coal":1},
+            {"muka":3, "coal":1},
+            {"muka":3, "coal":1},
+            {"muka":3, "coal":1}
+        ],
+        "output": [
+            {"food":5},
+            {"food":5},
+            {"food":5},
+            {"food":5},
+            {"food":5},
+            {"food":5}
+
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "magenta"
+        },
+        "points":[2, 5, 10, 10, 10, 10]
     },
     "mine":{
         "requrement":"mountain",
@@ -215,7 +407,61 @@
             "shape": "square",
             "color": "grey"
         },
-        "points":[1, 3, 8]
+        "points":[1, 3, 8, 2, 2, 3]
+    },
+    "Turna nad Bodvou":{
+        "requrement":"mountain",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":1
+            },
+            {
+                "people":2,
+                "wood":5
+            },
+            {
+                "people":5,
+                "plank":10,
+                "iron tool":3
+            },
+            {
+                "people":1,
+                "wood":1
+            },
+            {
+                "people":2,
+                "wood":5
+            },
+            {
+                "people":5,
+                "plank":10,
+                "iron tool":3
+            }
+        ],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
+        "input": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "output": [
+            {"hlina":1},
+            {"hlina":1},
+            {"hlina":1},
+            {"hlina":1},
+            {"hlina":1},
+            {"hlina":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey"
+        },
+        "points":[1, 3, 8, 2, 2, 3]
     },
     "iron mine":{
         "requrement":"metal mountain",
@@ -271,7 +517,7 @@
             "shape": "square",
             "color": "grey3"
         },
-        "points":[2, 5, 15]
+        "points":[2, 5, 15, 2, 5, 15]
     },
     "gold mine":{
         "requrement":"golden mountain",
@@ -303,44 +549,307 @@
         },
         "points":[10, 25]
     },
-    "forge":{
+    "tesar":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
                 "people":1,
-                "stone":5,
-                "wood":3
+                "stone":2,
+                "wood": 1
             },
             {
                 "people":2,
-                "stone":15,
-                "wood":5
+                "stone":5,
+                "wood": 5
+            },
+            {
+                "people":3,
+                "iron tool":3,
+                "iron": 5
+            },
+            {
+                "people":1,
+                "stone":2,
+                "wood": 1
+            },
+            {
+                "people":2,
+                "stone":5,
+                "wood": 5
+            },
+            {
+                "people":3,
+                "iron tool":3,
+                "iron": 5
+            }
+        ],
+        "ticks per item":[15, 10, 5, 15, 10, 5],
+        "input": [
+            {"stone":1},
+            {"stone":1},
+            {"stone":1},
+            {"stone":3, "marble":1},
+            {"stone":3, "marble":1},
+            {"stone":3, "marble":1}
+        ],
+        "output": [
+            {"chiseled stone":1},
+            {"chiseled stone":1},
+            {"chiseled stone":1},
+            {"chiseled stone":3, "chiseled marble":1},
+            {"chiseled stone":3, "chiseled marble":1},
+            {"chiseled stone":3, "chiseled marble":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "bisque2"
+        },
+        "points":[1, 3, 7, 1, 1, 1]
+    },
+    "vyhna":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3
             },
             {
                 "people":5,
-                "iron":10,
-                "wood":5
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
+            },
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
             }
         ],
-        "ticks per item":[10, 8, 12],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"coal":4, "raw iron":1},
-            {"coal":3, "raw iron":1},
-            {"coal":5, "raw iron":3}
+            {"raw iron":1, "coal":1},
+            {"raw iron":1, "coal":1},
+            {"raw iron":1, "coal":1},
+            {"raw iron":1, "coal":1},
+            {"raw iron":1, "coal":1},
+            {"raw iron":1, "coal":1}
         ],
         "output": [
             {"iron":1},
             {"iron":1},
+            {"iron":1},
+            {"iron":1},
+            {"iron":1},
+            {"iron":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey3"
+        },
+        "points":[2, 5, 15, 2, 5, 15]
+    },
+    "tehlaren":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
+            },
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
+        "input": [
+            {"hlina":1, "coal":1},
+            {"hlina":1, "coal":1},
+            {"hlina":1, "coal":1},
+            {"hlina":1, "coal":1},
+            {"hlina":1, "coal":1},
+            {"hlina":1, "coal":1}
+        ],
+        "output": [
+            {"tehla":1},
+            {"tehla":1},
+            {"tehla":1},
+            {"tehla":1},
+            {"tehla":1},
+            {"tehla":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "grey3"
+        },
+        "points":[2, 5, 15, 2, 5, 15]
+    },
+    "hrnciar":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":2,
+                "plank":5,
+                "iron tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            }
+        ],
+        "ticks per item":[30, 20, 10],
+        "input": [
+            {"hlina":25, "dust":10},
+            {"hlina":25, "dust":10},
+            {"hlina":25, "dust":10}
+        ],
+        "output": [
+            {"porcelan":1},
+            {"porcelan":1},
+            {"porcelan":1}
+        ],
+        "design": {
+            "shape": "pentagon",
+            "color": "grey4"
+        },
+        "points":[6, 15, 20]
+    },
+    "sklar":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":2,
+                "plank":5,
+                "iron tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            }
+        ],
+        "ticks per item":[30, 20, 10],
+        "input": [
+            {"sand":5, "coal":1},
+            {"sand":5, "coal":1},
+            {"sand":5, "coal":1}
+        ],
+        "output": [
+            {"sklo":1},
+            {"sklo":1},
+            {"sklo":1}
+        ],
+        "design": {
+            "shape": "pentagon",
+            "color": "grey4"
+        },
+        "points":[6, 15, 20]
+    },
+    "oceliaren":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
+            },
+            {
+                "people":1,
+                "wood":3
+            },
+            {
+                "people":5,
+                "wood":2,
+                "stone":5
+            },
+            {
+                "people":10,
+                "plank":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
+        "input": [
+            {"iron":1, "coal":1},
+            {"iron":1, "coal":1},
+            {"iron":1, "coal":1},
+            {"iron":1, "coal":1},
+            {"iron":1, "coal":1},
+            {"iron":1, "coal":1}
+        ],
+        "output": [
+            {"steel":1},
+            {"steel":1},
+            {"steel":1},
+            {"steel":1},
+            {"steel":1},
             {"steel":1}
         ],
         "design": {
             "shape": "square",
-            "color": "grey2"
+            "color": "grey3"
         },
-        "points":[2, 7, 15]
+        "points":[2, 5, 15, 2, 5, 15]
     },
-    "toolsmith":{
+    "kovac":{
         "requrement":"",
         "generating": true,
         "cost":[
@@ -361,24 +870,122 @@
                 "stone":5,
                 "wood":5,
                 "iron tool":5
+            },
+            {
+                "people":1,
+                "stone":3,
+                "wood":2,
+                "iron":1
+            },
+            {
+                "people":1,
+                "stone":10,
+                "wood":5,
+                "iron":3
+            },
+            {
+                "people":1,
+                "stone":5,
+                "wood":5,
+                "iron tool":5
             }
         ],
-        "ticks per item":[20, 20, 30],
+        "ticks per item":[30, 20, 10],
         "input": [
-            {"wood":2, "iron":1},
-            {"wood":3, "iron":2},
-            {"plank":3, "steel":1}
+            {"plank":2, "iron":1},
+            {"plank":2, "iron":1},
+            {"plank":2, "iron":1},
+            {"mahagon plank":2, "steel":1},
+            {"mahagon plank":2, "steel":1},
+            {"mahagon plank":2, "steel":1}
         ],
         "output": [
             {"iron tool":1},
             {"iron tool":1},
+            {"iron tool":1},
+            {"steel tool":1},
+            {"steel tool":1},
             {"steel tool":1}
         ],
         "design": {
             "shape": "pentagon",
             "color": "grey4"
         },
-        "points":[5, 10, 20]
+        "points":[5, 10, 20, 5, 10, 20]
+    },
+    "klinciaren":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":2,
+                "plank":5,
+                "iron tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            }
+        ],
+        "ticks per item":[30, 20, 10],
+        "input": [
+            {"iron":1, "coal":1},
+            {"iron":1, "coal":1},
+            {"iron":1,"coal":1}
+        ],
+        "output": [
+            {"klinec":1},
+            {"klinec":1},
+            {"klinec":1}
+        ],
+        "design": {
+            "shape": "pentagon",
+            "color": "grey4"
+        },
+        "points":[6, 15, 20]
+    },
+    "valcovna":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":2,
+                "plank":5,
+                "iron tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            }
+        ],
+        "ticks per item":[30, 20, 10],
+        "input": [
+            {"steel":3, "coal":1},
+            {"steel":3, "coal":1},
+            {"steel":3, "coal":1}
+        ],
+        "output": [
+            {"ocelovy plat":1},
+            {"ocelovy plat":1},
+            {"ocelovy plat":1}
+        ],
+        "design": {
+            "shape": "pentagon",
+            "color": "grey4"
+        },
+        "points":[6, 15, 20]
     },
     "weaponsmith":{
         "requrement":"",
@@ -393,24 +1000,120 @@
                 "people":3,
                 "plank":15,
                 "steel tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
             }
         ],
-        "ticks per item":[15, 35],
+        "ticks per item":[15, 15, 15],
         "input": [
-            {"plank":3, "iron":2, "gunpowder":5},
-            {"plamk":5, "iron":20, "gunpowder":50}
+            {"wood":5, "stone":10},
+            {"plank":5, "iron":10},
+            {"mahagon":5, "steel":10}
         ],
         "output": [
-            {"musket":1},
-            {"canon":1}
+            {"budogan":1},
+            {"kopia":1},
+            {"mec":1}
         ],
         "design": {
             "shape": "pentagon",
             "color": "grey4"
         },
-        "points":[6, 15]
+        "points":[6, 15, 20]
+    },
+    "weaponsmith2":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":2,
+                "plank":5,
+                "iron tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            },
+            {
+                "people":3,
+                "plank":15,
+                "steel tool":3
+            }
+        ],
+        "ticks per item":[15, 15, 15],
+        "input": [
+            {"wood":50, "klinec":100, "stone":50},
+            {"plank":30, "steel":50, "gunpowder":20},
+            {"mahagon plank":20, "steel":30, "gunpowder":15, "klinec":30, "chiseled marble":30}
+        ],
+        "output": [
+            {"katapult":1},
+            {"delo":1},
+            {"musketa":1}
+        ],
+        "design": {
+            "shape": "pentagon",
+            "color": "grey4"
+        },
+        "points":[6, 15, 20]
     },
     "lumberjack":{
+        "requrement":"forest",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
+            },
+            {
+                "people":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5, 15, 10, 5],
+        "input": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "output": [
+            {"wood":1},
+            {"wood":1},
+            {"wood":1},
+            {"wood":3, "mahagon":1},
+            {"wood":3, "mahagon":1},
+            {"wood":3, "mahagon":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "brown"
+        },
+        "points":[2, 5, 7, 0, 0, 0]
+    },
+    "lovec":{
         "requrement":"forest",
         "generating": true,
         "cost":[
@@ -434,9 +1137,111 @@
             {}
         ],
         "output": [
-            {"wood":1},
-            {"wood":1},
-            {"wood":1}
+            {"divina":1},
+            {"divina":1},
+            {"divina":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "brown"
+        },
+        "points":[2, 5, 7]
+    },
+    "masiar":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5],
+        "input": [
+            {"divina":1},
+            {"divina":1},
+            {"divina":1}
+        ],
+        "output": [
+            {"food":3},
+            {"food":3},
+            {"food":3}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "brown"
+        },
+        "points":[2, 5, 7]
+    },
+    "kozusnik":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5],
+        "input": [
+            {"divina":1},
+            {"divina":1},
+            {"divina":1}
+        ],
+        "output": [
+            {"leather":1},
+            {"leather":1},
+            {"leather":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "brown"
+        },
+        "points":[2, 5, 7]
+    },
+    "garbiar":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5],
+        "input": [
+            {"leather":1},
+            {"leather":1},
+            {"leather":1}
+        ],
+        "output": [
+            {"latka":1},
+            {"latka":1},
+            {"latka":1}
         ],
         "design": {
             "shape": "triangle",
@@ -462,24 +1267,79 @@
                 "people":3,
                 "iron tool":3,
                 "iron": 5
+            },
+            {
+                "people":1,
+                "stone":2,
+                "wood": 1
+            },
+            {
+                "people":2,
+                "stone":5,
+                "wood": 5
+            },
+            {
+                "people":3,
+                "iron tool":3,
+                "iron": 5
             }
         ],
-        "ticks per item":[2, 1, 3],
+        "ticks per item":[15, 10, 5, 15, 10, 5],
         "input": [
             {"wood":1},
             {"wood":1},
-            {"wood":4}
+            {"wood":1},
+            {"wood":3, "mahagon":1},
+            {"wood":3, "mahagon":1},
+            {"wood":3, "mahagon":1}
         ],
         "output": [
             {"plank":1},
             {"plank":1},
-            {"plank":5}
+            {"plank":1},
+            {"plank":3, "mahagon plank":1},
+            {"plank":3, "mahagon plank":1},
+            {"plank":3, "mahagon plank":1}
         ],
         "design": {
             "shape": "triangle",
             "color": "bisque2"
         },
-        "points":[1, 3, 7]
+        "points":[1, 3, 7, 1, 1, 1]
+    },
+    "uhliar":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":1
+            },
+            {
+                "people":2,
+                "stone":5
+            },
+            {
+                "people":5,
+                "iron tool":5
+            }
+        ],
+        "ticks per item":[15, 10, 5],
+        "input": [
+            {"wood":1},
+            {"wood":1},
+            {"wood":1}
+        ],
+        "output": [
+            {"coal":1},
+            {"coal":1},
+            {"coal":1}
+        ],
+        "design": {
+            "shape": "triangle",
+            "color": "brown"
+        },
+        "points":[2, 5, 7]
     },
     "drvicka":{
         "requrement":"",
@@ -519,6 +1379,43 @@
         "points":[2, 2, 5]
     },
     "vyskumnik":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "people":1,
+                "stone":5,
+                "coal": 10
+            },
+            {
+                "people":2,
+                "glass":5,
+                "gem": 2
+            },
+            {
+                "people":5,
+                "steel tool":10,
+                "leather":25
+            }
+        ],
+        "ticks per item":[10, 10, 10],
+        "input": [
+            {"sand": 5},
+            {"dust": 5},
+            {"steel":5}
+        ],
+        "output": [
+            {"glass":2},
+            {"gunpowder":2},
+            {"gold":2}
+        ],
+        "design": {
+            "shape": "pentagon",
+            "color": "bisque2"
+        },
+        "points":[5, 10, 15]
+    },
+    "carodej":{
         "requrement":"",
         "generating": true,
         "cost":[
