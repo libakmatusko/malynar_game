@@ -68,8 +68,6 @@ class actions:
         #print(len(self.all_lands))
         self.available_lands:list = [starting_pos]
         self.add_available_lands(starting_pos)
-        with open('desktop/beasts.json', "r", encoding="utf-8") as f:
-            self.beast_types = json.load(f)
 
         with open(f'desktop/buildings.json', 'r') as buildings_file:
             self.buildings = json.load(buildings_file)
@@ -337,7 +335,7 @@ class actions:
         if your_stren == 0:
             return False
         
-        monster_stren = self.beast_types[type]["strength"] * count
+        monster_stren = self.info[type]["strength"] * count
 
         monster_stren = int(random.random() / 2 * monster_stren)
         your_stren = int(random.random() / 2 * your_stren)
@@ -349,7 +347,7 @@ class actions:
         #monster_receieves_dmg = (your_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
         #you_receieve_dmg = (monster_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
 
-        monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
+        monsters_killed = int(ceil(monster_receieves_dmg / self.info[type]["strength"]))
 
         while you_receieve_dmg > 0 and soldier_count > 0:
             soldier = random.choice(list(self.army.keys()))
@@ -520,12 +518,15 @@ class actions:
         with open(f'save_{t}.json', 'w') as save_file:
             to_save = dict(self.__dict__)
             to_save.pop('front')
+            to_save.pop('info')
+            to_save.pop('buildings')
+            to_save.pop('army')
             json.dump(to_save, save_file)
     
 
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 
         with open(f'desktop/{save_name}.json', 'r') as save_file:
-            self.__dict__ = json.load(save_file)
+            self.__dict__.update(json.load(save_file))
 
 
 def conect():
