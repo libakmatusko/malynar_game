@@ -666,32 +666,31 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":3
+                "wood":10,
+                "stone":10
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "wood":10,
+                "stone":10
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "plank":25,
+                "chiseled stone":25
             },
             {
-                "people":1,
-                "wood":3
+                "plank":10,
+                "chiseled stone":10,
+                "iron":10
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "plank":10,
+                "chiseled stone":10,
+                "klinec":30
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "mahagon plank":25,
+                "chiseled marble":25,
+                "iron tool":10
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
