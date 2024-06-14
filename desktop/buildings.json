@@ -721,19 +721,20 @@
         "generating": true,
         "cost":[
             {
-                "people":2,
-                "plank":5,
-                "iron tool":3
+                "mahagon plank":15,
+                "chiseled marble":15,
+                "klinec":15,
+                "iron":15
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "mahagon plank":15,
+                "chiseled marble":15,
+                "steel":20
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "mahagon plank":30,
+                "chiseled marble":30,
+                "steel tool":40
             }
         ],
         "ticks per item":[30, 20, 10],
