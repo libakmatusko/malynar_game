@@ -1,4 +1,4 @@
 *.pyc
 save*
 test.py
-naplnac/*
+naplnac/uprava.py
