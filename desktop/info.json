@@ -1,7 +1,15 @@
 {
-  "mountain of the golden dragon":["mountain", "metal mountain", "golden mountain"],
-  "Iron mountain":["mountain", "metal mountain"],
-  "Old forest":["forest"],
+  "Hora zlateho draka":["mountain", "metal mountain", "golden mountain"],
+  "Zelezna hora":["metal mountain"],
+  "Stary les":["forest"],
+  "Hora uhlia":["coal mountain"],
+  "Hora":["mountain"],
+  "Hora s fosiliami":["mountain", "coal mountain"],
+  "Hora zeleznych ruin":["mountain", "metal mountain"],
+  "Pralesne pohorie":["mountain", "forest"],
+  "Rozsiahla plan":["field"],
+  "Urodne udole":["field", "forest"],
+
 
   "zombie": {"strength": 10}
 }
