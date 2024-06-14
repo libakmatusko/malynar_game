@@ -4,8 +4,8 @@
         "generating": false,
         "cost":[
             {
-                "stone":1,
-                "wood":1
+                "stone":5,
+                "wood":5
             }
         ],
         "design": {
@@ -351,7 +351,7 @@
             "shape": "square",
             "color": "grey"
         },
-        "points":[1, 3, 8]
+        "points":[1, 3, 8, 0, 0, 0]
     },
     "coal mine":{
         "requrement":"coal mountain",
@@ -375,11 +375,11 @@
             },
             {
                 "plank":50,
-                "iron tool":25
+                "iron tool":20
             },
             {
                 "mahagon plank":50,
-                "iron tool":50
+                "iron tool":40
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -410,30 +410,31 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":1
+                "wood":10,
+                "stone":10
             },
             {
-                "people":2,
-                "wood":5
+                "wood":10,
+                "stone":10
             },
             {
-                "people":5,
-                "plank":10,
-                "iron tool":3
+                "plank":25,
+                "chiseled stone":25
             },
             {
-                "people":1,
-                "wood":1
+                "plank":25,
+                "chiseled stone":25,
+                "iron":10
             },
             {
-                "people":2,
-                "wood":5
+                "plank":40,
+                "chiseled stone":40,
+                "iron":10
             },
             {
-                "people":5,
-                "plank":10,
-                "iron tool":3
+                "mahagon plank":20,
+                "chiseled marble":20,
+                "iron tool":20
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -464,32 +465,29 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":3
+                "wood":20,
+                "stone":20
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "plank":20,
+                "chiseled stone":20
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "plank":50,
+                "chiseled stone":40,
+                "iron":5
             },
             {
-                "people":1,
-                "wood":3
+                "plank":50,
+                "iron tool":20
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "mahagon plank":20,
+                "iron tool":15
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "mahagon plank":50,
+                "steel tool":25
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -520,64 +518,66 @@
         "generating": true,
         "cost":[
             {
-                "people":5,
-                "plank":15,
-                "iron tool":2
+                "marble":50,
+                "mahagon":50,
+                "iron tool":30
             },
             {
-                "people":20,
-                "plank":25,
-                "steel tool":5
+                "chiseled marble":50,
+                "mahagon plank":50,
+                "steel tool":30
+            },
+            {
+                "chiseled marble":50,
+                "mahagon plank":50,
+                "tehla":50,
+                "ocelovy plat":30
             }
         ],
-        "ticks per item":[30, 40],
+        "ticks per item":[45, 30, 15],
         "input": [
-            {"food":2, "gunpowder":5},
-            {"food":5, "gunpowder":10}
+            {},
+            {},
+            {}
         ],
         "output": [
             {"raw gold":1},
-            {"raw gold":2}
+            {"raw gold":1},
+            {"raw gold":1}
         ],
         "design": {
             "shape": "square",
             "color": "gold"
         },
-        "points":[10, 25]
+        "points":[10, 25, 30]
     },
     "tesar":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":2,
-                "wood": 1
+                "wood":20,
+                "stone":10
             },
             {
-                "people":2,
-                "stone":5,
-                "wood": 5
+                "wood":20,
+                "stone":10
             },
             {
-                "people":3,
-                "iron tool":3,
-                "iron": 5
+                "plank":50,
+                "chiseled stone":30
             },
             {
-                "people":1,
-                "stone":2,
-                "wood": 1
+                "plank":40,
+                "iron":10
             },
             {
-                "people":2,
-                "stone":5,
-                "wood": 5
+                "plank":50,
+                "iron tool":15
             },
             {
-                "people":3,
-                "iron tool":3,
-                "iron": 5
+                "mahagon plank":50,
+                "iron tool":30
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -608,32 +608,29 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":3
+                "wood":20,
+                "stone":20
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "plank":20,
+                "chiseled stone":20
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "plank":40,
+                "chiseled stone":50,
+                "iron":5
             },
             {
-                "people":1,
-                "wood":3
+                "plank":50,
+                "iron tool":20
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "chiseled marble":20,
+                "iron tool":15
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "chiseled marble":50,
+                "steel tool":25
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -1057,33 +1054,33 @@
         },
         "points":[6, 15, 20]
     },
-    "lumberjack":{
+    "drevorubac":{
         "requrement":"forest",
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":1
+                "wood":10,
+                "stone":10
             },
             {
-                "people":2,
-                "stone":5
+                "wood":10,
+                "stone":10
             },
             {
-                "people":5,
-                "iron tool":5
+                "plank":25,
+                "chiseled stone":25
             },
             {
-                "people":1,
-                "stone":1
+                "chiseled stone":10,
+                "iron":10
             },
             {
-                "people":2,
-                "stone":5
+                "chiseled stone":10,
+                "klinec":30
             },
             {
-                "people":5,
-                "iron tool":5
+                "chiseled marble":25,
+                "iron tool":10
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -1250,34 +1247,28 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":2,
-                "wood": 1
+                "wood":10,
+                "stone":20
             },
             {
-                "people":2,
-                "stone":5,
-                "wood": 5
+                "wood":10,
+                "stone":20
             },
             {
-                "people":3,
-                "iron tool":3,
-                "iron": 5
+                "plank":30,
+                "chiseled stone":50
             },
             {
-                "people":1,
-                "stone":2,
-                "wood": 1
+                "chiseled stone":40,
+                "iron":10
             },
             {
-                "people":2,
-                "stone":5,
-                "wood": 5
+                "chiseled stone":50,
+                "iron tool":15
             },
             {
-                "people":3,
-                "iron tool":3,
-                "iron": 5
+                "chiseled marble":50,
+                "iron tool":30
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -1308,25 +1299,43 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":1
+                "wood":10,
+                "stone":10
             },
             {
-                "people":2,
-                "stone":5
+                "wood":10,
+                "stone":10
             },
             {
-                "people":5,
-                "iron tool":5
+                "plank":30,
+                "chiseled stone":30
+            },
+            {
+                "chiseled stone":30,
+                "iron":10
+            },
+            {
+                "chiseled stone":50,
+                "iron tool":15
+            },
+            {
+                "chiseled marble":50,
+                "iron tool":30
             }
         ],
-        "ticks per item":[15, 10, 5],
+        "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
+            {"wood":1},
+            {"wood":1},
+            {"wood":1},
             {"wood":1},
             {"wood":1},
             {"wood":1}
         ],
         "output": [
+            {"coal":1},
+            {"coal":1},
+            {"coal":1},
             {"coal":1},
             {"coal":1},
             {"coal":1}
@@ -1335,7 +1344,7 @@
             "shape": "triangle",
             "color": "brown"
         },
-        "points":[2, 5, 7]
+        "points":[2, 5, 7, 10, 15, 20]
     },
     "drvicka":{
         "requrement":"",
@@ -1374,6 +1383,7 @@
         },
         "points":[2, 2, 5]
     },
+
     "vyskumnik":{
         "requrement":"",
         "generating": true,
