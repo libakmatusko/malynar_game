@@ -612,24 +612,29 @@
                 "stone":20
             },
             {
-                "plank":20,
-                "chiseled stone":20
+                "plank":15,
+                "chiseled stone":15,
+                "tehla":10
             },
             {
-                "plank":40,
-                "chiseled stone":50,
+                "plank":30,
+                "chiseled stone":30,
+                "tehla":30,
                 "iron":5
             },
             {
-                "plank":50,
+                "chiseled stone":30,           
+                "tehla":30,
                 "iron tool":20
             },
             {
                 "chiseled marble":20,
+                "tehla":50,
                 "iron tool":15
             },
             {
                 "chiseled marble":50,
+                "tehla":50,
                 "steel tool":25
             }
         ],
