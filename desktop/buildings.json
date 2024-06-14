@@ -795,32 +795,40 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":3
+                "plank":20,
+                "chiseled stone":20,
+                "klinec":5,
+                "iron":5
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "plank":20,
+                "chiseled stone":20,
+                "klinec":5,
+                "iron":5
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "mahagon plank":15,
+                "chiseled marble":15,
+                "klinec":15,
+                "iron":15
             },
             {
-                "people":1,
-                "wood":3
+                "mahagon plank":10,
+                "chiseled marble":15,
+                "tehla":30,
+                "steel":15
             },
             {
-                "people":5,
-                "wood":2,
-                "stone":5
+                "mahagon plank":5,
+                "chiseled marble":20,
+                "tehla":50,
+                "steel tool":20
             },
             {
-                "people":10,
-                "plank":5,
-                "iron tool":5
+                "chiseled marble":30,
+                "tehla":50,
+                "porcelan":5,
+                "steel tool":50
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
