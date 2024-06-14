@@ -1,0 +1,123 @@
+
+BERRY PICKER
+{}    ---(5 ⌛)--->    {'food': 1}
+{}    ---(3 ⌛)--->    {'food': 1}
+{}    ---(1 ⌛)--->    {'food': 1}
+
+KONIAR
+{'hay': 30}    ---(30 ⌛)--->    {'kon': 1}
+{'hay': 30}    ---(20 ⌛)--->    {'kon': 1}
+{'hay': 30}    ---(10 ⌛)--->    {'kon': 1}
+
+SEDLIAR
+{'lather': 15, 'plank': 5, 'klinec': 10}    ---(30 ⌛)--->    {'sedlo': 1}
+{'lather': 15, 'plank': 5, 'klinec': 10}    ---(20 ⌛)--->    {'sedlo': 1}
+{'lather': 15, 'plank': 5, 'klinec': 10}    ---(10 ⌛)--->    {'sedlo': 1}
+
+FARMER
+{}    ---(15 ⌛)--->    {'hay': 1}
+{}    ---(10 ⌛)--->    {'hay': 1}
+{}    ---(5 ⌛)--->    {'hay': 1}
+{}    ---(15 ⌛)--->    {'hay': 3, 'leather': 1}
+{}    ---(10 ⌛)--->    {'hay': 3, 'leather': 1}
+{}    ---(5 ⌛)--->    {'hay': 3, 'leather': 1}
+
+MLYN
+{'hay': 1}    ---(15 ⌛)--->    {'muka': 1}
+{'hay': 1}    ---(10 ⌛)--->    {'muka': 1}
+{'hay': 1}    ---(5 ⌛)--->    {'muka': 1}
+{'hay': 1}    ---(3 ⌛)--->    {'muka': 1}
+{'hay': 1}    ---(2 ⌛)--->    {'muka': 1}
+{'hay': 1}    ---(1 ⌛)--->    {'muka': 1}
+
+PEKAREN
+{'muka': 3, 'coal': 1}    ---(15 ⌛)--->    {'food': 5}
+{'muka': 3, 'coal': 1}    ---(10 ⌛)--->    {'food': 5}
+{'muka': 3, 'coal': 1}    ---(5 ⌛)--->    {'food': 5}
+{'muka': 3, 'coal': 1}    ---(3 ⌛)--->    {'food': 5}
+{'muka': 3, 'coal': 1}    ---(2 ⌛)--->    {'food': 5}
+{'muka': 3, 'coal': 1}    ---(1 ⌛)--->    {'food': 5}
+
+MINE
+{}    ---(15 ⌛)--->    {'stone': 1}
+{}    ---(10 ⌛)--->    {'stone': 1}
+{}    ---(5 ⌛)--->    {'stone': 1}
+{}    ---(15 ⌛)--->    {'stone': 3, 'marble': 1}
+{}    ---(10 ⌛)--->    {'stone': 3, 'marble': 1}
+{}    ---(5 ⌛)--->    {'stone': 3, 'marble': 1}
+
+COAL MINE
+{}    ---(15 ⌛)--->    {'coal': 1}
+{}    ---(10 ⌛)--->    {'coal': 1}
+{}    ---(5 ⌛)--->    {'coal': 1}
+{}    ---(3 ⌛)--->    {'coal': 1}
+{}    ---(2 ⌛)--->    {'coal': 1}
+{}    ---(1 ⌛)--->    {'coal': 1}
+
+TURNA NAD BODVOU
+{}    ---(15 ⌛)--->    {'hlina': 1}
+{}    ---(10 ⌛)--->    {'hlina': 1}
+{}    ---(5 ⌛)--->    {'hlina': 1}
+{}    ---(3 ⌛)--->    {'hlina': 1}
+{}    ---(2 ⌛)--->    {'hlina': 1}
+{}    ---(1 ⌛)--->    {'hlina': 1}
+
+IRON MINE
+{}    ---(15 ⌛)--->    {'raw iron': 1}
+{}    ---(10 ⌛)--->    {'raw iron': 1}
+{}    ---(5 ⌛)--->    {'raw iron': 1}
+{}    ---(3 ⌛)--->    {'raw iron': 1}
+{}    ---(2 ⌛)--->    {'raw iron': 1}
+{}    ---(1 ⌛)--->    {'raw iron': 1}
+
+GOLD MINE
+{}    ---(45 ⌛)--->    {'raw gold': 1}
+{}    ---(30 ⌛)--->    {'raw gold': 1}
+{}    ---(15 ⌛)--->    {'raw gold': 1}
+
+TESAR
+{'stone': 1}    ---(15 ⌛)--->    {'chiseled stone': 1}
+{'stone': 1}    ---(10 ⌛)--->    {'chiseled stone': 1}
+{'stone': 1}    ---(5 ⌛)--->    {'chiseled stone': 1}
+{'stone': 3, 'marble': 1}    ---(15 ⌛)--->    {'chiseled stone': 3, 'chiseled marble': 1}
+{'stone': 3, 'marble': 1}    ---(10 ⌛)--->    {'chiseled stone': 3, 'chiseled marble': 1}
+{'stone': 3, 'marble': 1}    ---(5 ⌛)--->    {'chiseled stone': 3, 'chiseled marble': 1}
+
+VYHNA
+{'raw iron': 1, 'coal': 1}    ---(15 ⌛)--->    {'iron': 1}
+{'raw iron': 1, 'coal': 1}    ---(10 ⌛)--->    {'iron': 1}
+{'raw iron': 1, 'coal': 1}    ---(5 ⌛)--->    {'iron': 1}
+{'raw iron': 1, 'coal': 1}    ---(3 ⌛)--->    {'iron': 1}
+{'raw iron': 1, 'coal': 1}    ---(2 ⌛)--->    {'iron': 1}
+{'raw iron': 1, 'coal': 1}    ---(1 ⌛)--->    {'iron': 1}
+
+TEHLAREN
+{'hlina': 1, 'coal': 1}    ---(15 ⌛)--->    {'tehla': 1}
+{'hlina': 1, 'coal': 1}    ---(10 ⌛)--->    {'tehla': 1}
+{'hlina': 1, 'coal': 1}    ---(5 ⌛)--->    {'tehla': 1}
+{'hlina': 1, 'coal': 1}    ---(3 ⌛)--->    {'tehla': 1}
+{'hlina': 1, 'coal': 1}    ---(2 ⌛)--->    {'tehla': 1}
+{'hlina': 1, 'coal': 1}    ---(1 ⌛)--->    {'tehla': 1}
+
+HRNCIAR
+{'hlina': 25, 'dust': 10}    ---(30 ⌛)--->    {'porcelan': 1}
+{'hlina': 25, 'dust': 10}    ---(20 ⌛)--->    {'porcelan': 1}
+{'hlina': 25, 'dust': 10}    ---(10 ⌛)--->    {'porcelan': 1}
+
+SKLAR
+{'sand': 5, 'coal': 1}    ---(30 ⌛)--->    {'sklo': 1}
+{'sand': 5, 'coal': 1}    ---(20 ⌛)--->    {'sklo': 1}
+{'sand': 5, 'coal': 1}    ---(10 ⌛)--->    {'sklo': 1}
+
+OCELIAREN
+{'iron': 1, 'coal': 1}    ---(15 ⌛)--->    {'steel': 1}
+{'iron': 1, 'coal': 1}    ---(10 ⌛)--->    {'steel': 1}
+{'iron': 1, 'coal': 1}    ---(5 ⌛)--->    {'steel': 1}
+{'iron': 1, 'coal': 1}    ---(3 ⌛)--->    {'steel': 1}
+{'iron': 1, 'coal': 1}    ---(2 ⌛)--->    {'steel': 1}
+{'iron': 1, 'coal': 1}    ---(1 ⌛)--->    {'steel': 1}
+
+KOVAC
+{'plank': 2, 'iron': 1}    ---(30 ⌛)--->    {'iron tool': 1}
+{'plank': 2, 'iron': 1}    ---(20 ⌛)--->    {'iron tool': 1}
+{'plank': 2, 'iron': 1}    ---(10 ⌛)--->    {'iron tool': 1}
