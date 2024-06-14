@@ -1,4 +1,4 @@
 *.pyc
 save*
 test.py
-naplnac/uprava.py
+uprava.py
