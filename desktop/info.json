@@ -11,5 +11,12 @@
   "Urodne udole":["field", "forest"],
 
 
-  "zombie": {"strength": 10}
+  "Velka krisa": {"strength":1},
+  "Hladny vlk": {"strength":5},
+  "Zombik": {"strength":20},
+  "Ozbrojeny zombik": {"strength":50},
+  "Zombie general": {"strength":100},
+  "Horsky troll": {"strength":200},
+  "Dracie mlada": {"strength":500},
+  "Zlaty drak": {"strength":1000}
 }
