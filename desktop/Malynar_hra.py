@@ -63,6 +63,8 @@ class actions:
                         'name': 'land',
                         'level': 0
                     }
+        with open(f'desktop/info.json', 'r') as info_file:
+            self.info = json.load(info_file) 
         #print(len(self.all_lands))
         self.available_lands:list = [starting_pos]
         self.add_available_lands(starting_pos)
@@ -453,7 +455,7 @@ class actions:
             [pos[0]-1, pos[1]],
             [pos[0]+1, pos[1]-1],    
         ]:
-            for resource in self.all_lands[self.to_pos_string(*land)].get('resources', []):
+            for resource in self.info.get(self.all_lands[self.to_pos_string(*land)]['name'], []):
                 if not resource in resources:
                     resources.append(resource)
         return resources
