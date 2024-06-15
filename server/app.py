@@ -57,7 +57,7 @@ class game_state():
         for x in range(-30, 31):
             for y in range(-30, 31):
                 if -x-31<y<-x+31:
-                    self.all_lands[self.to_pos_string(x, y)] = {
+                    self.all_lands[to_pos_string(x, y)] = {
                         'name': 'land'
                     }
         try:
