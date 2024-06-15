@@ -1,5 +1,5 @@
 {
-    "road": {
+    "cesta": {
         "requrement":"",
         "generating": false,
         "cost":[
@@ -1413,28 +1413,30 @@
     },
 
 
-
-
-
     "mohyla": {
         "requrement":"",
         "generating": false,
         "cost":[
-            {"stone":1},
-            {"stone":4},
-            {"stone":9},
-            {"stone":16},
-            {"stone":25, "iron":5},
-            {"stone":36},
-            {"stone":49},
-            {"stone":64},
-            {"stone":81},
-            {"stone":100, "gem":5},
-            {"stone":121},
-            {"stone":144},
-            {"stone":169},
-            {"stone":196},
-            {"stone":225, "gold":5}
+            {"chiseled stone":1},
+            {"chiseled stone":4},
+            {"chiseled stone":9},
+            {"chiseled stone":16},
+            {"chiseled stone":25, "iron":5},
+            {"chiseled stone":36},
+            {"chiseled stone":49},
+            {"chiseled stone":64},
+            {"chiseled stone":81},
+            {"chiseled stone":100, "steel":5},
+            {"chiseled stone":121},
+            {"chiseled stone":144},
+            {"chiseled stone":169},
+            {"chiseled stone":196},
+            {"chiseled stone":225, "gem":5},
+            {"chiseled marble":36},
+            {"chiseled marble":49},
+            {"chiseled marble":64},
+            {"chiseled marble":81},
+            {"chiseled marble":100, "gold":5}
         ],
         "design": {
             "shape": "star",
