@@ -167,6 +167,7 @@ class Front:
             self.map_canvas.itemconfig(self.selected_pos[0], fill=self.get_hexagon_color(self.map_cords))
         self.selected_pos = id
         map_cords = self.tkinter_to_map_cords[id[1]]
+        print(map_cords)
         self.map_cords = [map_cords[0], map_cords[1]]
 
         self.status = self.actions.possible_actions(list(map_cords))
