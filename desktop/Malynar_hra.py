@@ -7,6 +7,8 @@ from copy import copy
 import random
 from math import ceil
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
+LAN_SERVER_IP = 'http://192.168.1.20:5000'# stefi to na tomto spojazdnil
+SERVER_IP = LAN_SERVER_IP
 
 class actions:
     def __init__(self, name, starting_pos, debug=False):
