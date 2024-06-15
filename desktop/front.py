@@ -899,7 +899,7 @@ class Front:
                 width=width
             )
         elif building_shape == "pentagon":
-            radius = side_length / 1.25
+            radius = side_length * 0.6
             self.map_canvas.create_polygon(
                 x, y - radius,
                 x + radius*0.951, y - radius*0.309,
@@ -911,7 +911,7 @@ class Front:
                 width=width
             )
         elif building_shape == "star":
-            radius = side_length / 1.25
+            radius = side_length * 0.6
             p = 0.618-1
             self.map_canvas.create_polygon(
                 x, y - radius,
