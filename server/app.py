@@ -76,15 +76,15 @@ class game_state():
     
     def make_save(self) -> None:
         time = strftime("%d-%B-%Hh%Mm%Ss", localtime())
-        with open(f'server/saves/lands_{time}.json', 'w', encoding='utf-8') as f:
+        with open(f'saves/lands_{time}.json', 'w', encoding='utf-8') as f:
             json.dump(self.all_lands, f)
-        with open(f'server/saves/trades_{time}.json', 'w', encoding='utf-8') as f:
+        with open(f'saves/trades_{time}.json', 'w', encoding='utf-8') as f:
             json.dump(dict(self.trades.__dict__), f)
 
     def restore_save(self, time: str) -> None: # to do v tvare
-        with open(f'server/saves/lands_{time}.json', 'r', encoding='utf-8') as f:
+        with open(f'saves/lands_{time}.json', 'r', encoding='utf-8') as f:
             self.all_lands = json.load(f)
-        with open(f'server/saves/trades_{time}.json', "r", encoding='utf-8') as f:
+        with open(f'saves/trades_{time}.json', "r", encoding='utf-8') as f:
             self.trades.__dict__ = json.load(f)
 
 
@@ -181,8 +181,6 @@ def quicksave():
 
 @app.route('/load_from_save/<time>', methods=['POST'])
 def load_from_save(time):
-    if not game.playing:
-        return 'Not started!', 400
     game.restore_save(time)
     return 'Loaded', 200
 
