@@ -62,8 +62,7 @@ class actions:
             for y in range(-30, 31):
                 if -x-31<y<-x+31:
                     self.all_lands[self.to_pos_string(x, y)] = {
-                        'name': 'land',
-                        'level': 0
+                        'name': 'land'
                     }
         with open(f'desktop/info.json', 'r') as info_file:
             docasne = json.load(info_file)
@@ -499,8 +498,7 @@ class actions:
          return self.all_lands.get(
             f'{x}x{y}',
             {
-                'name': 'sea',  # if non-valid
-                'level': 0
+                'name': 'sea' # if non-valid
             }
         )
 
