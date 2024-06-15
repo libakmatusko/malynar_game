@@ -755,37 +755,56 @@
         "generating": true,
         "cost":[
             {
-                "people":2,
                 "plank":5,
-                "iron tool":3
+                "chiseled stone":10
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "plank":5,
+                "chiseled stone":10
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "plank":10,
+                "chiseled stone":20,
+                "iron tool":5
+            },
+            {
+                "chiseled marble":5,
+                "mahagon plank":10,
+                "steel tool":5
+            },
+            {
+                "chiseled marble":10,
+                "mahagon plank":20,
+                "steel tool":10
+            },
+            {
+                "chiseled marble":20,
+                "mahagon plank":40,
+                "ocelovy plat":10
             }
         ],
-        "ticks per item":[30, 20, 10],
+        "ticks per item":[90, 60, 30, 180, 120, 60],
         "input": [
             {"sand":5, "coal":1},
             {"sand":5, "coal":1},
-            {"sand":5, "coal":1}
+            {"sand":5, "coal":1},
+            {"sklo":5, "gem":3, "coal":1},
+            {"sklo":5, "gem":3, "coal":1},
+            {"sklo":5, "gem":3, "coal":1}
         ],
         "output": [
             {"sklo":1},
             {"sklo":1},
-            {"sklo":1}
+            {"sklo":1},
+            {"mozajka":1},
+            {"mozajka":1},
+            {"mozajka":1}
         ],
         "design": {
             "shape": "pentagon",
             "color": "grey4"
         },
-        "points":[6, 15, 20]
+        "points":[6, 15, 20, 0, 0, 0]
     },
     "oceliaren":{
         "requrement":"",
@@ -1340,7 +1359,7 @@
                 "mahagon plank":10
             }
         ],
-        "ticks per item":[150, 120, 180],
+        "ticks per item":[50, 40, 60],
         "input": [
             {"stone": 5},
             {"stone": 5},
