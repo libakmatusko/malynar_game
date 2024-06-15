@@ -1377,42 +1377,39 @@
         "points":[2, 2, 5]
     },
 
-    "vyskumnik":{
+    "carodej":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
                 "people":1,
-                "stone":5,
-                "coal": 10
+                "chiseled stone":25,
+                "plank":10,
+                "tehla":15,
+                "glass":5
             },
             {
-                "people":2,
-                "glass":5,
-                "gem": 2
-            },
-            {
-                "people":5,
-                "steel tool":10,
-                "leather":25
+                "steel tool":3,
+                "glass":10,
+                "porcelan":5,
+                "tehla":25,
+                "chiseled marble":10
             }
         ],
-        "ticks per item":[10, 10, 10],
+        "ticks per item":[10, 10],
         "input": [
-            {"sand": 5},
-            {"dust": 5},
-            {"steel":5}
+            {"leather": 5},
+            {"dust": 5}
         ],
         "output": [
-            {"glass":2},
-            {"gunpowder":2},
-            {"gold":2}
+            {"hodvab":2},
+            {"gunpowder":2}
         ],
         "design": {
             "shape": "pentagon",
             "color": "bisque2"
         },
-        "points":[5, 10, 15]
+        "points":[5, 10]
     },
 
 
