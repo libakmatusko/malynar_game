@@ -62,8 +62,7 @@ class actions:
             for y in range(-30, 31):
                 if -x-31<y<-x+31:
                     self.all_lands[self.to_pos_string(x, y)] = {
-                        'name': 'land',
-                        'level': 0
+                        'name': 'land'
                     }
         with open(f'desktop/info.json', 'r') as info_file:
             docasne = json.load(info_file)
@@ -80,6 +79,7 @@ class actions:
 
         self.front = front.Front(self)
         self.front.update()
+
     
 
     def __int__(self):
@@ -375,17 +375,16 @@ class actions:
             return False
 
 
-    def is_ok_code(self, item, code): # name of item, code (iron1234)
-        if code in self.used_codes:
-            return False
+    def is_ok_code(self, item, code):
+        a = int("".join([str(ord(x)) for x in self.name[:2]]))
 
-        modula = [317, 179, 263, 293]
-        num = int(code[len(item):])
+        with open("desktop/all_codes.json", "r", encoding="utf-8") as f:
+            all_codes = json.load(f)
 
-        for mod in modula:
-            if num % mod == 0:
-                self.used_codes.append(code)
-                return True
+        if (code - a) in all_codes[item]:
+            self.used_codes.append(code - a)
+            return True
+        
         return False
 
     def sleep(self, pos: list[int]):
@@ -499,8 +498,7 @@ class actions:
          return self.all_lands.get(
             f'{x}x{y}',
             {
-                'name': 'sea',  # if non-valid
-                'level': 0
+                'name': 'sea' # if non-valid
             }
         )
 

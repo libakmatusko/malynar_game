@@ -53,13 +53,12 @@ class game_state():
         ]
         self.playing = False
         self.names = []
-        self.all_lands = {}
-        for x in range(-40, 41):
-            for y in range(-40, 41):
-                if -x-40<y<-x+40:
+        self.all_lands:dict = {}
+        for x in range(-30, 31):
+            for y in range(-30, 31):
+                if -x-31<y<-x+31:
                     self.all_lands[to_pos_string(x, y)] = {
-                        'name': 'land',
-                        'level': 0
+                        'name': 'land'
                     }
         try:
             with open('server/resources.json', 'r') as resources_file:
@@ -76,15 +75,15 @@ class game_state():
     
     def make_save(self) -> None:
         time = strftime("%d-%B-%Hh%Mm%Ss", localtime())
-        with open(f'server/saves/lands_{time}.json', 'w', encoding='utf-8') as f:
+        with open(f'saves/lands_{time}.json', 'w', encoding='utf-8') as f:
             json.dump(self.all_lands, f)
-        with open(f'server/saves/trades_{time}.json', 'w', encoding='utf-8') as f:
+        with open(f'saves/trades_{time}.json', 'w', encoding='utf-8') as f:
             json.dump(dict(self.trades.__dict__), f)
 
     def restore_save(self, time: str) -> None: # to do v tvare
-        with open(f'server/saves/lands_{time}.json', 'r', encoding='utf-8') as f:
+        with open(f'saves/lands_{time}.json', 'r', encoding='utf-8') as f:
             self.all_lands = json.load(f)
-        with open(f'server/saves/trades_{time}.json', "r", encoding='utf-8') as f:
+        with open(f'saves/trades_{time}.json', "r", encoding='utf-8') as f:
             self.trades.__dict__ = json.load(f)
 
 
@@ -181,8 +180,6 @@ def quicksave():
 
 @app.route('/load_from_save/<time>', methods=['POST'])
 def load_from_save(time):
-    if not game.playing:
-        return 'Not started!', 400
     game.restore_save(time)
     return 'Loaded', 200
 

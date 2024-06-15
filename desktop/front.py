@@ -167,6 +167,7 @@ class Front:
             self.map_canvas.itemconfig(self.selected_pos[0], fill=self.get_hexagon_color(self.map_cords))
         self.selected_pos = id
         map_cords = self.tkinter_to_map_cords[id[1]]
+        print(map_cords)
         self.map_cords = [map_cords[0], map_cords[1]]
 
         self.status = self.actions.possible_actions(list(map_cords))
@@ -693,9 +694,8 @@ class Front:
 
         infos = self.status['info']
         name = infos["name"]
-        if name not in ["land", "sea", "base"]:
+        if name in self.actions.buildings.keys():
             name += f": {infos['level']}"
-        
         '''
         inv = self.actions.inventory
         self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(inv)*20, fill='yellow')
@@ -851,6 +851,8 @@ class Front:
                 if building["name"] in self.actions.buildings.keys():
                     design = self.actions.buildings[building["name"]]["design"]
                     self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color, design["shape"], design["color"])
+                elif building["name"] == "base":
+                    self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color, "star", "black")
                 else:
                     self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color)
 
