@@ -655,7 +655,7 @@ class Front:
         cost_text = ""
         for material in self.actions.buildings[infos["name"]]["cost"][next_level].keys():
             cost_text += f'{self.actions.buildings[infos["name"]]["cost"][next_level][material]} {material}, '
-            if self.actions.inventory[material] < self.actions.buildings[infos["name"]]["cost"][next_level][material]:
+            if self.actions.inventory.get(material, 0) < self.actions.buildings[infos["name"]]["cost"][next_level][material]:
                 is_buildable = False
         cost_text = cost_text[:-2]
         tk.Label(self.upgrade_window, text=cost_text, font=("smili", self.font_size)).pack()
