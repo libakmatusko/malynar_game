@@ -52,22 +52,19 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":1,
-                "stone":1
-            },
-            {
-                "people":3,
-                "wood":5,
-                "stone":5
-            },
-            {
-                "people":15,
-                "wood":20,
+                "wood":10,
                 "stone":10
+            },
+            {
+                "plank":10,
+                "stone":10
+            },
+            {
+                "plank":25,
+                "chiseled stone":25
             }
         ],
-        "ticks per item":[30, 20, 10],
+        "ticks per item":[60, 40, 20],
         "input": [
             {"hay":30},
             {"hay":30},
@@ -89,26 +86,23 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":1,
-                "stone":1
-            },
-            {
-                "people":3,
-                "wood":5,
-                "stone":5
-            },
-            {
-                "people":15,
-                "wood":20,
+                "wood":10,
                 "stone":10
+            },
+            {
+                "wood":10,
+                "chiseled stone":10
+            },
+            {
+                "plank":25,
+                "chiseled stone":25
             }
         ],
         "ticks per item":[30, 20, 10],
         "input": [
-            {"lather":15, "plank":5, "klinec":10},
-            {"lather":15, "plank":5, "klinec":10},
-            {"lather":15, "plank":5, "klinec":10}
+            {"lather":15, "plank":5},
+            {"lather":15, "plank":5},
+            {"lather":15, "plank":5}
         ],
         "output": [
             {"sedlo":1},
@@ -1121,16 +1115,16 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":1
+                "wood":10,
+                "stone":10
             },
             {
-                "people":2,
-                "stone":5
+                "plank":5,
+                "stone":15
             },
             {
-                "people":5,
-                "iron tool":5
+                "plank":20,
+                "chiseled stone":30
             }
         ],
         "ticks per item":[15, 10, 5],
@@ -1155,16 +1149,20 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":1
+                "wood":20,
+                "stone":20,
+                "iron":5
             },
             {
-                "people":2,
-                "stone":5
-            },
-            {
-                "people":5,
+                "plank":15,
+                "chiseled stone":15,
                 "iron tool":5
+            },
+            {
+                "plank":35,
+                "chiseled stone":35,
+                "klinec":10,
+                "iron":10
             }
         ],
         "ticks per item":[15, 10, 5],
@@ -1189,19 +1187,19 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":1
+                "wood":10,
+                "stone":10
             },
             {
-                "people":2,
-                "stone":5
+                "plank":15,
+                "stone":10
             },
             {
-                "people":5,
-                "iron tool":5
+                "plank":30,
+                "chiseled stone":20
             }
         ],
-        "ticks per item":[15, 10, 5],
+        "ticks per item":[30, 20, 10],
         "input": [
             {"divina":1},
             {"divina":1},
