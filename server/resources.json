@@ -3,9 +3,9 @@
     "-10x10":{"name":"Iron mountain"},
     "10x-20":{"name":"Old forest"},
     
-    "19x0": {"type": "zombie", "count": 40},
-    "18x0": {"type": "zombie", "count": 80},
-    "17x0": {"type": "zombie", "count": 160},
-    "16x0": {"type": "zombie", "count": 320},
-    "15x0": {"type": "zombie", "count": 640}
+    "19x0": {"name": "zombie", "count": 40},
+    "18x0": {"name": "zombie", "count": 80},
+    "17x0": {"name": "zombie", "count": 160},
+    "16x0": {"name": "zombie", "count": 320},
+    "15x0": {"name": "zombie", "count": 640}
 }

@@ -693,7 +693,7 @@ class Front:
 
         infos = self.status['info']
         name = infos["name"]
-        if name not in ["land", "sea"]:
+        if name not in ["land", "sea", "base"]:
             name += f": {infos['level']}"
         
         '''
@@ -928,6 +928,22 @@ class Front:
                 outline="black",
                 width=width
             )
+        elif building_shape == "hexagon":
+            side_length = side_length * 0.6
+            x_shift = (((3) ** 0.5) / 2) * side_length
+            y_shift = side_length / 2
+            self.map_canvas.create_polygon(
+                x, y + side_length,
+                x - x_shift, y + y_shift,
+                x - x_shift, y - y_shift,
+                x, y - side_length,
+                x + x_shift, y - y_shift,
+                x + x_shift, y + y_shift,
+                fill=building_color,
+                outline="black",
+                width=width
+        )
+
         
 
     
