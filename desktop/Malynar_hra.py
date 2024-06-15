@@ -456,7 +456,7 @@ class actions:
             [pos[0]-1, pos[1]],
             [pos[0]+1, pos[1]-1],    
         ]:
-            for resource in self.info.get(self.all_lands[self.to_pos_string(*land)]['name'], []):
+            for resource in self.info.get(self.read_pos(*land)['name'], []):
                 if not resource in resources:
                     resources.append(resource)
         return resources
