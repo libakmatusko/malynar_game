@@ -150,7 +150,7 @@
                 "mahagon plank":30,
                 "chiseled marble":30,
                 "tehla":30,
-                "klinec":90
+                "klinec":100
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -319,11 +319,11 @@
             },
             {
                 "plank":10,
-                "klinec":30
+                "iron tool":10
             },
             {
                 "mahagon plank":25,
-                "iron tool":10
+                "klinec":100
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -681,12 +681,12 @@
             {
                 "plank":10,
                 "chiseled stone":10,
-                "klinec":30
+                "iron tool":10
             },
             {
                 "mahagon plank":25,
                 "chiseled marble":25,
-                "iron tool":10
+                "klinec":100
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -918,19 +918,19 @@
         "generating": true,
         "cost":[
             {
-                "people":2,
-                "plank":5,
-                "iron tool":3
+                "chiseled stone":15,
+                "plank":15,
+                "iron tool":5
             },
             {
-                "people":3,
+                "chiseled stone":15,
                 "plank":15,
-                "steel tool":3
+                "iron tool":5
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "chiseled marble":10,
+                "mahagon plank":10,
+                "steel tool":10
             }
         ],
         "ticks per item":[30, 20, 10],
@@ -940,9 +940,9 @@
             {"iron":1,"coal":1}
         ],
         "output": [
-            {"klinec":1},
-            {"klinec":1},
-            {"klinec":1}
+            {"klinec":3},
+            {"klinec":3},
+            {"klinec":3}
         ],
         "design": {
             "shape": "pentagon",
@@ -1083,11 +1083,11 @@
             },
             {
                 "chiseled stone":10,
-                "klinec":30
+                "iron tool":10
             },
             {
                 "chiseled marble":25,
-                "iron tool":10
+                "klinec":100
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -1164,7 +1164,7 @@
             {
                 "plank":35,
                 "chiseled stone":35,
-                "klinec":10,
+                "klinec":50,
                 "iron":10
             }
         ],
@@ -1396,43 +1396,6 @@
     },
 
     "vyskumnik":{
-        "requrement":"",
-        "generating": true,
-        "cost":[
-            {
-                "people":1,
-                "stone":5,
-                "coal": 10
-            },
-            {
-                "people":2,
-                "glass":5,
-                "gem": 2
-            },
-            {
-                "people":5,
-                "steel tool":10,
-                "leather":25
-            }
-        ],
-        "ticks per item":[10, 10, 10],
-        "input": [
-            {"sand": 5},
-            {"dust": 5},
-            {"steel":5}
-        ],
-        "output": [
-            {"glass":2},
-            {"gunpowder":2},
-            {"gold":2}
-        ],
-        "design": {
-            "shape": "pentagon",
-            "color": "bisque2"
-        },
-        "points":[5, 10, 15]
-    },
-    "carodej":{
         "requrement":"",
         "generating": true,
         "cost":[
