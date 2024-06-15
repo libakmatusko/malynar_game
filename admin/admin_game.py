@@ -68,20 +68,6 @@ def load_server(time):
     else:
         print('server load failed')
 
-def create_codes(name, count):
-    result = []
-    used = set()
-    modula = [317, 179, 263, 293]
-    while len(result) < count:
-        modulo = random.choice(modula)
-        num = str(modulo * random.randrange(3,10))
-        if len(num) == 3:
-            num = '0' + num
-        if (f'{name}{num}') not in used:
-            result.append(f'{name}{num}')
-            used.add(f'{name}{num}')
-    print(result)
-    return result
 
 def is_ok_code(item, code):
     used_codes = set() #dakde vyssie v kode
@@ -136,11 +122,6 @@ while True:
     if task == 'load_server':
         time = input("enter time-stamp of save-file\n")
         load_server(time)
-    
-    if task == 'create_codes':
-        name = input('name of item\n')
-        n = input('number of codes\n')
-        create_codes(name, int(n))
     
     if task == 'check_code':
         item = input('name of item\n')

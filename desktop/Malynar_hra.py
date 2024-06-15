@@ -80,6 +80,7 @@ class actions:
 
         self.front = front.Front(self)
         self.front.update()
+
     
 
     def __int__(self):
@@ -375,17 +376,16 @@ class actions:
             return False
 
 
-    def is_ok_code(self, item, code): # name of item, code (iron1234)
-        if code in self.used_codes:
-            return False
+    def is_ok_code(self, item, code):
+        a = int("".join([str(ord(x)) for x in self.name[:2]]))
 
-        modula = [317, 179, 263, 293]
-        num = int(code[len(item):])
+        with open("desktop/all_codes.json", "r", encoding="utf-8") as f:
+            all_codes = json.load(f)
 
-        for mod in modula:
-            if num % mod == 0:
-                self.used_codes.append(code)
-                return True
+        if (code - a) in all_codes[item]:
+            self.used_codes.append(code - a)
+            return True
+        
         return False
 
     def sleep(self, pos: list[int]):
