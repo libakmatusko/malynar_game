@@ -1,22 +1,25 @@
 {
-  "Hora zlateho draka":["mountain", "metal mountain", "golden mountain"],
-  "Zelezna hora":["metal mountain"],
-  "Stary les":["forest"],
-  "Hora uhlia":["coal mountain"],
-  "Hora":["mountain"],
-  "Hora s fosiliami":["mountain", "coal mountain"],
-  "Hora zeleznych ruin":["mountain", "metal mountain"],
-  "Pralesne pohorie":["mountain", "forest"],
-  "Rozsiahla plan":["field"],
-  "Urodne udole":["field", "forest"],
+    "nature":{
+        "Hora zlateho draka":["mountain", "metal mountain", "golden mountain"],
+        "Zelezna hora":["metal mountain"],
+        "Stary les":["forest"],
+        "Hora uhlia":["coal mountain"],
+        "Hora":["mountain"],
+        "Hora s fosiliami":["mountain", "coal mountain"],
+        "Hora zeleznych ruin":["mountain", "metal mountain"],
+        "Pralesne pohorie":["mountain", "forest"],
+        "Rozsiahla plan":["field"],
+        "Urodne udole":["field", "forest"]
+    },
 
-
-  "Velka krisa": {"strength":1},
-  "Hladny vlk": {"strength":5},
-  "Zombik": {"strength":20},
-  "Ozbrojeny zombik": {"strength":50},
-  "Zombie general": {"strength":100},
-  "Horsky troll": {"strength":200},
-  "Dracie mlada": {"strength":500},
-  "Zlaty drak": {"strength":1000}
+    "monsters":{
+        "Velka krisa": {"strength":1},
+        "Hladny vlk": {"strength":5},
+        "Zombik": {"strength":20},
+        "Ozbrojeny zombik": {"strength":50},
+        "Zombie general": {"strength":100},
+        "Horsky troll": {"strength":200},
+        "Dracie mlada": {"strength":500},
+        "Zlaty drak": {"strength":1000}
+    }
 }

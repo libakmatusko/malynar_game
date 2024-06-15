@@ -13,27 +13,24 @@
             "color": "black"
         }
     },
-    "berry picker":{
+    "zbierac bobul":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "wood":1,
-                "stone":1
-            },
-            {
-                "people":3,
-                "wood":5,
-                "stone":5
-            },
-            {
-                "people":15,
-                "wood":20,
+                "wood":10,
                 "stone":10
+            },
+            {
+                "wood":10,
+                "stone":10
+            },
+            {
+                "plank":25,
+                "chiseled stone":25
             }
         ],
-        "ticks per item":[5, 3, 1],
+        "ticks per item":[15, 10, 5],
         "input": [
             {},
             {},
