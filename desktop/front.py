@@ -693,9 +693,8 @@ class Front:
 
         infos = self.status['info']
         name = infos["name"]
-        if name not in ["land", "sea", "base"]:
+        if name in self.actions.buildings.keys():
             name += f": {infos['level']}"
-        
         '''
         inv = self.actions.inventory
         self.menu_canvas.create_rectangle(0, ceiling, x, ceiling+len(inv)*20, fill='yellow')
@@ -851,6 +850,8 @@ class Front:
                 if building["name"] in self.actions.buildings.keys():
                     design = self.actions.buildings[building["name"]]["design"]
                     self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color, design["shape"], design["color"])
+                elif building["name"] == "base":
+                    self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color, "star", "black")
                 else:
                     self.draw_hexagon(center_pos_x, center_pos_y, 0.95 * side_length, color)
 
