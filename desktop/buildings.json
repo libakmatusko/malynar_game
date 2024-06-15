@@ -144,13 +144,13 @@
                 "plank":30,
                 "chiseled stone":30,
                 "tehla":10,
-                "klinec":30
+                "iron tool":10
             },
             {
                 "mahagon plank":30,
                 "chiseled marble":30,
                 "tehla":30,
-                "iron tool":30
+                "klinec":90
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
@@ -856,43 +856,41 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":3,
-                "wood":2,
-                "iron":1
+                "plank":15,
+                "chiseled stone":15,
+                "tehla":10
             },
             {
-                "people":1,
-                "stone":10,
-                "wood":5,
-                "iron":3
+                "chiseled stone":15,
+                "tehla":10,
+                "iron":5
             },
             {
-                "people":1,
-                "stone":5,
-                "wood":5,
-                "iron tool":5
+                "plank":20,
+                "chiseled stone":30,
+                "tehla":30,
+                "iron tool":10
             },
             {
-                "people":1,
-                "stone":3,
-                "wood":2,
-                "iron":1
+                "mahagon plank":20,
+                "chiseled marble":30,
+                "tehla":30,
+                "klinec":15
             },
             {
-                "people":1,
-                "stone":10,
-                "wood":5,
-                "iron":3
+                "mahagon plank":20,
+                "chiseled marble":30,
+                "tehla":50,
+                "steel":10
             },
             {
-                "people":1,
-                "stone":5,
-                "wood":5,
-                "iron tool":5
+                "mahagon plank":30,
+                "chiseled marble":50,
+                "tehla":50,
+                "steel tool":25
             }
         ],
-        "ticks per item":[30, 20, 10],
+        "ticks per item":[30, 20, 10, 30, 20, 10],
         "input": [
             {"plank":2, "iron":1},
             {"plank":2, "iron":1},
