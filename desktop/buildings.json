@@ -987,24 +987,24 @@
         },
         "points":[6, 15, 20]
     },
-    "weaponsmith":{
+    "zbrojnica":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "people":2,
-                "plank":5,
-                "iron tool":3
+                "wood":20,
+                "stone":20,
+                "tehla":10
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "chiseled stone":30,
+                "plank":30,
+                "iron tool":15
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "chiseled marble":20,
+                "mahagon plank":20,
+                "steel tool":20
             }
         ],
         "ticks per item":[15, 15, 15],
@@ -1024,29 +1024,29 @@
         },
         "points":[6, 15, 20]
     },
-    "weaponsmith2":{
+    "vojenska dielna":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "people":2,
-                "plank":5,
-                "iron tool":3
+                "chiseled stone":30,
+                "plank":30,
+                "iron tool":15
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "chiseled stone":50,
+                "plank":50,
+                "steel tool":25
             },
             {
-                "people":3,
-                "plank":15,
-                "steel tool":3
+                "chiseled marble":30,
+                "mahgon plank":30,
+                "steel tool":35
             }
         ],
         "ticks per item":[15, 15, 15],
         "input": [
-            {"wood":50, "klinec":100, "stone":50},
+            {"wood":50, "klinec":150, "stone":50},
             {"plank":30, "steel":50, "gunpowder":20},
             {"mahagon plank":20, "steel":30, "gunpowder":15, "klinec":30, "chiseled marble":30}
         ],
@@ -1219,40 +1219,6 @@
         },
         "points":[2, 5, 7]
     },
-    "garbiar":{
-        "requrement":"",
-        "generating": true,
-        "cost":[
-            {
-                "people":1,
-                "stone":1
-            },
-            {
-                "people":2,
-                "stone":5
-            },
-            {
-                "people":5,
-                "iron tool":5
-            }
-        ],
-        "ticks per item":[15, 10, 5],
-        "input": [
-            {"leather":1},
-            {"leather":1},
-            {"leather":1}
-        ],
-        "output": [
-            {"latka":1},
-            {"latka":1},
-            {"latka":1}
-        ],
-        "design": {
-            "shape": "pentagon",
-            "color": "brown"
-        },
-        "points":[2, 5, 7]
-    },
     "sawmill":{
         "requrement":"",
         "generating": true,
@@ -1362,22 +1328,19 @@
         "generating": true,
         "cost":[
             {
-                "people":1,
-                "stone":5,
-                "wood": 2
-            },
-            {
-                "people":2,
-                "stone":5,
-                "wood": 2
-            },
-            {
-                "people":5,
                 "stone":15,
-                "iron tool":5
+                "wood":5
+            },
+            {
+                "chiseled stone":20,
+                "plank":10
+            },
+            {
+                "chiseled marble":20,
+                "mahagon plank":10
             }
         ],
-        "ticks per item":[15, 12, 20],
+        "ticks per item":[150, 120, 180],
         "input": [
             {"stone": 5},
             {"stone": 5},
