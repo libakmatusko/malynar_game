@@ -44,12 +44,12 @@ class game_state():
     def __init__(self, game_description):
         self.game_description = game_description
         self.starting_positions = [
-            (30, 0),
-            (0, 30),
-            (30, -30),
-            (-30, 0),
-            (0, -30),
-            (-30, 30),
+            (25, 0),
+            (0, 25),
+            (25, -25),
+            (-25, 0),
+            (0, -25),
+            (-25, 25),
         ]
         self.playing = False
         self.names = []
@@ -57,7 +57,7 @@ class game_state():
         for x in range(-30, 31):
             for y in range(-30, 31):
                 if -x-31<y<-x+31:
-                    self.all_lands[self.to_pos_string(x, y)] = {
+                    self.all_lands[to_pos_string(x, y)] = {
                         'name': 'land'
                     }
         try:
@@ -125,8 +125,8 @@ def admin_start():
 
 @app.route('/build/<name>', methods=['POST'])
 def build(name):
-    content = request.json.keys()
-    for pos in content:
+    content = request.json
+    for pos in content.keys():
         game.all_lands[pos] = content[pos]
     return 'Built', 200
 

@@ -98,9 +98,9 @@ while True:
             print("zly typ ty puk\n")
             continue
         item = input("name of item\n")
-        if item not in all_items:
-            print("zly item ty puk\n")
-            continue
+        #if item not in all_items:
+        #    print("zly item ty puk\n")
+        #    continue
         count = int(input("how many items\n"))
         cost = int(input("money value\n"))
 
