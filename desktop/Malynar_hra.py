@@ -64,7 +64,9 @@ class actions:
                         'level': 0
                     }
         with open(f'desktop/info.json', 'r') as info_file:
-            self.info = json.load(info_file) 
+            docasne = json.load(info_file)
+            self.beast_types = docasne["monsters"]
+            self.info = docasne["nature"]
         #print(len(self.all_lands))
         self.available_lands:list = [starting_pos]
         self.add_available_lands(starting_pos)
@@ -335,7 +337,7 @@ class actions:
         if your_stren == 0:
             return False
         
-        monster_stren = self.info[type]["strength"] * count
+        monster_stren = self.beast_types[type]["strength"] * count
 
         monster_stren = int(random.random() / 2 * monster_stren)
         your_stren = int(random.random() / 2 * your_stren)
@@ -347,7 +349,7 @@ class actions:
         #monster_receieves_dmg = (your_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
         #you_receieve_dmg = (monster_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
 
-        monsters_killed = int(ceil(monster_receieves_dmg / self.info[type]["strength"]))
+        monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
 
         while you_receieve_dmg > 0 and soldier_count > 0:
             soldier = random.choice(list(self.army.keys()))
