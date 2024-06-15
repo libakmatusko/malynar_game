@@ -693,7 +693,7 @@ class Front:
 
         infos = self.status['info']
         name = infos["name"]
-        if name not in ["land", "sea"]:
+        if name not in ["land", "sea", "base"]:
             name += f": {infos['level']}"
         
         '''
