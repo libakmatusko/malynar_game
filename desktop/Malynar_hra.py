@@ -19,11 +19,10 @@ class actions:
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
             'people': 5,
-            'stone': 10,
-            'wood': 15,
+            'stone': 50,
+            'wood': 50,
             'money': 0,
-            "iron": 100,
-            "berries": 2,
+            "iron": 50,
             "plank": 5,
             "food": 0
         }
@@ -50,7 +49,7 @@ class actions:
                 'position': starting_pos,
                 'ticks per item': 10,
                 'time to generation': 10,
-                'generating': False,
+                'generating': True,
                 'input': {},
                 'output': {'people': 1},
                 'points': 0,
