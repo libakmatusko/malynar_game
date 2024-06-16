@@ -95,6 +95,7 @@ class actions:
                 print('Game updated')
             self.frontend_update()
         if self.tick_counter % 60 == 0:
+            self.generate_people()
             self.save()
     
         for land in self.my_lands:
@@ -127,7 +128,6 @@ class actions:
                         land["time to generation"] -= 1
 
 
-
     # return True ak sa updatlo
     def update_from_server(self):
         if self.debug:
@@ -149,6 +149,11 @@ class actions:
         self.check_my_trades()
         self.front.fill_build_window()
     
+    def generate_people(self):
+        new_count = self.inventory['food'] // 10
+        self.inventory['people'] += min(new_count, self.inventory['people'] // 10)
+        self.inventory['food'] -= new_count * 10
+
     def server_build(self, pos: list[int], building: str):
         if self.debug:
             print('Neupdatujem')
