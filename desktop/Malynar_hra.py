@@ -92,7 +92,8 @@ class actions:
                 #print('You are now ofline.')
                 pass
             else:
-                print('Game updated')
+                pass
+                #print('Game updated')
             self.frontend_update()
         if self.tick_counter % 60 == 0:
             self.save()
