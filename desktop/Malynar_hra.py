@@ -8,7 +8,7 @@ import random
 from math import ceil
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 LAN_SERVER_IP = 'http://192.168.1.20:5000'# stefi to na tomto spojazdnil
-SERVER_IP = LAN_SERVER_IP
+#SERVER_IP = LAN_SERVER_IP
 
 class actions:
     def __init__(self, name, starting_pos, debug=False):
@@ -63,6 +63,7 @@ class actions:
                     self.all_lands[self.to_pos_string(x, y)] = {
                         'name': 'land'
                     }
+        
         with open(f'desktop/info.json', 'r') as info_file:
             docasne = json.load(info_file)
             self.beast_types = docasne["monsters"]
@@ -94,6 +95,7 @@ class actions:
             else:
                 pass
                 #print('Game updated')
+            self.create_color_codes()
             self.frontend_update()
         if self.tick_counter % 60 == 0:
             self.generate_people()
@@ -127,6 +129,16 @@ class actions:
                             land["time to generation"] = land["ticks per item"]
                     else:
                         land["time to generation"] -= 1
+
+
+    def create_color_codes(self):
+        # smiliho front end calculation
+        colors = ["#ffababa", "#e7ffac", "#6eb5ff", "#f6a6ff", "#a79aff", "#fff5ba"]
+        counter = 0
+        self.color_code = {}
+        for land in self.all_lands.keys():  
+            if self.all_lands[land]['name'] == "base":
+                self.color_code[self.all_lands[land]["player"]] = colors[counter]
 
 
     # return True ak sa updatlo
@@ -559,6 +571,7 @@ def conect():
             'player': player.name,
             'level': 1
         }
+
     return player
 
 def start():

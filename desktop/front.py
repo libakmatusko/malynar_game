@@ -665,7 +665,6 @@ class Front:
         if not is_buildable:
             button.configure(bg="gray", state="disabled")
 
-
     def draw_menu(self, ceiling=0):
         self.menu_canvas.delete('all')
 
@@ -792,7 +791,10 @@ class Front:
         max_strength = 5000
 
         typ = self.actions.all_lands[self.actions.to_pos_string(*cords)]
-        if typ["name"] in self.actions.beast_types.keys():
+        player = typ.get("player", None)
+        if player:
+            color = self.actions.color_code.get(player, self.hexagon_color)
+        elif typ["name"] in self.actions.beast_types.keys():
             strength = typ["level"] * self.actions.beast_types[typ["name"]]["strength"]
 
             if strength > max_strength:
