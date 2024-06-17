@@ -15,7 +15,10 @@ class actions:
         self.debug:bool = debug
         self.playing:bool = False
         self.name:str = name
+        
         self.points:int = 0
+        self.army_points: int = 0
+
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
             'people': 5,
@@ -369,6 +372,7 @@ class actions:
         #you_receieve_dmg = (monster_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
 
         monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
+        self.army_points += monsters_killed * self.beast_types[type]["strength"]
 
         while you_receieve_dmg > 0 and soldier_count > 0:
             soldier = random.choice(list(self.army.keys()))
