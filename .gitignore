@@ -2,3 +2,4 @@
 save*
 uprava.py
 napnac/
+__pycache__/
