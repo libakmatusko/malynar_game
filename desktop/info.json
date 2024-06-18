@@ -13,12 +13,12 @@
     },
     "monsters":{
         "Veľká krisa": {"strength":1},
-        "Hladný vlk": {"strength":5},
+        "Hladný vlk": {"strength":10},
         "Zombik": {"strength":20},
-        "Ozbrojený zombik": {"strength":50},
-        "Zombie generál": {"strength":100},
-        "Horský troll": {"strength":200},
-        "Dračie mláďa": {"strength":500},
-        "Zlatý drak": {"strength":1000}
+        "Ozbrojený zombik": {"strength":100},
+        "Zombie generál": {"strength":500},
+        "Horský troll": {"strength":2000},
+        "Dračie mláďa": {"strength":5000},
+        "Zlatý drak": {"strength":10000}
     }
 }
