@@ -21,30 +21,17 @@ class actions:
 
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
-            'people': 5,
-            'stone': 50,
-            'wood': 50,
-            'money': 0,
-            "iron": 50,
-            "plank": 5,
+            'ľudia': 5,
+            'stone': 100,
+            'wood': 100,
+            'peniaze': 0,
             "food": 0
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army:dict = json.load(f)
 
         self.trades:dict = {}                # id : trade_info
-        self.trades:dict = {1: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       2: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       3: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
-                       4: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       5: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
-                       10: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       11: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       12: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       13: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
-                       14: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20},
-                       15: {"owner": "admin", "type": 1, "count": 10, "item": "iron", "cost": 20},
-                       110: {"owner": "admin", "type": 0, "count": 10, "item": "iron", "cost": 20}}
+        self.trades:dict = {1: {"owner": "admin", "type": 0, "count": 10, "item": "železo", "cost": 20}}
         self.placed_trades:dict = {}         # id : trade_info
         self.my_lands:list = [
             {
@@ -54,7 +41,7 @@ class actions:
                 'time to generation': 10,
                 'generating': True,
                 'input': {},
-                'output': {'people': 1},
+                'output': {'ľudia': 1},
                 'points': 0,
                 'is_sleeping': False
             }
@@ -67,7 +54,7 @@ class actions:
                         'name': 'land'
                     }
         
-        with open(f'desktop/info.json', 'r') as info_file:
+        with open(f'desktop/info.json', 'r', encoding='utf-8') as info_file:
             docasne = json.load(info_file)
             self.beast_types = docasne["monsters"]
             self.info = docasne["nature"]
@@ -75,7 +62,7 @@ class actions:
         self.available_lands:list = [starting_pos]
         self.add_available_lands(starting_pos)
 
-        with open(f'desktop/buildings.json', 'r') as buildings_file:
+        with open(f'desktop/buildings.json', 'r', encoding='utf-8') as buildings_file:
             self.buildings = json.load(buildings_file)
         
         self.used_codes = []
@@ -101,7 +88,7 @@ class actions:
             self.create_color_codes()
             self.frontend_update()
         if self.tick_counter % 60 == 0:
-            self.generate_people()
+            self.generate_ľudia()
             self.save()
     
         for land in self.my_lands:
@@ -165,9 +152,9 @@ class actions:
         self.check_my_trades()
         self.front.fill_build_window()
     
-    def generate_people(self):
+    def generate_ľudia(self):
         new_count = self.inventory['food'] // 10
-        self.inventory['people'] += min(new_count, self.inventory['people'] // 10)
+        self.inventory['ľudia'] += min(new_count, self.inventory['ľudia'] // 10)
         self.inventory['food'] -= new_count * 10
 
     def server_build(self, pos: list[int], building: str):
@@ -282,10 +269,10 @@ class actions:
         return True
     
     def place_trade(self, type, item, count, cost):
-        # type - 0 if you offer money for item, 1 if you offer item for money
+        # type - 0 if you offer peniaze for item, 1 if you offer item for peniaze
         assert type == 0 or type == 1
         if type == 0:
-            self.inventory['money'] -= cost
+            self.inventory['peniaze'] -= cost
         else:
             self.inventory[item] -= count
 
@@ -314,16 +301,16 @@ class actions:
             if self.inventory[self.trades[id]['item']] < self.trades[id]['count']:
                 return False
         else:
-            if self.inventory['money'] < self.trades[id]['cost']:
+            if self.inventory['peniaze'] < self.trades[id]['cost']:
                 return False
 
         response = requests.post(f'{SERVER_IP}/take_trade/{id}')
         if response.status_code == 200 and response.text == "1":
             if self.trades[id]["type"] == 0:
-                self.inventory['money'] += self.trades[id]['cost']
+                self.inventory['peniaze'] += self.trades[id]['cost']
                 self.inventory[self.trades[id]['item']] -= self.trades[id]['count']
             else:
-                self.inventory['money'] -= self.trades[id]['cost']
+                self.inventory['peniaze'] -= self.trades[id]['cost']
                 self.inventory[self.trades[id]['item']] += self.trades[id]['count']
             return True
         return False
@@ -336,7 +323,7 @@ class actions:
                 if self.placed_trades[id]['type'] == 0:
                     self.inventory[self.placed_trades[id]['item']] += self.placed_trades[id]['count']
                 else:
-                    self.inventory['money'] += self.placed_trades[id]['cost']
+                    self.inventory['peniaze'] += self.placed_trades[id]['cost']
                 self.placed_trades.pop(id)
 
     def build_soldier(self, name: str) -> bool:
@@ -538,7 +525,7 @@ class actions:
         for file in os.listdir():
             if file[:4] == 'save':
                 os.remove(file)
-        with open(f'save_{t}.json', 'w') as save_file:
+        with open(f'save_{t}.json', 'w', encoding="utf-8") as save_file:
             to_save = dict(self.__dict__)
             to_save.pop('front')
             to_save.pop('info')
@@ -548,7 +535,7 @@ class actions:
     
 
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 
-        with open(f'desktop/{save_name}.json', 'r') as save_file:
+        with open(f'desktop/{save_name}.json', 'r', encoding='utf-8') as save_file:
             self.__dict__.update(json.load(save_file))
 
 

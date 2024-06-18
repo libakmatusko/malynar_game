@@ -2,66 +2,66 @@
     "pešiak": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "palica": 1}
+        "recipe": {"ľudia": 1, "palica": 1}
     },
 
     "kopijník": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "kopija": 1}
+        "recipe": {"ľudia": 1, "kopija": 1}
     },
 
     "vojak": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "meč": 1}
+        "recipe": {"ľudia": 1, "meč": 1}
     },
 
     "obrnený kopijník": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "kopija": 1, "železné brnenie": 1}
+        "recipe": {"ľudia": 1, "kopija": 1, "železné brnenie": 1}
     },
 
     "elitný vojak": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "meč": 1, "oceľové brnenie": 1}
+        "recipe": {"ľudia": 1, "meč": 1, "oceľové brnenie": 1}
     },
 
     "pešiak jazdec": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "palica": 1, "kôň": 1}
+        "recipe": {"ľudia": 1, "palica": 1, "kôň": 1}
     },
 
     "kopijník jazdec": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "kopija": 1, "kôň": 1}
+        "recipe": {"ľudia": 1, "kopija": 1, "kôň": 1}
     },
 
     "vojak jazdec": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 1, "meč": 1, "kôň": 1}
+        "recipe": {"ľudia": 1, "meč": 1, "kôň": 1}
     },
 
     "katapultista": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 5, "katapult": 1}
+        "recipe": {"ľudia": 5, "katapult": 1}
     },
 
     "delostrelectvo": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 5, "delo": 1}
+        "recipe": {"ľudia": 5, "delo": 1}
     },
 
     "3 mušketiery": {
         "strength": 10,
         "count": 0,
-        "recipe": {"people": 3, "mušketa": 3}
+        "recipe": {"ľudia": 3, "mušketa": 3}
     }
 }

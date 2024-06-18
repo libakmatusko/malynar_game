@@ -61,12 +61,12 @@ class game_state():
                         'name': 'land'
                     }
         try:
-            with open('server/resources.json', 'r') as resources_file:
+            with open('server/resources.json', 'r', encoding='utf-8') as resources_file:
                 resources = json.load(resources_file)
                 for pos in resources.keys():
                     self.all_lands[pos] = resources[pos]
         except:
-            with open('resources.json', 'r') as resources_file:
+            with open('resources.json', 'r', encoding='utf-8') as resources_file:
                 resources = json.load(resources_file)
                 for pos in resources.keys():
                     self.all_lands[pos] = resources[pos]

@@ -202,12 +202,12 @@ class Front:
 
                 num_of_rows = 20
 
-                tk.Label(self.inventory_window, text=f"people: {inv['people']}", width=30, font=("smili", 20)).grid(row=0, column=0, columnspan=1000)
-                tk.Label(self.inventory_window, text=f"money: {inv['money']}", width=30, font=("smili", 20)).grid(row=1, column=0, columnspan=1000)
+                tk.Label(self.inventory_window, text=f"ľudia: {inv['ľudia']}", width=30, font=("smili", 20)).grid(row=0, column=0, columnspan=1000)
+                tk.Label(self.inventory_window, text=f"peniaze: {inv['peniaze']}", width=30, font=("smili", 20)).grid(row=1, column=0, columnspan=1000)
 
                 counter = 0
                 for item in inv.keys():
-                    if item != "money" and item != "people":
+                    if item != "peniaze" and item != "ľudia":
 
                         tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
                         counter += 1
@@ -272,7 +272,7 @@ class Front:
                 if self.actions.inventory[self.actions.trades[id]['item']] < self.actions.trades[id]['count']:
                     self.disposable_trade_labels[-1].config(bg="grey", state="disabled")
             else:
-                if self.actions.inventory['money'] < self.actions.trades[id]['cost']:
+                if self.actions.inventory['peniaze'] < self.actions.trades[id]['cost']:
                     self.disposable_trade_labels[-1].config(bg="grey", state="disabled")
 
         self.disposable_trade_labels.append(tk.Label(self.trade_window, text=f"{self.trade_page_number + 1} / {ceil(len(self.actions.trades) / 10)}", font=("smili", self.font_size)))
@@ -296,10 +296,10 @@ class Front:
         tk.Label(self.make_trade_window, text="Koľko:", width=30, font=("smili", self.font_size)).grid(row=2, column=2)
 
         self.make_trade_objects = {
-            "money_amount": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
+            "peniaze_amount": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
             "item_amount": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
             "item": tk.Entry(self.make_trade_window, width=30, font=("smili", self.font_size)),
-            "money_label": tk.Label(self.make_trade_window, text="Peniaze", width=30, font=("smili", self.font_size)),
+            "peniaze_label": tk.Label(self.make_trade_window, text="Peniaze", width=30, font=("smili", self.font_size)),
             "item_label": tk.Label(self.make_trade_window, text="Tovar:", width=30, font=("smili", self.font_size)),
             "direction": True
         }
@@ -311,27 +311,27 @@ class Front:
 
     def grid_make_trade_objects(self):
         if self.make_trade_objects["direction"]:
-            self.make_trade_objects["money_amount"].grid(row=2, column=3)
+            self.make_trade_objects["peniaze_amount"].grid(row=2, column=3)
             self.make_trade_objects["item_amount"].grid(row=2, column=1)
             self.make_trade_objects["item"].grid(row=1, column=1)
-            self.make_trade_objects["money_label"].grid(row=1, column=2, columnspan=2)
+            self.make_trade_objects["peniaze_label"].grid(row=1, column=2, columnspan=2)
             self.make_trade_objects["item_label"].grid(row=1, column=0)
         else:
-            self.make_trade_objects["money_amount"].grid(row=2, column=1)
+            self.make_trade_objects["peniaze_amount"].grid(row=2, column=1)
             self.make_trade_objects["item_amount"].grid(row=2, column=3)
             self.make_trade_objects["item"].grid(row=1, column=3)
-            self.make_trade_objects["money_label"].grid(row=1, column=0, columnspan=2)
+            self.make_trade_objects["peniaze_label"].grid(row=1, column=0, columnspan=2)
             self.make_trade_objects["item_label"].grid(row=1, column=2)
         self.make_trade_objects["direction"] = not self.make_trade_objects["direction"]
 
     def publish_trade(self):
         trade = {"item": self.make_trade_objects["item"].get(),
                  "count": self.make_trade_objects["item_amount"].get(),
-                 "cost": self.make_trade_objects["money_amount"].get(),
+                 "cost": self.make_trade_objects["peniaze_amount"].get(),
                  }
         exists = False
         for key in self.actions.inventory.keys():
-            if compare_strings(trade["item"], key) and key != "people":
+            if compare_strings(trade["item"], key) and key != "ľudia":
                 exists = True
                 break
         if not exists:
@@ -365,7 +365,7 @@ class Front:
             return
         
         if self.make_trade_objects["direction"]:
-            if self.actions.inventory["money"] < trade["cost"]:
+            if self.actions.inventory["peniaze"] < trade["cost"]:
                 # e-ee
                 play_sound(False)
                 print("eeee6")
@@ -449,7 +449,7 @@ class Front:
         # map_cords = self.tkinter_to_map_cords[self.selected_pos[1]]
         # self.status = self.actions.possible_actions(list(map_cords))
 
-        # [['Postav road', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('road', [-1, 1])), {'stone': 1, 'wood': 1}], ['Postav berry picker', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('berry picker', [-1, 1])), {'people': 1, 'wood': 1, 'stone': 1}]]
+        # [['Postav road', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('road', [-1, 1])), {'stone': 1, 'wood': 1}], ['Postav berry picker', (<bound method actions.build_new of <__main__.actions object at 0x000001E85F83A210>>, ('berry picker', [-1, 1])), {'ľudia': 1, 'wood': 1, 'stone': 1}]]
         
         tk.Button(self.build_window, text="<-", width=30, command=lambda: self.change_build_page(-1), font=("smili", self.font_size)).grid(row=15, column=0)
         tk.Button(self.build_window, text="->", width=30, command=lambda: self.change_build_page(1), font=("smili", self.font_size)).grid(row=15, column=2)

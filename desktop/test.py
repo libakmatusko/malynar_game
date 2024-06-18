@@ -1,5 +1,5 @@
 import json
-with open(f'desktop/buildings.json', 'r') as buildings_file:
+with open(f'desktop/buildings.json', 'r', encoding='utf-8') as buildings_file:
     buildings = json.load(buildings_file)
     #print(buildings.keys(), len(buildings.keys()))
     for key in buildings.keys():

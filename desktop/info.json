@@ -1,25 +1,25 @@
 {
     "nature":{
-        "Drakova zlata hora":["mountain", "metal mountain", "golden mountain"],
-        "Zelezna hora":["metal mountain"],
-        "Stary les":["forest"],
+        "Drakova zlatá hora":["mountain", "metal mountain", "golden mountain"],
+        "Železná hora":["metal mountain"],
+        "Starý les":["forest"],
         "Hora uhlia":["coal mountain"],
         "Hora":["mountain"],
-        "Hora s fosiliami":["mountain", "coal mountain"],
-        "Hora zeleznych ruin":["mountain", "metal mountain"],
-        "Pralesne pohorie":["mountain", "forest"],
-        "Rozsiahla plan":["field"],
-        "Urodne udole":["field", "forest"]
+        "Hora s fosíliami":["mountain", "coal mountain"],
+        "Hora železných rúd":["mountain", "metal mountain"],
+        "Pralesné pohorie":["mountain", "forest"],
+        "Rozsiahla pláň":["field"],
+        "Úrodné údolie":["field", "forest"]
     },
 
     "monsters":{
-        "Velka krisa": {"strength":1},
-        "Hladny vlk": {"strength":5},
+        "Veľká krisa": {"strength":1},
+        "Hladný vlk": {"strength":5},
         "Zombik": {"strength":20},
-        "Ozbrojeny zombik": {"strength":50},
-        "Zombie general": {"strength":100},
-        "Horsky troll": {"strength":200},
-        "Dracie mlada": {"strength":500},
-        "Zlaty drak": {"strength":1000}
+        "Ozbrojený zombik": {"strength":50},
+        "Zombie generál": {"strength":100},
+        "Horský troll": {"strength":200},
+        "Dračie mláďa": {"strength":500},
+        "Zlatý drak": {"strength":1000}
     }
 }
