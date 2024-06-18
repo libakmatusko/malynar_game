@@ -1,2124 +1,2106 @@
 {
     "0x0": {
-        "name": "Hora zlateho draka"
-    },
-    "12x-24": {
-        "name": "Base"
-    },
-    "-12x-12": {
-        "name": "Base"
-    },
-    "-24x12": {
-        "name": "Base"
-    },
-    "-12x24": {
-        "name": "Base"
-    },
-    "12x12": {
-        "name": "Base"
-    },
-    "24x-12": {
-        "name": "Base"
+        "name": "Drakova zlatá hora"
     },
     "1x0": {
-        "name": "Hora zlateho draka"
+        "name": "Drakova zlatá hora"
     },
     "1x-1": {
-        "name": "Hora zlateho draka"
+        "name": "Drakova zlatá hora"
     },
     "0x-1": {
-        "name": "Hora zlateho draka"
+        "name": "Drakova zlatá hora"
     },
     "-1x0": {
-        "name": "Hora zlateho draka"
+        "name": "Drakova zlatá hora"
     },
     "-1x1": {
-        "name": "Hora zlateho draka"
+        "name": "Drakova zlatá hora"
     },
     "0x1": {
-        "name": "Hora zlateho draka"
+        "name": "Drakova zlatá hora"
     },
     "2x-1": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "1x-2": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "-1x-1": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "-2x1": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "-1x2": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "1x1": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "2x0": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "2x-2": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "0x-2": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "-2x0": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "-2x2": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "0x2": {
-        "name": "Zlaty drak",
+        "name": "Zlatý drak",
         "count": 1
     },
     "3x-2": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "1x-3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-2x-1": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-3x2": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-1x3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "2x1": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "3x-1": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "2x-3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-1x-2": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-3x1": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-2x3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "1x2": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "3x0": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "3x-3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "0x-3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-3x0": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "-3x3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "0x3": {
-        "name": "Dracie mlada",
+        "name": "Dračie mláďa",
         "count": 1
     },
     "30x-30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-30x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-29x29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "1x29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "30x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "29x-29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-29x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "29x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "28x-28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-28x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-28x28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "28x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "27x-27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-27x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-27x27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "27x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "26x-26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-26x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-26x26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "26x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "25x-25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-25x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-25x25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "25x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "24x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-24x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-24x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "24x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "23x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-23x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-23x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "23x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "22x-22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-22x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-22x22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "22x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "21x-21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-21x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-21x21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "21x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "20x-20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-20x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-20x20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "20x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "19x-19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-19x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-19x19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "19x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "18x-18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-18x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-18x18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "18x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "17x-17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-17x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-17x17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "17x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "16x-16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-16x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-16x16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "16x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "15x-15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-15x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-15x15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "15x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "14x-14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-14x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-14x14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "14x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "13x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-13x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-13x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "13x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "12x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-12x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-12x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "12x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "11x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-11x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-11x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "11x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "10x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-10x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-10x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "10x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "9x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-9x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-9x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "9x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "8x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-8x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-8x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "8x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "7x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-7x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-7x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "7x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "6x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-6x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-6x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "6x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "5x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-5x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-5x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "5x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "4x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-4x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-4x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "0x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "4x0": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "4x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-3x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-3x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "11x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-11x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-11x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "11x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "14x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-14x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "15x-14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-14x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-15x14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "14x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "16x-15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-15x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-16x15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "15x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "17x-16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-16x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-17x16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "16x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "18x-17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-17x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-18x17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "17x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "19x-18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-18x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-19x18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "18x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "20x-19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-20x19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "19x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "21x-20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-21x20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "20x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "22x-21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-22x21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "21x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "23x-22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-23x22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "22x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "24x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-24x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "23x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "25x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-25x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "24x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "26x-25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "25x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "27x-26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "26x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "28x-27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "27x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "29x-28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "28x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-14x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "14x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "11x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-11x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-11x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "11x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "29x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "30x-29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x-30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "30x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "29x-30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-19x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "29x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "28x-29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "28x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "27x-28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "27x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "26x-27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "26x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "25x-26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "25x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "24x-25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-23x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "24x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "23x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "23x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "22x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-22x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "22x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "21x-22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-21x22": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "19x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "18x-19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-18x19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "18x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "17x-18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-18x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-17x18": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "17x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "16x-17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-17x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-16x17": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "20x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "19x-20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-19x20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x19": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "21x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "20x-21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-20x21": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x20": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "16x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "15x-16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-16x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-15x16": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "15x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "14x-15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x-14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-15x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-14x15": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x14": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-25x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-24x25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-26x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-25x26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-27x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-26x27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-28x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-27x28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "1x28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-29x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-28x29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-30x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-29x30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-29x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-30x29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x29": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-28x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-29x28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x28": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-27x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-28x27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x27": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-26x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-27x26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x26": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-25x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-26x25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-1x25": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-24x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "0x30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-30x30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 3
     },
     "-20x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-21x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-22x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-23x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-24x1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-23x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-22x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-21x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-20x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-19x-1": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "14x13": {
-        "name": "Stary les"
+        "name": "Starý les"
     },
     "27x-14": {
-        "name": "Stary les"
+        "name": "Starý les"
     },
     "13x-27": {
-        "name": "Stary les"
+        "name": "Starý les"
     },
     "-14x-13": {
-        "name": "Stary les"
+        "name": "Starý les"
     },
     "-27x14": {
-        "name": "Stary les"
+        "name": "Starý les"
     },
     "-13x27": {
-        "name": "Stary les"
+        "name": "Starý les"
     },
     "13x14": {
         "name": "Hora"
@@ -2211,639 +2193,639 @@
         "count": 2
     },
     "15x10": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "25x-15": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "10x-25": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-15x-10": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-25x15": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-10x25": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "15x9": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "24x-15": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "9x-24": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-15x-9": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-24x15": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-9x24": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "16x10": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "26x-16": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "10x-26": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-16x-10": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-26x16": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "-10x26": {
-        "name": "Rozsiahla plan"
+        "name": "Rozsiahla pláň"
     },
     "16x9": {
-        "name": "Urodne udole"
+        "name": "Úrodné údolie"
     },
     "25x-16": {
-        "name": "Urodne udole"
+        "name": "Úrodné údolie"
     },
     "9x-25": {
-        "name": "Urodne udole"
+        "name": "Úrodné údolie"
     },
     "-16x-9": {
-        "name": "Urodne udole"
+        "name": "Úrodné údolie"
     },
     "-25x16": {
-        "name": "Urodne udole"
+        "name": "Úrodné údolie"
     },
     "-9x25": {
-        "name": "Urodne udole"
+        "name": "Úrodné údolie"
     },
     "3x25": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "28x-3": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "25x-28": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-3x-25": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-28x3": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-25x28": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "4x24": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "28x-4": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "24x-28": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-4x-24": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-28x4": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-24x28": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "3x24": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "27x-3": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "24x-27": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-3x-24": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-27x3": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-24x27": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "3x23": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "26x-3": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "23x-26": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-3x-23": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-26x3": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "-23x26": {
-        "name": "Zelezna hora"
+        "name": "Železná hora"
     },
     "3x22": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "25x-3": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "22x-25": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-3x-22": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-25x3": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-22x25": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "2x23": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "25x-2": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "23x-25": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-2x-23": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-25x2": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-23x25": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "2x24": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "26x-2": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "24x-26": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-2x-24": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-26x2": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-24x26": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "5x23": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "28x-5": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "23x-28": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-5x-23": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-28x5": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-23x28": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "5x24": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "29x-5": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "24x-29": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-5x-24": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-29x5": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-24x29": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "6x23": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "29x-6": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "23x-29": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-6x-23": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-29x6": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "-23x29": {
-        "name": "Hora zeleznych ruin"
+        "name": "Hora železných rúd"
     },
     "6x24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "30x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "24x-30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x-24": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-30x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-24x30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "30x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "23x-30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x-23": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-30x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-23x30": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x21": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "26x-5": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "21x-26": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-5x-21": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-26x5": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-21x26": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "4x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "25x-4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "21x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-4x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-25x4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-21x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "3x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "24x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "21x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-3x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-24x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-21x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "2x22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "24x-2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "22x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-2x-22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-24x2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-22x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "2x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "23x-2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "21x-23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-2x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-23x2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-21x23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "4x20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "24x-4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "20x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-4x-20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-24x4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-20x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "5x20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "25x-5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "20x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-5x-20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-25x5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-20x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "6x20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "26x-6": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "20x-26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-6x-20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-26x6": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-20x26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "6x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "27x-6": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "21x-27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-6x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-27x6": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-21x27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "7x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "28x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "21x-28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-7x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-28x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-21x28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "7x22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "29x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "22x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-7x-22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-29x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-22x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "8x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "29x-8": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "21x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-8x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-29x8": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-21x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "7x20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "27x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "20x-27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-7x-20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-27x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-20x27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "8x20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "28x-8": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "20x-28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-8x-20": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-28x8": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "-20x28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 3
     },
     "3x20": {
@@ -3183,579 +3165,579 @@
         "count": 10
     },
     "23x5": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "28x-23": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "5x-28": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-23x-5": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-28x23": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-5x28": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "23x4": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "27x-23": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "4x-27": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-23x-4": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-27x23": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-4x27": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "22x4": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "26x-22": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "4x-26": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-22x-4": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-26x22": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-4x26": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "21x4": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "25x-21": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "4x-25": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-21x-4": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-25x21": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "-4x25": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 10
     },
     "6x15": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "21x-6": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "15x-21": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-6x-15": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-21x6": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-15x21": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "6x14": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "20x-6": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "14x-20": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-6x-14": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-20x6": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-14x20": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "7x14": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "21x-7": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "14x-21": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-7x-14": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-21x7": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "-14x21": {
-        "name": "Urodne udole",
+        "name": "Úrodné údolie",
         "count": 10
     },
     "20x7": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "27x-20": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "7x-27": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-20x-7": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-27x20": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-7x27": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "18x6": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "24x-18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "6x-24": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-18x-6": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-24x18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-6x24": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "18x4": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "22x-18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "4x-22": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-18x-4": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-22x18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "-4x22": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 10
     },
     "3x4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "7x-3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "4x-7": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-3x-4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-7x3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-4x7": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "3x3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "6x-3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "3x-6": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-3x-3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-6x3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-3x6": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "4x3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "7x-4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "3x-7": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-4x-3": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-7x4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-3x7": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "4x4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "8x-4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "4x-8": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-4x-4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-8x4": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "-4x8": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 10
     },
     "8x3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "11x-8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "3x-11": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-8x-3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-11x8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-3x11": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "3x8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "11x-3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "8x-11": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-3x-8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-11x3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-8x11": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "9x3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "12x-9": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "3x-12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-9x-3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-12x9": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-3x12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "3x9": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "12x-3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "9x-12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-3x-9": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-12x3": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-9x12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "8x4": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "12x-8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "4x-12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-8x-4": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-12x8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-4x12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "4x8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "12x-4": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "8x-12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-4x-8": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-12x4": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "-8x12": {
-        "name": "Hora zeleznych ruin",
+        "name": "Hora železných rúd",
         "count": 10
     },
     "6x3": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "9x-6": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "3x-9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-6x-3": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-9x6": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-3x9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "3x6": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "9x-3": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "6x-9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-3x-6": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-9x3": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-6x9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "4x5": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "9x-4": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "5x-9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-4x-5": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-9x4": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-5x9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "5x4": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "9x-5": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "4x-9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-5x-4": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-9x5": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "-4x9": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 10
     },
     "7x3": {
@@ -3795,963 +3777,963 @@
         "name": "Hora uhlia"
     },
     "9x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "11x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-11x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-3x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-3x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "11x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-11x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x11": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "13x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x-13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-13x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x13": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "14x-7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "7x-14": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-7x-7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-14x7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-7x14": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "7x6": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "13x-7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "6x-13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-7x-6": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-13x7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-6x13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "6x7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "13x-6": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "7x-13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-6x-7": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-13x6": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-7x13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "8x5": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "13x-8": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "5x-13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-8x-5": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-13x8": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-5x13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "5x8": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "13x-5": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "8x-13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-5x-8": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-13x5": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "-8x13": {
-        "name": "Zombie general",
+        "name": "Zombie generál",
         "count": 1
     },
     "7x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "12x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-12x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x12": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-3x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-3x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "4x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-4": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-4x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "5x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-5x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "6x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-6": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-6x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "9x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "7x-9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-7": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-9x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-7x9": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "2x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "10x-2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "8x-10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-2x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-10x2": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "-8x10": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 1
     },
     "3x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "8x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "5x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "-3x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "-8x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "-5x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "5x3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "8x-5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "3x-8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "-5x-3": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "-8x5": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "-3x8": {
-        "name": "Horsky troll",
+        "name": "Horský troll",
         "count": 5
     },
     "5x6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "11x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "6x-11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "-5x-6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "-11x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "-6x11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "6x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "11x-6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "5x-11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "-6x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "-11x6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "-5x11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 150
     },
     "7x4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "11x-7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "4x-11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-7x-4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-11x7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-4x11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "6x4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "10x-6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "4x-10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-6x-4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-10x6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-4x10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "5x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "10x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "5x-10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-5x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-10x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-5x10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "4x6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "10x-4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "6x-10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-4x-6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-10x4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-6x10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "4x7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "11x-4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "7x-11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-4x-7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-11x4": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "-7x11": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 100
     },
     "10x9": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 100
     },
     "19x-10": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 100
     },
     "9x-19": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 100
     },
     "-10x-9": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 100
     },
     "-19x10": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 100
     },
     "-9x19": {
-        "name": "Zelezna hora",
+        "name": "Železná hora",
         "count": 100
     },
     "10x8": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "18x-10": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "8x-18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "-10x-8": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "-18x10": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "-8x18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "9x9": {
@@ -4803,27 +4785,27 @@
         "count": 100
     },
     "9x10": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "19x-9": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "10x-19": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "-9x-10": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "-19x9": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "-10x19": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 100
     },
     "11x9": {
@@ -4929,1323 +4911,1323 @@
         "name": "Hora uhlia"
     },
     "19x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "26x-19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "7x-26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-19x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-26x19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-7x26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "19x6": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "25x-19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "6x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-19x-6": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-25x19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-6x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "18x5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "23x-18": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "5x-23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-18x-5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-23x18": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-5x23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "21x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "28x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "7x-28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-21x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-28x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-7x28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "22x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "29x-22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "7x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-22x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-29x22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-7x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "23x7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "30x-23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "7x-30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-23x-7": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-30x23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-7x30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "18x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "21x-18": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "3x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-18x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-21x18": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-3x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "19x2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "21x-19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "2x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-19x-2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-21x19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "-2x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 2
     },
     "23x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "26x-23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "3x-26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-23x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-26x23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-3x26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "22x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "25x-22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "3x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-22x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-25x22": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-3x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "24x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "27x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "3x-27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-24x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-27x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-3x27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "24x4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "28x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "4x-28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-24x-4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-28x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-4x28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "24x5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "29x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "5x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-24x-5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-29x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-5x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "21x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "24x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "3x-24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-21x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-24x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-3x24": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "21x2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "23x-21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "2x-23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-21x-2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-23x21": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "-2x23": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 5
     },
     "25x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "28x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "3x-28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-25x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-28x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-3x28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "25x2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "27x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "2x-27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-25x-2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-27x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-2x27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "25x5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "30x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "5x-30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-25x-5": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-30x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-5x30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "26x4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "30x-26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "4x-30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-26x-4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-30x26": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-4x30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "25x4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "29x-25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "4x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-25x-4": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-29x25": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-4x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "27x3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "30x-27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "3x-30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-27x-3": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-30x27": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-3x30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "28x2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "30x-28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "2x-30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-28x-2": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-30x28": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "-2x30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 8
     },
     "24x2": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "26x-24": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "2x-26": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-24x-2": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-26x24": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-2x26": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "23x2": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "25x-23": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "2x-25": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-23x-2": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-25x23": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-2x25": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "22x2": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "24x-22": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "2x-24": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-22x-2": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-24x22": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "-2x24": {
-        "name": "Hora s fosiliami",
+        "name": "Hora s fosíliami",
         "count": 8
     },
     "15x11": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "26x-15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "11x-26": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-15x-11": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-26x15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-11x26": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "14x10": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "24x-14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "10x-24": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-14x-10": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-24x14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-10x24": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "16x11": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "27x-16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "11x-27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-16x-11": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-27x16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-11x27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "15x12": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "27x-15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "12x-27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-15x-12": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-27x15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-12x27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "12x15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "27x-12": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "15x-27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-12x-15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-27x12": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-15x27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "14x9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "23x-14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "9x-23": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-14x-9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-23x14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-9x23": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "10x12": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "22x-10": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "12x-22": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-10x-12": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-22x10": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-12x22": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "9x13": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "22x-9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "13x-22": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-9x-13": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-22x9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-13x22": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "9x14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "23x-9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "14x-23": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-9x-14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-23x9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-14x23": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "9x15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "24x-9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "15x-24": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-9x-15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-24x9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "-15x24": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 1
     },
     "9x16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "25x-9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "16x-25": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-9x-16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-25x9": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-16x25": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "10x16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "26x-10": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "16x-26": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-10x-16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-26x10": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-16x26": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "11x16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "27x-11": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "16x-27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-11x-16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-27x11": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "-16x27": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 3
     },
     "10x17": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "27x-10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "17x-27": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "-10x-17": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "-27x10": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "-17x27": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "9x17": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "26x-9": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "17x-26": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "-9x-17": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "-26x9": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "-17x26": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 1
     },
     "9x18": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 3
     },
     "27x-9": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 3
     },
     "18x-27": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 3
     },
     "-9x-18": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 3
     },
     "-27x9": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 3
     },
     "-18x27": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 3
     },
     "8x13": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "21x-8": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "13x-21": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-8x-13": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-21x8": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-13x21": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "7x13": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "20x-7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "13x-20": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-7x-13": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-20x7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-13x20": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "6x13": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "19x-6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "13x-19": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-6x-13": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-19x6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-13x19": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "8x14": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "22x-8": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "14x-22": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-8x-14": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-22x8": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-14x22": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "7x15": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "22x-7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "15x-22": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-7x-15": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-22x7": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "-15x22": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 5
     },
     "6x16": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "22x-6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "16x-22": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "-6x-16": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "-22x6": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "-16x22": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "5x15": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "20x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "15x-20": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "-5x-15": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "-20x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "-15x20": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "5x14": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "19x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "14x-19": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "-5x-14": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "-19x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "-14x19": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 10
     },
     "5x16": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "21x-5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "16x-21": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "-5x-16": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "-21x5": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "-16x21": {
-        "name": "Hladny vlk",
+        "name": "Hladný vlk",
         "count": 15
     },
     "14x8": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "22x-14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "8x-22": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-14x-8": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-22x14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-8x22": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "14x7": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "21x-14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "7x-21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-14x-7": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-21x14": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-7x21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "15x6": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "21x-15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "6x-21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-15x-6": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-21x15": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-6x21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "16x5": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "21x-16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "5x-21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-16x-5": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-21x16": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-5x21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "17x4": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "21x-17": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "4x-21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-17x-4": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-21x17": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "-4x21": {
-        "name": "Velka krisa",
+        "name": "Veľká krisa",
         "count": 5
     },
     "16x8": {
@@ -6321,255 +6303,255 @@
         "count": 2
     },
     "14x4": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 2
     },
     "18x-14": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 2
     },
     "4x-18": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 2
     },
     "-14x-4": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 2
     },
     "-18x14": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 2
     },
     "-4x18": {
-        "name": "Pralesne pohorie",
+        "name": "Pralesné pohorie",
         "count": 2
     },
     "12x5": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "17x-12": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "5x-17": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-12x-5": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-17x12": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-5x17": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "14x2": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "16x-14": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "2x-16": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-14x-2": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-16x14": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-2x16": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "16x4": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "20x-16": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "4x-20": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-16x-4": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-20x16": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-4x20": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "8x18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "26x-8": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "18x-26": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-8x-18": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-26x8": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "-18x26": {
-        "name": "Stary les",
+        "name": "Starý les",
         "count": 2
     },
     "11x19": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "30x-11": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "19x-30": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "-11x-19": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "-30x11": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "-19x30": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "12x18": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "30x-12": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "18x-30": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "-12x-18": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "-30x12": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "-18x30": {
-        "name": "Hora s fosiliami"
+        "name": "Hora s fosíliami"
     },
     "10x19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "29x-10": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "19x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-10x-19": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-29x10": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-19x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "11x18": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "29x-11": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "18x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-11x-18": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-29x11": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-18x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "12x17": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "29x-12": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "17x-29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-12x-17": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-29x12": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-17x29": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "13x17": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "30x-13": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "17x-30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-13x-17": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-30x13": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     },
     "-17x30": {
-        "name": "Ozbrojeny zombik",
+        "name": "Ozbrojený zombik",
         "count": 1
     }
 }
