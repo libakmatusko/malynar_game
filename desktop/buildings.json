@@ -1026,7 +1026,7 @@
                 "oceľový nástroj":20
             }
         ],
-        "ticks per item":[30, 30, 30],
+        "ticks per item":[20, 20, 20],
         "input": [
             {"drevo":5, "kameň":10},
             {"doska":5, "železo":10},
@@ -1042,6 +1042,36 @@
             "color": "#bb0000"
         },
         "points":[11, 22, 30]
+    },
+    "tepáreň":{
+        "requrement":"",
+        "generating": true,
+        "cost":[
+            {
+                "otesaný kameň":30,
+                "doska":30,
+                "železný nástroj":15
+            },
+            {
+                "otesaný mramor":20,
+                "mahagónová doska":20,
+                "oceľový nástroj":20
+            }
+        ],
+        "ticks per item":[30, 30],
+        "input": [
+            {"doska":5, "železo":20},
+            {"mahagón":5, "oceľ":20}
+        ],
+        "output": [
+            {"železné brnenie":1},
+            {"oceľové brnenie":1}
+        ],
+        "design": {
+            "shape": "square",
+            "color": "#bb0000"
+        },
+        "points":[20, 30]
     },
     "vojenská dielňa":{
         "requrement":"",
