@@ -123,6 +123,7 @@ class actions:
 
 
     def create_color_codes(self):
+         
         # smiliho front end calculation
         colors = ["#ffabab", "#e7ffac", "#6eb5ff", "#f6a6ff", "#a79aff", "#fff5ba"]
         counter = 0
@@ -346,8 +347,8 @@ class actions:
 
         if your_stren == 0:
             return False
-        
-        monster_stren = self.beast_types[type]["strength"] * count
+
+        monster_stren = int(self.beast_types[type]["strength"]) * int(count)
 
         monster_stren = int(random.random() / 2 * monster_stren)
         your_stren = int(random.random() / 2 * your_stren)
@@ -376,6 +377,7 @@ class actions:
         response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
         self.front.draw_menu()
         if response.status_code == 200 and response.text == '0':
+            # updatovat my_lands + dokodit par monstier
             return True
         elif response.status_code == 200:
             return False
@@ -531,8 +533,7 @@ class actions:
             to_save.pop('front')
             to_save.pop('info')
             to_save.pop('buildings')
-            to_save.pop('army')
-            json.dump(to_save, save_file)
+            json.dump(to_save, save_file, indent=4)
     
 
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 

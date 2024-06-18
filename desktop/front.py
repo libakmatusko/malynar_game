@@ -1,5 +1,5 @@
 import tkinter as tk
-from math import ceil, acos, degrees
+from math import ceil, acos, degrees, pi, log2
 import unicodedata
 import winsound
 
@@ -401,6 +401,7 @@ class Front:
                 pass
         
         self.army_building_win = tk.Tk()
+        self.army_building_win.geometry("+50+50")
         self.update_create_army_window()
         self.army_building_win.title("Armáda")
          
@@ -749,7 +750,7 @@ class Front:
                 self.disposable_menu_buttons.append(tk.Label(text=output_text, borderwidth=4, font=("smili", self.font_size)))
                 self.disposable_menu_buttons[-1].place(rely=0.28, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
         elif infos["name"] in self.actions.beast_types.keys():
-            self.disposable_menu_buttons.append(tk.Button(text="Zaútočiť", command=lambda: self.actions.fight_monster(infos["name"], infos["level"], self.actions.to_pos_string(*self.map_cords)), borderwidth=4, font=("smili", self.font_size)))
+            self.disposable_menu_buttons.append(tk.Button(text="Zaútočiť", command=lambda: self.actions.fight_monster(infos["name"], infos["count"], self.actions.to_pos_string(*self.map_cords)), borderwidth=4, font=("smili", self.font_size)))
             self.disposable_menu_buttons[-1].place(rely=0.68, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=0.08)
 
             strength_text = f'Sila {self.actions.beast_types[infos["name"]]["strength"]}'
@@ -788,26 +789,30 @@ class Front:
     def get_hexagon_color(self, cords):
         color = self.hexagon_color
 
-        max_strength = 5000
+        max_strength = 10000
 
         typ = self.actions.all_lands[self.actions.to_pos_string(*cords)]
-        player = typ.get("player", None)
-        if player:
-            color = self.actions.color_code.get(player, self.hexagon_color)
-        elif typ["name"] in self.actions.beast_types.keys():
-            strength = typ["level"] * self.actions.beast_types[typ["name"]]["strength"]
+
+        if typ["name"] in self.actions.beast_types.keys():
+            strength = int(typ["count"]) * int(self.actions.beast_types[typ["name"]]["strength"])
 
             if strength > max_strength:
                 percentage = 1
             else:
-                percentage = strength / max_strength
+                percentage = log2(strength) / log2(max_strength)
             percentage = 1 - percentage
             
             rgb_color = [int(percentage * 180) for i in range(3)]
             rgb_color[1] += 75
 
             color = f"#{rgb_color[0]:02x}{rgb_color[1]:02x}{rgb_color[2]:02x}"
-
+        
+        elif typ["name"] in self.actions.info.keys():
+            color = "orange"
+        
+        player = typ.get("player")
+        if player is not None:
+            color = self.actions.color_code[player]
         
         return color
 

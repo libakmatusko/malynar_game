@@ -44,12 +44,12 @@ class game_state():
     def __init__(self, game_description):
         self.game_description = game_description
         self.starting_positions = [
-            (25, 0),
-            (0, 25),
-            (25, -25),
-            (-25, 0),
-            (0, -25),
-            (-25, 25),
+            (12, -24),
+            (-12, -12),
+            (-24, -12),
+            (-12, 24),
+            (12, 12),
+            (24, -12),
         ]
         self.playing = False
         self.names = []
@@ -164,12 +164,12 @@ def kill_monsters(args):
     count = int(count)
 
     game.all_lands[pos]
-    if game.all_lands[pos]["level"] <= count:
-        game.all_lands[pos]["level"] = 0
+    if game.all_lands[pos]["count"] <= count:
+        game.all_lands[pos]["count"] = 0
         game.all_lands[pos]["name"] = 'land'
         return '0', 200
     else:
-        game.all_lands[pos]["level"] -= count
+        game.all_lands[pos]["count"] -= count
         return '1', 200
 
 

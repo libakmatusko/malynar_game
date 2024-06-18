@@ -1026,7 +1026,7 @@
                 "oceľový nástroj":20
             }
         ],
-        "ticks per item":[15, 15, 15],
+        "ticks per item":[30, 30, 30],
         "input": [
             {"drevo":5, "kameň":10},
             {"doska":5, "železo":10},
@@ -1063,7 +1063,7 @@
                 "oceľový nástroj":35
             }
         ],
-        "ticks per item":[15, 15, 15],
+        "ticks per item":[30, 30, 30],
         "input": [
             {"drevo":50, "klinec":150, "kameň":50},
             {"doska":30, "oceľ":50, "pušný prach":20},
