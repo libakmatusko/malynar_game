@@ -25,8 +25,7 @@ class actions:
             'kameň': 100,
             'drevo': 100,
             'peniaze': 0,
-            "jedlo": 0,
-            "železo": 10
+            "jedlo": 0
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army:dict = json.load(f)
@@ -75,7 +74,7 @@ class actions:
     
 
     def __int__(self):
-        return self.points
+        return self.points * 100 + self.army_points + self.inventory['peniaze'] *10
 
 
     def tick(self):
