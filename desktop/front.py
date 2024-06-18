@@ -536,7 +536,7 @@ class Front:
             else:
                 points_text = "0 bodov"
 
-            self.disposable_build_labels.append(tk.Label(self.build_window, text=building, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=building, width=25, font=("smili", int(self.font_size * 1.2), "bold")))
             self.disposable_build_labels[-1].grid(row=2 * i, column=0)
             self.disposable_build_labels.append(tk.Label(self.build_window, text=cost_text, width=45, font=("smili", int(self.font_size * 0.7))))
             self.disposable_build_labels[-1].grid(row=2 * i, column=1)

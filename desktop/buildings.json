@@ -401,7 +401,7 @@
         },
         "points":[2, 4, 7, 10, 13, 15]
     },
-    "Hlinný výkop":{
+    "hlinný výkop":{
         "requrement":"mountain",
         "generating": true,
         "cost":[
