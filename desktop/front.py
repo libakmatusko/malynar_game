@@ -326,7 +326,7 @@ class Front:
                  }
         exists = False
         for key in self.actions.inventory.keys():
-            if compare_strings(trade["item"], key) and self.inventory[key] >= trade["count"]:
+            if compare_strings(trade["item"], key) and self.actions.inventory[key] >= int(trade["count"]):
                 exists = True
                 break
         if not exists:
