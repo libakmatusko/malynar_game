@@ -476,8 +476,10 @@ class Front:
         self.disposable_build_labels = []
 
         resources = self.actions.find_resources(self.map_cords)
-
-        for i, building in enumerate(list(self.actions.buildings.keys())[self.build_page_number * 7:]):
+        buildings_order = ["cesta", "drevorubač", "píla", "hlinný výkop", "tehliareň", "baňa", "tesár", "zberač bobúľ", "lovec", "mäsiar", "kožušník", "farmár",
+         "mlyn", "pekáreň", "uhliar", "drvička", "hrnčiar", "koniar", "sedliar", "zbrojnica", "vojenská dielňa", "uhoľná baňa", "železná baňa",
+         "zlatá baňa", "vyhňa", "oceliareň", "kováč", "klinciareň", "valcovňa", "sklár", "čarodejník", "mohyla"]
+        for i, building in enumerate(buildings_order[self.build_page_number * 7:]):
             if i >= 7:
                 break
 
