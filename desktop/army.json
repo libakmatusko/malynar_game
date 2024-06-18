@@ -2,7 +2,7 @@
     "pešiak": {
         "strength": 10,
         "count": 0,
-        "recipe": {"ľudia": 1, "palica": 1}
+        "recipe": {"ľudia": 1, "budzogáň": 1}
     },
 
     "kopijník": {
@@ -32,7 +32,7 @@
     "pešiak jazdec": {
         "strength": 10,
         "count": 0,
-        "recipe": {"ľudia": 1, "palica": 1, "kôň": 1}
+        "recipe": {"ľudia": 1, "budzogáň": 1, "kôň": 1}
     },
 
     "kopijník jazdec": {
