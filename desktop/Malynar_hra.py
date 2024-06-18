@@ -22,10 +22,11 @@ class actions:
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
             'ľudia': 5,
-            'stone': 100,
-            'wood': 100,
+            'kameň': 100,
+            'drevo': 100,
             'peniaze': 0,
-            "food": 0
+            "jedlo": 0,
+            "železo": 10
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army:dict = json.load(f)
@@ -123,7 +124,7 @@ class actions:
 
     def create_color_codes(self):
         # smiliho front end calculation
-        colors = ["#ffababa", "#e7ffac", "#6eb5ff", "#f6a6ff", "#a79aff", "#fff5ba"]
+        colors = ["#ffabab", "#e7ffac", "#6eb5ff", "#f6a6ff", "#a79aff", "#fff5ba"]
         counter = 0
         self.color_code = {}
         for land in self.all_lands.keys():  
@@ -153,9 +154,9 @@ class actions:
         self.front.fill_build_window()
     
     def generate_ľudia(self):
-        new_count = self.inventory['food'] // 10
+        new_count = self.inventory['jedlo'] // 10
         self.inventory['ľudia'] += min(new_count, self.inventory['ľudia'] // 10)
-        self.inventory['food'] -= new_count * 10
+        self.inventory['jedlo'] -= new_count * 10
 
     def server_build(self, pos: list[int], building: str):
         if self.debug:
