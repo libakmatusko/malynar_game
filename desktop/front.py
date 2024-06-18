@@ -75,7 +75,7 @@ class Front:
         self.last_move_up_was_right = True
         # matus sprta to kodu
         self.map_canvas.bind('<Button-1>', self.select_hex)
-        self.menu_canvas.bind('<Button-1>', self.menu_click)
+        #self.menu_canvas.bind('<Button-1>', self.menu_click)
         self.buttons = []
         self.polygons = []
         self.tkinter_to_map_cords = {}
