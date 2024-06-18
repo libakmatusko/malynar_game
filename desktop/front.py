@@ -75,7 +75,7 @@ class Front:
         self.last_move_up_was_right = True
         # matus sprta to kodu
         self.map_canvas.bind('<Button-1>', self.select_hex)
-        self.menu_canvas.bind('<Button-1>', self.menu_click)
+        #self.menu_canvas.bind('<Button-1>', self.menu_click)
         self.buttons = []
         self.polygons = []
         self.tkinter_to_map_cords = {}
@@ -198,14 +198,19 @@ class Front:
         if self.inventory_window:
             try:
                 inv = self.actions.inventory
-                inv = dict(sorted(inv.items(), key=lambda item: item[1]))
 
                 num_of_rows = 15
 
                 counter = 0
-                for item in inv.keys():
-                    tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
-                    counter += 1
+                items_order = ['ľudia', 'peniaze', 'jedlo', 'drevo', 'mahagón', 'doska', 'mahagónová doska', 'hlina', 'tehla', 'kameň', 'mramor', 'otesaný kameň',
+'otesaný mramor', 'divina', 'koža', 'pšenica', 'múka', 'uhlie', 'piesok', 'prach', 'drahokam', 'porcelán', 'kôň', 'sedlo', 'budzogáň',
+'kopija', 'meč', 'katapult', 'delo', 'mušketa', 'železná ruda', 'železo', 'zlato', 'oceľ', 'železný nástroj', 'oceľový nástroj',
+'klinec', 'oceľový plát', 'sklo', 'mozajka', 'pušný prach', 'hodváb']
+                for item in items_order:
+                    amount = inv.get(item)
+                    if amount:
+                        tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
+                        counter += 1
             except tk.TclError:
                 pass
     

@@ -388,8 +388,8 @@ class actions:
                 [l_pos[0]-1, l_pos[1]],
                 [l_pos[0]+1, l_pos[1]-1],
             ]:
-                if self.all_lands[self.to_pos_string(land)].get("player") == self.name:
-                    self.available_lands.append(land)
+                if self.all_lands[self.to_pos_string(*land)].get("player") == self.name:
+                    self.available_lands.append(l_pos)
                     break
             return True
         elif response.status_code == 200:
