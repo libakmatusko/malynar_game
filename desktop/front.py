@@ -61,8 +61,8 @@ class Front:
         self.menu_canvas = tk.Canvas(self.window, bg="grey")
         self.menu_canvas.place(y=0, x=self.map_canvas_size["x"], width=self.menu_canvas_size["x"], relheight=1)
 
-        self.zoom = 6 # describes how many rows of tiles will be displayed
-        self.zoom_strength = 3
+        self.zoom = 10 # describes how many rows of tiles will be displayed
+        self.zoom_strength = 1
         self.selected_pos = []
         self.map_cords = []
         self.status = {}

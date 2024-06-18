@@ -38,7 +38,7 @@ class actions:
             {
                 'name': 'base',
                 'position': starting_pos,
-                'ticks per item': 10,
+                'ticks per item': 60,
                 'time to generation': 10,
                 'generating': True,
                 'input': {},
@@ -54,7 +54,7 @@ class actions:
                     self.all_lands[self.to_pos_string(x, y)] = {
                         'name': 'land'
                     }
-        
+
         with open(f'desktop/info.json', 'r', encoding='utf-8') as info_file:
             docasne = json.load(info_file)
             self.beast_types = docasne["monsters"]
@@ -69,8 +69,9 @@ class actions:
         self.used_codes = []
 
         self.front = front.Front(self)
+        self.front.center_hexagon_cords = {"x": starting_pos[0], "y": starting_pos[1]}
         self.front.update()
-
+        self.front.draw_map()
     
 
     def __int__(self):
@@ -131,6 +132,7 @@ class actions:
         for land in self.all_lands.keys():  
             if self.all_lands[land]['name'] == "base":
                 self.color_code[self.all_lands[land]["player"]] = colors[counter]
+                counter += 1
 
 
     # return True ak sa updatlo
@@ -155,9 +157,9 @@ class actions:
         self.front.fill_build_window()
     
     def generate_ľudia(self):
-        new_count = self.inventory['jedlo'] // 10
+        new_count = self.inventory['jedlo'] // 30
         self.inventory['ľudia'] += min(new_count, self.inventory['ľudia'] // 10)
-        self.inventory['jedlo'] -= new_count * 10
+        self.inventory['jedlo'] -= new_count * 30
 
     def server_build(self, pos: list[int], building: str):
         if self.debug:
@@ -582,7 +584,7 @@ print('Enter username:', end=' ')
 player = conect()
 
 while not start():
-    sleep(1)
+    sleep(3)
 
 last_time: float = 0
 while True:
