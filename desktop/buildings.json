@@ -4,8 +4,8 @@
         "generating": false,
         "cost":[
             {
-                "stone":5,
-                "wood":5
+                "kameň":5,
+                "drevo":5
             }
         ],
         "design": {
@@ -13,21 +13,21 @@
             "color": "black"
         }
     },
-    "zbierac bobul":{
+    "zberač bobúľ":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":25,
-                "chiseled stone":25
+                "doska":25,
+                "otesaný kameň":25
             }
         ],
         "ticks per item":[15, 10, 5],
@@ -37,9 +37,9 @@
             {}
         ],
         "output": [
-            {"food":1},
-            {"food":1},
-            {"food":1}
+            {"jedlo":1},
+            {"jedlo":1},
+            {"jedlo":1}
         ],
         "design": {
             "shape": "triangle",
@@ -52,29 +52,29 @@
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":10,
-                "stone":10
+                "doska":10,
+                "kameň":10
             },
             {
-                "plank":20,
-                "chiseled stone":20,
+                "doska":20,
+                "otesaný kameň":20,
                 "tehla":10
             }
         ],
         "ticks per item":[60, 40, 20],
         "input": [
-            {"hay":30},
-            {"hay":30},
-            {"hay":30}
+            {"pšenica":30},
+            {"pšenica":30},
+            {"pšenica":30}
         ],
         "output": [
-            {"kon":1},
-            {"kon":1},
-            {"kon":1}
+            {"kôň":1},
+            {"kôň":1},
+            {"kôň":1}
         ],
         "design": {
             "shape": "triangle",
@@ -87,24 +87,24 @@
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "chiseled stone":10
+                "drevo":10,
+                "otesaný kameň":10
             },
             {
-                "plank":20,
-                "chiseled stone":20,
+                "doska":20,
+                "otesaný kameň":20,
                 "tehla":10
             }
         ],
         "ticks per item":[30, 20, 10],
         "input": [
-            {"lather":15, "plank":5},
-            {"lather":15, "plank":5},
-            {"lather":15, "plank":5}
+            {"koža":15, "doska":5},
+            {"koža":15, "doska":5},
+            {"koža":15, "doska":5}
         ],
         "output": [
             {"sedlo":1},
@@ -117,38 +117,38 @@
         },
         "points":[2, 4, 7]
     },
-    "farmer":{
+    "farmár":{
         "requrement":"field",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":20,
-                "chiseled stone":20,
+                "doska":20,
+                "otesaný kameň":20,
                 "tehla":10
             },
             {
-                "plank":10,
-                "chiseled stone":10,
+                "doska":10,
+                "otesaný kameň":10,
                 "tehla":10,
-                "iron":5
+                "železo":5
             },
             {
-                "plank":30,
-                "chiseled stone":30,
+                "doska":30,
+                "otesaný kameň":30,
                 "tehla":10,
-                "iron tool":10
+                "železný nástroj":10
             },
             {
-                "mahagon plank":30,
-                "chiseled marble":30,
+                "mahagónová doska":30,
+                "otesaný mramor":30,
                 "tehla":30,
                 "klinec":100
             }
@@ -163,12 +163,12 @@
             {}
         ],
         "output": [
-            {"hay":1},
-            {"hay":1},
-            {"hay":1},
-            {"hay":3, "leather":1},
-            {"hay":3, "leather":1},
-            {"hay":3, "leather":1}
+            {"pšenica":1},
+            {"pšenica":1},
+            {"pšenica":1},
+            {"pšenica":3, "koža":1},
+            {"pšenica":3, "koža":1},
+            {"pšenica":3, "koža":1}
 
         ],
         "design": {
@@ -182,53 +182,53 @@
         "generating": true,
         "cost":[
             {
-                "plank":30,
-                "chiseled stone":10,
+                "doska":30,
+                "otesaný kameň":10,
                 "klinec":15
             },
             {
-                "mahagon plank":10,
-                "chiseled marble":5,
-                "steel":5
+                "mahagónová doska":10,
+                "otesaný mramor":5,
+                "oceľ":5
             },
             {
-                "mahagon plank":15,
-                "chiseled marble":10,
-                "steel tool":10
+                "mahagónová doska":15,
+                "otesaný mramor":10,
+                "oceľový nástroj":10
             },
             {
-                "mahagon plank":25,
-                "chiseled marble":15,
-                "steel tool":15
+                "mahagónová doska":25,
+                "otesaný mramor":15,
+                "oceľový nástroj":15
             },
             {
-                "mahagon plank":40,
-                "chiseled marble":15,
-                "ocelovy plat":10
+                "mahagónová doska":40,
+                "otesaný mramor":15,
+                "oceľový plát":10
             },
             {
-                "mahagon plank":50,
-                "chiseled marble":25,
-                "porcelan":10,
-                "ocelovy plat":20
+                "mahagónová doska":50,
+                "otesaný mramor":25,
+                "porcelán":10,
+                "oceľový plát":20
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"hay":1},
-            {"hay":1},
-            {"hay":1},
-            {"hay":1},
-            {"hay":1},
-            {"hay":1}
+            {"pšenica":1},
+            {"pšenica":1},
+            {"pšenica":1},
+            {"pšenica":1},
+            {"pšenica":1},
+            {"pšenica":1}
         ],
         "output": [
-            {"muka":1},
-            {"muka":1},
-            {"muka":1},
-            {"muka":1},
-            {"muka":1},
-            {"muka":1}
+            {"múka":1},
+            {"múka":1},
+            {"múka":1},
+            {"múka":1},
+            {"múka":1},
+            {"múka":1}
 
         ],
         "design": {
@@ -237,58 +237,58 @@
         },
         "points":[6, 10, 14, 20, 23, 25]
     },
-    "pekaren":{
+    "pekáreň":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "plank":10,
-                "chiseled stone":30,
+                "doska":10,
+                "otesaný kameň":30,
                 "klinec":15
             },
             {
-                "mahagon plank":5,
-                "chiseled marble":10,
-                "steel":5
+                "mahagónová doska":5,
+                "otesaný mramor":10,
+                "oceľ":5
             },
             {
-                "mahagon plank":10,
-                "chiseled marble":15,
-                "steel tool":10
+                "mahagónová doska":10,
+                "otesaný mramor":15,
+                "oceľový nástroj":10
             },
             {
-                "mahagon plank":15,
-                "chiseled marble":25,
-                "steel tool":15
+                "mahagónová doska":15,
+                "otesaný mramor":25,
+                "oceľový nástroj":15
             },
             {
-                "mahagon plank":15,
-                "chiseled marble":40,
-                "ocelovy plat":10
+                "mahagónová doska":15,
+                "otesaný mramor":40,
+                "oceľový plát":10
             },
             {
-                "mahagon plank":25,
-                "chiseled marble":50,
-                "porcelan":10,
-                "ocelovy plat":20
+                "mahagónová doska":25,
+                "otesaný mramor":50,
+                "porcelán":10,
+                "oceľový plát":20
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"muka":3, "coal":1},
-            {"muka":3, "coal":1},
-            {"muka":3, "coal":1},
-            {"muka":3, "coal":1},
-            {"muka":3, "coal":1},
-            {"muka":3, "coal":1}
+            {"múka":3, "uhlie":1},
+            {"múka":3, "uhlie":1},
+            {"múka":3, "uhlie":1},
+            {"múka":3, "uhlie":1},
+            {"múka":3, "uhlie":1},
+            {"múka":3, "uhlie":1}
         ],
         "output": [
-            {"food":10},
-            {"food":10},
-            {"food":10},
-            {"food":10},
-            {"food":10},
-            {"food":10}
+            {"jedlo":10},
+            {"jedlo":10},
+            {"jedlo":10},
+            {"jedlo":10},
+            {"jedlo":10},
+            {"jedlo":10}
 
         ],
         "design": {
@@ -297,32 +297,32 @@
         },
         "points":[7, 11, 16, 22, 26, 30]
     },
-    "mine":{
+    "baňa":{
         "requrement":"mountain",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":25,
-                "chiseled stone":25
+                "doska":25,
+                "otesaný kameň":25
             },
             {
-                "plank":10,
-                "iron":10
+                "doska":10,
+                "železo":10
             },
             {
-                "plank":10,
-                "iron tool":10
+                "doska":10,
+                "železný nástroj":10
             },
             {
-                "mahagon plank":25,
+                "mahagónová doska":25,
                 "klinec":100
             }
         ],
@@ -336,12 +336,12 @@
             {}
         ],
         "output": [
-            {"stone":1},
-            {"stone":1},
-            {"stone":1},
-            {"stone":3, "marble":1},
-            {"stone":3, "marble":1},
-            {"stone":3, "marble":1}
+            {"kameň":1},
+            {"kameň":1},
+            {"kameň":1},
+            {"kameň":3, "mramor":1},
+            {"kameň":3, "mramor":1},
+            {"kameň":3, "mramor":1}
         ],
         "design": {
             "shape": "triangle",
@@ -349,33 +349,33 @@
         },
         "points":[1, 2, 4, 6, 8, 10]
     },
-    "coal mine":{
+    "uhoľná baňa":{
         "requrement":"coal mountain",
         "generating": true,
         "cost":[
             {
-                "wood":15,
-                "stone":15
+                "drevo":15,
+                "kameň":15
             },
             {
-                "wood":15,
-                "stone":15
+                "drevo":15,
+                "kameň":15
             },
             {
-                "plank":40,
-                "chiseled stone":40
+                "doska":40,
+                "otesaný kameň":40
             },
             {
-                "plank":40,
-                "iron":15
+                "doska":40,
+                "železo":15
             },
             {
-                "plank":50,
-                "iron tool":20
+                "doska":50,
+                "železný nástroj":20
             },
             {
-                "mahagon plank":50,
-                "iron tool":40
+                "mahagónová doska":50,
+                "železný nástroj":40
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -388,12 +388,12 @@
             {}
         ],
         "output": [
-            {"coal":1},
-            {"coal":1},
-            {"coal":1},
-            {"coal":1},
-            {"coal":1},
-            {"coal":1}
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1}
         ],
         "design": {
             "shape": "triangle",
@@ -401,36 +401,36 @@
         },
         "points":[2, 4, 7, 10, 13, 15]
     },
-    "Turna nad Bodvou":{
+    "Hlinný výkop":{
         "requrement":"mountain",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":25,
-                "chiseled stone":25
+                "doska":25,
+                "otesaný kameň":25
             },
             {
-                "plank":25,
-                "chiseled stone":25,
-                "iron":10
+                "doska":25,
+                "otesaný kameň":25,
+                "železo":10
             },
             {
-                "plank":40,
-                "chiseled stone":40,
-                "iron":10
+                "doska":40,
+                "otesaný kameň":40,
+                "železo":10
             },
             {
-                "mahagon plank":20,
-                "chiseled marble":20,
-                "iron tool":20
+                "mahagónová doska":20,
+                "otesaný mramor":20,
+                "železný nástroj":20
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -456,34 +456,34 @@
         },
         "points":[1, 2, 4, 6, 8, 10]
     },
-    "iron mine":{
+    "železná baňa":{
         "requrement":"metal mountain",
         "generating": true,
         "cost":[
             {
-                "wood":20,
-                "stone":20
+                "drevo":20,
+                "kameň":20
             },
             {
-                "plank":20,
-                "chiseled stone":20
+                "doska":20,
+                "otesaný kameň":20
             },
             {
-                "plank":50,
-                "chiseled stone":40,
-                "iron":5
+                "doska":50,
+                "otesaný kameň":40,
+                "železo":5
             },
             {
-                "plank":50,
-                "iron tool":20
+                "doska":50,
+                "železný nástroj":20
             },
             {
-                "mahagon plank":20,
-                "iron tool":15
+                "mahagónová doska":20,
+                "železný nástroj":15
             },
             {
-                "mahagon plank":50,
-                "steel tool":25
+                "mahagónová doska":50,
+                "oceľový nástroj":25
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
@@ -496,12 +496,12 @@
             {}
         ],
         "output": [
-            {"raw iron":1},
-            {"raw iron":1},
-            {"raw iron":1},
-            {"raw iron":1},
-            {"raw iron":1},
-            {"raw iron":1}
+            {"železná ruda":1},
+            {"železná ruda":1},
+            {"železná ruda":1},
+            {"železná ruda":1},
+            {"železná ruda":1},
+            {"železná ruda":1}
         ],
         "design": {
             "shape": "triangle",
@@ -509,25 +509,25 @@
         },
         "points":[6, 10, 14, 20, 23, 25]
     },
-    "gold mine":{
+    "zlatá baňa":{
         "requrement":"golden mountain",
         "generating": true,
         "cost":[
             {
-                "marble":50,
-                "mahagon":50,
-                "iron tool":30
+                "mramor":50,
+                "mahagón":50,
+                "železný nástroj":30
             },
             {
-                "chiseled marble":50,
-                "mahagon plank":50,
-                "steel tool":30
+                "otesaný mramor":50,
+                "mahagónová doska":50,
+                "oceľový nástroj":30
             },
             {
-                "chiseled marble":50,
-                "mahagon plank":50,
+                "otesaný mramor":50,
+                "mahagónová doska":50,
                 "tehla":50,
-                "ocelovy plat":30
+                "oceľový plát":30
             }
         ],
         "ticks per item":[45, 30, 15],
@@ -537,9 +537,9 @@
             {}
         ],
         "output": [
-            {"raw gold":1},
-            {"raw gold":1},
-            {"raw gold":1}
+            {"zlatá ruda":1},
+            {"zlatá ruda":1},
+            {"zlatá ruda":1}
         ],
         "design": {
             "shape": "triangle",
@@ -547,51 +547,51 @@
         },
         "points":[20, 30, 50]
     },
-    "tesar":{
+    "tesár":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":20,
-                "stone":10
+                "drevo":20,
+                "kameň":10
             },
             {
-                "wood":20,
-                "stone":10
+                "drevo":20,
+                "kameň":10
             },
             {
-                "plank":50,
-                "chiseled stone":30
+                "doska":50,
+                "otesaný kameň":30
             },
             {
-                "plank":40,
-                "iron":10
+                "doska":40,
+                "železo":10
             },
             {
-                "plank":50,
-                "iron tool":15
+                "doska":50,
+                "železný nástroj":15
             },
             {
-                "mahagon plank":50,
-                "iron tool":30
+                "mahagónová doska":50,
+                "železný nástroj":30
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
         "input": [
-            {"stone":1},
-            {"stone":1},
-            {"stone":1},
-            {"stone":3, "marble":1},
-            {"stone":3, "marble":1},
-            {"stone":3, "marble":1}
+            {"kameň":1},
+            {"kameň":1},
+            {"kameň":1},
+            {"kameň":3, "mramor":1},
+            {"kameň":3, "mramor":1},
+            {"kameň":3, "mramor":1}
         ],
         "output": [
-            {"chiseled stone":1},
-            {"chiseled stone":1},
-            {"chiseled stone":1},
-            {"chiseled stone":3, "chiseled marble":1},
-            {"chiseled stone":3, "chiseled marble":1},
-            {"chiseled stone":3, "chiseled marble":1}
+            {"otesaný kameň":1},
+            {"otesaný kameň":1},
+            {"otesaný kameň":1},
+            {"otesaný kameň":3, "otesaný mramor":1},
+            {"otesaný kameň":3, "otesaný mramor":1},
+            {"otesaný kameň":3, "otesaný mramor":1}
         ],
         "design": {
             "shape": "square",
@@ -599,57 +599,57 @@
         },
         "points":[2, 4, 7, 10, 13, 15]
     },
-    "vyhna":{
+    "vyhňa":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":20,
-                "stone":20
+                "drevo":20,
+                "kameň":20
             },
             {
-                "plank":15,
-                "chiseled stone":15,
+                "doska":15,
+                "otesaný kameň":15,
                 "tehla":10
             },
             {
-                "plank":30,
-                "chiseled stone":30,
+                "doska":30,
+                "otesaný kameň":30,
                 "tehla":30,
-                "iron":5
+                "železo":5
             },
             {
-                "chiseled stone":30,           
+                "otesaný kameň":30,           
                 "tehla":30,
-                "iron tool":20
+                "železný nástroj":20
             },
             {
-                "chiseled marble":20,
+                "otesaný mramor":20,
                 "tehla":50,
-                "iron tool":15
+                "železný nástroj":15
             },
             {
-                "chiseled marble":50,
+                "otesaný mramor":50,
                 "tehla":50,
-                "steel tool":25
+                "oceľový nástroj":25
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"raw iron":1, "coal":1},
-            {"raw iron":1, "coal":1},
-            {"raw iron":1, "coal":1},
-            {"raw iron":1, "coal":1},
-            {"raw iron":1, "coal":1},
-            {"raw iron":1, "coal":1}
+            {"železná ruda":1, "uhlie":1},
+            {"železná ruda":1, "uhlie":1},
+            {"železná ruda":1, "uhlie":1},
+            {"železná ruda":1, "uhlie":1},
+            {"železná ruda":1, "uhlie":1},
+            {"železná ruda":1, "uhlie":1}
         ],
         "output": [
-            {"iron":1},
-            {"iron":1},
-            {"iron":1},
-            {"iron":1},
-            {"iron":1},
-            {"iron":1}
+            {"železo":1},
+            {"železo":1},
+            {"železo":1},
+            {"železo":1},
+            {"železo":1},
+            {"železo":1}
         ],
         "design": {
             "shape": "square",
@@ -657,46 +657,46 @@
         },
         "points":[11, 16, 20, 24, 28, 34]
     },
-    "tehlaren":{
+    "tehliareň":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":25,
-                "chiseled stone":25
+                "doska":25,
+                "otesaný kameň":25
             },
             {
-                "plank":10,
-                "chiseled stone":10,
-                "iron":10
+                "doska":10,
+                "otesaný kameň":10,
+                "železo":10
             },
             {
-                "plank":10,
-                "chiseled stone":10,
-                "iron tool":10
+                "doska":10,
+                "otesaný kameň":10,
+                "železný nástroj":10
             },
             {
-                "mahagon plank":25,
-                "chiseled marble":25,
+                "mahagónová doska":25,
+                "otesaný mramor":25,
                 "klinec":100
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"hlina":1, "coal":1},
-            {"hlina":1, "coal":1},
-            {"hlina":1, "coal":1},
-            {"hlina":1, "coal":1},
-            {"hlina":1, "coal":1},
-            {"hlina":1, "coal":1}
+            {"hlina":1, "uhlie":1},
+            {"hlina":1, "uhlie":1},
+            {"hlina":1, "uhlie":1},
+            {"hlina":1, "uhlie":1},
+            {"hlina":1, "uhlie":1},
+            {"hlina":1, "uhlie":1}
         ],
         "output": [
             {"tehla":1},
@@ -712,37 +712,37 @@
         },
         "points":[2, 4, 7, 10, 12, 15]
     },
-    "hrnciar":{
+    "hrnčiar":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "mahagon plank":15,
-                "chiseled marble":15,
+                "mahagónová doska":15,
+                "otesaný mramor":15,
                 "klinec":15,
-                "iron":15
+                "železo":15
             },
             {
-                "mahagon plank":15,
-                "chiseled marble":15,
-                "steel":20
+                "mahagónová doska":15,
+                "otesaný mramor":15,
+                "oceľ":20
             },
             {
-                "mahagon plank":30,
-                "chiseled marble":30,
-                "steel tool":40
+                "mahagónová doska":30,
+                "otesaný mramor":30,
+                "oceľový nástroj":40
             }
         ],
         "ticks per item":[30, 20, 10],
         "input": [
-            {"hlina":25, "dust":10},
-            {"hlina":25, "dust":10},
-            {"hlina":25, "dust":10}
+            {"hlina":25, "prach":10},
+            {"hlina":25, "prach":10},
+            {"hlina":25, "prach":10}
         ],
         "output": [
-            {"porcelan":1},
-            {"porcelan":1},
-            {"porcelan":1}
+            {"porcelán":1},
+            {"porcelán":1},
+            {"porcelán":1}
         ],
         "design": {
             "shape": "pentagon",
@@ -750,47 +750,47 @@
         },
         "points":[7, 12, 20]
     },
-    "sklar":{
+    "sklár":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "plank":5,
-                "chiseled stone":10
+                "doska":5,
+                "otesaný kameň":10
             },
             {
-                "plank":5,
-                "chiseled stone":10
+                "doska":5,
+                "otesaný kameň":10
             },
             {
-                "plank":10,
-                "chiseled stone":20,
-                "iron tool":5
+                "doska":10,
+                "otesaný kameň":20,
+                "železný nástroj":5
             },
             {
-                "chiseled marble":5,
-                "mahagon plank":10,
-                "steel tool":5
+                "otesaný mramor":5,
+                "mahagónová doska":10,
+                "oceľový nástroj":5
             },
             {
-                "chiseled marble":10,
-                "mahagon plank":20,
-                "steel tool":10
+                "otesaný mramor":10,
+                "mahagónová doska":20,
+                "oceľový nástroj":10
             },
             {
-                "chiseled marble":20,
-                "mahagon plank":40,
-                "ocelovy plat":10
+                "otesaný mramor":20,
+                "mahagónová doska":40,
+                "oceľový plát":10
             }
         ],
         "ticks per item":[90, 60, 30, 180, 120, 60],
         "input": [
-            {"sand":5, "coal":1},
-            {"sand":5, "coal":1},
-            {"sand":5, "coal":1},
-            {"sklo":5, "gem":3, "coal":1},
-            {"sklo":5, "gem":3, "coal":1},
-            {"sklo":5, "gem":3, "coal":1}
+            {"piesok":5, "uhlie":1},
+            {"piesok":5, "uhlie":1},
+            {"piesok":5, "uhlie":1},
+            {"sklo":5, "drahokam":3, "uhlie":1},
+            {"sklo":5, "drahokam":3, "uhlie":1},
+            {"sklo":5, "drahokam":3, "uhlie":1}
         ],
         "output": [
             {"sklo":1},
@@ -806,63 +806,63 @@
         },
         "points":[2, 4, 7, 10, 12, 15]
     },
-    "oceliaren":{
+    "oceliareň":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "plank":20,
-                "chiseled stone":20,
+                "doska":20,
+                "otesaný kameň":20,
                 "klinec":5,
-                "iron":5
+                "železo":5
             },
             {
-                "plank":20,
-                "chiseled stone":20,
+                "doska":20,
+                "otesaný kameň":20,
                 "klinec":5,
-                "iron":5
+                "železo":5
             },
             {
-                "mahagon plank":15,
-                "chiseled marble":15,
+                "mahagónová doska":15,
+                "otesaný mramor":15,
                 "klinec":15,
-                "iron":15
+                "železo":15
             },
             {
-                "mahagon plank":10,
-                "chiseled marble":15,
+                "mahagónová doska":10,
+                "otesaný mramor":15,
                 "tehla":30,
-                "steel":15
+                "oceľ":15
             },
             {
-                "mahagon plank":5,
-                "chiseled marble":20,
+                "mahagónová doska":5,
+                "otesaný mramor":20,
                 "tehla":50,
-                "steel tool":20
+                "oceľový nástroj":20
             },
             {
-                "chiseled marble":30,
+                "otesaný mramor":30,
                 "tehla":50,
-                "porcelan":5,
-                "steel tool":50
+                "porcelán":5,
+                "oceľový nástroj":50
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"iron":1, "coal":1},
-            {"iron":1, "coal":1},
-            {"iron":1, "coal":1},
-            {"iron":1, "coal":1},
-            {"iron":1, "coal":1},
-            {"iron":1, "coal":1}
+            {"železo":1, "uhlie":1},
+            {"železo":1, "uhlie":1},
+            {"železo":1, "uhlie":1},
+            {"železo":1, "uhlie":1},
+            {"železo":1, "uhlie":1},
+            {"železo":1, "uhlie":1}
         ],
         "output": [
-            {"steel":1},
-            {"steel":1},
-            {"steel":1},
-            {"steel":1},
-            {"steel":1},
-            {"steel":1}
+            {"oceľ":1},
+            {"oceľ":1},
+            {"oceľ":1},
+            {"oceľ":1},
+            {"oceľ":1},
+            {"oceľ":1}
         ],
         "design": {
             "shape": "pentagon",
@@ -870,61 +870,61 @@
         },
         "points":[11, 16, 20, 24, 28, 34]
     },
-    "kovac":{
+    "kováč":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "plank":15,
-                "chiseled stone":15,
+                "doska":15,
+                "otesaný kameň":15,
                 "tehla":10
             },
             {
-                "chiseled stone":15,
+                "otesaný kameň":15,
                 "tehla":10,
-                "iron":5
+                "železo":5
             },
             {
-                "plank":20,
-                "chiseled stone":30,
+                "doska":20,
+                "otesaný kameň":30,
                 "tehla":30,
-                "iron tool":10
+                "železný nástroj":10
             },
             {
-                "mahagon plank":20,
-                "chiseled marble":30,
+                "mahagónová doska":20,
+                "otesaný mramor":30,
                 "tehla":30,
                 "klinec":15
             },
             {
-                "mahagon plank":20,
-                "chiseled marble":30,
+                "mahagónová doska":20,
+                "otesaný mramor":30,
                 "tehla":50,
-                "steel":10
+                "oceľ":10
             },
             {
-                "mahagon plank":30,
-                "chiseled marble":50,
+                "mahagónová doska":30,
+                "otesaný mramor":50,
                 "tehla":50,
-                "steel tool":25
+                "oceľový nástroj":25
             }
         ],
         "ticks per item":[30, 20, 10, 30, 20, 10],
         "input": [
-            {"plank":2, "iron":1},
-            {"plank":2, "iron":1},
-            {"plank":2, "iron":1},
-            {"mahagon plank":2, "steel":1},
-            {"mahagon plank":2, "steel":1},
-            {"mahagon plank":2, "steel":1}
+            {"doska":2, "železo":1},
+            {"doska":2, "železo":1},
+            {"doska":2, "železo":1},
+            {"mahagónová doska":2, "oceľ":1},
+            {"mahagónová doska":2, "oceľ":1},
+            {"mahagónová doska":2, "oceľ":1}
         ],
         "output": [
-            {"iron tool":1},
-            {"iron tool":1},
-            {"iron tool":1},
-            {"steel tool":1},
-            {"steel tool":1},
-            {"steel tool":1}
+            {"železný nástroj":1},
+            {"železný nástroj":1},
+            {"železný nástroj":1},
+            {"oceľový nástroj":1},
+            {"oceľový nástroj":1},
+            {"oceľový nástroj":1}
         ],
         "design": {
             "shape": "pentagon",
@@ -932,31 +932,31 @@
         },
         "points":[11, 16, 20, 24, 28, 34]
     },
-    "klinciaren":{
+    "klinciareň":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "chiseled stone":15,
-                "plank":15,
-                "iron tool":5
+                "otesaný kameň":15,
+                "doska":15,
+                "železný nástroj":5
             },
             {
-                "chiseled stone":15,
-                "plank":15,
-                "iron tool":5
+                "otesaný kameň":15,
+                "doska":15,
+                "železný nástroj":5
             },
             {
-                "chiseled marble":10,
-                "mahagon plank":10,
-                "steel tool":10
+                "otesaný mramor":10,
+                "mahagónová doska":10,
+                "oceľový nástroj":10
             }
         ],
         "ticks per item":[30, 20, 10],
         "input": [
-            {"iron":1, "coal":1},
-            {"iron":1, "coal":1},
-            {"iron":1,"coal":1}
+            {"železo":1, "uhlie":1},
+            {"železo":1, "uhlie":1},
+            {"železo":1,"uhlie":1}
         ],
         "output": [
             {"klinec":3},
@@ -969,36 +969,36 @@
         },
         "points":[11, 22, 30]
     },
-    "valcovna":{
+    "valcovňa":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "chiseled marble":15,
-                "mahagon plank":15,
-                "steel":5
+                "otesaný mramor":15,
+                "mahagónová doska":15,
+                "oceľ":5
             },
             {
-                "chiseled marble":15,
-                "mahagon plank":15,
-                "steel":5
+                "otesaný mramor":15,
+                "mahagónová doska":15,
+                "oceľ":5
             },
             {
-                "chiseled marble":30,
-                "mahagon plank":30,
-                "steel tool":10
+                "otesaný mramor":30,
+                "mahagónová doska":30,
+                "oceľový nástroj":10
             }
         ],
         "ticks per item":[30, 20, 10],
         "input": [
-            {"steel":3, "coal":1},
-            {"steel":3, "coal":1},
-            {"steel":3, "coal":1}
+            {"oceľ":3, "uhlie":1},
+            {"oceľ":3, "uhlie":1},
+            {"oceľ":3, "uhlie":1}
         ],
         "output": [
-            {"ocelovy plat":1},
-            {"ocelovy plat":1},
-            {"ocelovy plat":1}
+            {"oceľový plát":1},
+            {"oceľový plát":1},
+            {"oceľový plát":1}
         ],
         "design": {
             "shape": "hexagon",
@@ -1011,31 +1011,31 @@
         "generating": true,
         "cost":[
             {
-                "wood":20,
-                "stone":20,
+                "drevo":20,
+                "kameň":20,
                 "tehla":10
             },
             {
-                "chiseled stone":30,
-                "plank":30,
-                "iron tool":15
+                "otesaný kameň":30,
+                "doska":30,
+                "železný nástroj":15
             },
             {
-                "chiseled marble":20,
-                "mahagon plank":20,
-                "steel tool":20
+                "otesaný mramor":20,
+                "mahagónová doska":20,
+                "oceľový nástroj":20
             }
         ],
         "ticks per item":[15, 15, 15],
         "input": [
-            {"wood":5, "stone":10},
-            {"plank":5, "iron":10},
-            {"mahagon":5, "steel":10}
+            {"drevo":5, "kameň":10},
+            {"doska":5, "železo":10},
+            {"mahagón":5, "oceľ":10}
         ],
         "output": [
-            {"budogan":1},
-            {"kopia":1},
-            {"mec":1}
+            {"budzogáň":1},
+            {"kopija":1},
+            {"meč":1}
         ],
         "design": {
             "shape": "square",
@@ -1043,36 +1043,36 @@
         },
         "points":[11, 22, 30]
     },
-    "vojenska dielna":{
+    "vojenská dielňa":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "chiseled stone":30,
-                "plank":30,
-                "iron tool":15
+                "otesaný kameň":30,
+                "doska":30,
+                "železný nástroj":15
             },
             {
-                "chiseled stone":50,
-                "plank":50,
-                "steel tool":25
+                "otesaný kameň":50,
+                "doska":50,
+                "oceľový nástroj":25
             },
             {
-                "chiseled marble":30,
-                "mahgon plank":30,
-                "steel tool":35
+                "otesaný mramor":30,
+                "mahgon doska":30,
+                "oceľový nástroj":35
             }
         ],
         "ticks per item":[15, 15, 15],
         "input": [
-            {"wood":50, "klinec":150, "stone":50},
-            {"plank":30, "steel":50, "gunpowder":20},
-            {"mahagon plank":20, "steel":30, "gunpowder":15, "klinec":30, "chiseled marble":30}
+            {"drevo":50, "klinec":150, "kameň":50},
+            {"doska":30, "oceľ":50, "pušný prach":20},
+            {"mahagónová doska":20, "oceľ":30, "pušný prach":15, "klinec":30, "otesaný mramor":30}
         ],
         "output": [
             {"katapult":1},
             {"delo":1},
-            {"musketa":1}
+            {"mušketa":1}
         ],
         "design": {
             "shape": "pentagon",
@@ -1080,32 +1080,32 @@
         },
         "points":[15, 25, 35]
     },
-    "drevorubac":{
+    "drevorubač":{
         "requrement":"forest",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":25,
-                "chiseled stone":25
+                "doska":25,
+                "otesaný kameň":25
             },
             {
-                "chiseled stone":10,
-                "iron":10
+                "otesaný kameň":10,
+                "železo":10
             },
             {
-                "chiseled stone":10,
-                "iron tool":10
+                "otesaný kameň":10,
+                "železný nástroj":10
             },
             {
-                "chiseled marble":25,
+                "otesaný mramor":25,
                 "klinec":100
             }
         ],
@@ -1119,12 +1119,12 @@
             {}
         ],
         "output": [
-            {"wood":1},
-            {"wood":1},
-            {"wood":1},
-            {"wood":3, "mahagon":1},
-            {"wood":3, "mahagon":1},
-            {"wood":3, "mahagon":1}
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":3, "mahagón":1},
+            {"drevo":3, "mahagón":1},
+            {"drevo":3, "mahagón":1}
         ],
         "design": {
             "shape": "triangle",
@@ -1137,16 +1137,16 @@
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":5,
-                "stone":15
+                "doska":5,
+                "kameň":15
             },
             {
-                "plank":20,
-                "chiseled stone":30
+                "doska":20,
+                "otesaný kameň":30
             }
         ],
         "ticks per item":[15, 10, 5],
@@ -1166,25 +1166,25 @@
         },
         "points":[1, 2, 4]
     },
-    "masiar":{
+    "mäsiar":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":20,
-                "stone":20,
-                "iron":5
+                "drevo":20,
+                "kameň":20,
+                "železo":5
             },
             {
-                "plank":15,
-                "chiseled stone":15,
-                "iron tool":5
+                "doska":15,
+                "otesaný kameň":15,
+                "železný nástroj":5
             },
             {
-                "plank":35,
-                "chiseled stone":35,
+                "doska":35,
+                "otesaný kameň":35,
                 "klinec":50,
-                "iron":10
+                "železo":10
             }
         ],
         "ticks per item":[15, 10, 5],
@@ -1194,9 +1194,9 @@
             {"divina":1}
         ],
         "output": [
-            {"food":3},
-            {"food":3},
-            {"food":3}
+            {"jedlo":3},
+            {"jedlo":3},
+            {"jedlo":3}
         ],
         "design": {
             "shape": "square",
@@ -1204,21 +1204,21 @@
         },
         "points":[2, 4, 7]
     },
-    "kozusnik":{
+    "kožušník":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":15,
-                "stone":10
+                "doska":15,
+                "kameň":10
             },
             {
-                "plank":30,
-                "chiseled stone":20
+                "doska":30,
+                "otesaný kameň":20
             }
         ],
         "ticks per item":[30, 20, 10],
@@ -1228,9 +1228,9 @@
             {"divina":1}
         ],
         "output": [
-            {"leather":1},
-            {"leather":1},
-            {"leather":1}
+            {"koža":1},
+            {"koža":1},
+            {"koža":1}
         ],
         "design": {
             "shape": "square",
@@ -1238,51 +1238,51 @@
         },
         "points":[2, 4, 7]
     },
-    "sawmill":{
+    "píla":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":20
+                "drevo":10,
+                "kameň":20
             },
             {
-                "wood":10,
-                "stone":20
+                "drevo":10,
+                "kameň":20
             },
             {
-                "plank":30,
-                "chiseled stone":50
+                "doska":30,
+                "otesaný kameň":50
             },
             {
-                "chiseled stone":40,
-                "iron":10
+                "otesaný kameň":40,
+                "železo":10
             },
             {
-                "chiseled stone":50,
-                "iron tool":15
+                "otesaný kameň":50,
+                "železný nástroj":15
             },
             {
-                "chiseled marble":50,
-                "iron tool":30
+                "otesaný mramor":50,
+                "železný nástroj":30
             }
         ],
         "ticks per item":[15, 10, 5, 15, 10, 5],
         "input": [
-            {"wood":1},
-            {"wood":1},
-            {"wood":1},
-            {"wood":3, "mahagon":1},
-            {"wood":3, "mahagon":1},
-            {"wood":3, "mahagon":1}
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":3, "mahagón":1},
+            {"drevo":3, "mahagón":1},
+            {"drevo":3, "mahagón":1}
         ],
         "output": [
-            {"plank":1},
-            {"plank":1},
-            {"plank":1},
-            {"plank":3, "mahagon plank":1},
-            {"plank":3, "mahagon plank":1},
-            {"plank":3, "mahagon plank":1}
+            {"doska":1},
+            {"doska":1},
+            {"doska":1},
+            {"doska":3, "mahagónová doska":1},
+            {"doska":3, "mahagónová doska":1},
+            {"doska":3, "mahagónová doska":1}
         ],
         "design": {
             "shape": "square",
@@ -1295,46 +1295,46 @@
         "generating": true,
         "cost":[
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "wood":10,
-                "stone":10
+                "drevo":10,
+                "kameň":10
             },
             {
-                "plank":30,
-                "chiseled stone":30
+                "doska":30,
+                "otesaný kameň":30
             },
             {
-                "chiseled stone":30,
-                "iron":10
+                "otesaný kameň":30,
+                "železo":10
             },
             {
-                "chiseled stone":50,
-                "iron tool":15
+                "otesaný kameň":50,
+                "železný nástroj":15
             },
             {
-                "chiseled marble":50,
-                "iron tool":30
+                "otesaný mramor":50,
+                "železný nástroj":30
             }
         ],
         "ticks per item":[15, 10, 5, 3, 2, 1],
         "input": [
-            {"wood":1},
-            {"wood":1},
-            {"wood":1},
-            {"wood":1},
-            {"wood":1},
-            {"wood":1}
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":1},
+            {"drevo":1}
         ],
         "output": [
-            {"coal":1},
-            {"coal":1},
-            {"coal":1},
-            {"coal":1},
-            {"coal":1},
-            {"coal":1}
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1},
+            {"uhlie":1}
         ],
         "design": {
             "shape": "square",
@@ -1342,33 +1342,33 @@
         },
         "points":[2, 4, 7, 10, 12, 15]
     },
-    "drvicka":{
+    "drvička":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
-                "stone":15,
-                "wood":5
+                "kameň":15,
+                "drevo":5
             },
             {
-                "chiseled stone":20,
-                "plank":10
+                "otesaný kameň":20,
+                "doska":10
             },
             {
-                "chiseled marble":20,
-                "mahagon plank":10
+                "otesaný mramor":20,
+                "mahagónová doska":10
             }
         ],
         "ticks per item":[50, 40, 60],
         "input": [
-            {"stone": 5},
-            {"stone": 5},
-            {"stone": 10}
+            {"kameň": 5},
+            {"kameň": 5},
+            {"kameň": 10}
         ],
         "output": [
-            {"sand":1, "dust":4},
-            {"sand":2, "dust":3},
-            {"sand":4, "dust":5, "gem":1}
+            {"piesok":1, "prach":4},
+            {"piesok":2, "prach":3},
+            {"piesok":4, "prach":5, "drahokam":1}
         ],
         "design": {
             "shape": "square",
@@ -1377,33 +1377,33 @@
         "points":[2, 4, 7]
     },
 
-    "carodej":{
+    "čarodejník":{
         "requrement":"",
         "generating": true,
         "cost":[
             {
                 "people":1,
-                "chiseled stone":25,
-                "plank":10,
+                "otesaný kameň":25,
+                "doska":10,
                 "tehla":15,
-                "glass":5
+                "sklo":5
             },
             {
-                "steel tool":3,
-                "glass":10,
-                "porcelan":5,
+                "oceľový nástroj":3,
+                "sklo":10,
+                "porcelán":5,
                 "tehla":25,
-                "chiseled marble":10
+                "otesaný mramor":10
             }
         ],
         "ticks per item":[10, 10],
         "input": [
-            {"leather": 5},
-            {"dust": 5}
+            {"koža": 5},
+            {"prach": 5}
         ],
         "output": [
-            {"hodvab":2},
-            {"gunpowder":2}
+            {"hodváb":2},
+            {"pušný prach":2}
         ],
         "design": {
             "shape": "pentagon",
@@ -1417,26 +1417,26 @@
         "requrement":"",
         "generating": false,
         "cost":[
-            {"chiseled stone":1},
-            {"chiseled stone":4},
-            {"chiseled stone":9},
-            {"chiseled stone":16},
-            {"chiseled stone":25, "iron":5},
-            {"chiseled stone":36},
-            {"chiseled stone":49},
-            {"chiseled stone":64},
-            {"chiseled stone":81},
-            {"chiseled stone":100, "steel":5},
-            {"chiseled stone":121},
-            {"chiseled stone":144},
-            {"chiseled stone":169},
-            {"chiseled stone":196},
-            {"chiseled stone":225, "gem":5},
-            {"chiseled marble":36},
-            {"chiseled marble":49},
-            {"chiseled marble":64},
-            {"chiseled marble":81},
-            {"chiseled marble":100, "gold":5}
+            {"otesaný kameň":1},
+            {"otesaný kameň":4},
+            {"otesaný kameň":9},
+            {"otesaný kameň":16},
+            {"otesaný kameň":25, "železo":5},
+            {"otesaný kameň":36},
+            {"otesaný kameň":49},
+            {"otesaný kameň":64},
+            {"otesaný kameň":81},
+            {"otesaný kameň":100, "oceľ":5},
+            {"otesaný kameň":121},
+            {"otesaný kameň":144},
+            {"otesaný kameň":169},
+            {"otesaný kameň":196},
+            {"otesaný kameň":225, "drahokam":5},
+            {"otesaný mramor":36},
+            {"otesaný mramor":49},
+            {"otesaný mramor":64},
+            {"otesaný mramor":81},
+            {"otesaný mramor":100, "zlato":5}
         ],
         "design": {
             "shape": "star",
