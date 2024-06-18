@@ -200,17 +200,12 @@ class Front:
                 inv = self.actions.inventory
                 inv = dict(sorted(inv.items(), key=lambda item: item[1]))
 
-                num_of_rows = 20
-
-                tk.Label(self.inventory_window, text=f"ľudia: {inv['ľudia']}", width=30, font=("smili", 20)).grid(row=0, column=0, columnspan=1000)
-                tk.Label(self.inventory_window, text=f"peniaze: {inv['peniaze']}", width=30, font=("smili", 20)).grid(row=1, column=0, columnspan=1000)
+                num_of_rows = 15
 
                 counter = 0
                 for item in inv.keys():
-                    if item != "peniaze" and item != "ľudia":
-
-                        tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
-                        counter += 1
+                    tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
+                    counter += 1
             except tk.TclError:
                 pass
     
@@ -331,7 +326,7 @@ class Front:
                  }
         exists = False
         for key in self.actions.inventory.keys():
-            if compare_strings(trade["item"], key) and key != "ľudia":
+            if compare_strings(trade["item"], key) and self.inventory[key] >= trade["count"]:
                 exists = True
                 break
         if not exists:

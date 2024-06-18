@@ -537,9 +537,9 @@
             {}
         ],
         "output": [
-            {"zlatá ruda":1},
-            {"zlatá ruda":1},
-            {"zlatá ruda":1}
+            {"zlato":1},
+            {"zlato":1},
+            {"zlato":1}
         ],
         "design": {
             "shape": "triangle",
@@ -1067,7 +1067,7 @@
         "input": [
             {"drevo":50, "klinec":150, "kameň":50},
             {"doska":30, "oceľ":50, "pušný prach":20},
-            {"mahagónová doska":20, "oceľ":30, "pušný prach":15, "klinec":30, "otesaný mramor":30}
+            {"mahagónová doska":20, "oceľový plát":10, "pušný prach":15, "klinec":30, "otesaný mramor":30}
         ],
         "output": [
             {"katapult":1},
@@ -1442,6 +1442,6 @@
             "shape": "star",
             "color": "#7e0091"
         },
-        "points":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        "points":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     }
 }

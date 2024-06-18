@@ -378,7 +378,19 @@ class actions:
         response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
         self.front.draw_menu()
         if response.status_code == 200 and response.text == '0':
-            # updatovat my_lands + dokodit par monstier
+            # updatovat my_lands
+            l_pos = self.from_pos_string(pos=pos)
+            for land in [
+                [l_pos[0], l_pos[1]+1],
+                [l_pos[0]+1, l_pos[1]],
+                [l_pos[0]-1, l_pos[1]+1],
+                [l_pos[0], l_pos[1]-1],
+                [l_pos[0]-1, l_pos[1]],
+                [l_pos[0]+1, l_pos[1]-1],
+            ]:
+                if self.all_lands[self.to_pos_string(land)].get("player") == self.name:
+                    self.available_lands.append(land)
+                    break
             return True
         elif response.status_code == 200:
             return False
@@ -452,7 +464,7 @@ class actions:
             [pos[0]-1, pos[1]+1],
             [pos[0], pos[1]-1],
             [pos[0]-1, pos[1]],
-            [pos[0]+1, pos[1]-1],    
+            [pos[0]+1, pos[1]-1],
         ]:
             if (not (land in self.available_lands)) and self.read_pos(*land)['name'] == 'land':
                 self.available_lands.append(land)
@@ -587,7 +599,7 @@ while not start():
 
 last_time: float = 0
 while True:
-    if last_time < time() - 1:
+    if last_time < time() - 0.1:
         last_time = time()
         player.tick()
     player.front.update()
