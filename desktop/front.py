@@ -446,7 +446,7 @@ class Front:
             except tk.TclError:
                 pass
         self.build_window = tk.Tk()
-
+        self.build_window.geometry("+30+30")
         # map_cords = self.tkinter_to_map_cords[self.selected_pos[1]]
         # self.status = self.actions.possible_actions(list(map_cords))
 
@@ -548,13 +548,13 @@ class Front:
             if not is_buildable:
                 self.disposable_build_labels[-1].config(bg="grey", state="disabled")
 
-            self.disposable_build_labels.append(tk.Label(self.build_window, text=input_text, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=input_text, width=25, fg="grey40", font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i + 1, column=0)
-            self.disposable_build_labels.append(tk.Label(self.build_window, text="------->", font=("smili", self.font_size * 2)))
+            self.disposable_build_labels.append(tk.Label(self.build_window, text="------->", fg="grey40", font=("smili", self.font_size * 2)))
             self.disposable_build_labels[-1].grid(row=2 * i + 1, column=1)
-            self.disposable_build_labels.append(tk.Label(self.build_window, text=output_text, width=25, font=("smili", self.font_size)))
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=output_text, width=25, fg="grey40", font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i + 1, column=2)
-            self.disposable_build_labels.append(tk.Label(self.build_window, text=time_text, width=15, font=("smili", self.font_size)))
+            self.disposable_build_labels.append(tk.Label(self.build_window, text=time_text, width=15, fg="grey40", font=("smili", self.font_size)))
             self.disposable_build_labels[-1].grid(row=2 * i + 1, column=3)
 
             self.disposable_build_labels.append(tk.Label(self.build_window, text=f"{self.build_page_number + 1} / {ceil(len(self.actions.buildings) / 7)}", width=25, font=("smili", self.font_size)))
