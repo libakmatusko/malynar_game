@@ -7,7 +7,7 @@ from copy import copy
 import random
 from math import floor
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
-LAN_SERVER_IP = 'http://192.168.1.20:5000'# stefi to na tomto spojazdnil
+LAN_SERVER_IP = 'http://192.168.1.10:5000'# stefi to na tomto spojazdnil
 #SERVER_IP = LAN_SERVER_IP
 
 class actions:
@@ -400,13 +400,15 @@ class actions:
 
 
     def is_ok_code(self, item, code):
+        if not code.isnumeric():
+            return False
         a = int("".join([str(ord(x)) for x in self.name[:2]]))
 
-        with open("desktop/all_codes.json", "r", encoding="utf-8") as f:
+        with open("all_codes.json", "r", encoding="utf-8") as f:
             all_codes = json.load(f)
 
-        if (code - a) in all_codes[item]:
-            self.used_codes.append(code - a)
+        if (int(code) - a) in all_codes[item]:
+            self.used_codes.append(int(code) - a)
             return True
         
         return False
