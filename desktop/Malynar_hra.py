@@ -21,11 +21,11 @@ class actions:
 
         self.tick_counter:int = -1
         self.inventory:dict[str, int] = {
-            'ľudia': 5,
-            'kameň': 100,
-            'drevo': 100,
-            'peniaze': 0,
-            "jedlo": 0
+            'ľudia': 1,
+            'kameň': 50,
+            'drevo': 50,
+            'peniaze': 10,
+            "jedlo": 1
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army:dict = json.load(f)
