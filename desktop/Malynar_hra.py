@@ -7,8 +7,8 @@ from copy import copy
 import random
 from math import floor
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
-LAN_SERVER_IP = 'http://192.168.1.10:5000'# stefi to na tomto spojazdnil
-SERVER_IP = LAN_SERVER_IP
+LAN_SERVER_IP = 'http://192.168.1.25:5000'# stefi to na tomto spojazdnil
+#SERVER_IP = LAN_SERVER_IP
 
 class actions:
     def __init__(self, name, starting_pos, debug=False):
@@ -601,7 +601,7 @@ while not start():
 
 last_time: float = 0
 while True:
-    if last_time < time() - 0.1:
+    if last_time < time() - 1:
         last_time = time()
         player.tick()
     player.front.update()
