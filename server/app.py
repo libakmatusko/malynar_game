@@ -162,8 +162,7 @@ def was_trade_taken(id):
 def kill_monsters(args):
     pos, count = args.split("|")
     count = int(count)
-
-    game.all_lands[pos]
+    
     if game.all_lands[pos]["count"] <= count:
         game.all_lands[pos]["count"] = 0
         game.all_lands[pos]["name"] = 'land'

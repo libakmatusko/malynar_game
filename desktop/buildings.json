@@ -1452,6 +1452,7 @@
     },
 
 
+    
     "mohyla":{
         "requrement":"",
         "generating": false,
@@ -1466,11 +1467,11 @@
             {"otesaný kameň":64},
             {"otesaný kameň":81},
             {"otesaný kameň":100, "oceľ":10},
-            {"otesaný kameň":121},
-            {"otesaný kameň":144},
-            {"otesaný kameň":169},
-            {"otesaný kameň":196},
-            {"otesaný kameň":225, "drahokam":25},
+            {"otesaný kameň":121, "otesaný mramor":1},
+            {"otesaný kameň":144, "otesaný mramor":4},
+            {"otesaný kameň":169, "otesaný mramor":9},
+            {"otesaný kameň":196, "otesaný mramor":16},
+            {"otesaný kameň":225, "otesaný mramor":25, "drahokam":25},
             {"otesaný mramor":36},
             {"otesaný mramor":49},
             {"otesaný mramor":64},
@@ -1481,6 +1482,42 @@
             {"otesaný mramor":169},
             {"otesaný mramor":196},
             {"otesaný mramor":225, "zlato":15}
+        ],
+        "design": {
+            "shape": "star",
+            "color": "#7e0091"
+        },
+        "points":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+    },
+    "artikulárny kostolík":{
+        "requrement":"",
+        "generating": false,
+        "cost":[
+            {"doska":1},
+            {"doska":4},
+            {"doska":9},
+            {"doska":16},
+            {"doska":25, "železo":5},
+            {"doska":36},
+            {"doska":49},
+            {"doska":64},
+            {"doska":81},
+            {"doska":100, "oceľ":10},
+            {"doska":121, "mahagónová doska":1},
+            {"doska":144, "mahagónová doska":4},
+            {"doska":169, "mahagónová doska":9},
+            {"doska":196, "mahagónová doska":16},
+            {"doska":225, "mahagónová doska":25, "drahokam":25},
+            {"mahagónová doska":36},
+            {"mahagónová doska":49},
+            {"mahagónová doska":64},
+            {"mahagónová doska":81},
+            {"mahagónová doska":100, "zlato":10},
+            {"mahagónová doska":121},
+            {"mahagónová doska":144},
+            {"mahagónová doska":169},
+            {"mahagónová doska":196},
+            {"mahagónová doska":225, "zlato":25}
         ],
         "design": {
             "shape": "star",

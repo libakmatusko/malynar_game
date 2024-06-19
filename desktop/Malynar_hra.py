@@ -349,19 +349,9 @@ class actions:
         if your_stren == 0:
             return False
 
-        monster_stren = int(self.beast_types[type]["strength"]) * int(count)
+        you_receieve_dmg = int(self.beast_types[type]["strength"]) * int(count)
 
-        monster_stren = int(random.random() / 2 * monster_stren)
-        your_stren = int(random.random() / 2 * your_stren)
-        
-        monster_receieves_dmg = your_stren
-
-        you_receieve_dmg = monster_stren
-
-        #monster_receieves_dmg = (your_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
-        #you_receieve_dmg = (monster_stren / (your_stren + monster_stren)) * (your_stren + monster_stren)
-
-        monsters_killed = int(ceil(monster_receieves_dmg / self.beast_types[type]["strength"]))
+        monsters_killed = int(floor(your_stren / self.beast_types[type]["strength"]))
         self.army_points += monsters_killed * self.beast_types[type]["strength"]
 
         while you_receieve_dmg > 0 and soldier_count > 0:
@@ -375,8 +365,14 @@ class actions:
                 soldier_count -= 1
                 you_receieve_dmg -= self.army[soldier]["strength"]
 
-        response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
+        if self.all_lands[pos]["count"] <= count:
+            self.all_lands[pos] = {'name': 'land'}
+        else:
+            self.all_lands[pos]["count"] -= count
         self.front.draw_menu()
+
+        response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
+
         if response.status_code == 200 and response.text == '0':
             # updatovat my_lands
             l_pos = self.from_pos_string(pos=pos)
