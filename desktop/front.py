@@ -110,6 +110,12 @@ class Front:
         # upgrading
         self.upgrade_window = None
 
+        
+        self.items_order = ['ľudia', 'peniaze', 'jedlo', 'drevo', 'mahagón', 'doska', 'mahagónová doska', 'hlina', 'tehla', 'kameň', 'mramor', 'otesaný kameň',
+'otesaný mramor', 'divina', 'koža', 'pšenica', 'múka', 'uhlie', 'piesok', 'prach', 'drahokam', 'porcelán', 'kôň', 'sedlo', 'budzogáň',
+'kopija', 'meč', 'katapult', 'delo', 'mušketa', 'železná ruda', 'železo', 'zlato', 'oceľ', 'železný nástroj', 'oceľový nástroj',
+'klinec', 'oceľový plát', 'sklo', 'mozajka', 'pušný prach', 'hodváb']
+
     def update(self): # call this function rapidly to make everything work
         self.map_canvas.update()
 
@@ -202,11 +208,7 @@ class Front:
                 num_of_rows = 15
 
                 counter = 0
-                items_order = ['ľudia', 'peniaze', 'jedlo', 'drevo', 'mahagón', 'doska', 'mahagónová doska', 'hlina', 'tehla', 'kameň', 'mramor', 'otesaný kameň',
-'otesaný mramor', 'divina', 'koža', 'pšenica', 'múka', 'uhlie', 'piesok', 'prach', 'drahokam', 'porcelán', 'kôň', 'sedlo', 'budzogáň',
-'kopija', 'meč', 'katapult', 'delo', 'mušketa', 'železná ruda', 'železo', 'zlato', 'oceľ', 'železný nástroj', 'oceľový nástroj',
-'klinec', 'oceľový plát', 'sklo', 'mozajka', 'pušný prach', 'hodváb']
-                for item in items_order:
+                for item in self.items_order:
                     amount = inv.get(item)
                     if amount:
                         tk.Label(self.inventory_window, text=f"{item}: {inv[item]}", width=30, font=("smili", 20)).grid(row=counter % num_of_rows + 2, column=counter // num_of_rows)
@@ -269,7 +271,7 @@ class Front:
             self.disposable_trade_labels[-1].grid(row=i + 1, column=2)
 
             if self.actions.trades[id]['type'] == 0:
-                if self.actions.inventory[self.actions.trades[id]['item']] < self.actions.trades[id]['count']:
+                if self.actions.inventory.get(self.actions.trades[id]['item'], 0) < self.actions.trades[id]['count']:
                     self.disposable_trade_labels[-1].config(bg="grey", state="disabled")
             else:
                 if self.actions.inventory['peniaze'] < self.actions.trades[id]['cost']:
@@ -325,16 +327,18 @@ class Front:
         self.make_trade_objects["direction"] = not self.make_trade_objects["direction"]
 
     def publish_trade(self):
-        trade = {"item": self.make_trade_objects["item"].get(),
-                 "count": self.make_trade_objects["item_amount"].get(),
-                 "cost": self.make_trade_objects["peniaze_amount"].get(),
-                 }
+        trade = {
+            "item": self.make_trade_objects["item"].get(),
+            "count": self.make_trade_objects["item_amount"].get(),
+            "cost": self.make_trade_objects["peniaze_amount"].get(),
+        }
         exists = False
-        for key in self.actions.inventory.keys():
-            if compare_strings(trade["item"], key) and self.actions.inventory[key] >= int(trade["count"]):
+        for key in self.items_order:
+            if compare_strings(trade["item"], key) and self.actions.inventory.get(key, 0) >= int(trade["count"]):
                 exists = True
                 break
-        if not exists:
+
+        if (not exists) and (not self.make_trade_objects["direction"]):
             # e-ee
             play_sound(False)
             print("eeee1")
@@ -371,7 +375,7 @@ class Front:
                 print("eeee6")
                 return
         else:
-            if self.actions.inventory[trade["item"]] < trade["count"]:
+            if self.actions.inventory.get(trade["item"], -1) < trade["count"]:
                 # e-ee
                 play_sound(False)
                 print("eeee7")
@@ -577,7 +581,7 @@ class Front:
         tk.Button(self.build_confirm_window, text="✔", command=lambda: self.verify_build_confirmation(building, entry.get()), bg="green2", width=30, font=("smili", self.font_size)).pack()
 
     def verify_build_confirmation(self, building, code):
-        if True: # TODO verifikacia kodu eventualne
+        if self.actions.is_ok_code(building, code):
             self.actions.build_new(building, self.map_cords)
             self.actions.frontend_update()
             self.build_confirm_window.destroy()
