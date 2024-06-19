@@ -170,7 +170,7 @@ class Front:
         print(map_cords)
         self.map_cords = [map_cords[0], map_cords[1]]
 
-        self.status = self.actions.possible_actions(list(map_cords))
+        self.status = self.actions.possible_actions(self.map_cords)
         self.draw_menu()
         # tu pride daco co bude zo statusu pisat veci na sidebar
         # self.map_canvas.create_text(id[1][0], id[1][1], text=f"{map_cords[0]}, {map_cords[1]}")
@@ -478,7 +478,7 @@ class Front:
         resources = self.actions.find_resources(self.map_cords)
         buildings_order = ["cesta", "drevorubač", "píla", "hlinný výkop", "tehliareň", "baňa", "tesár", "zberač bobúľ", "lovec", "mäsiar", "kožušník", "farmár",
          "mlyn", "pekáreň", "uhliar", "drvička", "hrnčiar", "koniar", "sedliar", "zbrojnica", "vojenská dielňa", "uhoľná baňa", "železná baňa",
-         "zlatá baňa", "vyhňa", "oceliareň", "kováč", "klinciareň", "valcovňa", "sklár", "čarodejník", "mohyla"]
+         "zlatá baňa", "vyhňa", "oceliareň", "kováč", "klinciareň", "valcovňa", "sklár", "čarodejník", "mohyla", "artikulárny kostolík", "katedrála", "vojenské múzeum"]
         for i, building in enumerate(buildings_order[self.build_page_number * 7:]):
             if i >= 7:
                 break

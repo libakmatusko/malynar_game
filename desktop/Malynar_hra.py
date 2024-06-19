@@ -5,7 +5,7 @@ import json
 import os
 from copy import copy
 import random
-from math import ceil
+from math import floor
 SERVER_IP = 'http://127.0.0.1:5000'# pre ucely debugovania, myslim ze tato je defaultna adresa
 LAN_SERVER_IP = 'http://192.168.1.20:5000'# stefi to na tomto spojazdnil
 #SERVER_IP = LAN_SERVER_IP
@@ -366,14 +366,6 @@ class actions:
                 you_receieve_dmg -= self.army[soldier]["strength"]
 
         if self.all_lands[pos]["count"] <= count:
-            self.all_lands[pos] = {'name': 'land'}
-        else:
-            self.all_lands[pos]["count"] -= count
-        self.front.draw_menu()
-
-        response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
-
-        if response.status_code == 200 and response.text == '0':
             # updatovat my_lands
             l_pos = self.from_pos_string(pos=pos)
             for land in [
@@ -387,6 +379,18 @@ class actions:
                 if self.all_lands[self.to_pos_string(*land)].get("player") == self.name:
                     self.available_lands.append(l_pos)
                     break
+
+            self.all_lands[pos] = {'name': 'land'}
+
+            self.front.status = self.possible_actions(self.front.map_cords)
+            self.front.draw_menu()
+            self.front.update()
+        else:
+            self.all_lands[pos]["count"] -= count
+
+        response = requests.post(f'{SERVER_IP}/kill_monsters/{pos}|{monsters_killed}')
+
+        if response.status_code == 200 and response.text == '0':
             return True
         elif response.status_code == 200:
             return False
