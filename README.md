@@ -1,27 +1,11 @@
 # malynar_game
-Budu tu dva priečinky, jeden na server, ktorý bude bežať hru a jeden na aplikáciu/program, ktorý bude bežať každý hráč.
 
-Popis buildings.json:
-dictionary budov{
-    nazov:{
-        "requrement":string - potreby atribut policka vedla
-        "generating":bool - ci je generujuca budova
-        "cost":[
-            {
-                item:pocet
-            }
-        ] list - ku kazdemu levlu ma jeden dict
-        "ticks per item": list - ku kazdemu levlu ma jeden int
-        "input": [
-            item:pocet
-        ] list - ku kazdemu levlu ma jeden dict
-        "output": [
-            item:pocet
-        ] list - ku kazdemu levlu ma jeden dict
-        "design": {
-            "shape": "triangle",
-            "color": "purple"
-        } ako sa orientovat vo farbach dopisat...
-        "points" list z int k levlom
-    }
-}
+## Čo treba urobyť na spustenie hry v sólo móde?
+
+1. **stiahnuť si náš program**
+    - v tomto [repozitáry](https://github.com/libakmatusko/malynar_game) kliknúť na `#1f883d`zelené tlačítko <>CODE a vybrať možnosť Download ZIP
+    - ZIP súbor rozbaliť (kliknúť pravým a vybrať možnosť extrahovať všetko)
+2. treba mať naišnatovaný [Python](https://www.python.org/) (ideálne najnovšiu verziu, ale nie je to potrebné)
+3. otvoriť priečinok malynar_game vo vyextrahovanom pričinku a spustiť (dvojklikom) súbor start.py
+4. otvorí sa okno tk - v ňom sa odohráva celá hra
+5. otvorí sa okno cmd - tu stále uvidíte svoje aktuálne skóre.
