@@ -24,8 +24,10 @@ class actions:
             'ľudia': 1,
             'kameň': 50,
             'drevo': 50,
-            'peniaze': 10,
-            "jedlo": 1
+            'peniaze': 100,
+            "železo":0,
+            "tehla":0,
+            "jedlo": 0
         }
         with open('desktop/army.json', 'r', encoding='utf-8') as f:
             self.army:dict = json.load(f)
@@ -53,6 +55,9 @@ class actions:
                     self.all_lands[self.to_pos_string(x, y)] = {
                         'name': 'land'
                     }
+        if debug:
+            with open('server/resources.json', 'r', encoding='utf-8') as resources_file:
+                self.all_lands.update(json.load(resources_file))
 
         with open(f'desktop/info.json', 'r', encoding='utf-8') as info_file:
             docasne = json.load(info_file)
@@ -80,6 +85,7 @@ class actions:
     def tick(self):
         self.tick_counter += 1
         if self.tick_counter % 5 == 0:
+            print(int(self))
             if not self.update_from_server():
                 #print('You are now ofline.')
                 pass
@@ -400,6 +406,8 @@ class actions:
 
 
     def is_ok_code(self, item, code):
+        if self.debug:
+            return True
         if not code.isnumeric():
             return False
         a = int("".join([str(ord(x)) for x in self.name[:2]]))
@@ -554,6 +562,7 @@ class actions:
     def load(self, save_name: str):# v tvare reload:save_03-May-21h20m30s 
         with open(f'desktop/{save_name}.json', 'r', encoding='utf-8') as save_file:
             self.__dict__.update(json.load(save_file))
+        print(int(self))
 
 
 def conect():
@@ -592,16 +601,25 @@ def start():
         return True
     return False
 
+if __name__ == "main":
+    print('Enter username:', end=' ')
+    player = conect()
 
-print('Enter username:', end=' ')
-player = conect()
+    while not start():
+        sleep(3)
 
-while not start():
-    sleep(3)
-
-last_time: float = 0
-while True:
-    if last_time < time() - 1:
-        last_time = time()
-        player.tick()
-    player.front.update()
+    last_time: float = 0
+    while True:
+        if last_time < time() - 1:
+            last_time = time()
+            player.tick()
+        player.front.update()
+else:
+    player = actions('Solo', [12, -24], debug=True)
+    player.all_lands[player.to_pos_string(12, -24)] = {'name': 'base', 'player': player.name, 'level': 1}
+    last_time: float = 0
+    while True:
+        if last_time < time() - 1:
+            last_time = time()
+            player.tick()
+        player.front.update()
