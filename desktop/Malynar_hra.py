@@ -79,7 +79,7 @@ class actions:
     
 
     def __int__(self):
-        return self.points * 100 + self.army_points + self.inventory['peniaze'] *10
+        return self.points * 100 + self.army_points * 2 + self.inventory['peniaze']
 
 
     def tick(self):
