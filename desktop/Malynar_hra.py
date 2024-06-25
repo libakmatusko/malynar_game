@@ -616,6 +616,10 @@ if __name__ == "main":
         player.front.update()
 else:
     player = actions('Solo', [12, -24], debug=True)
+    for file in os.listdir(os.getcwd()+'/desktop'):
+        if file[:4]=='save':
+            player.load(file[:-5])
+            break
     player.all_lands[player.to_pos_string(12, -24)] = {'name': 'base', 'player': player.name, 'level': 1}
     last_time: float = 0
     while True:
